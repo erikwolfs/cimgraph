@@ -8,9 +8,10 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"github.com/urfave/cli/v3"
+
 	"github.com/urfave/cli-altsrc/v3"
-    yaml "github.com/urfave/cli-altsrc/v3/yaml"
+	yaml "github.com/urfave/cli-altsrc/v3/yaml"
+	"github.com/urfave/cli/v3"
 )
 
 type Config struct {
@@ -32,44 +33,6 @@ func main() {
 		Name: "cimgraph",
 		Usage: "Graphing Tool for CIM",
 		Version: "development",
-		Commands: []*cli.Command{
-			{
-				Name: "import",
-				Usage: "import RDF XML files into the Dgrap DB",
-				Arguments: []cli.Argument{
-					&cli.StringArg{
-						Name: "importpath",
-						UsageText: "path of the RDF XML files to import",
-						Value: "./data/",
-						Destination: &config.path,
-					},
-				},
-				Action: func(ctx context.Context, cmd *cli.Command) error {
-                    if err := importrdf(&config); err != nil {
-						return err
-					}
-                    return nil
-                },
-			},
-			{
-				Name: "export",
-				Usage: "export RDF XML files from the Dgrap DB",
-				Arguments: []cli.Argument{
-					&cli.StringArg{
-						Name: "exportpath",
-						UsageText: "path of the RDF XML files to export",
-						Value: "./data/",
-						Destination: &config.path,
-					},
-				},
-				Action: func(ctx context.Context, cmd *cli.Command) error {
-                    if err := exportrdf(&config); err != nil {
-						return err
-					}
-                    return nil
-                },
-			},
-		},
 		Flags: []cli.Flag{
 			&cli.StringFlag{
 				Name: "configpath",
@@ -86,6 +49,65 @@ func main() {
 				Destination: &config.url,
 			},
 		},
+		Commands: []*cli.Command{
+			{
+				Name: "import",
+				Aliases: []string{"i"},
+				Usage: "import RDF XML files into the Dgrap DB",
+				Arguments: []cli.Argument{
+					&cli.StringArg{
+						Name: "importpath",
+						UsageText: "path of the RDF XML files to import",
+						Value: "./data/",
+						Destination: &config.path,
+					},
+				},
+				Action: func(ctx context.Context, cmd *cli.Command) error {
+                    if err := importRDF(&config); err != nil {
+						return err
+					}
+                    return nil
+                },
+			},
+			{
+				Name: "export",
+				Aliases: []string{"e"},
+				Usage: "export RDF XML files from the Dgrap DB",
+				Arguments: []cli.Argument{
+					&cli.StringArg{
+						Name: "exportpath",
+						UsageText: "path of the RDF XML files to export",
+						Value: "./data/",
+						Destination: &config.path,
+					},
+				},
+				Action: func(ctx context.Context, cmd *cli.Command) error {
+                    if err := exportRDF(&config); err != nil {
+						return err
+					}
+                    return nil
+                },
+			},
+			{
+				Name: "create",
+				Usage: "create data schema in the Dgrap DB bases on provided XMI",
+				Aliases: []string{"s"},
+				Arguments: []cli.Argument{
+					&cli.StringArg{
+						Name: "schemapath",
+						UsageText: "path of the source XMI XML file",
+						Value: "./data/schema.xmi",
+						Destination: &config.path,
+					},
+				},
+				Action: func(ctx context.Context, cmd *cli.Command) error {
+                    if err := createSchema(&config); err != nil {
+						return err
+					}
+                    return nil
+                },
+			},
+		},
  	}
 
 	if err := cmd.Run(context.Background(), os.Args); err != nil {
@@ -93,13 +115,17 @@ func main() {
 	}
 }
 
-func importrdf(config *Config) error {
-	fmt.Println("importing from: ", config.path)
+func importRDF(config *Config) error {
+	fmt.Println("importing from: ", config.path , "into Dgraph with URL: ", config.url )
 	return nil
 }
 
-func exportrdf(config *Config) error {
-	fmt.Println("exporting to: ", config.path)
+func exportRDF(config *Config) error {
+	fmt.Println("exporting to: ", config.path, "from Dgraph with URL: ", config.url)
 	return nil
 }
 
+func createSchema(config *Config) error {
+	fmt.Println("create schema from", config.path, "into Dgraph with URL: ", config.url)
+	return nil
+}
