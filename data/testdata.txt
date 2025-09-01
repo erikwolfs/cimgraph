@@ -1,0 +1,31 @@
+<packagedElement xmi:type="uml:Class" xmi:id="EAID_AFB3B698_D55B_4b0c_B695_7A4806B80814" name="CapacitancePerLength">
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_CBAF9A7C_6FE4_438c_8423_CBA919750E9E" name="denominatorMultiplier" isStatic="true" isReadOnly="true">
+							<type xmi:idref="EAID_187CAE57_A83B_4353_A002_AF61EACCB844"/>
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000067_6FE4_438c_8423_CBA919750E9E" value="0"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000068_6FE4_438c_8423_CBA919750E9E" value="1"/>
+							<defaultValue xmi:type="uml:LiteralString" xmi:id="EAID_LI000069_6FE4_438c_8423_CBA919750E9E" value="none"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_844DC825_C327_4d18_9C90_8EC4025982B1" name="denominatorUnit" isStatic="true" isReadOnly="true">
+							<type xmi:idref="EAID_66DA823A_B6D8_4aea_8084_9DBADF8F8219"/>
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000069_C327_4d18_9C90_8EC4025982B1" value="0"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000070_C327_4d18_9C90_8EC4025982B1" value="1"/>
+							<defaultValue xmi:type="uml:LiteralString" xmi:id="EAID_LI000071_C327_4d18_9C90_8EC4025982B1" value="m"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_8A66459F_C8F4_440c_8347_9E90A1B1CB6C" name="multiplier" isStatic="true" isReadOnly="true">
+							<type xmi:idref="EAID_187CAE57_A83B_4353_A002_AF61EACCB844"/>
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000071_C8F4_440c_8347_9E90A1B1CB6C" value="0"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000072_C8F4_440c_8347_9E90A1B1CB6C" value="1"/>
+							<defaultValue xmi:type="uml:LiteralString" xmi:id="EAID_LI000073_C8F4_440c_8347_9E90A1B1CB6C" value="none"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_3BFEA431_5ED8_47c0_B085_7D0E23760611" name="unit" isStatic="true" isReadOnly="true">
+							<type xmi:idref="EAID_66DA823A_B6D8_4aea_8084_9DBADF8F8219"/>
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000073_5ED8_47c0_B085_7D0E23760611" value="0"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000074_5ED8_47c0_B085_7D0E23760611" value="1"/>
+							<defaultValue xmi:type="uml:LiteralString" xmi:id="EAID_LI000075_5ED8_47c0_B085_7D0E23760611" value="F"/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_6C7BBC62_76B1_4383_8901_C5498B46D2CA" name="value">
+							<type xmi:idref="EAID_CE061B0C_E2E4_44e3_B93D_C87DE4DBD69F"/>
+							<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000075_76B1_4383_8901_C5498B46D2CA" value="0"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000076_76B1_4383_8901_C5498B46D2CA" value="1"/>
+						</ownedAttribute>
+					</packagedElement>

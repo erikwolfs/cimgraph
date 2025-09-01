@@ -4,11 +4,11 @@ import (
 	//"encoding/xml"
 	//"github.com/dgraph-io/dgo/v240"
 	//"github.com/dgraph-io/dgo/v240/protos/api"
+	"cimgraph/dgraph"
 	"context"
 	"fmt"
 	"log"
 	"os"
-
 	"github.com/urfave/cli-altsrc/v3"
 	yaml "github.com/urfave/cli-altsrc/v3/yaml"
 	"github.com/urfave/cli/v3"
@@ -127,5 +127,9 @@ func exportRDF(config *Config) error {
 
 func createSchema(config *Config) error {
 	fmt.Println("create schema from", config.path, "into Dgraph with URL: ", config.url)
+	err := dgraph.CreateSchema(config.path)
+	if err != nil {
+		return err
+	}
 	return nil
 }

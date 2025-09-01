@@ -1,0 +1,30 @@
+- Package - packageElement
+    Constraint - ownedRule
+    Class - packageElement
+        Property - ownedAttribute
+            type_xmi:idref
+            lowerValue
+            upperValue
+            defaultValue
+        Generarization - generalization
+    Enumeration - PackageElement
+    Association - packagedElement
+        memberEnd
+        memberEnd
+        Property - ownedEnd
+            type
+            lowerValue
+            upperValue
+    Package - packageElement
+    Dependency - packageElement
+
+
+
+
+
+    packageElement
+        ownedRule
+        packageElement
+            ownedAttribute
+            generaralization
+            ownedEnd
