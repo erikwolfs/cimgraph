@@ -29,3 +29,13 @@
 							<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000076_76B1_4383_8901_C5498B46D2CA" value="1"/>
 						</ownedAttribute>
 					</packagedElement>
+
+
+<packagedElement xmi:type="uml:Class" xmi:id="EAID_DE66E2D9_4708_4958_84A6_32786286FC55" name="DCTopologicalIsland">
+							<generalization xmi:type="uml:Generalization" xmi:id="EAID_A279C4F9_B4B4_492e_9609_74BF7088E776" general="EAID_7C98020E_C03C_4105_93C3_EB6A8BB0B562"/>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_srcF88328_D643_4c98_8BAE_06152801F234" name="DCTopologicalNodes" association="EAID_39F88328_D643_4c98_8BAE_06152801F234">
+								<type xmi:idref="EAID_6244BB0F_2B27_4607_84D8_373932DEE501"/>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI001653__D643_4c98_8BAE_06152801F234" value="1"/>
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI001654__D643_4c98_8BAE_06152801F234" value="*"/>
+							</ownedAttribute>
+						</packagedElement>
