@@ -139,7 +139,11 @@ type SchemaNode struct {
 
 func CreateSchema(config Config) error {
 	schema := Schema{}
-	err := parseXMI(config.ImportPath, &schema)
+	err := parseXMI(config, &schema)
+	if err != nil {
+		return err
+	}
+	err = addmodeltypes(&schema)
 	if err != nil {
 		return err
 	}
@@ -166,6 +170,26 @@ func CreateSchema(config Config) error {
 	return nil
 }
 
+func addmodeltypes(schema *Schema) error {
+	node := SchemaNode{Name: "FullModel"}
+	node.Predicates = make(map[string]SchemaPredicate)
+	node.Predicates["rdf.about"] = SchemaPredicate{Name: "rdf.about", Type: "string"}
+	predicates := []SchemaPredicate{{Name: "Model.created", Type: "datetime"},
+									{Name: "Model.definition",Type: "string"},
+									{Name: "Model.modelingAuthoritySet", Type: "string"},
+									{Name: "Model.profile", Type: "[string]"},
+									{Name: "Model.scenarioTime", Type: "datetime"},
+									{Name: "Model.version", Type: "int"},
+									{Name: "Model.Supersedes", Type: "[uid]"},
+									{Name: "Model.DependentOn", Type: "[uid]"}}
+	for i := 0;i < 8;i++ {
+		schema.Predicates[predicates[i].Name] = predicates[i]
+		node.Predicates[predicates[i].Name] = predicates[i]
+	}
+	schema.Nodes["FullModel"] = node
+	return nil
+}
+
 func writePredicates(conn *dgo.Dgraph, schema *Schema) error {
 	for _,i := range schema.Predicates {
 		err := addPredicate(conn, &i)
@@ -188,12 +212,12 @@ func writeNodes(conn *dgo.Dgraph, schema *Schema) error {
 	return nil
 }
 
-func parseXMI(path string, schema *Schema) error {
-	file, err := os.Open(path)
+func parseXMI(config Config, schema *Schema) error {
+	file, err := os.Open(config.ImportPath)
     if err != nil {
         return err
     }
-	fmt.Println("Successfully Opened ", path)
+	fmt.Println("Successfully Opened ", config.ImportPath)
     defer file.Close()
 	var xmi XMI
 	var cim CIMProfile
@@ -231,7 +255,7 @@ func parseXMI(path string, schema *Schema) error {
 	}
 	//showCIM(&cim)
 	createSchemaData(schema, &cim)
-	writeCIM(&cim)
+	writeCIM(&cim, config)
 	return nil
 }
 
@@ -357,8 +381,8 @@ func makeCharsetReader(charset string, input io.Reader) (io.Reader, error) {
     return nil, fmt.Errorf("unknown charset: %s", charset)
 }
 
-func writeCIM(cim *CIMProfile) {
-	file, err := os.Create("./data/output.txt")
+func writeCIM(cim *CIMProfile, config Config) {
+	file, err := os.Create(config.DebugPath)
 	if err != nil {
 		fmt.Println(err)
 		return
