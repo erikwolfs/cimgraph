@@ -1,6 +1,5 @@
 <?xml  version='1.0' encoding='windows-1252' ?>
 <xmi:XMI xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0">
-	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5" exporterID="1628"/>
 	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
 		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_143B7521_2347_4ae5_9FB3_EE9990F0F32B" name="Part456" visibility="public">
 			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_3D5412AF_72F1_4eff_82BE_46542A38F525" name="SteadyStateHypothesisProfile" visibility="public">
@@ -3700,7 +3699,7 @@
 				<attributes>
 					<attribute xmi:idref="EAID_FFD9E988_48F1_4cb0_BFF2_3C5F640654D6" name="operatingMode" scope="Public">
 						<initial/>
-						<documentation value="Indicates whether the DC pole is operating as an inverter or as a rectifier. It is converter’s control variable used in power flow."/>
+						<documentation value="Indicates whether the DC pole is operating as an inverter or as a rectifier. It is converterï¿½s control variable used in power flow."/>
 						<model ea_localid="171967" ea_guid="{FFD9E988-48F1-4cb0-BFF2-3C5F640654D6}"/>
 						<properties type="CsOperatingModeKind" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -3734,7 +3733,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_8E3424D5_2632_4894_88CD_B9A1C381598B" name="targetAlpha" scope="Public">
 						<initial/>
-						<documentation value="Target firing angle. It is converter’s control variable used in power flow. It is only applicable for rectifier if continuous tap changer control is used. Allowed values are within the range minAlpha&amp;lt;=targetAlpha&amp;lt;=maxAlpha. The attribute shall be a positive value."/>
+						<documentation value="Target firing angle. It is converterï¿½s control variable used in power flow. It is only applicable for rectifier if continuous tap changer control is used. Allowed values are within the range minAlpha&amp;lt;=targetAlpha&amp;lt;=maxAlpha. The attribute shall be a positive value."/>
 						<model ea_localid="169666" ea_guid="{8E3424D5-2632-4894-88CD-B9A1C381598B}"/>
 						<properties type="AngleDegrees" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -3751,7 +3750,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_6A90FF9D_4864_4cfa_A3D3_AA215FFA7F0C" name="targetGamma" scope="Public">
 						<initial/>
-						<documentation value="Target extinction angle. It is converter’s control variable used in power flow. It is only applicable for inverter if continuous tap changer control is used. Allowed values are within the range minGamma&amp;lt;=targetGamma&amp;lt;=maxGamma. The attribute shall be a positive value."/>
+						<documentation value="Target extinction angle. It is converterï¿½s control variable used in power flow. It is only applicable for inverter if continuous tap changer control is used. Allowed values are within the range minGamma&amp;lt;=targetGamma&amp;lt;=maxGamma. The attribute shall be a positive value."/>
 						<model ea_localid="168928" ea_guid="{6A90FF9D-4864-4cfa-A3D3-AA215FFA7F0C}"/>
 						<properties type="AngleDegrees" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -3768,7 +3767,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_FADF59FD_0D71_4014_9E9C_72CFAFD7817D" name="targetIdc" scope="Public">
 						<initial/>
-						<documentation value="DC current target value. It is converter’s control variable used in power flow. The attribute shall be a positive value."/>
+						<documentation value="DC current target value. It is converterï¿½s control variable used in power flow. The attribute shall be a positive value."/>
 						<model ea_localid="171856" ea_guid="{FADF59FD-0D71-4014-9E9C-72CFAFD7817D}"/>
 						<properties type="CurrentFlow" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -7071,7 +7070,7 @@
 			</element>
 			<element xmi:idref="EAID_B35DBF20_FD58_4b93_A4F5_7C68993D96FF" xmi:type="uml:Class" name="UnitMultiplier" scope="public">
 				<model package="EAPK_3D5412AF_72F1_4eff_82BE_46542A38F525" tpos="68" ea_localid="45954" ea_eleType="element"/>
-				<properties documentation="The unit multipliers defined for the CIM.  When applied to unit symbols, the unit symbol is treated as a derived unit. Regardless of the contents of the unit symbol text, the unit symbol shall be treated as if it were a single-character unit symbol. Unit symbols should not contain multipliers, and it should be left to the multiplier to define the multiple for an entire data type. &#xA;&#xA;For example, if a unit symbol is &quot;m2Pers&quot; and the multiplier is &quot;k&quot;, then the value is k(m**2/s), and the multiplier applies to the entire final value, not to any individual part of the value. This can be conceptualized by substituting a derived unit symbol for the unit type. If one imagines that the symbol &quot;Þ&quot; represents the derived unit &quot;m2Pers&quot;, then applying the multiplier &quot;k&quot; can be conceptualized simply as &quot;kÞ&quot;.&#xA;&#xA;For example, the SI unit for mass is &quot;kg&quot; and not &quot;g&quot;.  If the unit symbol is defined as &quot;kg&quot;, then the multiplier is applied to &quot;kg&quot; as a whole and does not replace the &quot;k&quot; in front of the &quot;g&quot;. In this case, the multiplier of &quot;m&quot; would be used with the unit symbol of &quot;kg&quot; to represent one gram.  As a text string, this violates the instructions in IEC 80000-1. However, because the unit symbol in CIM is treated as a derived unit instead of as an SI unit, it makes more sense to conceptualize the &quot;kg&quot; as if it were replaced by one of the proposed replacements for the SI mass symbol. If one imagines that the &quot;kg&quot; were replaced by a symbol &quot;Þ&quot;, then it is easier to conceptualize the multiplier &quot;m&quot; as creating the proper unit &quot;mÞ&quot;, and not the forbidden unit &quot;mkg&quot;." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="enumeration" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<properties documentation="The unit multipliers defined for the CIM.  When applied to unit symbols, the unit symbol is treated as a derived unit. Regardless of the contents of the unit symbol text, the unit symbol shall be treated as if it were a single-character unit symbol. Unit symbols should not contain multipliers, and it should be left to the multiplier to define the multiple for an entire data type. &#xA;&#xA;For example, if a unit symbol is &quot;m2Pers&quot; and the multiplier is &quot;k&quot;, then the value is k(m**2/s), and the multiplier applies to the entire final value, not to any individual part of the value. This can be conceptualized by substituting a derived unit symbol for the unit type. If one imagines that the symbol &quot;ï¿½&quot; represents the derived unit &quot;m2Pers&quot;, then applying the multiplier &quot;k&quot; can be conceptualized simply as &quot;kï¿½&quot;.&#xA;&#xA;For example, the SI unit for mass is &quot;kg&quot; and not &quot;g&quot;.  If the unit symbol is defined as &quot;kg&quot;, then the multiplier is applied to &quot;kg&quot; as a whole and does not replace the &quot;k&quot; in front of the &quot;g&quot;. In this case, the multiplier of &quot;m&quot; would be used with the unit symbol of &quot;kg&quot; to represent one gram.  As a text string, this violates the instructions in IEC 80000-1. However, because the unit symbol in CIM is treated as a derived unit instead of as an SI unit, it makes more sense to conceptualize the &quot;kg&quot; as if it were replaced by one of the proposed replacements for the SI mass symbol. If one imagines that the &quot;kg&quot; were replaced by a symbol &quot;ï¿½&quot;, then it is easier to conceptualize the multiplier &quot;m&quot; as creating the proper unit &quot;mï¿½&quot;, and not the forbidden unit &quot;mkg&quot;." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="enumeration" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
 				<project author="Jean-Luc" phase="1.0" created="2019-04-12 11:32:42" modified="2020-08-26 16:37:21" complexity="1" status="Proposed"/>
 				<code gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
@@ -7445,7 +7444,7 @@
 			</element>
 			<element xmi:idref="EAID_9F5B9769_2E6F_4bce_9A7A_1493BF59FB01" xmi:type="uml:Class" name="UnitSymbol" scope="public">
 				<model package="EAPK_3D5412AF_72F1_4eff_82BE_46542A38F525" tpos="69" ea_localid="45883" ea_eleType="element"/>
-				<properties documentation="The derived units defined for usage in the CIM. In some cases, the derived unit is equal to an SI unit. Whenever possible, the standard derived symbol is used instead of the formula for the derived unit. For example, the unit symbol Farad is defined as &quot;F&quot; instead of &quot;CPerV&quot;. In cases where a standard symbol does not exist for a derived unit, the formula for the unit is used as the unit symbol. For example, density does not have a standard symbol and so it is represented as &quot;kgPerm3&quot;. With the exception of the &quot;kg&quot;, which is an SI unit, the unit symbols do not contain multipliers and therefore represent the base derived unit to which a multiplier can be applied as a whole. &#xA;Every unit symbol is treated as an unparseable text as if it were a single-letter symbol. The meaning of each unit symbol is defined by the accompanying descriptive text and not by the text contents of the unit symbol.&#xA;To allow the widest possible range of serializations without requiring special character handling, several substitutions are made which deviate from the format described in IEC 80000-1. The division symbol &quot;/&quot; is replaced by the letters &quot;Per&quot;. Exponents are written in plain text after the unit as &quot;m3&quot; instead of being formatted as &quot;m&quot; with a superscript of 3  or introducing a symbol as in &quot;m^3&quot;. The degree symbol &quot;°&quot; is replaced with the letters &quot;deg&quot;. Any clarification of the meaning for a substitution is included in the description for the unit symbol.&#xA;Non-SI units are included in list of unit symbols to allow sources of data to be correctly labelled with their non-SI units (for example, a GPS sensor that is reporting numbers that represent feet instead of meters). This allows software to use the unit symbol information correctly convert and scale the raw data of those sources into SI-based units. &#xA;The integer values are used for harmonization with IEC 61850." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="enumeration" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<properties documentation="The derived units defined for usage in the CIM. In some cases, the derived unit is equal to an SI unit. Whenever possible, the standard derived symbol is used instead of the formula for the derived unit. For example, the unit symbol Farad is defined as &quot;F&quot; instead of &quot;CPerV&quot;. In cases where a standard symbol does not exist for a derived unit, the formula for the unit is used as the unit symbol. For example, density does not have a standard symbol and so it is represented as &quot;kgPerm3&quot;. With the exception of the &quot;kg&quot;, which is an SI unit, the unit symbols do not contain multipliers and therefore represent the base derived unit to which a multiplier can be applied as a whole. &#xA;Every unit symbol is treated as an unparseable text as if it were a single-letter symbol. The meaning of each unit symbol is defined by the accompanying descriptive text and not by the text contents of the unit symbol.&#xA;To allow the widest possible range of serializations without requiring special character handling, several substitutions are made which deviate from the format described in IEC 80000-1. The division symbol &quot;/&quot; is replaced by the letters &quot;Per&quot;. Exponents are written in plain text after the unit as &quot;m3&quot; instead of being formatted as &quot;m&quot; with a superscript of 3  or introducing a symbol as in &quot;m^3&quot;. The degree symbol &quot;ï¿½&quot; is replaced with the letters &quot;deg&quot;. Any clarification of the meaning for a substitution is included in the description for the unit symbol.&#xA;Non-SI units are included in list of unit symbols to allow sources of data to be correctly labelled with their non-SI units (for example, a GPS sensor that is reporting numbers that represent feet instead of meters). This allows software to use the unit symbol information correctly convert and scale the raw data of those sources into SI-based units. &#xA;The integer values are used for harmonization with IEC 61850." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="enumeration" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
 				<project author="C56850" phase="1.0" created="2019-04-12 11:32:06" modified="2020-08-26 16:37:22" complexity="1" status="Proposed"/>
 				<code gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
@@ -7491,7 +7490,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_363BBE44_EC44_4cf8_AC4A_9C72B8E083C0" name="kg" scope="Public">
 						<initial body="3"/>
-						<documentation value="Mass in kilograms.  Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3."/>
+						<documentation value="Mass in kilograms.  Note: multiplier ï¿½kï¿½ is included in this unit symbol for compatibility with IEC 61850-7-3."/>
 						<model ea_localid="167811" ea_guid="{363BBE44-EC44-4cf8-AC4A-9C72B8E083C0}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -7678,7 +7677,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_92233223_4000_434c_A0E7_DDE073983D8B" name="degC" scope="Public">
 						<initial body="23"/>
-						<documentation value="Relative temperature in degrees Celsius.&#xA;In the SI unit system the symbol is °C. Electric charge is measured in coulomb that has the unit symbol C. To distinguish degree Celsius from coulomb the symbol used in the UML is degC. The reason for not using °C is that the special character ° is difficult to manage in software."/>
+						<documentation value="Relative temperature in degrees Celsius.&#xA;In the SI unit system the symbol is ï¿½C. Electric charge is measured in coulomb that has the unit symbol C. To distinguish degree Celsius from coulomb the symbol used in the UML is degC. The reason for not using ï¿½C is that the special character ï¿½ is difficult to manage in software."/>
 						<model ea_localid="169750" ea_guid="{92233223-4000-434c-A0E7-DDE073983D8B}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -7729,7 +7728,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_C290163F_7287_46f1_9876_F329C1247577" name="C" scope="Public">
 						<initial body="26"/>
-						<documentation value="Electric charge in coulombs (A·s)."/>
+						<documentation value="Electric charge in coulombs (Aï¿½s)."/>
 						<model ea_localid="170767" ea_guid="{C290163F-7287-46f1-9876-F329C1247577}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -7814,7 +7813,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_F642180F_899F_47eb_A210_F8DD2FEC23F1" name="J" scope="Public">
 						<initial body="31"/>
-						<documentation value="Energy in joules (N·m = C·V = W·s)."/>
+						<documentation value="Energy in joules (Nï¿½m = Cï¿½V = Wï¿½s)."/>
 						<model ea_localid="171772" ea_guid="{F642180F-899F-47eb-A210-F8DD2FEC23F1}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -7831,7 +7830,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_AAF114F1_082D_4642_B727_96E5C4F19EF2" name="N" scope="Public">
 						<initial body="32"/>
-						<documentation value="Force in newtons (kg·m/s²)."/>
+						<documentation value="Force in newtons (kgï¿½m/sï¿½)."/>
 						<model ea_localid="170260" ea_guid="{AAF114F1-082D-4642-B727-96E5C4F19EF2}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -7865,7 +7864,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_717A17D7_DEAD_4c8e_8464_13BE7598FB10" name="lx" scope="Public">
 						<initial body="34"/>
-						<documentation value="Illuminance in lux (lm/m²)."/>
+						<documentation value="Illuminance in lux (lm/mï¿½)."/>
 						<model ea_localid="169063" ea_guid="{717A17D7-DEAD-4c8e-8464-13BE7598FB10}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -7882,7 +7881,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_39582893_ECC2_497b_981F_368C7FBFA106" name="lm" scope="Public">
 						<initial body="35"/>
-						<documentation value="Luminous flux in lumens (cd·sr)."/>
+						<documentation value="Luminous flux in lumens (cdï¿½sr)."/>
 						<model ea_localid="167880" ea_guid="{39582893-ECC2-497b-981F-368C7FBFA106}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -7899,7 +7898,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_FAD434D0_1745_41fd_AF1F_0F78D4F8DF03" name="Wb" scope="Public">
 						<initial body="36"/>
-						<documentation value="Magnetic flux in webers (V·s)."/>
+						<documentation value="Magnetic flux in webers (Vï¿½s)."/>
 						<model ea_localid="171854" ea_guid="{FAD434D0-1745-41fd-AF1F-0F78D4F8DF03}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -7950,7 +7949,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_0AF300AC_ABFD_4486_BC58_7184667ED01F" name="Pa" scope="Public">
 						<initial body="39"/>
-						<documentation value="Pressure in pascals (N/m²). Note: the absolute or relative measurement of pressure is implied with this entry. See below for more explicit forms."/>
+						<documentation value="Pressure in pascals (N/mï¿½). Note: the absolute or relative measurement of pressure is implied with this entry. See below for more explicit forms."/>
 						<model ea_localid="166917" ea_guid="{0AF300AC-ABFD-4486-BC58-7184667ED01F}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -7967,7 +7966,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_B1527F61_CF99_4fc0_953C_DAE2AE1EDABC" name="m2" scope="Public">
 						<initial body="41"/>
-						<documentation value="Area in square metres (m²)."/>
+						<documentation value="Area in square metres (mï¿½)."/>
 						<model ea_localid="170402" ea_guid="{B1527F61-CF99-4fc0-953C-DAE2AE1EDABC}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -7984,7 +7983,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_7A63A963_F69D_4c8e_99D7_097338413AE3" name="m3" scope="Public">
 						<initial body="42"/>
-						<documentation value="Volume in cubic metres (m³)."/>
+						<documentation value="Volume in cubic metres (mï¿½)."/>
 						<model ea_localid="169265" ea_guid="{7A63A963-F69D-4c8e-99D7-097338413AE3}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8018,7 +8017,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_34550757_1013_40f4_B0FD_AFF66B3698A4" name="mPers2" scope="Public">
 						<initial body="44"/>
-						<documentation value="Acceleration in metres per second squared (m/s²)."/>
+						<documentation value="Acceleration in metres per second squared (m/sï¿½)."/>
 						<model ea_localid="167781" ea_guid="{34550757-1013-40f4-B0FD-AFF66B3698A4}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8035,7 +8034,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_476462C2_11F2_4868_84FF_215ABDE3B475" name="m3Pers" scope="Public">
 						<initial body="45"/>
-						<documentation value="Volumetric flow rate in cubic metres per second (m³/s)."/>
+						<documentation value="Volumetric flow rate in cubic metres per second (mï¿½/s)."/>
 						<model ea_localid="168198" ea_guid="{476462C2-11F2-4868-84FF-215ABDE3B475}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8052,7 +8051,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_CC48956A_3EC8_439a_B4EA_0CB18888566C" name="mPerm3" scope="Public">
 						<initial body="46"/>
-						<documentation value="Fuel efficiency in metres per cubic metres (m/m³)."/>
+						<documentation value="Fuel efficiency in metres per cubic metres (m/mï¿½)."/>
 						<model ea_localid="170944" ea_guid="{CC48956A-3EC8-439a-B4EA-0CB18888566C}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8069,7 +8068,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_839F42F1_D71D_4204_9EFC_1A6BE969F76B" name="kgm" scope="Public">
 						<initial body="47"/>
-						<documentation value="Moment of mass in kilogram metres (kg·m) (first moment of mass). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3."/>
+						<documentation value="Moment of mass in kilogram metres (kgï¿½m) (first moment of mass). Note: multiplier ï¿½kï¿½ is included in this unit symbol for compatibility with IEC 61850-7-3."/>
 						<model ea_localid="169475" ea_guid="{839F42F1-D71D-4204-9EFC-1A6BE969F76B}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8086,7 +8085,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_40B5C410_A615_4e08_A3A3_7641F9DE0774" name="kgPerm3" scope="Public">
 						<initial body="48"/>
-						<documentation value="Density in kilogram/cubic metres (kg/m³). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3."/>
+						<documentation value="Density in kilogram/cubic metres (kg/mï¿½). Note: multiplier ï¿½kï¿½ is included in this unit symbol for compatibility with IEC 61850-7-3."/>
 						<model ea_localid="168047" ea_guid="{40B5C410-A615-4e08-A3A3-7641F9DE0774}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8103,7 +8102,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_95AC3E86_B3B7_4034_B329_1BFBD0234A61" name="m2Pers" scope="Public">
 						<initial body="49"/>
-						<documentation value="Viscosity in square metres / second (m²/s)."/>
+						<documentation value="Viscosity in square metres / second (mï¿½/s)."/>
 						<model ea_localid="169838" ea_guid="{95AC3E86-B3B7-4034-B329-1BFBD0234A61}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8324,7 +8323,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_5AFBE1B1_A638_4a24_AF91_96D79BEE09F2" name="VAr" scope="Public">
 						<initial body="63"/>
-						<documentation value="Reactive power in volt amperes reactive. The “reactive” or “imaginary” component of electrical power (VIsin(phi)). (See also real power and apparent power).&#xA;Note: Different meter designs use different methods to arrive at their results. Some meters may compute reactive power as an arithmetic value, while others compute the value vectorially. The data consumer should determine the method in use and the suitability of the measurement for the intended purpose."/>
+						<documentation value="Reactive power in volt amperes reactive. The ï¿½reactiveï¿½ or ï¿½imaginaryï¿½ component of electrical power (VIsin(phi)). (See also real power and apparent power).&#xA;Note: Different meter designs use different methods to arrive at their results. Some meters may compute reactive power as an arithmetic value, while others compute the value vectorially. The data consumer should determine the method in use and the suitability of the measurement for the intended purpose."/>
 						<model ea_localid="168612" ea_guid="{5AFBE1B1-A638-4a24-AF91-96D79BEE09F2}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8341,7 +8340,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_DBFB23C4_C4D5_4029_B63D_687FE9626248" name="cosPhi" scope="Public">
 						<initial body="65"/>
-						<documentation value="Power factor, dimensionless.&#xA;Note 1: This definition of power factor only holds for balanced systems. See the alternative definition under code 153.&#xA;Note 2 : Beware of differing sign conventions in use between the IEC and EEI. It is assumed that the data consumer understands the type of meter in use and the sign convention in use by the utility."/>
+						<documentation value="Power factor, dimensionless.&#xA;Note 1: This definition of power factor only holds for balanced systems. See the alternative definition under code 153.&#xA;Note 2ï¿½: Beware of differing sign conventions in use between the IEC and EEI. It is assumed that the data consumer understands the type of meter in use and the sign convention in use by the utility."/>
 						<model ea_localid="171238" ea_guid="{DBFB23C4-C4D5-4029-B63D-687FE9626248}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8375,7 +8374,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_1C54B688_9474_4b1f_9DD7_C97315915E0A" name="V2" scope="Public">
 						<initial body="67"/>
-						<documentation value="Volt squared (W²/A²)."/>
+						<documentation value="Volt squared (Wï¿½/Aï¿½)."/>
 						<model ea_localid="167278" ea_guid="{1C54B688-9474-4b1f-9DD7-C97315915E0A}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8392,7 +8391,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_8B65131B_A541_48d0_9621_E945221AFE3E" name="As" scope="Public">
 						<initial body="68"/>
-						<documentation value="Ampere seconds (A·s)."/>
+						<documentation value="Ampere seconds (Aï¿½s)."/>
 						<model ea_localid="169618" ea_guid="{8B65131B-A541-48d0-9621-E945221AFE3E}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8409,7 +8408,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_D2280067_A595_49fe_9DAA_14C857C9A39B" name="A2" scope="Public">
 						<initial body="69"/>
-						<documentation value="Amperes squared (A²)."/>
+						<documentation value="Amperes squared (Aï¿½)."/>
 						<model ea_localid="171053" ea_guid="{D2280067-A595-49fe-9DAA-14C857C9A39B}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8426,7 +8425,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_07262052_C3CB_43cf_91A9_6D5DC27F5786" name="A2s" scope="Public">
 						<initial body="70"/>
-						<documentation value="Ampere squared time in square amperes (A²s)."/>
+						<documentation value="Ampere squared time in square amperes (Aï¿½s)."/>
 						<model ea_localid="166840" ea_guid="{07262052-C3CB-43cf-91A9-6D5DC27F5786}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8562,7 +8561,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_DC32F635_C0B8_45bb_BAAE_F42D8F1A0A2B" name="kgm2" scope="Public">
 						<initial body="78"/>
-						<documentation value="Moment of mass in kilogram square metres (kg·m²) (Second moment of mass, commonly called the moment of inertia). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3."/>
+						<documentation value="Moment of mass in kilogram square metres (kgï¿½mï¿½) (Second moment of mass, commonly called the moment of inertia). Note: multiplier ï¿½kï¿½ is included in this unit symbol for compatibility with IEC 61850-7-3."/>
 						<model ea_localid="171243" ea_guid="{DC32F635-C0B8-45bb-BAAE-F42D8F1A0A2B}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8579,7 +8578,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_5D17D7AD_00ED_4163_9825_AAB161467AF8" name="dB" scope="Public">
 						<initial body="79"/>
-						<documentation value="Sound pressure level in decibels. Note:  multiplier “d” is included in this unit symbol for compatibility with IEC 61850-7-3."/>
+						<documentation value="Sound pressure level in decibels. Note:  multiplier ï¿½dï¿½ is included in this unit symbol for compatibility with IEC 61850-7-3."/>
 						<model ea_localid="168648" ea_guid="{5D17D7AD-00ED-4163-9825-AAB161467AF8}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8630,7 +8629,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_DA9C9CE2_A7BE_4ee4_9173_4A514A8FA1F2" name="dBm" scope="Public">
 						<initial body="83"/>
-						<documentation value="Power level (logarithmic ratio of signal strength , Bel-mW), normalized to 1mW. Note:  multiplier “d” is included in this unit symbol for compatibility with IEC 61850-7-3."/>
+						<documentation value="Power level (logarithmic ratio of signal strength , Bel-mW), normalized to 1mW. Note:  multiplier ï¿½dï¿½ is included in this unit symbol for compatibility with IEC 61850-7-3."/>
 						<model ea_localid="171205" ea_guid="{DA9C9CE2-A7BE-4ee4-9173-4A514A8FA1F2}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8919,7 +8918,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_8C1DBA2E_2D61_4878_A9A9_D3567281BD27" name="lPerl" scope="Public">
 						<initial body="143"/>
-						<documentation value="Concentration, The ratio of the volume of a solute divided by the volume of  the solution. Note: Users may need use a prefix such a ‘µ’ to express a quantity such as ‘µL/L’."/>
+						<documentation value="Concentration, The ratio of the volume of a solute divided by the volume of  the solution. Note: Users may need use a prefix such a ï¿½ï¿½ï¿½ to express a quantity such as ï¿½ï¿½L/Lï¿½."/>
 						<model ea_localid="169634" ea_guid="{8C1DBA2E-2D61-4878-A9A9-D3567281BD27}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8936,7 +8935,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_29EDE522_6E1C_43bc_AC39_451008D05DB6" name="gPerg" scope="Public">
 						<initial body="144"/>
-						<documentation value="Concentration, The ratio of the mass of a solute divided by the mass of  the solution. Note: Users may need use a prefix such a ‘µ’ to express a quantity such as ‘µg/g’."/>
+						<documentation value="Concentration, The ratio of the mass of a solute divided by the mass of  the solution. Note: Users may need use a prefix such a ï¿½ï¿½ï¿½ to express a quantity such as ï¿½ï¿½g/gï¿½."/>
 						<model ea_localid="167561" ea_guid="{29EDE522-6E1C-43bc-AC39-451008D05DB6}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -8953,7 +8952,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_966DFECF_1481_41ce_8017_12054495EF54" name="molPerm3" scope="Public">
 						<initial body="145"/>
-						<documentation value="Concentration, The amount of substance concentration, (c), the amount of solvent in moles divided by the volume of solution in m³."/>
+						<documentation value="Concentration, The amount of substance concentration, (c), the amount of solvent in moles divided by the volume of solution in mï¿½."/>
 						<model ea_localid="169856" ea_guid="{966DFECF-1481-41ce-8017-12054495EF54}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -9004,7 +9003,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_92A572B6_F4F7_4ea1_941D_487FE49108AF" name="sPers" scope="Public">
 						<initial body="149"/>
-						<documentation value="Time, Ratio of time.  Note: Users may need to supply a prefix such as ‘&amp;#181;’ to show rates such as ‘&amp;#181;s/s’."/>
+						<documentation value="Time, Ratio of time.  Note: Users may need to supply a prefix such as ï¿½&amp;#181;ï¿½ to show rates such as ï¿½&amp;#181;s/sï¿½."/>
 						<model ea_localid="169763" ea_guid="{92A572B6-F4F7-4ea1-941D-487FE49108AF}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -9021,7 +9020,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_42F752FA_D5CE_4827_B2B2_55680EB9B8FA" name="HzPerHz" scope="Public">
 						<initial body="150"/>
-						<documentation value="Frequency, rate of frequency change.   Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mHz/Hz’."/>
+						<documentation value="Frequency, rate of frequency change.   Note: Users may need to supply a prefix such as ï¿½mï¿½ to show rates such as ï¿½mHz/Hzï¿½."/>
 						<model ea_localid="168107" ea_guid="{42F752FA-D5CE-4827-B2B2-55680EB9B8FA}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -9038,7 +9037,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_3B21D4BB_0C79_4790_8715_990561565FCC" name="VPerV" scope="Public">
 						<initial body="151"/>
-						<documentation value="Voltage, ratio of voltages.  Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mV/V’."/>
+						<documentation value="Voltage, ratio of voltages.  Note: Users may need to supply a prefix such as ï¿½mï¿½ to show rates such as ï¿½mV/Vï¿½."/>
 						<model ea_localid="167918" ea_guid="{3B21D4BB-0C79-4790-8715-990561565FCC}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -9055,7 +9054,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_B7D26A57_C362_4074_A9B1_8CF197AAF6D7" name="APerA" scope="Public">
 						<initial body="152"/>
-						<documentation value="Current, ratio of amperages.   Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mA/A’."/>
+						<documentation value="Current, ratio of amperages.   Note: Users may need to supply a prefix such as ï¿½mï¿½ to show rates such as ï¿½mA/Aï¿½."/>
 						<model ea_localid="170538" ea_guid="{B7D26A57-C362-4074-A9B1-8CF197AAF6D7}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -9174,7 +9173,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_A8DF0005_6C76_43cf_9B14_221695D4A1AA" name="WPerW" scope="Public">
 						<initial body="168"/>
-						<documentation value="Signal Strength, ratio of power.   Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mW/W’."/>
+						<documentation value="Signal Strength, ratio of power.   Note: Users may need to supply a prefix such as ï¿½mï¿½ to show rates such as ï¿½mW/Wï¿½."/>
 						<model ea_localid="170214" ea_guid="{A8DF0005-6C76-43cf-9B14-221695D4A1AA}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -9599,7 +9598,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_2BE8D4DB_554B_43f1_BB64_497B1ED09C29" name="tonne" scope="Public">
 						<initial body="199"/>
-						<documentation value="Mass in tons, “tonne” or “metric  ton” (1000 kg = 1 Mg)."/>
+						<documentation value="Mass in tons, ï¿½tonneï¿½ or ï¿½metric  tonï¿½ (1000 kg = 1 Mg)."/>
 						<model ea_localid="167609" ea_guid="{2BE8D4DB-554B-43f1-BB64-497B1ED09C29}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -9820,7 +9819,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_FB59B64A_35FA_455d_AAAF_390F1098C27A" name="kgPerJ" scope="Public">
 						<initial/>
-						<documentation value="Weight per energy in kilograms per joule (kg/J). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3."/>
+						<documentation value="Weight per energy in kilograms per joule (kg/J). Note: multiplier ï¿½kï¿½ is included in this unit symbol for compatibility with IEC 61850-7-3."/>
 						<model ea_localid="171866" ea_guid="{FB59B64A-35FA-455d-AAAF-390F1098C27A}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -10828,7 +10827,7 @@
 				<attributes>
 					<attribute xmi:idref="EAID_832618CF_150B_498b_86E7_E17B7880E13A" name="idc" scope="Public">
 						<initial/>
-						<documentation value="Converter DC current, also called Id. It is converter’s state variable, result from power flow."/>
+						<documentation value="Converter DC current, also called Id. It is converterï¿½s state variable, result from power flow."/>
 						<model ea_localid="169465" ea_guid="{832618CF-150B-498b-86E7-E17B7880E13A}"/>
 						<properties type="CurrentFlow" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -10845,7 +10844,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_826E29DB_F82E_4982_8993_9AA9224764F7" name="poleLossP" scope="Public">
 						<initial/>
-						<documentation value="The active power loss at a DC Pole &#xA;= idleLoss + switchingLoss*|Idc| + resitiveLoss*Idc^2.&#xA;For lossless operation Pdc=Pac.&#xA;For rectifier operation with losses Pdc=Pac-lossP.&#xA;For inverter operation with losses Pdc=Pac+lossP.&#xA;It is converter’s state variable used in power flow. The attribute shall be a positive value."/>
+						<documentation value="The active power loss at a DC Pole &#xA;= idleLoss + switchingLoss*|Idc| + resitiveLoss*Idc^2.&#xA;For lossless operation Pdc=Pac.&#xA;For rectifier operation with losses Pdc=Pac-lossP.&#xA;For inverter operation with losses Pdc=Pac+lossP.&#xA;It is converterï¿½s state variable used in power flow. The attribute shall be a positive value."/>
 						<model ea_localid="169448" ea_guid="{826E29DB-F82E-4982-8993-9AA9224764F7}"/>
 						<properties type="ActivePower" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -10862,7 +10861,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_4F26162A_B57E_426d_AF64_1CCD3ABB3A32" name="uc" scope="Public">
 						<initial/>
-						<documentation value="Line-to-line converter voltage, the voltage at the AC side of the valve. It is converter’s state variable, result from power flow. The attribute shall be a positive value."/>
+						<documentation value="Line-to-line converter voltage, the voltage at the AC side of the valve. It is converterï¿½s state variable, result from power flow. The attribute shall be a positive value."/>
 						<model ea_localid="168377" ea_guid="{4F26162A-B57E-426d-AF64-1CCD3ABB3A32}"/>
 						<properties type="Voltage" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -10879,7 +10878,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_8A06800F_ABA2_4957_ADB0_1444539D6002" name="udc" scope="Public">
 						<initial/>
-						<documentation value="Converter voltage at the DC side, also called Ud. It is converter’s state variable, result from power flow. The attribute shall be a positive value."/>
+						<documentation value="Converter voltage at the DC side, also called Ud. It is converterï¿½s state variable, result from power flow. The attribute shall be a positive value."/>
 						<model ea_localid="169596" ea_guid="{8A06800F-ABA2-4957-ADB0-1444539D6002}"/>
 						<properties type="Voltage" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -10934,7 +10933,7 @@
 				<attributes>
 					<attribute xmi:idref="EAID_A724C15E_B42D_44d3_BE77_072BE36E6D3C" name="alpha" scope="Public">
 						<initial/>
-						<documentation value="Firing angle that determines the dc voltage at the converter dc terminal. Typical value between 10 degrees and 18 degrees for a rectifier. It is converter’s state variable, result from power flow. The attribute shall be a positive value."/>
+						<documentation value="Firing angle that determines the dc voltage at the converter dc terminal. Typical value between 10 degrees and 18 degrees for a rectifier. It is converterï¿½s state variable, result from power flow. The attribute shall be a positive value."/>
 						<model ea_localid="171996" ea_guid="{A724C15E-B42D-44d3-BE77-072BE36E6D3C}"/>
 						<properties type="AngleDegrees" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -10951,7 +10950,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_AB94A1E6_25EF_4880_A191_7CB62C64B943" name="gamma" scope="Public">
 						<initial/>
-						<documentation value="Extinction angle. It is used to limit the dc voltage at the inverter if needed. Typical value between 17 degrees and 20 degrees for an inverter. It is converter’s state variable, result from power flow. The attribute shall be a positive value."/>
+						<documentation value="Extinction angle. It is used to limit the dc voltage at the inverter if needed. Typical value between 17 degrees and 20 degrees for an inverter. It is converterï¿½s state variable, result from power flow. The attribute shall be a positive value."/>
 						<model ea_localid="171997" ea_guid="{AB94A1E6-25EF-4880-A191-7CB62C64B943}"/>
 						<properties type="AngleDegrees" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -11493,7 +11492,7 @@
 				<attributes>
 					<attribute xmi:idref="EAID_D2AF86AB_578A_4561_9E84_C8BCE70763C3" name="delta" scope="Public">
 						<initial/>
-						<documentation value="Angle between VsConverter.uv and ACDCConverter.uc. It is converter’s state variable used in power flow. The attribute shall be a positive value or zero."/>
+						<documentation value="Angle between VsConverter.uv and ACDCConverter.uc. It is converterï¿½s state variable used in power flow. The attribute shall be a positive value or zero."/>
 						<model ea_localid="171063" ea_guid="{D2AF86AB-578A-4561-9E84-C8BCE70763C3}"/>
 						<properties type="AngleDegrees" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -11510,7 +11509,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_CB6E35B4_94AF_4f0a_B6EB_7431D65D1E1E" name="uv" scope="Public">
 						<initial/>
-						<documentation value="Line-to-line voltage on the valve side of the converter transformer. It is converter’s state variable, result from power flow. The attribute shall be a positive value."/>
+						<documentation value="Line-to-line voltage on the valve side of the converter transformer. It is converterï¿½s state variable, result from power flow. The attribute shall be a positive value."/>
 						<model ea_localid="170927" ea_guid="{CB6E35B4-94AF-4f0a-B6EB-7431D65D1E1E}"/>
 						<properties type="Voltage" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -12292,7 +12291,7 @@
 			</element>
 			<element xmi:idref="EAID_F8A88C02_9258_4261_81A8_371769FA9F9A" xmi:type="uml:Class" name="UnitMultiplier" scope="public">
 				<model package="EAPK_45000F05_3F1A_4eec_805E_1B5229D022E7" tpos="22" ea_localid="46241" ea_eleType="element"/>
-				<properties documentation="The unit multipliers defined for the CIM.  When applied to unit symbols, the unit symbol is treated as a derived unit. Regardless of the contents of the unit symbol text, the unit symbol shall be treated as if it were a single-character unit symbol. Unit symbols should not contain multipliers, and it should be left to the multiplier to define the multiple for an entire data type. &#xA;&#xA;For example, if a unit symbol is &quot;m2Pers&quot; and the multiplier is &quot;k&quot;, then the value is k(m**2/s), and the multiplier applies to the entire final value, not to any individual part of the value. This can be conceptualized by substituting a derived unit symbol for the unit type. If one imagines that the symbol &quot;Þ&quot; represents the derived unit &quot;m2Pers&quot;, then applying the multiplier &quot;k&quot; can be conceptualized simply as &quot;kÞ&quot;.&#xA;&#xA;For example, the SI unit for mass is &quot;kg&quot; and not &quot;g&quot;.  If the unit symbol is defined as &quot;kg&quot;, then the multiplier is applied to &quot;kg&quot; as a whole and does not replace the &quot;k&quot; in front of the &quot;g&quot;. In this case, the multiplier of &quot;m&quot; would be used with the unit symbol of &quot;kg&quot; to represent one gram.  As a text string, this violates the instructions in IEC 80000-1. However, because the unit symbol in CIM is treated as a derived unit instead of as an SI unit, it makes more sense to conceptualize the &quot;kg&quot; as if it were replaced by one of the proposed replacements for the SI mass symbol. If one imagines that the &quot;kg&quot; were replaced by a symbol &quot;Þ&quot;, then it is easier to conceptualize the multiplier &quot;m&quot; as creating the proper unit &quot;mÞ&quot;, and not the forbidden unit &quot;mkg&quot;." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="enumeration" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<properties documentation="The unit multipliers defined for the CIM.  When applied to unit symbols, the unit symbol is treated as a derived unit. Regardless of the contents of the unit symbol text, the unit symbol shall be treated as if it were a single-character unit symbol. Unit symbols should not contain multipliers, and it should be left to the multiplier to define the multiple for an entire data type. &#xA;&#xA;For example, if a unit symbol is &quot;m2Pers&quot; and the multiplier is &quot;k&quot;, then the value is k(m**2/s), and the multiplier applies to the entire final value, not to any individual part of the value. This can be conceptualized by substituting a derived unit symbol for the unit type. If one imagines that the symbol &quot;ï¿½&quot; represents the derived unit &quot;m2Pers&quot;, then applying the multiplier &quot;k&quot; can be conceptualized simply as &quot;kï¿½&quot;.&#xA;&#xA;For example, the SI unit for mass is &quot;kg&quot; and not &quot;g&quot;.  If the unit symbol is defined as &quot;kg&quot;, then the multiplier is applied to &quot;kg&quot; as a whole and does not replace the &quot;k&quot; in front of the &quot;g&quot;. In this case, the multiplier of &quot;m&quot; would be used with the unit symbol of &quot;kg&quot; to represent one gram.  As a text string, this violates the instructions in IEC 80000-1. However, because the unit symbol in CIM is treated as a derived unit instead of as an SI unit, it makes more sense to conceptualize the &quot;kg&quot; as if it were replaced by one of the proposed replacements for the SI mass symbol. If one imagines that the &quot;kg&quot; were replaced by a symbol &quot;ï¿½&quot;, then it is easier to conceptualize the multiplier &quot;m&quot; as creating the proper unit &quot;mï¿½&quot;, and not the forbidden unit &quot;mkg&quot;." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="enumeration" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
 				<project author="Jean-Luc" phase="1.0" created="2019-04-12 11:35:43" modified="2020-08-26 16:37:28" complexity="1" status="Proposed"/>
 				<code gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
@@ -12666,7 +12665,7 @@
 			</element>
 			<element xmi:idref="EAID_232FAD27_CAA5_455d_BB65_DCD298A94DF8" xmi:type="uml:Class" name="UnitSymbol" scope="public">
 				<model package="EAPK_45000F05_3F1A_4eec_805E_1B5229D022E7" tpos="23" ea_localid="45387" ea_eleType="element"/>
-				<properties documentation="The derived units defined for usage in the CIM. In some cases, the derived unit is equal to an SI unit. Whenever possible, the standard derived symbol is used instead of the formula for the derived unit. For example, the unit symbol Farad is defined as &quot;F&quot; instead of &quot;CPerV&quot;. In cases where a standard symbol does not exist for a derived unit, the formula for the unit is used as the unit symbol. For example, density does not have a standard symbol and so it is represented as &quot;kgPerm3&quot;. With the exception of the &quot;kg&quot;, which is an SI unit, the unit symbols do not contain multipliers and therefore represent the base derived unit to which a multiplier can be applied as a whole. &#xA;Every unit symbol is treated as an unparseable text as if it were a single-letter symbol. The meaning of each unit symbol is defined by the accompanying descriptive text and not by the text contents of the unit symbol.&#xA;To allow the widest possible range of serializations without requiring special character handling, several substitutions are made which deviate from the format described in IEC 80000-1. The division symbol &quot;/&quot; is replaced by the letters &quot;Per&quot;. Exponents are written in plain text after the unit as &quot;m3&quot; instead of being formatted as &quot;m&quot; with a superscript of 3  or introducing a symbol as in &quot;m^3&quot;. The degree symbol &quot;°&quot; is replaced with the letters &quot;deg&quot;. Any clarification of the meaning for a substitution is included in the description for the unit symbol.&#xA;Non-SI units are included in list of unit symbols to allow sources of data to be correctly labelled with their non-SI units (for example, a GPS sensor that is reporting numbers that represent feet instead of meters). This allows software to use the unit symbol information correctly convert and scale the raw data of those sources into SI-based units. &#xA;The integer values are used for harmonization with IEC 61850." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="enumeration" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<properties documentation="The derived units defined for usage in the CIM. In some cases, the derived unit is equal to an SI unit. Whenever possible, the standard derived symbol is used instead of the formula for the derived unit. For example, the unit symbol Farad is defined as &quot;F&quot; instead of &quot;CPerV&quot;. In cases where a standard symbol does not exist for a derived unit, the formula for the unit is used as the unit symbol. For example, density does not have a standard symbol and so it is represented as &quot;kgPerm3&quot;. With the exception of the &quot;kg&quot;, which is an SI unit, the unit symbols do not contain multipliers and therefore represent the base derived unit to which a multiplier can be applied as a whole. &#xA;Every unit symbol is treated as an unparseable text as if it were a single-letter symbol. The meaning of each unit symbol is defined by the accompanying descriptive text and not by the text contents of the unit symbol.&#xA;To allow the widest possible range of serializations without requiring special character handling, several substitutions are made which deviate from the format described in IEC 80000-1. The division symbol &quot;/&quot; is replaced by the letters &quot;Per&quot;. Exponents are written in plain text after the unit as &quot;m3&quot; instead of being formatted as &quot;m&quot; with a superscript of 3  or introducing a symbol as in &quot;m^3&quot;. The degree symbol &quot;ï¿½&quot; is replaced with the letters &quot;deg&quot;. Any clarification of the meaning for a substitution is included in the description for the unit symbol.&#xA;Non-SI units are included in list of unit symbols to allow sources of data to be correctly labelled with their non-SI units (for example, a GPS sensor that is reporting numbers that represent feet instead of meters). This allows software to use the unit symbol information correctly convert and scale the raw data of those sources into SI-based units. &#xA;The integer values are used for harmonization with IEC 61850." isSpecification="false" sType="Class" nType="0" scope="public" stereotype="enumeration" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
 				<project author="C56850" phase="1.0" created="2019-04-12 11:35:06" modified="2020-08-26 16:37:28" complexity="1" status="Proposed"/>
 				<code gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
@@ -12712,7 +12711,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_AE0CAB51_7071_47d6_B0CF_E1FE20F8CD1F" name="kg" scope="Public">
 						<initial body="3"/>
-						<documentation value="Mass in kilograms.  Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3."/>
+						<documentation value="Mass in kilograms.  Note: multiplier ï¿½kï¿½ is included in this unit symbol for compatibility with IEC 61850-7-3."/>
 						<model ea_localid="170318" ea_guid="{AE0CAB51-7071-47d6-B0CF-E1FE20F8CD1F}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -12899,7 +12898,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_46905277_AA57_4b96_B098_D371F0D228CF" name="degC" scope="Public">
 						<initial body="23"/>
-						<documentation value="Relative temperature in degrees Celsius.&#xA;In the SI unit system the symbol is °C. Electric charge is measured in coulomb that has the unit symbol C. To distinguish degree Celsius from coulomb the symbol used in the UML is degC. The reason for not using °C is that the special character ° is difficult to manage in software."/>
+						<documentation value="Relative temperature in degrees Celsius.&#xA;In the SI unit system the symbol is ï¿½C. Electric charge is measured in coulomb that has the unit symbol C. To distinguish degree Celsius from coulomb the symbol used in the UML is degC. The reason for not using ï¿½C is that the special character ï¿½ is difficult to manage in software."/>
 						<model ea_localid="168184" ea_guid="{46905277-AA57-4b96-B098-D371F0D228CF}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -12950,7 +12949,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_C99910B7_79D6_4e66_81D4_4CB043F02E63" name="C" scope="Public">
 						<initial body="26"/>
-						<documentation value="Electric charge in coulombs (A·s)."/>
+						<documentation value="Electric charge in coulombs (Aï¿½s)."/>
 						<model ea_localid="170887" ea_guid="{C99910B7-79D6-4e66-81D4-4CB043F02E63}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13035,7 +13034,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_46377F8B_B423_45d1_80A0_FDE2C4276A9B" name="J" scope="Public">
 						<initial body="31"/>
-						<documentation value="Energy in joules (N·m = C·V = W·s)."/>
+						<documentation value="Energy in joules (Nï¿½m = Cï¿½V = Wï¿½s)."/>
 						<model ea_localid="168177" ea_guid="{46377F8B-B423-45d1-80A0-FDE2C4276A9B}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13052,7 +13051,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_1852209C_2B59_4696_B2FD_D0117B516D6B" name="N" scope="Public">
 						<initial body="32"/>
-						<documentation value="Force in newtons (kg·m/s²)."/>
+						<documentation value="Force in newtons (kgï¿½m/sï¿½)."/>
 						<model ea_localid="167199" ea_guid="{1852209C-2B59-4696-B2FD-D0117B516D6B}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13086,7 +13085,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_7AFDB06A_8E1E_4847_AB93_A468D1687655" name="lx" scope="Public">
 						<initial body="34"/>
-						<documentation value="Illuminance in lux (lm/m²)."/>
+						<documentation value="Illuminance in lux (lm/mï¿½)."/>
 						<model ea_localid="169273" ea_guid="{7AFDB06A-8E1E-4847-AB93-A468D1687655}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13103,7 +13102,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_E33A4345_405D_484e_9ED5_C644524C01C8" name="lm" scope="Public">
 						<initial body="35"/>
-						<documentation value="Luminous flux in lumens (cd·sr)."/>
+						<documentation value="Luminous flux in lumens (cdï¿½sr)."/>
 						<model ea_localid="171363" ea_guid="{E33A4345-405D-484e-9ED5-C644524C01C8}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13120,7 +13119,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_9B6F6FAE_303C_4df2_816E_A574C238AB71" name="Wb" scope="Public">
 						<initial body="36"/>
-						<documentation value="Magnetic flux in webers (V·s)."/>
+						<documentation value="Magnetic flux in webers (Vï¿½s)."/>
 						<model ea_localid="169958" ea_guid="{9B6F6FAE-303C-4df2-816E-A574C238AB71}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13171,7 +13170,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_B4596248_EE26_48b4_9040_B1A1B5A59E9C" name="Pa" scope="Public">
 						<initial body="39"/>
-						<documentation value="Pressure in pascals (N/m²). Note: the absolute or relative measurement of pressure is implied with this entry. See below for more explicit forms."/>
+						<documentation value="Pressure in pascals (N/mï¿½). Note: the absolute or relative measurement of pressure is implied with this entry. See below for more explicit forms."/>
 						<model ea_localid="170465" ea_guid="{B4596248-EE26-48b4-9040-B1A1B5A59E9C}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13188,7 +13187,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_C50B6E40_3B80_48bb_BBEF_174A9C14763D" name="m2" scope="Public">
 						<initial body="41"/>
-						<documentation value="Area in square metres (m²)."/>
+						<documentation value="Area in square metres (mï¿½)."/>
 						<model ea_localid="170813" ea_guid="{C50B6E40-3B80-48bb-BBEF-174A9C14763D}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13205,7 +13204,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_2ACE6BE6_3976_495b_A9DB_79A616AA1446" name="m3" scope="Public">
 						<initial body="42"/>
-						<documentation value="Volume in cubic metres (m³)."/>
+						<documentation value="Volume in cubic metres (mï¿½)."/>
 						<model ea_localid="167578" ea_guid="{2ACE6BE6-3976-495b-A9DB-79A616AA1446}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13239,7 +13238,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_7F5FD0E2_87BC_4894_B53B_F305AB28A3AB" name="mPers2" scope="Public">
 						<initial body="44"/>
-						<documentation value="Acceleration in metres per second squared (m/s²)."/>
+						<documentation value="Acceleration in metres per second squared (m/sï¿½)."/>
 						<model ea_localid="169374" ea_guid="{7F5FD0E2-87BC-4894-B53B-F305AB28A3AB}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13256,7 +13255,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_790FEE79_652A_4728_916D_5A5F1F4E27D4" name="m3Pers" scope="Public">
 						<initial body="45"/>
-						<documentation value="Volumetric flow rate in cubic metres per second (m³/s)."/>
+						<documentation value="Volumetric flow rate in cubic metres per second (mï¿½/s)."/>
 						<model ea_localid="169234" ea_guid="{790FEE79-652A-4728-916D-5A5F1F4E27D4}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13273,7 +13272,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_941DA501_7BDF_4e68_98F2_B0036285F41F" name="mPerm3" scope="Public">
 						<initial body="46"/>
-						<documentation value="Fuel efficiency in metres per cubic metres (m/m³)."/>
+						<documentation value="Fuel efficiency in metres per cubic metres (m/mï¿½)."/>
 						<model ea_localid="169805" ea_guid="{941DA501-7BDF-4e68-98F2-B0036285F41F}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13290,7 +13289,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_A8523747_CC42_43d9_9AA4_60DD70AB0A07" name="kgm" scope="Public">
 						<initial body="47"/>
-						<documentation value="Moment of mass in kilogram metres (kg·m) (first moment of mass). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3."/>
+						<documentation value="Moment of mass in kilogram metres (kgï¿½m) (first moment of mass). Note: multiplier ï¿½kï¿½ is included in this unit symbol for compatibility with IEC 61850-7-3."/>
 						<model ea_localid="170202" ea_guid="{A8523747-CC42-43d9-9AA4-60DD70AB0A07}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13307,7 +13306,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_3E600661_33A3_4134_AF73_5448E557F4D7" name="kgPerm3" scope="Public">
 						<initial body="48"/>
-						<documentation value="Density in kilogram/cubic metres (kg/m³). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3."/>
+						<documentation value="Density in kilogram/cubic metres (kg/mï¿½). Note: multiplier ï¿½kï¿½ is included in this unit symbol for compatibility with IEC 61850-7-3."/>
 						<model ea_localid="167996" ea_guid="{3E600661-33A3-4134-AF73-5448E557F4D7}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13324,7 +13323,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_29EBA2E3_1370_4cc9_B277_75B38374F4E9" name="m2Pers" scope="Public">
 						<initial body="49"/>
-						<documentation value="Viscosity in square metres / second (m²/s)."/>
+						<documentation value="Viscosity in square metres / second (mï¿½/s)."/>
 						<model ea_localid="167559" ea_guid="{29EBA2E3-1370-4cc9-B277-75B38374F4E9}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13545,7 +13544,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_3396C962_6ACD_4004_A0E5_34F4173E109A" name="VAr" scope="Public">
 						<initial body="63"/>
-						<documentation value="Reactive power in volt amperes reactive. The “reactive” or “imaginary” component of electrical power (VIsin(phi)). (See also real power and apparent power).&#xA;Note: Different meter designs use different methods to arrive at their results. Some meters may compute reactive power as an arithmetic value, while others compute the value vectorially. The data consumer should determine the method in use and the suitability of the measurement for the intended purpose."/>
+						<documentation value="Reactive power in volt amperes reactive. The ï¿½reactiveï¿½ or ï¿½imaginaryï¿½ component of electrical power (VIsin(phi)). (See also real power and apparent power).&#xA;Note: Different meter designs use different methods to arrive at their results. Some meters may compute reactive power as an arithmetic value, while others compute the value vectorially. The data consumer should determine the method in use and the suitability of the measurement for the intended purpose."/>
 						<model ea_localid="167764" ea_guid="{3396C962-6ACD-4004-A0E5-34F4173E109A}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13562,7 +13561,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_D660399A_ABE8_4903_B6F7_00099DC249B4" name="cosPhi" scope="Public">
 						<initial body="65"/>
-						<documentation value="Power factor, dimensionless.&#xA;Note 1: This definition of power factor only holds for balanced systems. See the alternative definition under code 153.&#xA;Note 2 : Beware of differing sign conventions in use between the IEC and EEI. It is assumed that the data consumer understands the type of meter in use and the sign convention in use by the utility."/>
+						<documentation value="Power factor, dimensionless.&#xA;Note 1: This definition of power factor only holds for balanced systems. See the alternative definition under code 153.&#xA;Note 2ï¿½: Beware of differing sign conventions in use between the IEC and EEI. It is assumed that the data consumer understands the type of meter in use and the sign convention in use by the utility."/>
 						<model ea_localid="171137" ea_guid="{D660399A-ABE8-4903-B6F7-00099DC249B4}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13596,7 +13595,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_A2E2E0E4_B82D_4da9_92AA_4CEBCD69DDEC" name="V2" scope="Public">
 						<initial body="67"/>
-						<documentation value="Volt squared (W²/A²)."/>
+						<documentation value="Volt squared (Wï¿½/Aï¿½)."/>
 						<model ea_localid="170099" ea_guid="{A2E2E0E4-B82D-4da9-92AA-4CEBCD69DDEC}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13613,7 +13612,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_C5CD0914_642C_45f4_A77E_0F7877A7FE2C" name="As" scope="Public">
 						<initial body="68"/>
-						<documentation value="Ampere seconds (A·s)."/>
+						<documentation value="Ampere seconds (Aï¿½s)."/>
 						<model ea_localid="170825" ea_guid="{C5CD0914-642C-45f4-A77E-0F7877A7FE2C}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13630,7 +13629,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_8872AC80_E7BA_4654_A498_704F8FDC7786" name="A2" scope="Public">
 						<initial body="69"/>
-						<documentation value="Amperes squared (A²)."/>
+						<documentation value="Amperes squared (Aï¿½)."/>
 						<model ea_localid="169566" ea_guid="{8872AC80-E7BA-4654-A498-704F8FDC7786}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13647,7 +13646,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_AAD90342_3A40_4c54_B09A_19550FA7215A" name="A2s" scope="Public">
 						<initial body="70"/>
-						<documentation value="Ampere squared time in square amperes (A²s)."/>
+						<documentation value="Ampere squared time in square amperes (Aï¿½s)."/>
 						<model ea_localid="170257" ea_guid="{AAD90342-3A40-4c54-B09A-19550FA7215A}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13783,7 +13782,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_2F5F0564_BCD7_4a2b_89A7_2889991F3FF7" name="kgm2" scope="Public">
 						<initial body="78"/>
-						<documentation value="Moment of mass in kilogram square metres (kg·m²) (Second moment of mass, commonly called the moment of inertia). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3."/>
+						<documentation value="Moment of mass in kilogram square metres (kgï¿½mï¿½) (Second moment of mass, commonly called the moment of inertia). Note: multiplier ï¿½kï¿½ is included in this unit symbol for compatibility with IEC 61850-7-3."/>
 						<model ea_localid="167681" ea_guid="{2F5F0564-BCD7-4a2b-89A7-2889991F3FF7}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13800,7 +13799,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_310C881E_0FF1_4db4_B4DC_8AF8E9C793A0" name="dB" scope="Public">
 						<initial body="79"/>
-						<documentation value="Sound pressure level in decibels. Note:  multiplier “d” is included in this unit symbol for compatibility with IEC 61850-7-3."/>
+						<documentation value="Sound pressure level in decibels. Note:  multiplier ï¿½dï¿½ is included in this unit symbol for compatibility with IEC 61850-7-3."/>
 						<model ea_localid="167713" ea_guid="{310C881E-0FF1-4db4-B4DC-8AF8E9C793A0}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -13851,7 +13850,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_35D4F288_E04E_4471_ADD0_316BCA2BCD88" name="dBm" scope="Public">
 						<initial body="83"/>
-						<documentation value="Power level (logarithmic ratio of signal strength , Bel-mW), normalized to 1mW. Note:  multiplier “d” is included in this unit symbol for compatibility with IEC 61850-7-3."/>
+						<documentation value="Power level (logarithmic ratio of signal strength , Bel-mW), normalized to 1mW. Note:  multiplier ï¿½dï¿½ is included in this unit symbol for compatibility with IEC 61850-7-3."/>
 						<model ea_localid="167803" ea_guid="{35D4F288-E04E-4471-ADD0-316BCA2BCD88}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -14140,7 +14139,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_EB226058_8FC3_477f_90B4_EAF6BFFBA38D" name="lPerl" scope="Public">
 						<initial body="143"/>
-						<documentation value="Concentration, The ratio of the volume of a solute divided by the volume of  the solution. Note: Users may need use a prefix such a ‘µ’ to express a quantity such as ‘µL/L’."/>
+						<documentation value="Concentration, The ratio of the volume of a solute divided by the volume of  the solution. Note: Users may need use a prefix such a ï¿½ï¿½ï¿½ to express a quantity such as ï¿½ï¿½L/Lï¿½."/>
 						<model ea_localid="171516" ea_guid="{EB226058-8FC3-477f-90B4-EAF6BFFBA38D}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -14157,7 +14156,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_AB614E54_B9B9_4cbc_A9C2_1588D6E7D9FD" name="gPerg" scope="Public">
 						<initial body="144"/>
-						<documentation value="Concentration, The ratio of the mass of a solute divided by the mass of  the solution. Note: Users may need use a prefix such a ‘µ’ to express a quantity such as ‘µg/g’."/>
+						<documentation value="Concentration, The ratio of the mass of a solute divided by the mass of  the solution. Note: Users may need use a prefix such a ï¿½ï¿½ï¿½ to express a quantity such as ï¿½ï¿½g/gï¿½."/>
 						<model ea_localid="170268" ea_guid="{AB614E54-B9B9-4cbc-A9C2-1588D6E7D9FD}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -14174,7 +14173,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_770FBCF6_B603_466b_B769_5DA4FC630593" name="molPerm3" scope="Public">
 						<initial body="145"/>
-						<documentation value="Concentration, The amount of substance concentration, (c), the amount of solvent in moles divided by the volume of solution in m³."/>
+						<documentation value="Concentration, The amount of substance concentration, (c), the amount of solvent in moles divided by the volume of solution in mï¿½."/>
 						<model ea_localid="169190" ea_guid="{770FBCF6-B603-466b-B769-5DA4FC630593}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -14225,7 +14224,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_58AF6CF0_D1E5_4a48_BB62_6DCBE7B38753" name="sPers" scope="Public">
 						<initial body="149"/>
-						<documentation value="Time, Ratio of time.  Note: Users may need to supply a prefix such as ‘&amp;#181;’ to show rates such as ‘&amp;#181;s/s’."/>
+						<documentation value="Time, Ratio of time.  Note: Users may need to supply a prefix such as ï¿½&amp;#181;ï¿½ to show rates such as ï¿½&amp;#181;s/sï¿½."/>
 						<model ea_localid="168570" ea_guid="{58AF6CF0-D1E5-4a48-BB62-6DCBE7B38753}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -14242,7 +14241,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_7FCB9950_1669_4ee4_999D_5135315ABBA1" name="HzPerHz" scope="Public">
 						<initial body="150"/>
-						<documentation value="Frequency, rate of frequency change.   Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mHz/Hz’."/>
+						<documentation value="Frequency, rate of frequency change.   Note: Users may need to supply a prefix such as ï¿½mï¿½ to show rates such as ï¿½mHz/Hzï¿½."/>
 						<model ea_localid="169388" ea_guid="{7FCB9950-1669-4ee4-999D-5135315ABBA1}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -14259,7 +14258,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_53BEB829_CB16_4b0e_8C9A_32F3F9162EC3" name="VPerV" scope="Public">
 						<initial body="151"/>
-						<documentation value="Voltage, ratio of voltages.  Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mV/V’."/>
+						<documentation value="Voltage, ratio of voltages.  Note: Users may need to supply a prefix such as ï¿½mï¿½ to show rates such as ï¿½mV/Vï¿½."/>
 						<model ea_localid="168464" ea_guid="{53BEB829-CB16-4b0e-8C9A-32F3F9162EC3}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -14276,7 +14275,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_E258CCF1_3ECB_415d_A7F1_0051216DDB2B" name="APerA" scope="Public">
 						<initial body="152"/>
-						<documentation value="Current, ratio of amperages.   Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mA/A’."/>
+						<documentation value="Current, ratio of amperages.   Note: Users may need to supply a prefix such as ï¿½mï¿½ to show rates such as ï¿½mA/Aï¿½."/>
 						<model ea_localid="171341" ea_guid="{E258CCF1-3ECB-415d-A7F1-0051216DDB2B}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -14395,7 +14394,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_B5F9654B_E727_4566_8261_6162D0432019" name="WPerW" scope="Public">
 						<initial body="168"/>
-						<documentation value="Signal Strength, ratio of power.   Note: Users may need to supply a prefix such as ‘m’ to show rates such as ‘mW/W’."/>
+						<documentation value="Signal Strength, ratio of power.   Note: Users may need to supply a prefix such as ï¿½mï¿½ to show rates such as ï¿½mW/Wï¿½."/>
 						<model ea_localid="170497" ea_guid="{B5F9654B-E727-4566-8261-6162D0432019}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -14820,7 +14819,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_3DCB9962_E987_4f59_9EAE_68E3E27A8E5D" name="tonne" scope="Public">
 						<initial body="199"/>
-						<documentation value="Mass in tons, “tonne” or “metric  ton” (1000 kg = 1 Mg)."/>
+						<documentation value="Mass in tons, ï¿½tonneï¿½ or ï¿½metric  tonï¿½ (1000 kg = 1 Mg)."/>
 						<model ea_localid="167983" ea_guid="{3DCB9962-E987-4f59-9EAE-68E3E27A8E5D}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -15041,7 +15040,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_170F2187_4D67_45a3_97A7_F3310C2E4EEB" name="kgPerJ" scope="Public">
 						<initial/>
-						<documentation value="Weight per energy in kilograms per joule (kg/J). Note: multiplier “k” is included in this unit symbol for compatibility with IEC 61850-7-3."/>
+						<documentation value="Weight per energy in kilograms per joule (kg/J). Note: multiplier ï¿½kï¿½ is included in this unit symbol for compatibility with IEC 61850-7-3."/>
 						<model ea_localid="167177" ea_guid="{170F2187-4D67-45a3-97A7-F3310C2E4EEB}"/>
 						<properties derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
@@ -15107,8 +15106,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -15276,8 +15275,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={4BDE107F-44F1-45b8-ABA7-775890DE0215}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={73FFB34C-A944-4f12-8150-A352292C9AE6}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -15343,8 +15342,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -15478,8 +15477,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={11D62209-7630-4628-93D9-E0E82D5E2846}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={F33CF782-86DD-4053-9D6A-983B9EED1696}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -15511,8 +15510,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={8C1BEB3B-E730-436b-8979-DEEF2CD92ACB}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={5524941C-A376-4af9-83D3-B070DD69FD40}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -15578,8 +15577,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -15645,8 +15644,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={1EFAFC8C-F1BC-4cee-AA1A-27099E4B48E7}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={1CFC5C31-1FF4-41d3-B5FD-D1D5E3C749C0}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -15712,8 +15711,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -15813,8 +15812,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -15982,8 +15981,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={93A78CB2-42B8-46ec-9E03-016534F805A7}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={C8971AE1-EDC6-4a2c-AFA2-E14227F58232}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -16083,8 +16082,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -16116,8 +16115,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -16183,8 +16182,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={4688816C-443E-41b3-A720-80E7FEDC6DBF}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={A529A9D0-A88A-4f1e-AB4E-2137915B3DD1}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -16216,8 +16215,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={F93EAF3E-DEED-4c1d-B6BF-131D8E1B54AF}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={E170C22F-9142-4198-93DC-4E590F49D00D}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -16283,8 +16282,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={DD126C56-165A-4018-B450-3A1F95F85E22}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={303C8B8F-6794-4a90-9DCE-4326E8ACF2E7}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -16316,8 +16315,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -16383,8 +16382,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={547FCFD6-2957-4915-8060-B7E98B4B7C53}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={C2FCC625-4F8A-4210-84D9-EBA798461162}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -16416,8 +16415,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={9B381D94-5735-40f1-81D2-168736F7E7B5}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={52F0A8A7-53A3-4aef-B0C3-CFA7B1E5AC09}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -16551,8 +16550,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -16652,8 +16651,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -16685,8 +16684,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -16820,8 +16819,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -16887,8 +16886,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -16920,8 +16919,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -16987,8 +16986,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={953DCD87-B9B7-48b6-ACE5-C8C2DC2B3635}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={0F9635D6-D2CE-4d6b-AD61-CAE5BB005588}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -17054,8 +17053,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -17291,8 +17290,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -17324,8 +17323,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -17357,8 +17356,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -17492,8 +17491,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={B1C6052E-7632-44d0-AAD4-6135D989FC3E}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={8094611D-3A1F-4952-98E7-5DE1DE6561A2}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -17525,8 +17524,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -17626,8 +17625,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -17659,8 +17658,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={39F14519-21BB-409e-A193-2147F82EB974}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={73995C72-5D07-447d-A864-BF3CB1156491}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -17692,8 +17691,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -17759,8 +17758,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -17792,8 +17791,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={08F368BD-E086-4600-97B5-9FEC584E6504}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={46D04985-74FF-4b1b-9FB9-301D3959207B}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -17893,8 +17892,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={C8167950-2CC4-434e-9631-8371281C8C35}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={AD599B47-5FDD-474c-B310-140B9BFA6DFB}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -18062,8 +18061,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={CE00F5C6-CA73-4c47-9801-FED563E93731}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={8C5E16C1-5A7F-4bb2-9332-A832A673391F}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -18095,8 +18094,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={A569A4F9-79ED-4488-8384-3ACFC75FCB39}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={9D3F60C2-B97D-4a95-B763-0FA0533DC9DF}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -18128,8 +18127,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={695319CD-ECAD-4e01-A459-A9726AE961A3}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={6B3183D0-18E7-4902-B622-1682FF2EB080}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -18195,8 +18194,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={1EAB6F08-7E64-403f-9C60-82E119E7941C}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={F1A1C870-0FD9-4ddc-BE19-8086D9665B59}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -18228,8 +18227,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={F13D8128-D8DF-44f3-8CA2-CE56E48C740F}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={81A9CAB8-9C6A-427e-A704-08D52DEAD5F3}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -18261,8 +18260,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={C4DBD761-B973-4cb9-9070-9C5C6BE2883C}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={5E3B3AC7-F0AB-4add-B008-4A14BB95F02E}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -18328,8 +18327,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={C99ACD76-6965-4d3a-8908-59B76F47F825}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={B64701B9-CCC4-4884-B601-32053F1535BA}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -18361,8 +18360,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -18462,8 +18461,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -18529,8 +18528,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={D1C32777-3245-4b9b-A63F-7FAB276AF2C5}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={303CC87B-25A9-42bb-8101-32B351518EC2}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -18596,8 +18595,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -18731,8 +18730,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -18798,8 +18797,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -18865,8 +18864,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -18898,8 +18897,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -18931,8 +18930,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -18964,8 +18963,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={016EC6BB-A229-4bd2-9897-774FD27071FE}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={43B642CA-D072-446d-A655-0301FF68294B}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -18997,8 +18996,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -19030,8 +19029,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -19063,8 +19062,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -19096,8 +19095,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={6C281520-688B-436e-8B1C-8A3C3D3513C9}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={6951CFDF-E9F2-4981-B84A-87888A86AE36}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19129,8 +19128,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -19162,8 +19161,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -19195,8 +19194,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={7AE9E688-F8CB-487b-A8CD-C2FEDEDD3B19}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={56F28A5A-CCF9-4da9-B0D9-241720A2ED77}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19228,8 +19227,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -19261,8 +19260,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -19294,8 +19293,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={CBE6EB92-49A1-45ef-BA05-F56C96C5AEE3}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={A8667ADB-F47F-4f03-AAA2-A2B69C04314B}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19327,8 +19326,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={E8929F02-1106-4a28-8C4C-FE13FA04A317}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={2167F835-5668-4cef-92CB-0D4DE131E9E0}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19360,8 +19359,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={815991C5-6590-4588-920C-56D12741A5F0}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={A0D37F2A-4E8A-4ddd-8E33-EB128EFF555B}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19393,8 +19392,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={9D29EE1B-7E5E-44ae-AD78-95DFD1168A96}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={16E5CBCC-CB0D-435a-B79B-F1A20AE34933}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19426,8 +19425,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={6589AF2B-4139-44cb-AE4D-1DDA0972A037}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={638B8FD7-AF75-4322-B5F9-6D4522C46AD6}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19459,8 +19458,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={E355725A-F2B9-4f94-AF9D-CA9E7EB78B1A}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={23DC63AF-ADF4-469c-9164-D9712AA11C32}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19492,8 +19491,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={EFEBEC4B-9843-42c5-B548-339AB3073400}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={FB9D7633-72A4-4176-8A9A-E6163747F42B}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19525,8 +19524,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={29287DBD-9403-4162-958D-E740B82459A9}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={6E727623-D820-4239-BB9B-9E8B1823FE02}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19558,8 +19557,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={3CD4524B-0FC9-4ebd-B885-8ACB7E34F2F0}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={A48BAEEC-09E5-4b31-B159-657227CF9EBC}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19591,8 +19590,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={DD0BF920-60D1-4e00-A550-94836F26B87D}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={35CE5C6B-5D33-4e82-9D0C-517E4D1D706A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19624,8 +19623,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={36D39349-A06B-4492-AB2F-4806F2BBC6E6}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={D72000A6-C9D8-4342-8721-40A08278D0D3}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19657,8 +19656,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={D9D2BDA5-EBFE-4279-BDD9-FF13550F1949}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={27AD14B5-2D30-4ec0-8AA6-E23B21935D80}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19690,8 +19689,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={01E7A88E-4F5E-4f8a-9CA4-7815818B6CA3}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={374D09AA-581C-4410-9D67-D620A47A6E59}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19723,8 +19722,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={BB751C8F-F6CA-42f5-A515-C78411328507}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={57C7DC06-5EDE-4dc8-81B8-93D9BB2A93F9}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19756,8 +19755,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={A016C9EE-88C9-4c75-B1F3-F923AE9B3E60}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={B2F116E0-4B2B-4c59-91FE-B25419D490C0}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19789,8 +19788,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={2679714B-7C90-439a-8883-5CA9F24E0653}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={8C3056F8-EE83-4dfd-921C-BBFF7D99E8A2}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19822,8 +19821,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={B2E7DD13-5718-46a2-AF9D-F2615F69444C}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={841E601F-FAC0-4b6a-B7FE-0CA6B6EFF537}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19889,8 +19888,8 @@
 				<properties ea_type="Dependency" stereotype="embed" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«embed»"/>
-				<extendedProperties conditional=" &#xA;«embed»" virtualInheritance="0"/>
+				<labels mb="ï¿½embedï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½embedï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={9BF41812-2FE4-412e-B721-441E22678C08}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=embed;GUID={EFCADD93-DFD5-4ea7-8F10-35F570508E73};@ENDSTEREO;$DES;$CLT={0442E89E-DB38-447c-8838-BCDDFE744EB5}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19922,8 +19921,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={00A1A774-1F54-4e68-B336-87E8FEFD7BBC}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={C83D8634-6B19-483d-AD2B-0D957A875AD8}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19955,8 +19954,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={F502064B-00F5-44b4-875D-D3975E698B11}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={4F3D82C8-34A0-416d-92F4-8E80FC63E964}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -19988,8 +19987,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={D0BC4BB5-FA0A-43a1-B4B8-FFD4D5A6CBDF}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={8986B940-68F1-4de8-87B6-A33A13736803}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -20021,8 +20020,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={DCB6F0AD-B971-443d-9307-181FBE5ABAF7}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={B85E500A-3C6E-4cb3-BA19-B49BC113291D}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -20054,8 +20053,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={E784EEE5-65A2-40a2-AED7-EA6AD38F2753}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={55C122A9-D55A-4fc0-A3D8-C5259B3B9470}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -20087,8 +20086,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={51D78E34-9167-4456-A49A-F05436190327}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={84F222CA-1AD2-4897-B4BA-8956E87CE6EB}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -20120,8 +20119,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={2188C664-6026-4156-8D2A-C2F0F377E9A0}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={13E7A662-DC6F-4678-AD32-141B28CABA5C}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -20153,8 +20152,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={E5076B1F-42E7-4a37-A7E7-926097B9C5F7}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={BE71FC83-BCDC-4dc5-9C65-03E8A29E7782}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -20186,8 +20185,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={975E6C87-E3C1-4a21-849E-6DB03D077CCA}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={87B4623F-80A2-4ac0-B566-687E02C1AED9}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -20219,8 +20218,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={93658B93-F1F3-4a39-8E47-C4EB8415E4A2}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={00FD22B6-6E82-4205-A080-46B393E940D6}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -20252,8 +20251,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={7FA3B623-7643-4e7d-9B72-161C44F9D8FE}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={C32B8979-1BC9-4ea9-A89C-ABABAE403818}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -20285,8 +20284,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={769FF02A-A12F-4321-AEBF-86F6CED062F5}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={70E48A78-655D-4270-B408-6339C86F049F};@ENDSTEREO;$DES;$CLT={19CDF0F0-D0AB-43b5-BE16-4827B9C8E759}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -20386,8 +20385,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -20487,8 +20486,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -20557,8 +20556,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -20627,8 +20626,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -20697,8 +20696,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -20801,8 +20800,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -20905,8 +20904,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -20975,8 +20974,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -21008,8 +21007,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -21075,8 +21074,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -21176,8 +21175,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -21246,8 +21245,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -21316,8 +21315,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={4A7C8B72-21A4-4272-AC08-892373FD780D}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={BC264363-6C82-4163-A71A-083CDB75A962}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -21349,8 +21348,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -21382,8 +21381,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={ED849B4C-A635-493e-A650-432C4913DD9B}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={A0C331CC-16FF-4d4b-945E-BAE0276E500B}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -21449,8 +21448,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={4262C4E0-B230-4909-9207-489D6ADD0CB7}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={4C78A825-6C28-41c1-A36E-78CC7D5DAD4A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -21482,8 +21481,8 @@
 				<properties ea_type="Dependency" stereotype="embed" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«embed»"/>
-				<extendedProperties conditional=" &#xA;«embed»" virtualInheritance="0"/>
+				<labels mb="ï¿½embedï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½embedï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={D0059229-5B3B-4a88-A340-941CB72A1C65}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=embed;GUID={EFCADD93-DFD5-4ea7-8F10-35F570508E73};@ENDSTEREO;$DES;$CLT={4574ABEA-494D-440e-B04A-4F09513012C2}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -21515,8 +21514,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={C48C7C50-EA65-4c26-AE42-B734D1E8652B}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={112B09E6-B795-465d-9ACC-7A1E20A7685A};@ENDSTEREO;$DES;$CLT={17BB5615-247D-406e-BBB5-A0F4313080B3}$CLT;$ENDXREF;"/>
 				<tags/>
@@ -21548,8 +21547,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={C1795FA7-F8DF-4463-9EA0-A0D84C13CC7F}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={BA806BD5-437A-4eae-97D3-B3708C871224}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -21614,8 +21613,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -21783,8 +21782,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -21850,8 +21849,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -21883,8 +21882,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22021,8 +22020,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22090,8 +22089,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22157,8 +22156,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22224,8 +22223,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22298,8 +22297,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22413,8 +22412,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22446,8 +22445,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22479,8 +22478,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22549,8 +22548,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={B84E3015-2760-4999-9B22-056FFBD2FA5B}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={E3A780F3-10E4-4fa6-B72A-52BCD5862228}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -22623,8 +22622,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22656,8 +22655,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22730,8 +22729,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={CD380DCD-63A4-4d44-B720-7B197E14B821}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={C544B9B6-BBEC-41e1-B141-55012262115D}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -22763,8 +22762,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22796,8 +22795,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22829,8 +22828,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22936,8 +22935,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -22969,8 +22968,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
 				<tags/>
@@ -23002,8 +23001,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={2029D3BF-648F-4118-9219-93D5424E26F5}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={CA3D7839-F41B-49e0-8853-BAE51C6EDBD5}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -23035,8 +23034,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={50461FD9-7146-4b89-8FC7-FA8E6EBD3488}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={640C3BDE-E477-4ee5-AED2-35E938C808A8}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -23068,8 +23067,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={7DF12C90-FE02-464c-AFDA-3459E96470F7}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={1A422D36-98A9-40f5-B9DA-B082FB997224}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -23101,8 +23100,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={1626CAA9-1A56-4392-A65A-515779494AFB}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={9177A67A-857B-4c5d-8067-56BC1CC3AF3C}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -23134,8 +23133,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={3968D68F-749F-44f9-8BE3-439793EBC3E8}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={F6E47639-BC47-43d9-BB2D-38B612B0D3FB}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -23167,8 +23166,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={FF814457-AB95-4bac-A473-0DA7C778ECB6}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={F744A68E-69D3-4e08-A41D-43ED5D1CF3D2}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -23200,8 +23199,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={85287969-BDC3-479a-97F9-8E208B285FE6}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={82B79ABB-92D0-4b2f-9596-69E461DFCD5F}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -23233,8 +23232,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={83E80997-A5E7-4993-BE8F-60682CE9065A}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={42643B78-D689-4c23-92F3-F8082DA69080}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -23266,8 +23265,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={196AF437-B9CE-4c6b-9FD1-F40CFB3A177E}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={200BEF6B-DFC9-424e-9A19-0A49A4AC1971}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -23333,8 +23332,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={1FDBFB9B-6D56-42f4-BA26-C83260397CDB}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={78CF84EA-1695-48a6-9653-A15F14842DF9}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -23366,8 +23365,8 @@
 				<properties ea_type="Dependency" stereotype="embed" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«embed»"/>
-				<extendedProperties conditional=" &#xA;«embed»" virtualInheritance="0"/>
+				<labels mb="ï¿½embedï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½embedï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={CD07641D-2408-47ec-A165-3E99067D50DF}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=embed;GUID={EFCADD93-DFD5-4ea7-8F10-35F570508E73};@ENDSTEREO;$DES;$CLT={B49F7473-3836-4528-B10A-73BF15F51A7F}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -23399,8 +23398,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={6AF7E25C-1737-4d14-9A8B-1EDBDE3457C0}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={DF66531F-443F-4867-849A-93AE80190F78}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -23432,8 +23431,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={9D64293E-7697-45af-B5D1-613C38610F67}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={231BAE8E-7B8B-4e66-883C-CF3AFAD517CF}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -23465,8 +23464,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={07329C4C-7476-4ac7-8ACF-4067B68B8979}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={5E0BD32A-102C-4c18-B504-836975D21FF0};@ENDSTEREO;$DES;$CLT={7E42905F-FBAB-41fe-B771-4891C1AC432F}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>
@@ -23498,8 +23497,8 @@
 				<properties ea_type="Dependency" stereotype="IsBasedOn" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mb="«IsBasedOn»"/>
-				<extendedProperties conditional=" &#xA;«IsBasedOn»" virtualInheritance="0"/>
+				<labels mb="ï¿½IsBasedOnï¿½"/>
+				<extendedProperties conditional=" &#xA;ï¿½IsBasedOnï¿½" virtualInheritance="0"/>
 				<style/>
 				<xrefs value="$XREFPROP=$XID={B614BBB4-96DF-48db-BACC-933CEF685850}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=IsBasedOn;GUID={1198FB62-F82A-407b-BDC0-9CBAB32938E9};@ENDSTEREO;$DES;$CLT={D7BE61D0-2AC2-482f-9227-7A3CC1FF3B89}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<tags/>

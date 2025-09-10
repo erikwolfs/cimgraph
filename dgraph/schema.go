@@ -137,15 +137,16 @@ type SchemaNode struct {
 	Predicates map[string]SchemaPredicate
 }
 
-func CreateSchema(path string) error {
+func CreateSchema(config Config) error {
 	schema := Schema{}
-	fmt.Println(path)
-	err := parseXMI(path, &schema)
+	err := parseXMI(config.ImportPath, &schema)
 	if err != nil {
 		return err
 	}
-	writeSchema(schema)
-	con, err := newClient()
+	if config.DebugPath != "" {
+		writeSchema(schema)
+	}
+	con, err := newClient(config)
 	if err != nil {
 		return err
 	}
@@ -172,6 +173,7 @@ func writePredicates(conn *dgo.Dgraph, schema *Schema) error {
 			return err
 		}
 	}
+	fmt.Println("Predicate Definitons written to DB Schema")
 	return nil
 }
 
@@ -182,6 +184,7 @@ func writeNodes(conn *dgo.Dgraph, schema *Schema) error {
 			return err
 		}
 	}
+	fmt.Println("Node definitions written to DB Schema")
 	return nil
 }
 
@@ -247,12 +250,6 @@ func processPackageElement(element *PackageElement, cim *CIMProfile, classindex 
 				return err
 			}
 		}
-		// for i := 0; i < len(element.Ends); i++ {
-		// 	err := processEnd(&element.Ends[i])
-		// 	if err != nil {
-		// 		return err
-		// 	}
-		// }
 		if !element.Abstract {
 			cim.Classes = append(cim.Classes, class)
 		}
@@ -295,10 +292,6 @@ func processGeneralization(generic *Generalization, class *CIMClass) error {
 	}
 	return nil
 }
-
-// func processEnd(end *End) error {
-// 	return nil
-// }
 
 func processEnum(literal *Literal, enum *CIMEnum) error {
 	lit := CIMEnumLiteral{ID: literal.ID, Name: literal.Name}
@@ -364,18 +357,6 @@ func makeCharsetReader(charset string, input io.Reader) (io.Reader, error) {
     return nil, fmt.Errorf("unknown charset: %s", charset)
 }
 
-// func showCIM(cim *CIMProfile) {
-// 	for _, v := range cim.Classes {
-// 		fmt.Println("Class: ", v.Name)
-// 		for _, w := range v.InheritsFrom {
-// 			fmt.Println(".  Generic:", w.Name)
-// 		}
-// 		for _, x := range v.Properties {
-// 		 	fmt.Println(".  Property:", x.Name, " Type: ", x.Type)
-// 		}
-// 	}
-// }
-
 func writeCIM(cim *CIMProfile) {
 	file, err := os.Create("./data/output.txt")
 	if err != nil {
@@ -410,7 +391,7 @@ func createSchemaData(schema *Schema, cim *CIMProfile) error {
 	schema.Predicates = make(map[string]SchemaPredicate)
 	schema.Predicates["rdf.about"] = rdfpredicate
 	for _, i := range cim.Classes {
-		if len(i.Properties) > 1 {
+		if len(i.Properties) > 0 {
 			node, existing = schema.Nodes[i.Name]
 			if !existing {
 				node = SchemaNode{Name: i.Name}
@@ -455,17 +436,7 @@ func createSchemaData(schema *Schema, cim *CIMProfile) error {
 		}
 	}
 	println("created predicates")
-	for _, i := range schema.Predicates {
-		fmt.Println("<" + i.Name + ">: " + i.Type + " .")
-	}
 	println("created nodes")
-	for _, i := range schema.Nodes {
-		fmt.Println ("type <" + i.Name + "> {")
-		for _, j := range i.Predicates {
-			fmt.Println("  " + j.Name)
-		}
-		fmt.Println("}")
-	}
 	return nil
 }
 

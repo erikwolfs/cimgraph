@@ -1,9 +1,6 @@
 package main
 
 import (
-	//"encoding/xml"
-	//"github.com/dgraph-io/dgo/v240"
-	//"github.com/dgraph-io/dgo/v240/protos/api"
 	"cimgraph/dgraph"
 	"context"
 	"fmt"
@@ -18,6 +15,7 @@ type Config struct {
 	url string
 	configpath string
 	path string
+	debugPath string
 }
 
 func main() {
@@ -47,6 +45,13 @@ func main() {
 				Usage: "URL of the Dgraph DB to be used",
 				Sources: cli.NewValueSourceChain(yaml.YAML("DgraphURL", altsrc.NewStringPtrSourcer(&config.configpath))),
 				Destination: &config.url,
+			},
+			&cli.StringFlag{
+				Name: "debuglog",
+				Aliases: []string{"d"},
+				Usage: "Activates writing debug info to the given location",
+				Sources: cli.NewValueSourceChain(yaml.YAML("DebugPath", altsrc.NewStringPtrSourcer(&config.debugPath))),
+				Destination: &config.debugPath,
 			},
 		},
 		Commands: []*cli.Command{
@@ -117,6 +122,10 @@ func main() {
 
 func importRDF(config *Config) error {
 	fmt.Println("importing from: ", config.path , "into Dgraph with URL: ", config.url )
+	err := dgraph.ImportRDF(config.path, config.url)
+	if err != nil {
+		return err
+	}
 	return nil
 }
 
@@ -126,8 +135,9 @@ func exportRDF(config *Config) error {
 }
 
 func createSchema(config *Config) error {
+	dconfig := dgraph.Config{URL: config.url, ImportPath: config.path, DebugPath: config.debugPath}
 	fmt.Println("create schema from", config.path, "into Dgraph with URL: ", config.url)
-	err := dgraph.CreateSchema(config.path)
+	err := dgraph.CreateSchema(dconfig)
 	if err != nil {
 		return err
 	}

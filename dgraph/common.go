@@ -10,9 +10,16 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 )
 
+type Config struct {
+	URL string
+	ImportPath string
+	ExportPath string
+	DebugPath string
+}
 
-func newClient() (*dgo.Dgraph, error) {
-	client, err := dgo.NewClient("192.168.215.2:9080",
+
+func newClient(config Config) (*dgo.Dgraph, error) {
+	client, err := dgo.NewClient(config.URL,
   		// add Dgraph ACL credentials
   		//dgo.WithACLCreds("groot", "password"),
   		// add insecure transport credentials
