@@ -1,0 +1,3232 @@
+<RotatingMachine.GeneratingUnit>: uid .
+<ConnectivityNode.ConnectivityNodeContainer>: uid .
+<MeasurementValue.sensorAccuracy>: uid .
+<ExternalNetworkInjection.maxInitialSymShCCurrent>: uid .
+<Model.profile>: [string] .
+<ACDCConverterDCTerminal.polarity>: uid .
+<DCLineSegment.capacitance>: uid .
+<Frequency.multiplier>: uid .
+<MeasurementValueQuality.MeasurementValue>: uid .
+<SynchronousMachine.x2>: uid .
+<CurveStyle.name>: string .
+<ShuntCompensator.grounded>: bool .
+<ActivePowerPerCurrentFlow.value>: float .
+<PerCent.multiplier>: uid .
+<VsConverter.targetQpcc>: uid .
+<Clamp.lengthFromTerminal1>: uid .
+<PhaseTapChangerNonLinear.xMin>: uid .
+<Control.controlType>: string .
+<Control.operationInProgress>: bool .
+<Command.normalValue>: int .
+<EquivalentInjection.q>: uid .
+<Switch.ratedCurrent>: uid .
+<Switch.retained>: bool .
+<CsConverter.maxAlpha>: uid .
+<DCSeriesDevice.resistance>: uid .
+<VoltageLimit.normalValue>: uid .
+<WindGenUnitKind.name>: string .
+<GeneratingUnit.nominalP>: uid .
+<StaticVarCompensator.capacitiveRating>: uid .
+<ApparentPower.value>: float .
+<ACLineSegment.shortCircuitEndTemperature>: uid .
+<EquivalentBranch.negativeR21>: uid .
+<VsConverter.qPccControl>: uid .
+<PowerTransformerEnd.r>: uid .
+<SynchronousMachine.maxQ>: uid .
+<Voltage.unit>: uid .
+<ACDCConverter.targetUdc>: uid .
+<ACDCConverter.udc>: uid .
+<Switch.normalOpen>: bool .
+<ACDCConverter.switchingLoss>: uid .
+<Cut.lengthFromTerminal1>: uid .
+<ACLineSegment.r0>: uid .
+<CsConverter.targetIdc>: uid .
+<TopologicalNode.ReportingGroup>: uid .
+<CsConverter.targetAlpha>: uid .
+<GeneratingUnit.ratedGrossMaxP>: uid .
+<Curve.y1Unit>: uid .
+<Terminal.phases>: uid .
+<Conductance.value>: float .
+<Money.value>: uid .
+<Quality61850.badReference>: bool .
+<VsQpccControlKind.name>: string .
+<HydroPump.RotatingMachine>: uid .
+<SynchronousMachine.InitialReactiveCapabilityCurve>: uid .
+<Length.multiplier>: uid .
+<AnalogControl.AnalogValue>: uid .
+<AsynchronousMachine.polePairNumber>: int .
+<TopologicalNode.BaseVoltage>: uid .
+<CurveData.Curve>: uid .
+<EarthFaultCompensator.r>: uid .
+<MutualCoupling.distance22>: uid .
+<EnergySource.voltageMagnitude>: uid .
+<RegulatingControlModeKind.name>: string .
+<EnergyConsumer.pfixed>: uid .
+<VsConverter.targetUpcc>: uid .
+<SvPowerFlow.Terminal>: uid .
+<ACDCConverter.PccTerminal>: uid .
+<DCNode.DCEquipmentContainer>: uid .
+<SynchronousMachine.referencePriority>: int .
+<SvShuntCompensatorSections.ShuntCompensator>: uid .
+<PowerElectronicsUnit.maxP>: uid .
+<CsConverter.minAlpha>: uid .
+<EquivalentInjection.minQ>: uid .
+<EquivalentBranch.negativeR12>: uid .
+<PowerTransformerEnd.g0>: uid .
+<AuxiliaryEquipment.Terminal>: uid .
+<VsConverter.droop>: uid .
+<AsynchronousMachine.converterFedDrive>: bool .
+<GeneratingUnit.normalPF>: float .
+<CsConverter.gamma>: uid .
+<PhaseTapChangerNonLinear.xMax>: uid .
+<Resistance.value>: float .
+<PetersenCoil.xGroundNominal>: uid .
+<PowerTransformer.beforeShCircuitHighestOperatingVoltage>: uid .
+<Validity.name>: string .
+<ACDCConverterDCTerminal.DCConductingEquipment>: uid .
+<Cut.ACLineSegment>: uid .
+<PhaseTapChangerTabular.PhaseTapChangerTable>: uid .
+<RegulatingControl.Terminal>: uid .
+<SeriesCompensator.x>: uid .
+<SynchronousMachine.satDirectSubtransX>: uid .
+<ACDCConverter.valveU0>: uid .
+<PowerTransformerEnd.ratedU>: uid .
+<ApparentPower.unit>: uid .
+<Quality61850.outOfRange>: bool .
+<EquivalentInjection.regulationTarget>: uid .
+<UnitMultiplier.name>: string .
+<RotatingMachine.ratedPowerFactor>: float .
+<LinearShuntCompensator.bPerSection>: uid .
+<PowerTransformer.operationalValuesConsidered>: bool .
+<SvPowerFlow.p>: uid .
+<SynchronousMachine.voltageRegulationRange>: uid .
+<RegularIntervalSchedule.timeStep>: uid .
+<PowerTransformerEnd.b>: uid .
+<RaiseLowerCommand.ValueAliasSet>: uid .
+<SetPoint.value>: float .
+<Model.Supersedes>: [uid] .
+<SynchronousMachineKind.name>: string .
+<RegularTimePoint.value2>: float .
+<ValueToAlias.ValueAliasSet>: uid .
+<PowerTransformer.beforeShortCircuitAnglePf>: uid .
+<TransformerEnd.xground>: uid .
+<RegulatingControl.targetValueUnitMultiplier>: uid .
+<Currency.name>: string .
+<ActivePower.unit>: uid .
+<ACLineSegment.b0ch>: uid .
+<SvShuntCompensatorSections.sections>: float .
+<TapChangerTablePoint.ratio>: float .
+<EquivalentInjection.p>: uid .
+<HydroTurbineKind.name>: string .
+<Model.version>: int .
+<PU.unit>: uid .
+<IdentifiedObject.description>: string .
+<EnergyConsumer.qfixed>: uid .
+<OperationalLimitType.kind>: uid .
+<TapChanger.neutralStep>: int .
+<ThermalGeneratingUnit.CogenerationPlant>: uid .
+<AnalogLimit.value>: float .
+<EquivalentBranch.zeroX21>: uid .
+<ACLineSegment.x>: uid .
+<ACDCConverter.minUdc>: uid .
+<FossilFuel.fossilFuelType>: uid .
+<FossilFuel.ThermalGeneratingUnit>: uid .
+<HydroGeneratingUnit.energyConversionCapability>: uid .
+<EnergySource.xn>: uid .
+<PhaseCode.name>: string .
+<AsynchronousMachine.nominalSpeed>: uid .
+<RegulationSchedule.RegulatingControl>: uid .
+<ExternalNetworkInjection.minR1ToX1Ratio>: float .
+<LinearShuntCompensator.b0PerSection>: uid .
+<TransformerEnd.grounded>: bool .
+<PU.value>: float .
+<VoltagePerReactivePower.value>: float .
+<Quality61850.oscillatory>: bool .
+<ACDCTerminal.connected>: bool .
+<Conductance.unit>: uid .
+<EnergySource.r>: uid .
+<PowerTransformer.beforeShCircuitHighestOperatingCurrent>: uid .
+<AsynchronousMachine.nominalFrequency>: uid .
+<EnergyConsumer.LoadResponse>: uid .
+<ACDCConverter.minP>: uid .
+<PowerElectronicsConnection.maxQ>: uid .
+<ActivePower.multiplier>: uid .
+<AsynchronousMachine.ratedMechanicalPower>: uid .
+<Temperature.multiplier>: uid .
+<AsynchronousMachine.asynchronousMachineType>: uid .
+<CurrentFlow.multiplier>: uid .
+<VsConverter.qShare>: uid .
+<UnitSymbol.name>: string .
+<ExternalNetworkInjection.minQ>: uid .
+<HydroPump.HydroPowerPlant>: uid .
+<VsConverter.targetPhasePcc>: uid .
+<VsConverter.targetPowerFactorPcc>: float .
+<ActivePowerPerFrequency.multiplier>: uid .
+<ExternalNetworkInjection.minInitialSymShCCurrent>: uid .
+<VsConverter.droopCompensation>: uid .
+<AsynchronousMachineKind.name>: string .
+<ACDCConverter.numberOfValves>: int .
+<PhaseTapChangerLinear.xMax>: uid .
+<Switch.locked>: bool .
+<Equipment.EquipmentContainer>: uid .
+<OperationalLimitType.isInfiniteDuration>: bool .
+<PowerTransformerEnd.ratedS>: uid .
+<Resistance.multiplier>: uid .
+<SynchronousMachine.satDirectTransX>: uid .
+<EquivalentInjection.maxP>: uid .
+<GeneratingUnit.totalEfficiency>: uid .
+<TapChangerTablePoint.r>: uid .
+<Quality61850.operatorBlocked>: bool .
+<EnergySource.r0>: uid .
+<PetersenCoil.xGroundMax>: uid .
+<Curve.y2Unit>: uid .
+<AngleDegrees.multiplier>: uid .
+<PerCent.value>: float .
+<AccumulatorReset.AccumulatorValue>: uid .
+<MutualCoupling.distance21>: uid .
+<DCBaseTerminal.DCTopologicalNode>: uid .
+<IdentifiedObject.mRID>: string .
+<NonlinearShuntCompensatorPoint.sectionNumber>: int .
+<TapChanger.normalStep>: int .
+<RealEnergy.value>: float .
+<RotationSpeed.multiplier>: uid .
+<SvSwitch.open>: bool .
+<EnergySource.voltageAngle>: uid .
+<CsConverter.alpha>: uid .
+<Model.scenarioTime>: datetime .
+<OperationalLimit.OperationalLimitSet>: uid .
+<CurveData.y1value>: float .
+<ExternalNetworkInjection.minP>: uid .
+<ThermalGeneratingUnit.CombinedCyclePlant>: uid .
+<Inductance.unit>: uid .
+<RotationSpeed.unit>: uid .
+<ACDCConverter.maxUdc>: uid .
+<Season.endDate>: uid .
+<AnalogLimit.LimitSet>: uid .
+<TapChanger.controlEnabled>: bool .
+<RegulatingControl.targetValue>: float .
+<Model.DependentOn>: [uid] .
+<TapChanger.ltcFlag>: bool .
+<TapChanger.TapChangerControl>: uid .
+<Quality61850.oldData>: bool .
+<Curve.xUnit>: uid .
+<ShuntCompensator.voltageSensitivity>: uid .
+<RatioTapChanger.TransformerEnd>: uid .
+<ExternalNetworkInjection.maxZ0ToZ1Ratio>: float .
+<EnergyConsumer.q>: uid .
+<EnergySource.reactivePower>: uid .
+<EnergyConsumer.p>: uid .
+<SvSwitch.Switch>: uid .
+<DCLine.Region>: uid .
+<EquivalentEquipment.EquivalentNetwork>: uid .
+<GeneratingUnit.shortPF>: float .
+<Line.Region>: uid .
+<Quality61850.estimatorReplaced>: bool .
+<EquivalentBranch.positiveX12>: uid .
+<ExternalNetworkInjection.maxR0ToX0Ratio>: float .
+<HydroPlantStorageKind.name>: string .
+<BoundaryPoint.isExcludedFromAreaInterchange>: bool .
+<EquivalentInjection.regulationCapability>: bool .
+<GeneratingUnit.ratedGrossMinP>: uid .
+<LoadResponseCharacteristic.qConstantCurrent>: float .
+<PowerTransformerEnd.x>: uid .
+<EnergySource.rn>: uid .
+<LimitKind.name>: string .
+<ACDCConverter.uc>: uid .
+<SvInjection.qInjection>: uid .
+<RatioTapChangerTablePoint.RatioTapChangerTable>: uid .
+<StaticVarCompensator.voltageSetPoint>: uid .
+<Voltage.multiplier>: uid .
+<Quality61850.test>: bool .
+<GroundingImpedance.x>: uid .
+<LinearShuntCompensator.g0PerSection>: uid .
+<SvVoltage.v>: uid .
+<ShuntCompensator.aVRDelay>: uid .
+<PowerElectronicsConnection.PowerElectronicsUnit>: uid .
+<TieFlow.positiveFlowIn>: bool .
+<PerCent.unit>: uid .
+<AccumulatorLimit.LimitSet>: uid .
+<RegulatingControl.targetDeadband>: float .
+<BoundaryPoint.fromEndIsoCode>: string .
+<HydroGeneratingUnit.dropHeight>: uid .
+<Measurement.phases>: uid .
+<SVCControlMode.name>: string .
+<PetersenCoilModeKind.name>: string .
+<LoadResponseCharacteristic.qConstantPower>: float .
+<TapChangerTablePoint.step>: int .
+<Frequency.value>: float .
+<Length.value>: float .
+<ACDCConverter.poleLossP>: uid .
+<SvVoltage.angle>: uid .
+<ACLineSegment.gch>: uid .
+<VoltageLevel.lowVoltageLimit>: uid .
+<VsConverter.maxModulationIndex>: float .
+<CurrentFlow.value>: float .
+<CurrentLimit.value>: uid .
+<ACDCConverter.idc>: uid .
+<DCPolarityKind.name>: string .
+<ControlAreaTypeKind.name>: string .
+<ACDCConverter.idleLoss>: uid .
+<NonConformLoadSchedule.NonConformLoadGroup>: uid .
+<TapChanger.neutralU>: uid .
+<ControlArea.pTolerance>: uid .
+<DCNode.DCTopologicalNode>: uid .
+<EnergySource.pMin>: uid .
+<SvStatus.ConductingEquipment>: uid .
+<VsConverter.pPccControl>: uid .
+<CsConverter.minIdc>: uid .
+<WindGeneratingUnit.WindPowerPlant>: uid .
+<ReactivePower.unit>: uid .
+<ExternalNetworkInjection.ikSecond>: bool .
+<PowerTransformer.isPartOfGeneratorUnit>: bool .
+<SeriesCompensator.varistorVoltageThreshold>: uid .
+<PowerElectronicsConnection.minQ>: uid .
+<Terminal.ConductingEquipment>: uid .
+<Frequency.unit>: uid .
+<Quality61850.suspect>: bool .
+<ShuntCompensator.sections>: float .
+<LoadResponseCharacteristic.pConstantPower>: float .
+<TapChanger.lowStep>: int .
+<Conductance.multiplier>: uid .
+<CsConverter.operatingMode>: uid .
+<SvInjection.pInjection>: uid .
+<ACDCTerminal.BusNameMarker>: uid .
+<BusNameMarker.priority>: int .
+<PetersenCoil.mode>: uid .
+<TopologicalNode.ConnectivityNodeContainer>: uid .
+<ApparentPowerLimit.normalValue>: uid .
+<GeneratingUnit.startupCost>: uid .
+<Susceptance.value>: float .
+<SeriesCompensator.r0>: uid .
+<EquivalentInjection.regulationStatus>: bool .
+<VsConverter.targetPWMfactor>: float .
+<EquivalentInjection.minP>: uid .
+<LoadResponseCharacteristic.pConstantCurrent>: float .
+<PowerTransformerEnd.connectionKind>: uid .
+<StaticVarCompensator.inductiveRating>: uid .
+<rdf.about>: string .
+<GrossToNetActivePowerCurve.GeneratingUnit>: uid .
+<ShuntCompensator.normalSections>: int .
+<NonlinearShuntCompensatorPoint.NonlinearShuntCompensator>: uid .
+<PhaseTapChangerLinear.stepPhaseShiftIncrement>: uid .
+<PowerElectronicsConnection.ratedS>: uid .
+<PowerTransformer.highSideMinOperatingU>: uid .
+<PhaseTapChanger.TransformerEnd>: uid .
+<AngleDegrees.unit>: uid .
+<SeriesCompensator.x0>: uid .
+<LoadResponseCharacteristic.qVoltageExponent>: float .
+<TapChangerTablePoint.b>: uid .
+<TieFlow.Terminal>: uid .
+<Discrete.ValueAliasSet>: uid .
+<FuelType.name>: string .
+<ShortCircuitRotorKind.name>: string .
+<SeasonDayTypeSchedule.DayType>: uid .
+<ControlAreaGeneratingUnit.ControlArea>: uid .
+<StaticVarCompensator.sVCControlMode>: uid .
+<Measurement.unitMultiplier>: uid .
+<EquivalentInjection.x0>: uid .
+<RotatingMachine.p>: uid .
+<Equipment.aggregate>: bool .
+<GeneratingUnit.maximumAllowableSpinningReserve>: uid .
+<Money.multiplier>: uid .
+<EquivalentInjection.r2>: uid .
+<ConnectivityNode.TopologicalNode>: uid .
+<OperationalLimit.OperationalLimitType>: uid .
+<ShuntCompensator.nomU>: uid .
+<Substation.Region>: uid .
+<RegulatingControl.discrete>: bool .
+<WindingConnection.name>: string .
+<PowerTransformerEnd.r0>: uid .
+<RegulatingControl.minAllowedTargetValue>: float .
+<BoundaryPoint.toEndNameTso>: string .
+<Inductance.multiplier>: uid .
+<ValueToAlias.value>: int .
+<EquivalentBranch.negativeX21>: uid .
+<NonlinearShuntCompensatorPoint.b0>: uid .
+<PetersenCoil.offsetCurrent>: uid .
+<SynchronousMachineOperatingMode.name>: string .
+<BusbarSection.ipMax>: uid .
+<SynchronousMachine.operatingMode>: uid .
+<TopologicalIsland.TopologicalNodes>: uid .
+<CsConverter.maxGamma>: uid .
+<VoltageLimit.value>: uid .
+<IdentifiedObject.shortName>: string .
+<DCGround.inductance>: uid .
+<LoadResponseCharacteristic.qFrequencyExponent>: float .
+<ReactivePower.value>: float .
+<PetersenCoil.positionCurrent>: uid .
+<CurveData.y2value>: float .
+<LoadResponseCharacteristic.pConstantImpedance>: float .
+<EquivalentBranch.negativeX12>: uid .
+<EquivalentInjection.x>: uid .
+<SvStatus.inService>: bool .
+<Source.name>: string .
+<BasicIntervalSchedule.startTime>: dateTime .
+<LoadResponseCharacteristic.qConstantImpedance>: float .
+<PhaseTapChangerTablePoint.PhaseTapChangerTable>: uid .
+<StaticVarCompensator.slope>: uid .
+<VsConverter.CapabilityCurve>: uid .
+<Measurement.Terminal>: uid .
+<Control.timeStamp>: dateTime .
+<GeneratingUnit.ratedNetMaxP>: uid .
+<LoadResponseCharacteristic.exponentModel>: bool .
+<PhaseTapChangerTablePoint.angle>: uid .
+<RegularTimePoint.value1>: float .
+<RegularTimePoint.IntervalSchedule>: uid .
+<Reactance.multiplier>: uid .
+<EquivalentBranch.zeroX12>: uid .
+<SynchronousMachine.r>: uid .
+<Conductor.length>: uid .
+<ConformLoad.LoadGroup>: uid .
+<Analog.positiveFlowIn>: bool .
+<AnalogControl.maxValue>: float .
+<ACDCConverter.p>: uid .
+<ACDCConverter.maxP>: uid .
+<VoltageLevel.highVoltageLimit>: uid .
+<Resistance.unit>: uid .
+<PowerElectronicsConnection.q>: uid .
+<SynchronousMachine.r0>: uid .
+<GeneratorControlSource.name>: string .
+<EnergySource.EnergySchedulingType>: uid .
+<GeneratingUnit.maxOperatingP>: uid .
+<LinearShuntCompensator.gPerSection>: uid .
+<ThermalGeneratingUnit.CAESPlant>: uid .
+<ActivePowerPerFrequency.value>: float .
+<Command.DiscreteValue>: uid .
+<OperationalLimitDirectionKind.name>: string .
+<DCLineSegment.resistance>: uid .
+<Reactance.unit>: uid .
+<MutualCoupling.Second_Terminal>: uid .
+<Switch.open>: bool .
+<ACLineSegment.x0>: uid .
+<AsynchronousMachine.rxLockedRotorRatio>: float .
+<ACLineSegment.bch>: uid .
+<BoundaryPoint.fromEndName>: string .
+<RegularIntervalSchedule.endTime>: dateTime .
+<DCGround.r>: uid .
+<Length.unit>: uid .
+<Measurement.measurementType>: string .
+<Equipment.inService>: bool .
+<SvTapStep.TapChanger>: uid .
+<DCLineSegment.length>: uid .
+<Seconds.value>: float .
+<MeasurementValue.MeasurementValueSource>: uid .
+<ExternalNetworkInjection.maxR1ToX1Ratio>: float .
+<Temperature.unit>: uid .
+<NonlinearShuntCompensatorPoint.b>: uid .
+<PetersenCoil.nominalU>: uid .
+<Model.modelingAuthoritySet>: string .
+<Bay.VoltageLevel>: uid .
+<ACDCConverter.ratedUdc>: uid .
+<AnalogValue.Analog>: uid .
+<EquivalentBranch.positiveR12>: uid .
+<MutualCoupling.distance12>: uid .
+<SvVoltage.TopologicalNode>: uid .
+<EnergyConsumer.qfixedPct>: uid .
+<DCShunt.capacitance>: uid .
+<SeriesCompensator.r>: uid .
+<RegulatingCondEq.controlEnabled>: bool .
+<VsPpccControlKind.name>: string .
+<Equipment.normallyInService>: bool .
+<BoundaryPoint.fromEndNameTso>: string .
+<BatteryUnit.storedE>: uid .
+<BasicIntervalSchedule.value2Unit>: uid .
+<DCTerminal.DCConductingEquipment>: uid .
+<OperationalLimitSet.Equipment>: uid .
+<SynchronousMachine.minQ>: uid .
+<ExternalNetworkInjection.minZ0ToZ1Ratio>: float .
+<SynchronousMachine.earthingStarPointX>: uid .
+<ControlArea.type>: uid .
+<ExternalNetworkInjection.maxP>: uid .
+<NonlinearShuntCompensatorPoint.g>: uid .
+<ExternalNetworkInjection.voltageFactor>: uid .
+<HydroEnergyConversionKind.name>: string .
+<ConductingEquipment.BaseVoltage>: uid .
+<BoundaryPoint.ConnectivityNode>: uid .
+<CsConverter.ratedIdc>: uid .
+<RotationSpeed.value>: float .
+<Seconds.unit>: uid .
+<ExternalNetworkInjection.q>: uid .
+<CurrentLimit.normalValue>: uid .
+<EquivalentBranch.x21>: uid .
+<Capacitance.value>: float .
+<AngleRadians.unit>: uid .
+<ActivePowerLimit.value>: uid .
+<DCTopologicalIsland.DCTopologicalNodes>: uid .
+<BasicIntervalSchedule.value1Unit>: uid .
+<ControlArea.EnergyArea>: uid .
+<DCConverterUnit.operationMode>: uid .
+<RealEnergy.multiplier>: uid .
+<LimitSet.isPercentageLimits>: bool .
+<MutualCoupling.g0ch>: uid .
+<BaseVoltage.nominalVoltage>: uid .
+<RealEnergy.unit>: uid .
+<MutualCoupling.distance11>: uid .
+<RegulatingCondEq.RegulatingControl>: uid .
+<GeneratingUnit.longPF>: float .
+<AnalogControl.minValue>: float .
+<OperationalLimitType.direction>: uid .
+<PowerTransformerEnd.PowerTransformer>: uid .
+<EquivalentBranch.positiveX21>: uid .
+<Terminal.TopologicalNode>: uid .
+<IdentifiedObject.energyIdentCodeEic>: string .
+<SubLoadArea.LoadArea>: uid .
+<PowerTransformerEnd.x0>: uid .
+<SynchronousMachine.ikk>: uid .
+<DCTopologicalNode.DCEquipmentContainer>: uid .
+<EnergyConsumer.pfixedPct>: uid .
+<ACDCConverter.resistiveLoss>: uid .
+<StaticVarCompensator.q>: uid .
+<AngleRadians.multiplier>: uid .
+<AccumulatorLimitSet.Measurements>: uid .
+<SynchronousMachine.x0>: uid .
+<GeneratingUnit.governorSCD>: uid .
+<RegulatingControl.mode>: uid .
+<WindGeneratingUnit.windGenUnitType>: uid .
+<ActivePowerPerCurrentFlow.multiplier>: uid .
+<ActivePowerPerCurrentFlow.unit>: uid .
+<Inductance.value>: float .
+<RegulatingControl.enabled>: bool .
+<CsConverter.minGamma>: uid .
+<RegularTimePoint.sequenceNumber>: int .
+<Capacitance.unit>: uid .
+<Measurement.PowerSystemResource>: uid .
+<AccumulatorValue.Accumulator>: uid .
+<TapChanger.step>: float .
+<AsynchronousMachine.reversible>: bool .
+<VoltagePerReactivePower.unit>: uid .
+<Control.unitSymbol>: uid .
+<Control.PowerSystemResource>: uid .
+<MeasurementValue.timeStamp>: dateTime .
+<ControlAreaGeneratingUnit.GeneratingUnit>: uid .
+<Seconds.multiplier>: uid .
+<CsPpccControlKind.name>: string .
+<PowerElectronicsUnit.minP>: uid .
+<SubGeographicalRegion.Region>: uid .
+<Terminal.ConnectivityNode>: uid .
+<DCSeriesDevice.inductance>: uid .
+<EnergySource.pMax>: uid .
+<Clamp.ACLineSegment>: uid .
+<DCConverterUnit.Substation>: uid .
+<CurrentFlow.unit>: uid .
+<ReactivePower.multiplier>: uid .
+<RegulatingControl.maxAllowedTargetValue>: float .
+<SeasonDayTypeSchedule.Season>: uid .
+<PhaseTapChangerAsymmetrical.windingConnectionAngle>: uid .
+<EquivalentBranch.positiveR21>: uid .
+<SynchronousMachine.r2>: uid .
+<BoundaryPoint.toEndIsoCode>: string .
+<LoadGroup.SubLoadArea>: uid .
+<NonConformLoad.LoadGroup>: uid .
+<SynchronousMachine.qPercent>: uid .
+<TieFlow.ControlArea>: uid .
+<Susceptance.multiplier>: uid .
+<ApparentPowerLimit.value>: uid .
+<SvPowerFlow.q>: uid .
+<ACDCTerminal.sequenceNumber>: int .
+<ACLineSegment.r>: uid .
+<TapSchedule.TapChanger>: uid .
+<VoltageLevel.Substation>: uid .
+<Quality61850.source>: uid .
+<AsynchronousMachine.efficiency>: uid .
+<DCLineSegment.inductance>: uid .
+<EquivalentBranch.x>: uid .
+<EquivalentShunt.b>: uid .
+<GeneratingUnit.minOperatingP>: uid .
+<TransformerEnd.endNumber>: int .
+<RatioTapChanger.stepVoltageIncrement>: uid .
+<MutualCoupling.x0>: uid .
+<PetersenCoil.xGroundMin>: uid .
+<DCConverterOperatingModeKind.name>: string .
+<PowerElectronicsConnection.ratedU>: uid .
+<SynchronousMachine.type>: uid .
+<Command.ValueAliasSet>: uid .
+<ACLineSegment.g0ch>: uid .
+<EnergySource.x>: uid .
+<SetPoint.normalValue>: float .
+<SynchronousMachine.earthing>: bool .
+<RotatingMachine.ratedS>: uid .
+<RotatingMachine.ratedU>: uid .
+<EquivalentInjection.maxQ>: uid .
+<GeneratingUnit.variableCost>: uid .
+<HydroPowerPlant.hydroPlantStorageType>: uid .
+<OperationalLimitType.acceptableDuration>: uid .
+<CsConverter.targetGamma>: uid .
+<VsConverter.uv>: uid .
+<Model.created>: datetime .
+<GeneratingUnit.genControlSource>: uid .
+<HydroGeneratingUnit.turbineType>: uid .
+<TapChangerTablePoint.x>: uid .
+<PowerTransformerEnd.g>: uid .
+<DiscreteValue.Discrete>: uid .
+<SynchronousMachine.satDirectSyncX>: uid .
+<PowerTransformerEnd.phaseAngleClock>: int .
+<ConformLoadSchedule.ConformLoadGroup>: uid .
+<LoadResponseCharacteristic.pFrequencyExponent>: float .
+<VoltagePerReactivePower.multiplier>: uid .
+<AnalogLimitSet.Measurements>: uid .
+<EquivalentInjection.r0>: uid .
+<PowerTransformerEnd.b0>: uid .
+<SynchronousMachine.shortCircuitRotorType>: uid .
+<ControlArea.netInterchange>: uid .
+<EquivalentInjection.ReactiveCapabilityCurve>: uid .
+<TransformerEnd.Terminal>: uid .
+<MutualCoupling.r0>: uid .
+<NonlinearShuntCompensatorPoint.g0>: uid .
+<SeriesCompensator.varistorRatedCurrent>: uid .
+<SynchronousMachine.mu>: float .
+<TransformerEnd.BaseVoltage>: uid .
+<ActivePowerPerFrequency.unit>: uid .
+<Reactance.value>: float .
+<StringMeasurementValue.StringMeasurement>: uid .
+<SynchronousMachine.earthingStarPointR>: uid .
+<MutualCoupling.First_Terminal>: uid .
+<PowerElectronicsConnection.p>: uid .
+<BoundaryPoint.toEndName>: string .
+<ExternalNetworkInjection.governorSCD>: uid .
+<ExternalNetworkInjection.maxQ>: uid .
+<LoadResponseCharacteristic.pVoltageExponent>: float .
+<VoltageLevel.BaseVoltage>: uid .
+<EquivalentInjection.x2>: uid .
+<TopologicalIsland.AngleRefTopologicalNode>: uid .
+<TapChangerTablePoint.g>: uid .
+<RatioTapChanger.RatioTapChangerTable>: uid .
+<AccumulatorLimit.value>: int .
+<EnergySource.x0>: uid .
+<SvInjection.TopologicalNode>: uid .
+<BatteryStateKind.name>: string .
+<DCBaseTerminal.DCNode>: uid .
+<CurveData.xvalue>: float .
+<HydroGeneratingUnit.HydroPowerPlant>: uid .
+<EquivalentBranch.zeroR21>: uid .
+<EnergySource.activePower>: uid .
+<ExternalNetworkInjection.referencePriority>: int .
+<Voltage.value>: float .
+<EquivalentBranch.zeroR12>: uid .
+<AngleRadians.value>: float .
+<EquivalentBranch.r>: uid .
+<Quality61850.failure>: bool .
+<Quality61850.validity>: uid .
+<Model.definition>: string .
+<ActivePowerLimit.normalValue>: uid .
+<CsConverter.maxIdc>: uid .
+<Season.startDate>: uid .
+<TransformerEnd.rground>: uid .
+<Temperature.value>: float .
+<CsOperatingModeKind.name>: string .
+<BatteryUnit.ratedE>: uid .
+<PhaseTapChangerNonLinear.voltageStepIncrement>: uid .
+<Capacitance.multiplier>: uid .
+<PU.multiplier>: uid .
+<ACDCConverter.baseS>: uid .
+<Susceptance.unit>: uid .
+<Command.value>: int .
+<VsConverter.delta>: uid .
+<DCShunt.resistance>: uid .
+<ActivePower.value>: float .
+<ShuntCompensator.maximumSections>: int .
+<BatteryUnit.batteryState>: uid .
+<ACDCConverter.q>: uid .
+<DCConductingEquipment.ratedUdc>: uid .
+<OperationalLimitSet.Terminal>: uid .
+<ExternalNetworkInjection.minR0ToX0Ratio>: float .
+<MutualCoupling.b0ch>: uid .
+<IdentifiedObject.name>: string .
+<BusNameMarker.ReportingGroup>: uid .
+<AngleDegrees.value>: float .
+<Control.unitMultiplier>: uid .
+<RotatingMachine.q>: uid .
+<GeneratingUnit.startupTime>: uid .
+<SolarGeneratingUnit.SolarPowerPlant>: uid .
+<ApparentPower.multiplier>: uid .
+<Quality61850.overFlow>: bool .
+<CsConverter.pPccControl>: uid .
+<EquivalentShunt.g>: uid .
+<SwitchSchedule.Switch>: uid .
+<Money.unit>: uid .
+<Measurement.unitSymbol>: uid .
+<AsynchronousMachine.iaIrRatio>: float .
+<SeriesCompensator.varistorPresent>: bool .
+<BoundaryPoint.isDirectCurrent>: bool .
+<EquivalentBranch.r21>: uid .
+<TapChanger.highStep>: int .
+<EquivalentInjection.r>: uid .
+<SvTapStep.position>: float .
+<EnergySource.nominalVoltage>: uid .
+<Curve.curveStyle>: uid .
+<PhaseTapChangerLinear.xMin>: uid .
+<ACDCConverter.targetPpcc>: uid .
+<ExternalNetworkInjection.p>: uid .
+type <Seconds> {
+  Seconds.unit
+  Seconds.value
+  rdf.about
+  Seconds.multiplier
+}
+type <UnitMultiplier> {
+  UnitMultiplier.name
+  rdf.about
+}
+type <ControlArea> {
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  ControlArea.EnergyArea
+  ControlArea.netInterchange
+  ControlArea.pTolerance
+  ControlArea.type
+}
+type <Disconnector> {
+  rdf.about
+  IdentifiedObject.description
+  Switch.open
+  Equipment.aggregate
+  Equipment.normallyInService
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  Switch.normalOpen
+  Switch.retained
+  ConductingEquipment.BaseVoltage
+  Switch.locked
+  Equipment.inService
+  Switch.ratedCurrent
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  Equipment.EquipmentContainer
+}
+type <AngleDegrees> {
+  rdf.about
+  AngleDegrees.multiplier
+  AngleDegrees.unit
+  AngleDegrees.value
+}
+type <AngleRadians> {
+  rdf.about
+  AngleRadians.multiplier
+  AngleRadians.unit
+  AngleRadians.value
+}
+type <TopologicalIsland> {
+  rdf.about
+  TopologicalIsland.TopologicalNodes
+  TopologicalIsland.AngleRefTopologicalNode
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+}
+type <HydroPump> {
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  rdf.about
+  Equipment.normallyInService
+  IdentifiedObject.energyIdentCodeEic
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.shortName
+  HydroPump.RotatingMachine
+  HydroPump.HydroPowerPlant
+  Equipment.aggregate
+}
+type <OperationalLimitType> {
+  OperationalLimitType.acceptableDuration
+  OperationalLimitType.direction
+  OperationalLimitType.kind
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.name
+  rdf.about
+  OperationalLimitType.isInfiniteDuration
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+}
+type <CogenerationPlant> {
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+}
+type <EnergyConsumer> {
+  rdf.about
+  Equipment.normallyInService
+  IdentifiedObject.mRID
+  Equipment.inService
+  Equipment.aggregate
+  IdentifiedObject.description
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  EnergyConsumer.q
+  EnergyConsumer.pfixedPct
+  EnergyConsumer.qfixed
+  EnergyConsumer.qfixedPct
+  EnergyConsumer.LoadResponse
+  EnergyConsumer.p
+  EnergyConsumer.pfixed
+  ConductingEquipment.BaseVoltage
+  Equipment.EquipmentContainer
+  IdentifiedObject.energyIdentCodeEic
+}
+type <ActivePower> {
+  ActivePower.multiplier
+  ActivePower.unit
+  ActivePower.value
+  rdf.about
+}
+type <AccumulatorLimitSet> {
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  rdf.about
+  AccumulatorLimitSet.Measurements
+  LimitSet.isPercentageLimits
+  IdentifiedObject.description
+}
+type <ValueAliasSet> {
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+}
+type <SvPowerFlow> {
+  rdf.about
+  SvPowerFlow.p
+  SvPowerFlow.q
+  SvPowerFlow.Terminal
+}
+type <Breaker> {
+  Switch.locked
+  Switch.normalOpen
+  ConductingEquipment.BaseVoltage
+  Equipment.aggregate
+  Equipment.normallyInService
+  Equipment.EquipmentContainer
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  Switch.ratedCurrent
+  Switch.open
+  Switch.retained
+  IdentifiedObject.mRID
+  Equipment.inService
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+}
+type <ApparentPower> {
+  rdf.about
+  ApparentPower.multiplier
+  ApparentPower.unit
+  ApparentPower.value
+}
+type <DCSeriesDevice> {
+  Equipment.normallyInService
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+  DCSeriesDevice.resistance
+  Equipment.aggregate
+  DCConductingEquipment.ratedUdc
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.name
+  rdf.about
+  DCSeriesDevice.inductance
+}
+type <NonConformLoadSchedule> {
+  NonConformLoadSchedule.NonConformLoadGroup
+  SeasonDayTypeSchedule.Season
+  RegularIntervalSchedule.endTime
+  RegularIntervalSchedule.timeStep
+  IdentifiedObject.name
+  rdf.about
+  IdentifiedObject.shortName
+  IdentifiedObject.description
+  BasicIntervalSchedule.startTime
+  BasicIntervalSchedule.value1Unit
+  IdentifiedObject.energyIdentCodeEic
+  SeasonDayTypeSchedule.DayType
+  IdentifiedObject.mRID
+  BasicIntervalSchedule.value2Unit
+}
+type <PhaseTapChangerSymmetrical> {
+  IdentifiedObject.name
+  rdf.about
+  TapChanger.normalStep
+  IdentifiedObject.description
+  TapChanger.controlEnabled
+  TapChanger.step
+  TapChanger.lowStep
+  TapChanger.TapChangerControl
+  IdentifiedObject.shortName
+  PhaseTapChanger.TransformerEnd
+  TapChanger.highStep
+  TapChanger.neutralU
+  TapChanger.ltcFlag
+  TapChanger.neutralStep
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  PhaseTapChangerNonLinear.voltageStepIncrement
+  PhaseTapChangerNonLinear.xMax
+  PhaseTapChangerNonLinear.xMin
+}
+type <GrossToNetActivePowerCurve> {
+  rdf.about
+  Curve.y2Unit
+  IdentifiedObject.shortName
+  Curve.y1Unit
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  GrossToNetActivePowerCurve.GeneratingUnit
+  Curve.curveStyle
+  Curve.xUnit
+}
+type <PowerElectronicsConnection> {
+  PowerElectronicsConnection.maxQ
+  PowerElectronicsConnection.minQ
+  Equipment.aggregate
+  IdentifiedObject.shortName
+  PowerElectronicsConnection.q
+  PowerElectronicsConnection.ratedU
+  PowerElectronicsConnection.PowerElectronicsUnit
+  ConductingEquipment.BaseVoltage
+  IdentifiedObject.description
+  IdentifiedObject.name
+  rdf.about
+  RegulatingCondEq.RegulatingControl
+  Equipment.EquipmentContainer
+  RegulatingCondEq.controlEnabled
+  Equipment.inService
+  PowerElectronicsConnection.ratedS
+  Equipment.normallyInService
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  PowerElectronicsConnection.p
+}
+type <Inductance> {
+  rdf.about
+  Inductance.multiplier
+  Inductance.unit
+  Inductance.value
+}
+type <StringMeasurementValue> {
+  MeasurementValue.timeStamp
+  MeasurementValue.MeasurementValueSource
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  rdf.about
+  StringMeasurementValue.StringMeasurement
+  MeasurementValue.sensorAccuracy
+}
+type <PU> {
+  rdf.about
+  PU.multiplier
+  PU.unit
+  PU.value
+}
+type <EquivalentNetwork> {
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+}
+type <FaultIndicator> {
+  rdf.about
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.shortName
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  AuxiliaryEquipment.Terminal
+  Equipment.aggregate
+  Equipment.normallyInService
+  IdentifiedObject.energyIdentCodeEic
+}
+type <SeriesCompensator> {
+  SeriesCompensator.x
+  Equipment.aggregate
+  Equipment.normallyInService
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.shortName
+  SeriesCompensator.varistorPresent
+  SeriesCompensator.x0
+  rdf.about
+  ConductingEquipment.BaseVoltage
+  SeriesCompensator.r0
+  SeriesCompensator.varistorVoltageThreshold
+  SeriesCompensator.r
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  SeriesCompensator.varistorRatedCurrent
+  Equipment.EquipmentContainer
+}
+type <Switch> {
+  Switch.ratedCurrent
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+  Switch.locked
+  Switch.open
+  Switch.retained
+  ConductingEquipment.BaseVoltage
+  Equipment.EquipmentContainer
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.name
+  Equipment.inService
+  Switch.normalOpen
+  Equipment.aggregate
+  Equipment.normallyInService
+}
+type <ThermalGeneratingUnit> {
+  ThermalGeneratingUnit.CogenerationPlant
+  GeneratingUnit.shortPF
+  Equipment.normallyInService
+  IdentifiedObject.shortName
+  Equipment.inService
+  GeneratingUnit.genControlSource
+  GeneratingUnit.longPF
+  GeneratingUnit.totalEfficiency
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.name
+  GeneratingUnit.ratedNetMaxP
+  GeneratingUnit.variableCost
+  Equipment.aggregate
+  IdentifiedObject.mRID
+  GeneratingUnit.ratedGrossMaxP
+  GeneratingUnit.ratedGrossMinP
+  rdf.about
+  ThermalGeneratingUnit.CAESPlant
+  GeneratingUnit.maximumAllowableSpinningReserve
+  GeneratingUnit.minOperatingP
+  GeneratingUnit.nominalP
+  GeneratingUnit.maxOperatingP
+  ThermalGeneratingUnit.CombinedCyclePlant
+  GeneratingUnit.governorSCD
+  Equipment.EquipmentContainer
+  GeneratingUnit.startupCost
+  GeneratingUnit.startupTime
+  IdentifiedObject.description
+  GeneratingUnit.normalPF
+}
+type <ShortCircuitRotorKind> {
+  rdf.about
+  ShortCircuitRotorKind.name
+}
+type <ApparentPowerLimit> {
+  OperationalLimit.OperationalLimitSet
+  IdentifiedObject.mRID
+  rdf.about
+  ApparentPowerLimit.normalValue
+  OperationalLimit.OperationalLimitType
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  ApparentPowerLimit.value
+}
+type <CurrentTransformer> {
+  AuxiliaryEquipment.Terminal
+  Equipment.aggregate
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  Equipment.normallyInService
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+}
+type <LoadArea> {
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  IdentifiedObject.description
+}
+type <GroundDisconnector> {
+  Switch.retained
+  IdentifiedObject.energyIdentCodeEic
+  Switch.open
+  Equipment.inService
+  Switch.ratedCurrent
+  IdentifiedObject.description
+  IdentifiedObject.shortName
+  ConductingEquipment.BaseVoltage
+  IdentifiedObject.name
+  rdf.about
+  Switch.normalOpen
+  Equipment.aggregate
+  Equipment.normallyInService
+  Equipment.EquipmentContainer
+  IdentifiedObject.mRID
+  Switch.locked
+}
+type <RatioTapChanger> {
+  TapChanger.normalStep
+  TapChanger.TapChangerControl
+  IdentifiedObject.shortName
+  RatioTapChanger.stepVoltageIncrement
+  TapChanger.ltcFlag
+  TapChanger.neutralU
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  TapChanger.lowStep
+  TapChanger.highStep
+  TapChanger.step
+  rdf.about
+  RatioTapChanger.RatioTapChangerTable
+  TapChanger.neutralStep
+  IdentifiedObject.description
+  IdentifiedObject.name
+  TapChanger.controlEnabled
+  RatioTapChanger.TransformerEnd
+}
+type <LinearShuntCompensator> {
+  IdentifiedObject.shortName
+  LinearShuntCompensator.b0PerSection
+  LinearShuntCompensator.gPerSection
+  ShuntCompensator.aVRDelay
+  ShuntCompensator.grounded
+  ShuntCompensator.maximumSections
+  ShuntCompensator.voltageSensitivity
+  ConductingEquipment.BaseVoltage
+  LinearShuntCompensator.g0PerSection
+  ShuntCompensator.sections
+  Equipment.inService
+  LinearShuntCompensator.bPerSection
+  ShuntCompensator.normalSections
+  Equipment.aggregate
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  rdf.about
+  ShuntCompensator.nomU
+  RegulatingCondEq.RegulatingControl
+  IdentifiedObject.energyIdentCodeEic
+  Equipment.normallyInService
+  Equipment.EquipmentContainer
+  RegulatingCondEq.controlEnabled
+}
+type <WindPowerPlant> {
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+}
+type <Frequency> {
+  rdf.about
+  Frequency.multiplier
+  Frequency.unit
+  Frequency.value
+}
+type <OperationalLimitDirectionKind> {
+  OperationalLimitDirectionKind.name
+  rdf.about
+}
+type <DCBreaker> {
+  IdentifiedObject.shortName
+  rdf.about
+  DCConductingEquipment.ratedUdc
+  Equipment.normallyInService
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  Equipment.aggregate
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+}
+type <NonConformLoad> {
+  rdf.about
+  EnergyConsumer.pfixed
+  EnergyConsumer.qfixed
+  Equipment.normallyInService
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+  Equipment.inService
+  EnergyConsumer.pfixedPct
+  EnergyConsumer.qfixedPct
+  EnergyConsumer.LoadResponse
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  EnergyConsumer.p
+  EnergyConsumer.q
+  NonConformLoad.LoadGroup
+  Equipment.EquipmentContainer
+  IdentifiedObject.name
+  ConductingEquipment.BaseVoltage
+  Equipment.aggregate
+}
+type <VsCapabilityCurve> {
+  rdf.about
+  Curve.curveStyle
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+  IdentifiedObject.name
+  Curve.xUnit
+  Curve.y1Unit
+  Curve.y2Unit
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+}
+type <Equipment> {
+  IdentifiedObject.mRID
+  rdf.about
+  Equipment.inService
+}
+type <ACLineSegment> {
+  IdentifiedObject.mRID
+  ACLineSegment.b0ch
+  ACLineSegment.g0ch
+  ACLineSegment.r0
+  ACLineSegment.shortCircuitEndTemperature
+  ACLineSegment.x0
+  ConductingEquipment.BaseVoltage
+  Equipment.EquipmentContainer
+  IdentifiedObject.shortName
+  Equipment.aggregate
+  Equipment.normallyInService
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.name
+  ACLineSegment.bch
+  Conductor.length
+  ACLineSegment.r
+  ACLineSegment.x
+  rdf.about
+  ACLineSegment.gch
+}
+type <ControlAreaGeneratingUnit> {
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  ControlAreaGeneratingUnit.GeneratingUnit
+  ControlAreaGeneratingUnit.ControlArea
+}
+type <DCGround> {
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  DCGround.inductance
+  DCGround.r
+  Equipment.aggregate
+  Equipment.normallyInService
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.shortName
+  rdf.about
+  DCConductingEquipment.ratedUdc
+}
+type <Capacitance> {
+  rdf.about
+  Capacitance.multiplier
+  Capacitance.unit
+  Capacitance.value
+}
+type <Voltage> {
+  rdf.about
+  Voltage.multiplier
+  Voltage.unit
+  Voltage.value
+}
+type <ControlAreaTypeKind> {
+  ControlAreaTypeKind.name
+  rdf.about
+}
+type <BatteryUnit> {
+  BatteryUnit.batteryState
+  BatteryUnit.ratedE
+  PowerElectronicsUnit.maxP
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  PowerElectronicsUnit.minP
+  Equipment.aggregate
+  Equipment.EquipmentContainer
+  rdf.about
+  Equipment.normallyInService
+  BatteryUnit.storedE
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.shortName
+  Equipment.inService
+}
+type <DCNode> {
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  DCNode.DCTopologicalNode
+  rdf.about
+  DCNode.DCEquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+}
+type <DayType> {
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+}
+type <PhaseTapChangerTabular> {
+  TapChanger.lowStep
+  TapChanger.neutralStep
+  IdentifiedObject.mRID
+  TapChanger.ltcFlag
+  TapChanger.normalStep
+  IdentifiedObject.description
+  IdentifiedObject.name
+  TapChanger.controlEnabled
+  rdf.about
+  PhaseTapChanger.TransformerEnd
+  TapChanger.highStep
+  TapChanger.neutralU
+  TapChanger.TapChangerControl
+  IdentifiedObject.energyIdentCodeEic
+  TapChanger.step
+  PhaseTapChangerTabular.PhaseTapChangerTable
+  IdentifiedObject.shortName
+}
+type <VoltageLimit> {
+  OperationalLimit.OperationalLimitType
+  OperationalLimit.OperationalLimitSet
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  VoltageLimit.normalValue
+  IdentifiedObject.shortName
+  VoltageLimit.value
+  rdf.about
+}
+type <WindGenUnitKind> {
+  WindGenUnitKind.name
+  rdf.about
+}
+type <DCConverterOperatingModeKind> {
+  DCConverterOperatingModeKind.name
+  rdf.about
+}
+type <VsQpccControlKind> {
+  rdf.about
+  VsQpccControlKind.name
+}
+type <SubLoadArea> {
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  SubLoadArea.LoadArea
+  IdentifiedObject.description
+}
+type <SVCControlMode> {
+  SVCControlMode.name
+  rdf.about
+}
+type <TieFlow> {
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+  rdf.about
+  TieFlow.Terminal
+  TieFlow.ControlArea
+  TieFlow.positiveFlowIn
+  IdentifiedObject.name
+}
+type <GroundingImpedance> {
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  EarthFaultCompensator.r
+  rdf.about
+  Equipment.aggregate
+  Equipment.EquipmentContainer
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.shortName
+  GroundingImpedance.x
+  ConductingEquipment.BaseVoltage
+  Equipment.normallyInService
+}
+type <StaticVarCompensator> {
+  StaticVarCompensator.capacitiveRating
+  StaticVarCompensator.inductiveRating
+  IdentifiedObject.shortName
+  rdf.about
+  StaticVarCompensator.voltageSetPoint
+  Equipment.aggregate
+  Equipment.inService
+  StaticVarCompensator.sVCControlMode
+  ConductingEquipment.BaseVoltage
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.name
+  StaticVarCompensator.q
+  StaticVarCompensator.slope
+  RegulatingCondEq.RegulatingControl
+  Equipment.normallyInService
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  RegulatingCondEq.controlEnabled
+}
+type <TapChangerControl> {
+  IdentifiedObject.name
+  RegulatingControl.targetDeadband
+  RegulatingControl.targetValueUnitMultiplier
+  IdentifiedObject.mRID
+  RegulatingControl.mode
+  RegulatingControl.Terminal
+  IdentifiedObject.shortName
+  RegulatingControl.discrete
+  RegulatingControl.enabled
+  RegulatingControl.maxAllowedTargetValue
+  RegulatingControl.targetValue
+  rdf.about
+  RegulatingControl.minAllowedTargetValue
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+}
+type <PerCent> {
+  PerCent.multiplier
+  PerCent.unit
+  PerCent.value
+  rdf.about
+}
+type <RealEnergy> {
+  rdf.about
+  RealEnergy.multiplier
+  RealEnergy.unit
+  RealEnergy.value
+}
+type <Source> {
+  Source.name
+  rdf.about
+}
+type <PotentialTransformer> {
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.shortName
+  AuxiliaryEquipment.Terminal
+  Equipment.aggregate
+  Equipment.normallyInService
+  IdentifiedObject.name
+  rdf.about
+  Equipment.EquipmentContainer
+  IdentifiedObject.mRID
+}
+type <VsConverter> {
+  VsConverter.maxModulationIndex
+  ACDCConverter.maxP
+  ACDCConverter.minUdc
+  Equipment.aggregate
+  Equipment.EquipmentContainer
+  VsConverter.droopCompensation
+  VsConverter.pPccControl
+  VsConverter.qPccControl
+  VsConverter.targetPowerFactorPcc
+  Equipment.inService
+  ACDCConverter.uc
+  VsConverter.CapabilityCurve
+  ACDCConverter.baseS
+  ACDCConverter.valveU0
+  ConductingEquipment.BaseVoltage
+  VsConverter.targetPhasePcc
+  ACDCConverter.p
+  ACDCConverter.q
+  rdf.about
+  IdentifiedObject.name
+  VsConverter.qShare
+  ACDCConverter.targetPpcc
+  ACDCConverter.resistiveLoss
+  IdentifiedObject.energyIdentCodeEic
+  VsConverter.targetQpcc
+  ACDCConverter.targetUdc
+  ACDCConverter.idleLoss
+  ACDCConverter.ratedUdc
+  ACDCConverter.switchingLoss
+  IdentifiedObject.shortName
+  VsConverter.targetPWMfactor
+  ACDCConverter.idc
+  ACDCConverter.udc
+  ACDCConverter.maxUdc
+  ACDCConverter.numberOfValves
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  VsConverter.droop
+  ACDCConverter.minP
+  ACDCConverter.PccTerminal
+  Equipment.normallyInService
+  VsConverter.targetUpcc
+  VsConverter.delta
+  VsConverter.uv
+  ACDCConverter.poleLossP
+}
+type <StringMeasurement> {
+  rdf.about
+  Measurement.measurementType
+  Measurement.unitMultiplier
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  Measurement.phases
+  Measurement.unitSymbol
+  Measurement.PowerSystemResource
+  Measurement.Terminal
+}
+type <ReactiveCapabilityCurve> {
+  IdentifiedObject.mRID
+  rdf.about
+  Curve.curveStyle
+  Curve.xUnit
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.shortName
+  Curve.y1Unit
+  Curve.y2Unit
+  IdentifiedObject.description
+  IdentifiedObject.name
+}
+type <AsynchronousMachineKind> {
+  AsynchronousMachineKind.name
+  rdf.about
+}
+type <ConformLoad> {
+  EnergyConsumer.pfixed
+  ConductingEquipment.BaseVoltage
+  IdentifiedObject.energyIdentCodeEic
+  EnergyConsumer.p
+  rdf.about
+  EnergyConsumer.LoadResponse
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  EnergyConsumer.pfixedPct
+  EnergyConsumer.qfixedPct
+  Equipment.aggregate
+  Equipment.normallyInService
+  ConformLoad.LoadGroup
+  EnergyConsumer.qfixed
+  EnergyConsumer.q
+  Equipment.inService
+}
+type <CurrentLimit> {
+  CurrentLimit.normalValue
+  OperationalLimit.OperationalLimitType
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  CurrentLimit.value
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.shortName
+  OperationalLimit.OperationalLimitSet
+}
+type <DisconnectingCircuitBreaker> {
+  IdentifiedObject.description
+  IdentifiedObject.shortName
+  Switch.retained
+  Equipment.normallyInService
+  Switch.ratedCurrent
+  Equipment.aggregate
+  Equipment.EquipmentContainer
+  IdentifiedObject.energyIdentCodeEic
+  Switch.locked
+  Switch.open
+  Switch.normalOpen
+  ConductingEquipment.BaseVoltage
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  Equipment.inService
+  rdf.about
+}
+type <Length> {
+  rdf.about
+  Length.multiplier
+  Length.unit
+  Length.value
+}
+type <SvInjection> {
+  rdf.about
+  SvInjection.pInjection
+  SvInjection.qInjection
+  SvInjection.TopologicalNode
+}
+type <DCChopper> {
+  IdentifiedObject.name
+  DCConductingEquipment.ratedUdc
+  Equipment.normallyInService
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  rdf.about
+  Equipment.aggregate
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+}
+type <GeneratingUnit> {
+  GeneratingUnit.governorSCD
+  GeneratingUnit.startupCost
+  Equipment.normallyInService
+  GeneratingUnit.normalPF
+  GeneratingUnit.minOperatingP
+  GeneratingUnit.nominalP
+  GeneratingUnit.ratedGrossMinP
+  GeneratingUnit.totalEfficiency
+  Equipment.aggregate
+  Equipment.EquipmentContainer
+  rdf.about
+  GeneratingUnit.genControlSource
+  GeneratingUnit.longPF
+  GeneratingUnit.maximumAllowableSpinningReserve
+  GeneratingUnit.maxOperatingP
+  GeneratingUnit.ratedNetMaxP
+  GeneratingUnit.variableCost
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+  GeneratingUnit.ratedGrossMaxP
+  GeneratingUnit.shortPF
+  GeneratingUnit.startupTime
+  IdentifiedObject.name
+  Equipment.inService
+}
+type <PhaseTapChangerTablePoint> {
+  TapChangerTablePoint.g
+  TapChangerTablePoint.r
+  TapChangerTablePoint.ratio
+  TapChangerTablePoint.x
+  PhaseTapChangerTablePoint.angle
+  PhaseTapChangerTablePoint.PhaseTapChangerTable
+  TapChangerTablePoint.step
+  rdf.about
+  TapChangerTablePoint.b
+}
+type <CsOperatingModeKind> {
+  CsOperatingModeKind.name
+  rdf.about
+}
+type <ConformLoadSchedule> {
+  IdentifiedObject.name
+  ConformLoadSchedule.ConformLoadGroup
+  BasicIntervalSchedule.startTime
+  IdentifiedObject.energyIdentCodeEic
+  SeasonDayTypeSchedule.Season
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+  RegularIntervalSchedule.timeStep
+  BasicIntervalSchedule.value2Unit
+  IdentifiedObject.description
+  BasicIntervalSchedule.value1Unit
+  rdf.about
+  SeasonDayTypeSchedule.DayType
+  RegularIntervalSchedule.endTime
+}
+type <ConnectivityNode> {
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  ConnectivityNode.TopologicalNode
+  rdf.about
+  ConnectivityNode.ConnectivityNodeContainer
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+}
+type <FossilFuel> {
+  rdf.about
+  FossilFuel.fossilFuelType
+  FossilFuel.ThermalGeneratingUnit
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+}
+type <CurrentFlow> {
+  rdf.about
+  CurrentFlow.multiplier
+  CurrentFlow.unit
+  CurrentFlow.value
+}
+type <CAESPlant> {
+  IdentifiedObject.shortName
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+}
+type <EquivalentBranch> {
+  Equipment.aggregate
+  EquivalentBranch.negativeX12
+  EquivalentBranch.positiveR21
+  ConductingEquipment.BaseVoltage
+  EquivalentEquipment.EquivalentNetwork
+  IdentifiedObject.name
+  EquivalentBranch.negativeR12
+  EquivalentBranch.positiveR12
+  rdf.about
+  EquivalentBranch.positiveX12
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.shortName
+  IdentifiedObject.energyIdentCodeEic
+  EquivalentBranch.negativeR21
+  EquivalentBranch.zeroR12
+  EquivalentBranch.zeroX12
+  EquivalentBranch.r
+  EquivalentBranch.x
+  EquivalentBranch.zeroR21
+  EquivalentBranch.r21
+  Equipment.normallyInService
+  IdentifiedObject.mRID
+  EquivalentBranch.negativeX21
+  EquivalentBranch.positiveX21
+  EquivalentBranch.zeroX21
+  EquivalentBranch.x21
+}
+type <Ground> {
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  ConductingEquipment.BaseVoltage
+  Equipment.aggregate
+  Equipment.normallyInService
+  IdentifiedObject.mRID
+}
+type <SolarPowerPlant> {
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+}
+type <DCShunt> {
+  DCShunt.capacitance
+  Equipment.normallyInService
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  rdf.about
+  DCShunt.resistance
+  DCConductingEquipment.ratedUdc
+  Equipment.aggregate
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+}
+type <PhaseTapChangerLinear> {
+  PhaseTapChanger.TransformerEnd
+  TapChanger.ltcFlag
+  TapChanger.neutralStep
+  IdentifiedObject.shortName
+  TapChanger.step
+  IdentifiedObject.description
+  IdentifiedObject.name
+  rdf.about
+  PhaseTapChangerLinear.xMax
+  TapChanger.lowStep
+  TapChanger.neutralU
+  TapChanger.normalStep
+  TapChanger.TapChangerControl
+  PhaseTapChangerLinear.stepPhaseShiftIncrement
+  PhaseTapChangerLinear.xMin
+  TapChanger.highStep
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  TapChanger.controlEnabled
+}
+type <WaveTrap> {
+  AuxiliaryEquipment.Terminal
+  IdentifiedObject.shortName
+  rdf.about
+  Equipment.aggregate
+  Equipment.normallyInService
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+}
+type <SvTapStep> {
+  rdf.about
+  SvTapStep.position
+  SvTapStep.TapChanger
+}
+type <RegulatingControlModeKind> {
+  RegulatingControlModeKind.name
+  rdf.about
+}
+type <ExternalNetworkInjection> {
+  RegulatingCondEq.RegulatingControl
+  IdentifiedObject.energyIdentCodeEic
+  ExternalNetworkInjection.minZ0ToZ1Ratio
+  ExternalNetworkInjection.p
+  ExternalNetworkInjection.q
+  Equipment.aggregate
+  IdentifiedObject.mRID
+  ExternalNetworkInjection.ikSecond
+  RegulatingCondEq.controlEnabled
+  ExternalNetworkInjection.maxP
+  IdentifiedObject.description
+  ExternalNetworkInjection.maxR1ToX1Ratio
+  ExternalNetworkInjection.minInitialSymShCCurrent
+  ExternalNetworkInjection.minR0ToX0Ratio
+  ExternalNetworkInjection.minR1ToX1Ratio
+  ExternalNetworkInjection.maxQ
+  ExternalNetworkInjection.minQ
+  ConductingEquipment.BaseVoltage
+  ExternalNetworkInjection.maxInitialSymShCCurrent
+  Equipment.normallyInService
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  ExternalNetworkInjection.maxZ0ToZ1Ratio
+  Equipment.inService
+  ExternalNetworkInjection.governorSCD
+  ExternalNetworkInjection.minP
+  ExternalNetworkInjection.voltageFactor
+  ExternalNetworkInjection.referencePriority
+  rdf.about
+  Equipment.EquipmentContainer
+  ExternalNetworkInjection.maxR0ToX0Ratio
+}
+type <Fuse> {
+  Switch.ratedCurrent
+  Switch.retained
+  Equipment.EquipmentContainer
+  Switch.normalOpen
+  Equipment.aggregate
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+  rdf.about
+  IdentifiedObject.energyIdentCodeEic
+  Switch.locked
+  ConductingEquipment.BaseVoltage
+  Equipment.normallyInService
+  IdentifiedObject.description
+  IdentifiedObject.name
+  Switch.open
+  Equipment.inService
+}
+type <TapSchedule> {
+  BasicIntervalSchedule.value2Unit
+  IdentifiedObject.description
+  IdentifiedObject.shortName
+  rdf.about
+  RegularIntervalSchedule.endTime
+  RegularIntervalSchedule.timeStep
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  SeasonDayTypeSchedule.DayType
+  SeasonDayTypeSchedule.Season
+  BasicIntervalSchedule.startTime
+  TapSchedule.TapChanger
+  BasicIntervalSchedule.value1Unit
+  IdentifiedObject.name
+}
+type <PhaseTapChangerTable> {
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+}
+type <PowerTransformer> {
+  Equipment.aggregate
+  Equipment.normallyInService
+  IdentifiedObject.shortName
+  rdf.about
+  IdentifiedObject.description
+  PowerTransformer.beforeShortCircuitAnglePf
+  PowerTransformer.operationalValuesConsidered
+  Equipment.EquipmentContainer
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.name
+  PowerTransformer.beforeShCircuitHighestOperatingVoltage
+  PowerTransformer.highSideMinOperatingU
+  PowerTransformer.isPartOfGeneratorUnit
+  ConductingEquipment.BaseVoltage
+  IdentifiedObject.mRID
+  PowerTransformer.beforeShCircuitHighestOperatingCurrent
+}
+type <AccumulatorReset> {
+  IdentifiedObject.name
+  AccumulatorReset.AccumulatorValue
+  Control.operationInProgress
+  Control.unitMultiplier
+  Control.unitSymbol
+  Control.PowerSystemResource
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  rdf.about
+  Control.controlType
+  Control.timeStamp
+}
+type <AsynchronousMachine> {
+  RotatingMachine.ratedU
+  AsynchronousMachine.converterFedDrive
+  rdf.about
+  RegulatingCondEq.RegulatingControl
+  RotatingMachine.ratedPowerFactor
+  Equipment.normallyInService
+  AsynchronousMachine.rxLockedRotorRatio
+  AsynchronousMachine.asynchronousMachineType
+  Equipment.inService
+  ConductingEquipment.BaseVoltage
+  Equipment.aggregate
+  AsynchronousMachine.efficiency
+  AsynchronousMachine.iaIrRatio
+  AsynchronousMachine.polePairNumber
+  RotatingMachine.ratedS
+  RotatingMachine.GeneratingUnit
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  RotatingMachine.q
+  IdentifiedObject.mRID
+  AsynchronousMachine.ratedMechanicalPower
+  RotatingMachine.p
+  AsynchronousMachine.nominalFrequency
+  AsynchronousMachine.nominalSpeed
+  IdentifiedObject.shortName
+  AsynchronousMachine.reversible
+  Equipment.EquipmentContainer
+  IdentifiedObject.name
+  RegulatingCondEq.controlEnabled
+}
+type <Reactance> {
+  Reactance.unit
+  Reactance.value
+  rdf.about
+  Reactance.multiplier
+}
+type <Susceptance> {
+  Susceptance.unit
+  Susceptance.value
+  rdf.about
+  Susceptance.multiplier
+}
+type <SetPoint> {
+  rdf.about
+  AnalogControl.minValue
+  Control.operationInProgress
+  Control.unitMultiplier
+  Control.unitSymbol
+  Control.PowerSystemResource
+  AnalogControl.AnalogValue
+  IdentifiedObject.description
+  IdentifiedObject.name
+  SetPoint.value
+  IdentifiedObject.mRID
+  SetPoint.normalValue
+  AnalogControl.maxValue
+  Control.controlType
+  Control.timeStamp
+}
+type <SvShuntCompensatorSections> {
+  SvShuntCompensatorSections.ShuntCompensator
+  rdf.about
+  SvShuntCompensatorSections.sections
+}
+type <Validity> {
+  Validity.name
+  rdf.about
+}
+type <EquivalentInjection> {
+  IdentifiedObject.energyIdentCodeEic
+  EquivalentInjection.regulationCapability
+  EquivalentInjection.p
+  EquivalentInjection.maxP
+  ConductingEquipment.BaseVoltage
+  Equipment.EquipmentContainer
+  EquivalentInjection.x
+  EquivalentInjection.x0
+  rdf.about
+  EquivalentEquipment.EquivalentNetwork
+  EquivalentInjection.r0
+  EquivalentInjection.q
+  EquivalentInjection.regulationStatus
+  IdentifiedObject.mRID
+  EquivalentInjection.r
+  EquivalentInjection.regulationTarget
+  Equipment.inService
+  EquivalentInjection.maxQ
+  EquivalentInjection.minP
+  EquivalentInjection.minQ
+  Equipment.aggregate
+  IdentifiedObject.shortName
+  EquivalentInjection.r2
+  EquivalentInjection.x2
+  EquivalentInjection.ReactiveCapabilityCurve
+  Equipment.normallyInService
+  IdentifiedObject.description
+  IdentifiedObject.name
+}
+type <Conductance> {
+  rdf.about
+  Conductance.multiplier
+  Conductance.unit
+  Conductance.value
+}
+type <HydroPowerPlant> {
+  HydroPowerPlant.hydroPlantStorageType
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+}
+type <RegulatingControl> {
+  RegulatingControl.discrete
+  RegulatingControl.minAllowedTargetValue
+  RegulatingControl.targetDeadband
+  rdf.about
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  RegulatingControl.maxAllowedTargetValue
+  RegulatingControl.mode
+  RegulatingControl.Terminal
+  RegulatingControl.enabled
+  IdentifiedObject.description
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  RegulatingControl.targetValue
+  RegulatingControl.targetValueUnitMultiplier
+}
+type <Terminal> {
+  Terminal.ConnectivityNode
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  Terminal.phases
+  ACDCTerminal.BusNameMarker
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  ACDCTerminal.connected
+  Terminal.TopologicalNode
+  Terminal.ConductingEquipment
+  ACDCTerminal.sequenceNumber
+}
+type <Temperature> {
+  Temperature.multiplier
+  Temperature.unit
+  Temperature.value
+  rdf.about
+}
+type <SvVoltage> {
+  SvVoltage.angle
+  SvVoltage.v
+  SvVoltage.TopologicalNode
+  rdf.about
+}
+type <CsPpccControlKind> {
+  CsPpccControlKind.name
+  rdf.about
+}
+type <Clamp> {
+  Clamp.ACLineSegment
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  Equipment.normallyInService
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  Clamp.lengthFromTerminal1
+  ConductingEquipment.BaseVoltage
+  Equipment.aggregate
+}
+type <ActivePowerPerFrequency> {
+  ActivePowerPerFrequency.unit
+  ActivePowerPerFrequency.value
+  rdf.about
+  ActivePowerPerFrequency.multiplier
+}
+type <DiscreteValue> {
+  DiscreteValue.Discrete
+  MeasurementValue.sensorAccuracy
+  MeasurementValue.timeStamp
+  MeasurementValue.MeasurementValueSource
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  rdf.about
+}
+type <Currency> {
+  rdf.about
+  Currency.name
+}
+type <BaseVoltage> {
+  rdf.about
+  BaseVoltage.nominalVoltage
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+}
+type <NonlinearShuntCompensator> {
+  ShuntCompensator.normalSections
+  ShuntCompensator.voltageSensitivity
+  Equipment.normallyInService
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  ShuntCompensator.grounded
+  ShuntCompensator.nomU
+  ShuntCompensator.sections
+  RegulatingCondEq.RegulatingControl
+  Equipment.EquipmentContainer
+  rdf.about
+  ShuntCompensator.maximumSections
+  ConductingEquipment.BaseVoltage
+  IdentifiedObject.shortName
+  IdentifiedObject.energyIdentCodeEic
+  RegulatingCondEq.controlEnabled
+  Equipment.inService
+  ShuntCompensator.aVRDelay
+  Equipment.aggregate
+}
+type <WindGeneratingUnit> {
+  GeneratingUnit.startupTime
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.shortName
+  GeneratingUnit.genControlSource
+  GeneratingUnit.ratedGrossMinP
+  IdentifiedObject.name
+  GeneratingUnit.governorSCD
+  GeneratingUnit.maximumAllowableSpinningReserve
+  GeneratingUnit.nominalP
+  GeneratingUnit.shortPF
+  IdentifiedObject.energyIdentCodeEic
+  WindGeneratingUnit.WindPowerPlant
+  GeneratingUnit.longPF
+  GeneratingUnit.minOperatingP
+  Equipment.aggregate
+  Equipment.normallyInService
+  GeneratingUnit.normalPF
+  GeneratingUnit.maxOperatingP
+  GeneratingUnit.startupCost
+  GeneratingUnit.ratedNetMaxP
+  GeneratingUnit.variableCost
+  WindGeneratingUnit.windGenUnitType
+  GeneratingUnit.ratedGrossMaxP
+  rdf.about
+  Equipment.inService
+  GeneratingUnit.totalEfficiency
+  IdentifiedObject.mRID
+}
+type <VoltagePerReactivePower> {
+  rdf.about
+  VoltagePerReactivePower.multiplier
+  VoltagePerReactivePower.unit
+  VoltagePerReactivePower.value
+}
+type <AnalogLimit> {
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  rdf.about
+  AnalogLimit.value
+  AnalogLimit.LimitSet
+  IdentifiedObject.description
+}
+type <LimitKind> {
+  LimitKind.name
+  rdf.about
+}
+type <CombinedCyclePlant> {
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+}
+type <MutualCoupling> {
+  IdentifiedObject.mRID
+  rdf.about
+  MutualCoupling.b0ch
+  MutualCoupling.distance11
+  MutualCoupling.distance12
+  MutualCoupling.g0ch
+  MutualCoupling.Second_Terminal
+  MutualCoupling.distance21
+  MutualCoupling.distance22
+  MutualCoupling.r0
+  MutualCoupling.x0
+  MutualCoupling.First_Terminal
+}
+type <UnitSymbol> {
+  UnitSymbol.name
+  rdf.about
+}
+type <Bay> {
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  Bay.VoltageLevel
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+}
+type <SynchronousMachineOperatingMode> {
+  SynchronousMachineOperatingMode.name
+  rdf.about
+}
+type <HydroTurbineKind> {
+  HydroTurbineKind.name
+  rdf.about
+}
+type <NuclearGeneratingUnit> {
+  GeneratingUnit.maximumAllowableSpinningReserve
+  GeneratingUnit.nominalP
+  IdentifiedObject.name
+  GeneratingUnit.shortPF
+  GeneratingUnit.startupCost
+  rdf.about
+  GeneratingUnit.governorSCD
+  GeneratingUnit.ratedGrossMaxP
+  GeneratingUnit.ratedGrossMinP
+  Equipment.aggregate
+  Equipment.normallyInService
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  GeneratingUnit.longPF
+  GeneratingUnit.maxOperatingP
+  GeneratingUnit.ratedNetMaxP
+  GeneratingUnit.totalEfficiency
+  Equipment.inService
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+  GeneratingUnit.normalPF
+  GeneratingUnit.genControlSource
+  GeneratingUnit.minOperatingP
+  GeneratingUnit.startupTime
+  GeneratingUnit.variableCost
+}
+type <DCTopologicalNode> {
+  rdf.about
+  DCTopologicalNode.DCEquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+}
+type <DCPolarityKind> {
+  DCPolarityKind.name
+  rdf.about
+}
+type <Junction> {
+  IdentifiedObject.shortName
+  ConductingEquipment.BaseVoltage
+  Equipment.aggregate
+  Equipment.normallyInService
+  IdentifiedObject.description
+  IdentifiedObject.name
+  rdf.about
+  Equipment.EquipmentContainer
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+}
+type <PhaseCode> {
+  rdf.about
+  PhaseCode.name
+}
+type <CsConverter> {
+  ACDCConverter.baseS
+  ACDCConverter.resistiveLoss
+  IdentifiedObject.description
+  IdentifiedObject.name
+  CsConverter.pPccControl
+  CsConverter.maxGamma
+  CsConverter.maxIdc
+  Equipment.aggregate
+  IdentifiedObject.shortName
+  Equipment.inService
+  CsConverter.ratedIdc
+  ACDCConverter.idleLoss
+  ACDCConverter.maxP
+  ACDCConverter.ratedUdc
+  ACDCConverter.PccTerminal
+  CsConverter.targetAlpha
+  CsConverter.targetGamma
+  CsConverter.targetIdc
+  ACDCConverter.targetPpcc
+  ACDCConverter.idc
+  ACDCConverter.uc
+  ACDCConverter.udc
+  CsConverter.minGamma
+  CsConverter.minIdc
+  ConductingEquipment.BaseVoltage
+  Equipment.EquipmentContainer
+  ACDCConverter.p
+  ACDCConverter.targetUdc
+  ACDCConverter.switchingLoss
+  ACDCConverter.valveU0
+  IdentifiedObject.energyIdentCodeEic
+  ACDCConverter.q
+  CsConverter.minAlpha
+  ACDCConverter.minUdc
+  Equipment.normallyInService
+  CsConverter.gamma
+  CsConverter.maxAlpha
+  ACDCConverter.maxUdc
+  ACDCConverter.minP
+  ACDCConverter.numberOfValves
+  IdentifiedObject.mRID
+  CsConverter.alpha
+  ACDCConverter.poleLossP
+  rdf.about
+  CsConverter.operatingMode
+}
+type <DCLineSegment> {
+  DCLineSegment.length
+  IdentifiedObject.description
+  Equipment.EquipmentContainer
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  DCConductingEquipment.ratedUdc
+  Equipment.normallyInService
+  DCLineSegment.capacitance
+  DCLineSegment.inductance
+  DCLineSegment.resistance
+  Equipment.aggregate
+}
+type <SynchronousMachine> {
+  RotatingMachine.ratedS
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  SynchronousMachine.satDirectSubtransX
+  SynchronousMachine.satDirectSyncX
+  SynchronousMachine.voltageRegulationRange
+  SynchronousMachine.referencePriority
+  RotatingMachine.ratedU
+  Equipment.EquipmentContainer
+  SynchronousMachine.r0
+  RotatingMachine.p
+  SynchronousMachine.earthingStarPointR
+  SynchronousMachine.ikk
+  SynchronousMachine.r2
+  RotatingMachine.q
+  RegulatingCondEq.controlEnabled
+  SynchronousMachine.minQ
+  SynchronousMachine.earthingStarPointX
+  SynchronousMachine.mu
+  SynchronousMachine.maxQ
+  SynchronousMachine.type
+  RotatingMachine.ratedPowerFactor
+  RegulatingCondEq.RegulatingControl
+  Equipment.normallyInService
+  IdentifiedObject.energyIdentCodeEic
+  Equipment.inService
+  SynchronousMachine.InitialReactiveCapabilityCurve
+  RotatingMachine.GeneratingUnit
+  ConductingEquipment.BaseVoltage
+  IdentifiedObject.description
+  SynchronousMachine.satDirectTransX
+  SynchronousMachine.x2
+  rdf.about
+  SynchronousMachine.qPercent
+  Equipment.aggregate
+  SynchronousMachine.r
+  SynchronousMachine.shortCircuitRotorType
+  IdentifiedObject.mRID
+  SynchronousMachine.earthing
+  SynchronousMachine.x0
+  SynchronousMachine.operatingMode
+}
+type <GeneratorControlSource> {
+  GeneratorControlSource.name
+  rdf.about
+}
+type <PetersenCoilModeKind> {
+  PetersenCoilModeKind.name
+  rdf.about
+}
+type <RatioTapChangerTablePoint> {
+  TapChangerTablePoint.b
+  TapChangerTablePoint.g
+  TapChangerTablePoint.r
+  TapChangerTablePoint.ratio
+  TapChangerTablePoint.step
+  TapChangerTablePoint.x
+  rdf.about
+  RatioTapChangerTablePoint.RatioTapChangerTable
+}
+type <SurgeArrester> {
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  Equipment.aggregate
+  Equipment.normallyInService
+  Equipment.EquipmentContainer
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  AuxiliaryEquipment.Terminal
+  IdentifiedObject.description
+}
+type <TopologicalNode> {
+  TopologicalNode.ConnectivityNodeContainer
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  TopologicalNode.BaseVoltage
+  TopologicalNode.ReportingGroup
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+}
+type <ACDCConverterDCTerminal> {
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  ACDCTerminal.connected
+  ACDCTerminal.sequenceNumber
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  DCBaseTerminal.DCNode
+  ACDCTerminal.BusNameMarker
+  IdentifiedObject.shortName
+  DCBaseTerminal.DCTopologicalNode
+  rdf.about
+  ACDCConverterDCTerminal.polarity
+  ACDCConverterDCTerminal.DCConductingEquipment
+}
+type <BusbarSection> {
+  rdf.about
+  ConductingEquipment.BaseVoltage
+  Equipment.aggregate
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  BusbarSection.ipMax
+  Equipment.normallyInService
+  Equipment.EquipmentContainer
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+}
+type <PhaseTapChangerAsymmetrical> {
+  rdf.about
+  TapChanger.highStep
+  TapChanger.lowStep
+  TapChanger.normalStep
+  PhaseTapChangerNonLinear.xMax
+  PhaseTapChangerNonLinear.xMin
+  TapChanger.neutralStep
+  TapChanger.neutralU
+  IdentifiedObject.description
+  IdentifiedObject.name
+  PhaseTapChangerAsymmetrical.windingConnectionAngle
+  PhaseTapChangerNonLinear.voltageStepIncrement
+  PhaseTapChanger.TransformerEnd
+  TapChanger.ltcFlag
+  IdentifiedObject.mRID
+  TapChanger.controlEnabled
+  TapChanger.TapChangerControl
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.shortName
+  TapChanger.step
+}
+type <PowerElectronicsWindUnit> {
+  Equipment.EquipmentContainer
+  PowerElectronicsUnit.maxP
+  Equipment.normallyInService
+  Equipment.aggregate
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  PowerElectronicsUnit.minP
+}
+type <BoundaryPoint> {
+  BoundaryPoint.fromEndName
+  BoundaryPoint.isExcludedFromAreaInterchange
+  IdentifiedObject.shortName
+  BoundaryPoint.fromEndIsoCode
+  BoundaryPoint.toEndName
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  rdf.about
+  BoundaryPoint.fromEndNameTso
+  BoundaryPoint.toEndIsoCode
+  BoundaryPoint.toEndNameTso
+  BoundaryPoint.ConnectivityNode
+  BoundaryPoint.isDirectCurrent
+  IdentifiedObject.name
+}
+type <SwitchSchedule> {
+  BasicIntervalSchedule.value1Unit
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  RegularIntervalSchedule.endTime
+  SwitchSchedule.Switch
+  SeasonDayTypeSchedule.DayType
+  RegularIntervalSchedule.timeStep
+  BasicIntervalSchedule.startTime
+  BasicIntervalSchedule.value2Unit
+  IdentifiedObject.description
+  rdf.about
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  SeasonDayTypeSchedule.Season
+}
+type <Command> {
+  Control.operationInProgress
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  Command.DiscreteValue
+  Control.timeStamp
+  Control.PowerSystemResource
+  rdf.about
+  Control.controlType
+  Command.ValueAliasSet
+  Control.unitMultiplier
+  Control.unitSymbol
+  IdentifiedObject.name
+  Command.normalValue
+  Command.value
+}
+type <DCTopologicalIsland> {
+  rdf.about
+  DCTopologicalIsland.DCTopologicalNodes
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+}
+type <SvStatus> {
+  rdf.about
+  SvStatus.inService
+  SvStatus.ConductingEquipment
+}
+type <NonlinearShuntCompensatorPoint> {
+  NonlinearShuntCompensatorPoint.b0
+  NonlinearShuntCompensatorPoint.g0
+  rdf.about
+  NonlinearShuntCompensatorPoint.b
+  NonlinearShuntCompensatorPoint.g
+  NonlinearShuntCompensatorPoint.sectionNumber
+  NonlinearShuntCompensatorPoint.NonlinearShuntCompensator
+}
+type <RatioTapChangerTable> {
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+}
+type <RegularTimePoint> {
+  rdf.about
+  RegularTimePoint.sequenceNumber
+  RegularTimePoint.value1
+  RegularTimePoint.value2
+  RegularTimePoint.IntervalSchedule
+}
+type <FuelType> {
+  FuelType.name
+  rdf.about
+}
+type <Line> {
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  Line.Region
+  IdentifiedObject.description
+}
+type <NonConformLoadGroup> {
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  LoadGroup.SubLoadArea
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+}
+type <ActivePowerPerCurrentFlow> {
+  rdf.about
+  ActivePowerPerCurrentFlow.multiplier
+  ActivePowerPerCurrentFlow.unit
+  ActivePowerPerCurrentFlow.value
+}
+type <RaiseLowerCommand> {
+  AnalogControl.AnalogValue
+  IdentifiedObject.description
+  rdf.about
+  AnalogControl.maxValue
+  Control.controlType
+  Control.PowerSystemResource
+  Control.operationInProgress
+  Control.unitMultiplier
+  IdentifiedObject.mRID
+  RaiseLowerCommand.ValueAliasSet
+  AnalogControl.minValue
+  IdentifiedObject.name
+  Control.timeStamp
+  Control.unitSymbol
+}
+type <CurveStyle> {
+  CurveStyle.name
+  rdf.about
+}
+type <DCTerminal> {
+  ACDCTerminal.connected
+  DCBaseTerminal.DCTopologicalNode
+  rdf.about
+  DCBaseTerminal.DCNode
+  ACDCTerminal.sequenceNumber
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  DCTerminal.DCConductingEquipment
+  ACDCTerminal.BusNameMarker
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+}
+type <EquivalentShunt> {
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  rdf.about
+  EquivalentShunt.g
+  Equipment.aggregate
+  IdentifiedObject.description
+  Equipment.EquipmentContainer
+  IdentifiedObject.shortName
+  EquivalentShunt.b
+  EquivalentEquipment.EquivalentNetwork
+  ConductingEquipment.BaseVoltage
+  Equipment.normallyInService
+}
+type <StationSupply> {
+  EnergyConsumer.pfixed
+  EnergyConsumer.LoadResponse
+  Equipment.aggregate
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  rdf.about
+  IdentifiedObject.description
+  Equipment.inService
+  EnergyConsumer.qfixed
+  EnergyConsumer.qfixedPct
+  ConductingEquipment.BaseVoltage
+  Equipment.EquipmentContainer
+  IdentifiedObject.name
+  EnergyConsumer.q
+  EnergyConsumer.pfixedPct
+  Equipment.normallyInService
+  IdentifiedObject.shortName
+  EnergyConsumer.p
+}
+type <AccumulatorLimit> {
+  AccumulatorLimit.LimitSet
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  rdf.about
+  AccumulatorLimit.value
+}
+type <AccumulatorValue> {
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  rdf.about
+  AccumulatorValue.Accumulator
+  MeasurementValue.sensorAccuracy
+  MeasurementValue.timeStamp
+  MeasurementValue.MeasurementValueSource
+}
+type <DCLine> {
+  rdf.about
+  DCLine.Region
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+}
+type <PostLineSensor> {
+  AuxiliaryEquipment.Terminal
+  IdentifiedObject.shortName
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  rdf.about
+  Equipment.aggregate
+  Equipment.normallyInService
+}
+type <VoltageLevel> {
+  VoltageLevel.BaseVoltage
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+  VoltageLevel.highVoltageLimit
+  VoltageLevel.lowVoltageLimit
+  VoltageLevel.Substation
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.name
+  rdf.about
+}
+type <Money> {
+  rdf.about
+  Money.multiplier
+  Money.unit
+  Money.value
+}
+type <Accumulator> {
+  rdf.about
+  Measurement.unitMultiplier
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  Measurement.Terminal
+  IdentifiedObject.name
+  Measurement.measurementType
+  Measurement.phases
+  Measurement.unitSymbol
+  Measurement.PowerSystemResource
+}
+type <ValueToAlias> {
+  ValueToAlias.ValueAliasSet
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  rdf.about
+  ValueToAlias.value
+}
+type <BatteryStateKind> {
+  BatteryStateKind.name
+  rdf.about
+}
+type <DCConverterUnit> {
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  DCConverterUnit.operationMode
+  DCConverterUnit.Substation
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+}
+type <EnergySource> {
+  EnergySource.x0
+  EnergySource.nominalVoltage
+  EnergySource.pMin
+  IdentifiedObject.energyIdentCodeEic
+  EnergySource.voltageAngle
+  Equipment.inService
+  Equipment.normallyInService
+  IdentifiedObject.mRID
+  EnergySource.reactivePower
+  IdentifiedObject.shortName
+  EnergySource.r
+  EnergySource.rn
+  EnergySource.x
+  EnergySource.activePower
+  rdf.about
+  EnergySource.pMax
+  EnergySource.EnergySchedulingType
+  EnergySource.voltageMagnitude
+  IdentifiedObject.description
+  IdentifiedObject.name
+  EnergySource.r0
+  EnergySource.xn
+  ConductingEquipment.BaseVoltage
+  Equipment.aggregate
+  Equipment.EquipmentContainer
+}
+type <HydroGeneratingUnit> {
+  IdentifiedObject.mRID
+  GeneratingUnit.governorSCD
+  GeneratingUnit.variableCost
+  Equipment.EquipmentContainer
+  Equipment.inService
+  GeneratingUnit.genControlSource
+  GeneratingUnit.ratedGrossMinP
+  GeneratingUnit.startupCost
+  Equipment.aggregate
+  GeneratingUnit.maximumAllowableSpinningReserve
+  GeneratingUnit.startupTime
+  GeneratingUnit.totalEfficiency
+  HydroGeneratingUnit.dropHeight
+  IdentifiedObject.name
+  HydroGeneratingUnit.HydroPowerPlant
+  GeneratingUnit.maxOperatingP
+  GeneratingUnit.ratedGrossMaxP
+  GeneratingUnit.ratedNetMaxP
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  HydroGeneratingUnit.energyConversionCapability
+  GeneratingUnit.minOperatingP
+  GeneratingUnit.nominalP
+  GeneratingUnit.shortPF
+  IdentifiedObject.shortName
+  GeneratingUnit.normalPF
+  Equipment.normallyInService
+  rdf.about
+  HydroGeneratingUnit.turbineType
+  GeneratingUnit.longPF
+}
+type <MeasurementValueQuality> {
+  Quality61850.oscillatory
+  Quality61850.suspect
+  Quality61850.test
+  rdf.about
+  Quality61850.badReference
+  MeasurementValueQuality.MeasurementValue
+  Quality61850.estimatorReplaced
+  Quality61850.outOfRange
+  Quality61850.validity
+  Quality61850.failure
+  Quality61850.oldData
+  Quality61850.operatorBlocked
+  Quality61850.overFlow
+  Quality61850.source
+}
+type <HydroPlantStorageKind> {
+  HydroPlantStorageKind.name
+  rdf.about
+}
+type <GeographicalRegion> {
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+}
+type <PetersenCoil> {
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+  EarthFaultCompensator.r
+  rdf.about
+  Equipment.aggregate
+  Equipment.normallyInService
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.name
+  PetersenCoil.positionCurrent
+  PetersenCoil.xGroundMin
+  PetersenCoil.xGroundMax
+  PetersenCoil.xGroundNominal
+  ConductingEquipment.BaseVoltage
+  Equipment.EquipmentContainer
+  PetersenCoil.mode
+  PetersenCoil.offsetCurrent
+  PetersenCoil.nominalU
+}
+type <PowerTransformerEnd> {
+  PowerTransformerEnd.b0
+  PowerTransformerEnd.g0
+  PowerTransformerEnd.b
+  PowerTransformerEnd.connectionKind
+  PowerTransformerEnd.r
+  PowerTransformerEnd.PowerTransformer
+  IdentifiedObject.description
+  IdentifiedObject.name
+  PowerTransformerEnd.r0
+  TransformerEnd.grounded
+  TransformerEnd.rground
+  PowerTransformerEnd.x0
+  TransformerEnd.xground
+  rdf.about
+  PowerTransformerEnd.x
+  TransformerEnd.endNumber
+  TransformerEnd.BaseVoltage
+  IdentifiedObject.shortName
+  PowerTransformerEnd.phaseAngleClock
+  PowerTransformerEnd.g
+  PowerTransformerEnd.ratedS
+  TransformerEnd.Terminal
+  IdentifiedObject.energyIdentCodeEic
+  PowerTransformerEnd.ratedU
+  IdentifiedObject.mRID
+}
+type <Season> {
+  Season.startDate
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  Season.endDate
+}
+type <RegulationSchedule> {
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  RegularIntervalSchedule.timeStep
+  BasicIntervalSchedule.startTime
+  IdentifiedObject.description
+  IdentifiedObject.shortName
+  RegulationSchedule.RegulatingControl
+  SeasonDayTypeSchedule.DayType
+  BasicIntervalSchedule.value2Unit
+  RegularIntervalSchedule.endTime
+  BasicIntervalSchedule.value1Unit
+  rdf.about
+  SeasonDayTypeSchedule.Season
+}
+type <OperationalLimitSet> {
+  OperationalLimitSet.Equipment
+  OperationalLimitSet.Terminal
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+}
+type <SubGeographicalRegion> {
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  SubGeographicalRegion.Region
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+}
+type <SynchronousMachineKind> {
+  SynchronousMachineKind.name
+  rdf.about
+}
+type <DCSwitch> {
+  Equipment.normallyInService
+  Equipment.EquipmentContainer
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  DCConductingEquipment.ratedUdc
+  Equipment.aggregate
+  IdentifiedObject.energyIdentCodeEic
+  rdf.about
+  IdentifiedObject.description
+}
+type <EnergySchedulingType> {
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+}
+type <LoadBreakSwitch> {
+  Equipment.EquipmentContainer
+  Switch.locked
+  Equipment.aggregate
+  Equipment.normallyInService
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  Switch.ratedCurrent
+  IdentifiedObject.shortName
+  Switch.open
+  rdf.about
+  Switch.normalOpen
+  Switch.retained
+  ConductingEquipment.BaseVoltage
+  IdentifiedObject.energyIdentCodeEic
+  Equipment.inService
+}
+type <Analog> {
+  Measurement.unitSymbol
+  Measurement.Terminal
+  IdentifiedObject.description
+  IdentifiedObject.name
+  Measurement.measurementType
+  Measurement.phases
+  Measurement.unitMultiplier
+  IdentifiedObject.mRID
+  rdf.about
+  Analog.positiveFlowIn
+  Measurement.PowerSystemResource
+}
+type <PhotoVoltaicUnit> {
+  Equipment.EquipmentContainer
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  Equipment.normallyInService
+  Equipment.aggregate
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  PowerElectronicsUnit.maxP
+  PowerElectronicsUnit.minP
+}
+type <SolarGeneratingUnit> {
+  rdf.about
+  GeneratingUnit.shortPF
+  GeneratingUnit.startupTime
+  IdentifiedObject.energyIdentCodeEic
+  SolarGeneratingUnit.SolarPowerPlant
+  GeneratingUnit.nominalP
+  GeneratingUnit.governorSCD
+  GeneratingUnit.maxOperatingP
+  GeneratingUnit.ratedNetMaxP
+  GeneratingUnit.totalEfficiency
+  GeneratingUnit.variableCost
+  Equipment.normallyInService
+  GeneratingUnit.genControlSource
+  GeneratingUnit.longPF
+  GeneratingUnit.minOperatingP
+  Equipment.aggregate
+  IdentifiedObject.description
+  GeneratingUnit.ratedGrossMaxP
+  IdentifiedObject.shortName
+  Equipment.inService
+  Equipment.EquipmentContainer
+  GeneratingUnit.maximumAllowableSpinningReserve
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  GeneratingUnit.normalPF
+  GeneratingUnit.ratedGrossMinP
+  GeneratingUnit.startupCost
+}
+type <VsPpccControlKind> {
+  VsPpccControlKind.name
+  rdf.about
+}
+type <AnalogLimitSet> {
+  IdentifiedObject.name
+  rdf.about
+  AnalogLimitSet.Measurements
+  LimitSet.isPercentageLimits
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+}
+type <ActivePowerLimit> {
+  rdf.about
+  OperationalLimit.OperationalLimitType
+  IdentifiedObject.description
+  IdentifiedObject.shortName
+  ActivePowerLimit.normalValue
+  OperationalLimit.OperationalLimitSet
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  ActivePowerLimit.value
+}
+type <HydroEnergyConversionKind> {
+  HydroEnergyConversionKind.name
+  rdf.about
+}
+type <ConformLoadGroup> {
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+  LoadGroup.SubLoadArea
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+}
+type <ReactivePower> {
+  ReactivePower.multiplier
+  ReactivePower.unit
+  ReactivePower.value
+  rdf.about
+}
+type <AnalogValue> {
+  MeasurementValue.MeasurementValueSource
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  rdf.about
+  AnalogValue.Analog
+  MeasurementValue.sensorAccuracy
+  MeasurementValue.timeStamp
+}
+type <Resistance> {
+  rdf.about
+  Resistance.multiplier
+  Resistance.unit
+  Resistance.value
+}
+type <MeasurementValueSource> {
+  rdf.about
+  IdentifiedObject.description
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+}
+type <CurveData> {
+  rdf.about
+  CurveData.xvalue
+  CurveData.y1value
+  CurveData.y2value
+  CurveData.Curve
+}
+type <LoadResponseCharacteristic> {
+  rdf.about
+  LoadResponseCharacteristic.qConstantCurrent
+  LoadResponseCharacteristic.qFrequencyExponent
+  IdentifiedObject.name
+  LoadResponseCharacteristic.pConstantImpedance
+  LoadResponseCharacteristic.qVoltageExponent
+  IdentifiedObject.shortName
+  LoadResponseCharacteristic.qConstantPower
+  IdentifiedObject.description
+  LoadResponseCharacteristic.exponentModel
+  LoadResponseCharacteristic.pConstantCurrent
+  LoadResponseCharacteristic.pConstantPower
+  LoadResponseCharacteristic.pFrequencyExponent
+  LoadResponseCharacteristic.pVoltageExponent
+  LoadResponseCharacteristic.qConstantImpedance
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+}
+type <RotationSpeed> {
+  rdf.about
+  RotationSpeed.multiplier
+  RotationSpeed.unit
+  RotationSpeed.value
+}
+type <BusNameMarker> {
+  IdentifiedObject.shortName
+  rdf.about
+  BusNameMarker.priority
+  BusNameMarker.ReportingGroup
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+}
+type <DCBusbar> {
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.name
+  Equipment.normallyInService
+  Equipment.EquipmentContainer
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+  rdf.about
+  DCConductingEquipment.ratedUdc
+  Equipment.aggregate
+}
+type <Substation> {
+  rdf.about
+  Substation.Region
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+}
+type <Discrete> {
+  Measurement.measurementType
+  Measurement.phases
+  Measurement.unitMultiplier
+  Measurement.Terminal
+  IdentifiedObject.name
+  IdentifiedObject.mRID
+  rdf.about
+  Discrete.ValueAliasSet
+  Measurement.unitSymbol
+  Measurement.PowerSystemResource
+  IdentifiedObject.description
+}
+type <Cut> {
+  Cut.ACLineSegment
+  Switch.retained
+  Equipment.aggregate
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.shortName
+  Equipment.normallyInService
+  IdentifiedObject.mRID
+  Switch.ratedCurrent
+  Equipment.EquipmentContainer
+  IdentifiedObject.description
+  rdf.about
+  Cut.lengthFromTerminal1
+  Switch.normalOpen
+  ConductingEquipment.BaseVoltage
+  IdentifiedObject.name
+}
+type <DCDisconnector> {
+  Equipment.normallyInService
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.shortName
+  DCConductingEquipment.ratedUdc
+  Equipment.aggregate
+  Equipment.EquipmentContainer
+  IdentifiedObject.name
+  rdf.about
+}
+type <Jumper> {
+  Equipment.aggregate
+  rdf.about
+  Equipment.EquipmentContainer
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  Switch.locked
+  Switch.open
+  Equipment.normallyInService
+  IdentifiedObject.description
+  Switch.retained
+  ConductingEquipment.BaseVoltage
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.shortName
+  Equipment.inService
+  Switch.normalOpen
+  Switch.ratedCurrent
+}
+type <ReportingGroup> {
+  IdentifiedObject.description
+  IdentifiedObject.energyIdentCodeEic
+  IdentifiedObject.mRID
+  IdentifiedObject.name
+  IdentifiedObject.shortName
+  rdf.about
+}
+type <SvSwitch> {
+  rdf.about
+  SvSwitch.open
+  SvSwitch.Switch
+}
+type <WindingConnection> {
+  WindingConnection.name
+  rdf.about
+}
+type <FullModel> {
+  Model.modelingAuthoritySet
+  Model.scenarioTime
+  Model.version
+  rdf.about
+  Model.definition
+  Model.Supersedes
+  Model.DependentOn
+  Model.created
+  Model.profile
+}

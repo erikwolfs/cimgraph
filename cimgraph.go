@@ -15,7 +15,7 @@ type Config struct {
 	url string
 	configpath string
 	path string
-	debugPath string
+	debugpath string
 }
 
 func main() {
@@ -49,9 +49,9 @@ func main() {
 			&cli.StringFlag{
 				Name: "debuglog",
 				Aliases: []string{"d"},
+				Value: "./log",
 				Usage: "Activates writing debug info to the given location",
-				Sources: cli.NewValueSourceChain(yaml.YAML("DebugPath", altsrc.NewStringPtrSourcer(&config.debugPath))),
-				Destination: &config.debugPath,
+				Destination: &config.debugpath,
 			},
 		},
 		Commands: []*cli.Command{
@@ -135,7 +135,7 @@ func exportRDF(config *Config) error {
 }
 
 func createSchema(config *Config) error {
-	dconfig := dgraph.Config{URL: config.url, ImportPath: config.path, DebugPath: config.debugPath}
+	dconfig := dgraph.Config{URL: config.url, ImportPath: config.path, DebugPath: config.debugpath}
 	fmt.Println("create schema from", config.path, "into Dgraph with URL: ", config.url)
 	err := dgraph.CreateSchema(dconfig)
 	if err != nil {

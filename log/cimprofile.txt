@@ -1,0 +1,2352 @@
+Class: ACDCConverterDCTerminal
+.  Property: ACDCConverterDCTerminal.polarity Type: DCPolarityKind Upper 1
+.  Property: ACDCConverterDCTerminal.DCConductingEquipment Type: ACDCConverter Upper 1
+.  Property: DCBaseTerminal.DCNode Type: DCNode Upper 1
+.  Property: ACDCTerminal.sequenceNumber Type: Integer Upper 1
+.  Property: ACDCTerminal.BusNameMarker Type: BusNameMarker Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: ACLineSegment
+.  Property: ACLineSegment.bch Type: Susceptance Upper 1
+.  Property: ACLineSegment.gch Type: Conductance Upper 1
+.  Property: ACLineSegment.r Type: Resistance Upper 1
+.  Property: ACLineSegment.x Type: Reactance Upper 1
+.  Property: Conductor.length Type: Length Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: ActivePowerLimit
+.  Property: ActivePowerLimit.normalValue Type: ActivePower Upper 1
+.  Property: OperationalLimit.OperationalLimitType Type: OperationalLimitType Upper 1
+.  Property: OperationalLimit.OperationalLimitSet Type: OperationalLimitSet Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: ApparentPowerLimit
+.  Property: ApparentPowerLimit.normalValue Type: ApparentPower Upper 1
+.  Property: OperationalLimit.OperationalLimitType Type: OperationalLimitType Upper 1
+.  Property: OperationalLimit.OperationalLimitSet Type: OperationalLimitSet Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: AsynchronousMachine
+.  Property: AsynchronousMachine.nominalFrequency Type: Frequency Upper 1
+.  Property: AsynchronousMachine.nominalSpeed Type: RotationSpeed Upper 1
+.  Property: RotatingMachine.ratedPowerFactor Type: Float Upper 1
+.  Property: RotatingMachine.ratedS Type: ApparentPower Upper 1
+.  Property: RotatingMachine.ratedU Type: Voltage Upper 1
+.  Property: RotatingMachine.GeneratingUnit Type: GeneratingUnit Upper 1
+.  Property: RegulatingCondEq.RegulatingControl Type: RegulatingControl Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: BaseVoltage
+.  Property: BaseVoltage.nominalVoltage Type: Voltage Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: BatteryUnit
+.  Property: BatteryUnit.ratedE Type: RealEnergy Upper 1
+.  Property: PowerElectronicsUnit.maxP Type: ActivePower Upper 1
+.  Property: PowerElectronicsUnit.minP Type: ActivePower Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Bay
+.  Property: Bay.VoltageLevel Type: VoltageLevel Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: BoundaryPoint
+.  Property: BoundaryPoint.fromEndIsoCode Type: String Upper 1
+.  Property: BoundaryPoint.fromEndName Type: String Upper 1
+.  Property: BoundaryPoint.fromEndNameTso Type: String Upper 1
+.  Property: BoundaryPoint.isDirectCurrent Type: Boolean Upper 1
+.  Property: BoundaryPoint.isExcludedFromAreaInterchange Type: Boolean Upper 1
+.  Property: BoundaryPoint.toEndIsoCode Type: String Upper 1
+.  Property: BoundaryPoint.toEndName Type: String Upper 1
+.  Property: BoundaryPoint.toEndNameTso Type: String Upper 1
+.  Property: BoundaryPoint.ConnectivityNode Type: ConnectivityNode Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Breaker
+.  Property: Switch.normalOpen Type: Boolean Upper 1
+.  Property: Switch.ratedCurrent Type: CurrentFlow Upper 1
+.  Property: Switch.retained Type: Boolean Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: BusbarSection
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: BusNameMarker
+.  Property: BusNameMarker.priority Type: Integer Upper 1
+.  Property: BusNameMarker.ReportingGroup Type: ReportingGroup Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: CAESPlant
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Clamp
+.  Property: Clamp.lengthFromTerminal1 Type: Length Upper 1
+.  Property: Clamp.ACLineSegment Type: ACLineSegment Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: ConformLoadSchedule
+.  Property: ConformLoadSchedule.ConformLoadGroup Type: ConformLoadGroup Upper 1
+.  Property: SeasonDayTypeSchedule.DayType Type: DayType Upper 1
+.  Property: SeasonDayTypeSchedule.Season Type: Season Upper 1
+.  Property: RegularIntervalSchedule.endTime Type: DateTime Upper 1
+.  Property: RegularIntervalSchedule.timeStep Type: Seconds Upper 1
+.  Property: BasicIntervalSchedule.startTime Type: DateTime Upper 1
+.  Property: BasicIntervalSchedule.value1Unit Type: UnitSymbol Upper 1
+.  Property: BasicIntervalSchedule.value2Unit Type: UnitSymbol Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: CogenerationPlant
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: CombinedCyclePlant
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: ConformLoad
+.  Property: ConformLoad.LoadGroup Type: ConformLoadGroup Upper 1
+.  Property: EnergyConsumer.pfixed Type: ActivePower Upper 1
+.  Property: EnergyConsumer.pfixedPct Type: PerCent Upper 1
+.  Property: EnergyConsumer.qfixed Type: ReactivePower Upper 1
+.  Property: EnergyConsumer.qfixedPct Type: PerCent Upper 1
+.  Property: EnergyConsumer.LoadResponse Type: LoadResponseCharacteristic Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: ConformLoadGroup
+.  Property: LoadGroup.SubLoadArea Type: SubLoadArea Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: ConnectivityNode
+.  Property: ConnectivityNode.ConnectivityNodeContainer Type: ConnectivityNodeContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: ControlArea
+.  Property: ControlArea.type Type: ControlAreaTypeKind Upper 1
+.  Property: ControlArea.EnergyArea Type: EnergyArea Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: ControlAreaGeneratingUnit
+.  Property: ControlAreaGeneratingUnit.GeneratingUnit Type: GeneratingUnit Upper 1
+.  Property: ControlAreaGeneratingUnit.ControlArea Type: ControlArea Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: CsConverter
+.  Property: CsConverter.maxAlpha Type: AngleDegrees Upper 1
+.  Property: CsConverter.maxGamma Type: AngleDegrees Upper 1
+.  Property: CsConverter.maxIdc Type: CurrentFlow Upper 1
+.  Property: CsConverter.minAlpha Type: AngleDegrees Upper 1
+.  Property: CsConverter.minGamma Type: AngleDegrees Upper 1
+.  Property: CsConverter.minIdc Type: CurrentFlow Upper 1
+.  Property: CsConverter.ratedIdc Type: CurrentFlow Upper 1
+.  Property: ACDCConverter.baseS Type: ApparentPower Upper 1
+.  Property: ACDCConverter.idleLoss Type: ActivePower Upper 1
+.  Property: ACDCConverter.maxP Type: ActivePower Upper 1
+.  Property: ACDCConverter.maxUdc Type: Voltage Upper 1
+.  Property: ACDCConverter.minP Type: ActivePower Upper 1
+.  Property: ACDCConverter.minUdc Type: Voltage Upper 1
+.  Property: ACDCConverter.numberOfValves Type: Integer Upper 1
+.  Property: ACDCConverter.ratedUdc Type: Voltage Upper 1
+.  Property: ACDCConverter.resistiveLoss Type: Resistance Upper 1
+.  Property: ACDCConverter.switchingLoss Type: ActivePowerPerCurrentFlow Upper 1
+.  Property: ACDCConverter.valveU0 Type: Voltage Upper 1
+.  Property: ACDCConverter.PccTerminal Type: Terminal Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: CurrentLimit
+.  Property: CurrentLimit.normalValue Type: CurrentFlow Upper 1
+.  Property: OperationalLimit.OperationalLimitType Type: OperationalLimitType Upper 1
+.  Property: OperationalLimit.OperationalLimitSet Type: OperationalLimitSet Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: CurrentTransformer
+.  Property: AuxiliaryEquipment.Terminal Type: Terminal Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: CurveData
+.  Property: CurveData.xvalue Type: Float Upper 1
+.  Property: CurveData.y1value Type: Float Upper 1
+.  Property: CurveData.y2value Type: Float Upper 1
+.  Property: CurveData.Curve Type: Curve Upper 1
+Class: Cut
+.  Property: Cut.lengthFromTerminal1 Type: Length Upper 1
+.  Property: Cut.ACLineSegment Type: ACLineSegment Upper 1
+.  Property: Switch.normalOpen Type: Boolean Upper 1
+.  Property: Switch.ratedCurrent Type: CurrentFlow Upper 1
+.  Property: Switch.retained Type: Boolean Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DayType
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCBreaker
+.  Property: DCConductingEquipment.ratedUdc Type: Voltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCBusbar
+.  Property: DCConductingEquipment.ratedUdc Type: Voltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCChopper
+.  Property: DCConductingEquipment.ratedUdc Type: Voltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCConverterUnit
+.  Property: DCConverterUnit.operationMode Type: DCConverterOperatingModeKind Upper 1
+.  Property: DCConverterUnit.Substation Type: Substation Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCDisconnector
+.  Property: DCConductingEquipment.ratedUdc Type: Voltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCGround
+.  Property: DCGround.inductance Type: Inductance Upper 1
+.  Property: DCGround.r Type: Resistance Upper 1
+.  Property: DCConductingEquipment.ratedUdc Type: Voltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCLine
+.  Property: DCLine.Region Type: SubGeographicalRegion Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCLineSegment
+.  Property: DCLineSegment.capacitance Type: Capacitance Upper 1
+.  Property: DCLineSegment.inductance Type: Inductance Upper 1
+.  Property: DCLineSegment.length Type: Length Upper 1
+.  Property: DCLineSegment.resistance Type: Resistance Upper 1
+.  Property: DCConductingEquipment.ratedUdc Type: Voltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCNode
+.  Property: DCNode.DCEquipmentContainer Type: DCEquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: RegulationSchedule
+.  Property: RegulationSchedule.RegulatingControl Type: RegulatingControl Upper 1
+.  Property: SeasonDayTypeSchedule.DayType Type: DayType Upper 1
+.  Property: SeasonDayTypeSchedule.Season Type: Season Upper 1
+.  Property: RegularIntervalSchedule.endTime Type: DateTime Upper 1
+.  Property: RegularIntervalSchedule.timeStep Type: Seconds Upper 1
+.  Property: BasicIntervalSchedule.startTime Type: DateTime Upper 1
+.  Property: BasicIntervalSchedule.value1Unit Type: UnitSymbol Upper 1
+.  Property: BasicIntervalSchedule.value2Unit Type: UnitSymbol Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCSeriesDevice
+.  Property: DCSeriesDevice.inductance Type: Inductance Upper 1
+.  Property: DCSeriesDevice.resistance Type: Resistance Upper 1
+.  Property: DCConductingEquipment.ratedUdc Type: Voltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCShunt
+.  Property: DCShunt.capacitance Type: Capacitance Upper 1
+.  Property: DCShunt.resistance Type: Resistance Upper 1
+.  Property: DCConductingEquipment.ratedUdc Type: Voltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCSwitch
+.  Property: DCConductingEquipment.ratedUdc Type: Voltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCTerminal
+.  Property: DCTerminal.DCConductingEquipment Type: DCConductingEquipment Upper 1
+.  Property: DCBaseTerminal.DCNode Type: DCNode Upper 1
+.  Property: ACDCTerminal.sequenceNumber Type: Integer Upper 1
+.  Property: ACDCTerminal.BusNameMarker Type: BusNameMarker Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Disconnector
+.  Property: Switch.normalOpen Type: Boolean Upper 1
+.  Property: Switch.ratedCurrent Type: CurrentFlow Upper 1
+.  Property: Switch.retained Type: Boolean Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DisconnectingCircuitBreaker
+.  Property: Switch.normalOpen Type: Boolean Upper 1
+.  Property: Switch.ratedCurrent Type: CurrentFlow Upper 1
+.  Property: Switch.retained Type: Boolean Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: EnergyConsumer
+.  Property: EnergyConsumer.pfixed Type: ActivePower Upper 1
+.  Property: EnergyConsumer.pfixedPct Type: PerCent Upper 1
+.  Property: EnergyConsumer.qfixed Type: ReactivePower Upper 1
+.  Property: EnergyConsumer.qfixedPct Type: PerCent Upper 1
+.  Property: EnergyConsumer.LoadResponse Type: LoadResponseCharacteristic Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: EnergySchedulingType
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: TapSchedule
+.  Property: TapSchedule.TapChanger Type: TapChanger Upper 1
+.  Property: SeasonDayTypeSchedule.DayType Type: DayType Upper 1
+.  Property: SeasonDayTypeSchedule.Season Type: Season Upper 1
+.  Property: RegularIntervalSchedule.endTime Type: DateTime Upper 1
+.  Property: RegularIntervalSchedule.timeStep Type: Seconds Upper 1
+.  Property: BasicIntervalSchedule.startTime Type: DateTime Upper 1
+.  Property: BasicIntervalSchedule.value1Unit Type: UnitSymbol Upper 1
+.  Property: BasicIntervalSchedule.value2Unit Type: UnitSymbol Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: EnergySource
+.  Property: EnergySource.nominalVoltage Type: Voltage Upper 1
+.  Property: EnergySource.pMax Type: ActivePower Upper 1
+.  Property: EnergySource.pMin Type: ActivePower Upper 1
+.  Property: EnergySource.EnergySchedulingType Type: EnergySchedulingType Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: EquivalentBranch
+.  Property: EquivalentBranch.r Type: Resistance Upper 1
+.  Property: EquivalentBranch.r21 Type: Resistance Upper 1
+.  Property: EquivalentBranch.x Type: Reactance Upper 1
+.  Property: EquivalentBranch.x21 Type: Reactance Upper 1
+.  Property: EquivalentEquipment.EquivalentNetwork Type: EquivalentNetwork Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: EquivalentInjection
+.  Property: EquivalentInjection.maxP Type: ActivePower Upper 1
+.  Property: EquivalentInjection.maxQ Type: ReactivePower Upper 1
+.  Property: EquivalentInjection.minP Type: ActivePower Upper 1
+.  Property: EquivalentInjection.minQ Type: ReactivePower Upper 1
+.  Property: EquivalentInjection.regulationCapability Type: Boolean Upper 1
+.  Property: EquivalentInjection.ReactiveCapabilityCurve Type: ReactiveCapabilityCurve Upper 1
+.  Property: EquivalentEquipment.EquivalentNetwork Type: EquivalentNetwork Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: EquivalentNetwork
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: EquivalentShunt
+.  Property: EquivalentShunt.b Type: Susceptance Upper 1
+.  Property: EquivalentShunt.g Type: Conductance Upper 1
+.  Property: EquivalentEquipment.EquivalentNetwork Type: EquivalentNetwork Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: ExternalNetworkInjection
+.  Property: ExternalNetworkInjection.governorSCD Type: ActivePowerPerFrequency Upper 1
+.  Property: ExternalNetworkInjection.maxP Type: ActivePower Upper 1
+.  Property: ExternalNetworkInjection.maxQ Type: ReactivePower Upper 1
+.  Property: ExternalNetworkInjection.minP Type: ActivePower Upper 1
+.  Property: ExternalNetworkInjection.minQ Type: ReactivePower Upper 1
+.  Property: RegulatingCondEq.RegulatingControl Type: RegulatingControl Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: FaultIndicator
+.  Property: AuxiliaryEquipment.Terminal Type: Terminal Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: FossilFuel
+.  Property: FossilFuel.fossilFuelType Type: FuelType Upper 1
+.  Property: FossilFuel.ThermalGeneratingUnit Type: ThermalGeneratingUnit Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Fuse
+.  Property: Switch.normalOpen Type: Boolean Upper 1
+.  Property: Switch.ratedCurrent Type: CurrentFlow Upper 1
+.  Property: Switch.retained Type: Boolean Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: GeneratingUnit
+.  Property: GeneratingUnit.genControlSource Type: GeneratorControlSource Upper 1
+.  Property: GeneratingUnit.governorSCD Type: PerCent Upper 1
+.  Property: GeneratingUnit.longPF Type: Float Upper 1
+.  Property: GeneratingUnit.maximumAllowableSpinningReserve Type: ActivePower Upper 1
+.  Property: GeneratingUnit.maxOperatingP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.minOperatingP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.nominalP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedGrossMaxP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedGrossMinP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedNetMaxP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.shortPF Type: Float Upper 1
+.  Property: GeneratingUnit.startupCost Type: Money Upper 1
+.  Property: GeneratingUnit.startupTime Type: Seconds Upper 1
+.  Property: GeneratingUnit.totalEfficiency Type: PerCent Upper 1
+.  Property: GeneratingUnit.variableCost Type: Money Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: GeographicalRegion
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: GrossToNetActivePowerCurve
+.  Property: GrossToNetActivePowerCurve.GeneratingUnit Type: GeneratingUnit Upper 1
+.  Property: Curve.curveStyle Type: CurveStyle Upper 1
+.  Property: Curve.xUnit Type: UnitSymbol Upper 1
+.  Property: Curve.y1Unit Type: UnitSymbol Upper 1
+.  Property: Curve.y2Unit Type: UnitSymbol Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Ground
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: GroundDisconnector
+.  Property: Switch.normalOpen Type: Boolean Upper 1
+.  Property: Switch.ratedCurrent Type: CurrentFlow Upper 1
+.  Property: Switch.retained Type: Boolean Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: GroundingImpedance
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: HydroGeneratingUnit
+.  Property: HydroGeneratingUnit.dropHeight Type: Length Upper 1
+.  Property: HydroGeneratingUnit.energyConversionCapability Type: HydroEnergyConversionKind Upper 1
+.  Property: HydroGeneratingUnit.turbineType Type: HydroTurbineKind Upper 1
+.  Property: HydroGeneratingUnit.HydroPowerPlant Type: HydroPowerPlant Upper 1
+.  Property: GeneratingUnit.genControlSource Type: GeneratorControlSource Upper 1
+.  Property: GeneratingUnit.governorSCD Type: PerCent Upper 1
+.  Property: GeneratingUnit.longPF Type: Float Upper 1
+.  Property: GeneratingUnit.maximumAllowableSpinningReserve Type: ActivePower Upper 1
+.  Property: GeneratingUnit.maxOperatingP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.minOperatingP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.nominalP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedGrossMaxP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedGrossMinP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedNetMaxP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.shortPF Type: Float Upper 1
+.  Property: GeneratingUnit.startupCost Type: Money Upper 1
+.  Property: GeneratingUnit.startupTime Type: Seconds Upper 1
+.  Property: GeneratingUnit.totalEfficiency Type: PerCent Upper 1
+.  Property: GeneratingUnit.variableCost Type: Money Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: HydroPowerPlant
+.  Property: HydroPowerPlant.hydroPlantStorageType Type: HydroPlantStorageKind Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: HydroPump
+.  Property: HydroPump.RotatingMachine Type: RotatingMachine Upper 1
+.  Property: HydroPump.HydroPowerPlant Type: HydroPowerPlant Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Jumper
+.  Property: Switch.normalOpen Type: Boolean Upper 1
+.  Property: Switch.ratedCurrent Type: CurrentFlow Upper 1
+.  Property: Switch.retained Type: Boolean Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Junction
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Line
+.  Property: Line.Region Type: SubGeographicalRegion Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: LinearShuntCompensator
+.  Property: LinearShuntCompensator.bPerSection Type: Susceptance Upper 1
+.  Property: LinearShuntCompensator.gPerSection Type: Conductance Upper 1
+.  Property: ShuntCompensator.aVRDelay Type: Seconds Upper 1
+.  Property: ShuntCompensator.grounded Type: Boolean Upper 1
+.  Property: ShuntCompensator.maximumSections Type: Integer Upper 1
+.  Property: ShuntCompensator.nomU Type: Voltage Upper 1
+.  Property: ShuntCompensator.normalSections Type: Integer Upper 1
+.  Property: ShuntCompensator.voltageSensitivity Type: VoltagePerReactivePower Upper 1
+.  Property: RegulatingCondEq.RegulatingControl Type: RegulatingControl Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: LoadArea
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: LoadBreakSwitch
+.  Property: Switch.normalOpen Type: Boolean Upper 1
+.  Property: Switch.ratedCurrent Type: CurrentFlow Upper 1
+.  Property: Switch.retained Type: Boolean Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: LoadResponseCharacteristic
+.  Property: LoadResponseCharacteristic.exponentModel Type: Boolean Upper 1
+.  Property: LoadResponseCharacteristic.pConstantCurrent Type: Float Upper 1
+.  Property: LoadResponseCharacteristic.pConstantImpedance Type: Float Upper 1
+.  Property: LoadResponseCharacteristic.pConstantPower Type: Float Upper 1
+.  Property: LoadResponseCharacteristic.pFrequencyExponent Type: Float Upper 1
+.  Property: LoadResponseCharacteristic.pVoltageExponent Type: Float Upper 1
+.  Property: LoadResponseCharacteristic.qConstantCurrent Type: Float Upper 1
+.  Property: LoadResponseCharacteristic.qConstantImpedance Type: Float Upper 1
+.  Property: LoadResponseCharacteristic.qConstantPower Type: Float Upper 1
+.  Property: LoadResponseCharacteristic.qFrequencyExponent Type: Float Upper 1
+.  Property: LoadResponseCharacteristic.qVoltageExponent Type: Float Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: NonConformLoad
+.  Property: NonConformLoad.LoadGroup Type: NonConformLoadGroup Upper 1
+.  Property: EnergyConsumer.pfixed Type: ActivePower Upper 1
+.  Property: EnergyConsumer.pfixedPct Type: PerCent Upper 1
+.  Property: EnergyConsumer.qfixed Type: ReactivePower Upper 1
+.  Property: EnergyConsumer.qfixedPct Type: PerCent Upper 1
+.  Property: EnergyConsumer.LoadResponse Type: LoadResponseCharacteristic Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: NonConformLoadGroup
+.  Property: LoadGroup.SubLoadArea Type: SubLoadArea Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: NonConformLoadSchedule
+.  Property: NonConformLoadSchedule.NonConformLoadGroup Type: NonConformLoadGroup Upper 1
+.  Property: SeasonDayTypeSchedule.DayType Type: DayType Upper 1
+.  Property: SeasonDayTypeSchedule.Season Type: Season Upper 1
+.  Property: RegularIntervalSchedule.endTime Type: DateTime Upper 1
+.  Property: RegularIntervalSchedule.timeStep Type: Seconds Upper 1
+.  Property: BasicIntervalSchedule.startTime Type: DateTime Upper 1
+.  Property: BasicIntervalSchedule.value1Unit Type: UnitSymbol Upper 1
+.  Property: BasicIntervalSchedule.value2Unit Type: UnitSymbol Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: NonlinearShuntCompensator
+.  Property: ShuntCompensator.aVRDelay Type: Seconds Upper 1
+.  Property: ShuntCompensator.grounded Type: Boolean Upper 1
+.  Property: ShuntCompensator.maximumSections Type: Integer Upper 1
+.  Property: ShuntCompensator.nomU Type: Voltage Upper 1
+.  Property: ShuntCompensator.normalSections Type: Integer Upper 1
+.  Property: ShuntCompensator.voltageSensitivity Type: VoltagePerReactivePower Upper 1
+.  Property: RegulatingCondEq.RegulatingControl Type: RegulatingControl Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: NonlinearShuntCompensatorPoint
+.  Property: NonlinearShuntCompensatorPoint.b Type: Susceptance Upper 1
+.  Property: NonlinearShuntCompensatorPoint.g Type: Conductance Upper 1
+.  Property: NonlinearShuntCompensatorPoint.sectionNumber Type: Integer Upper 1
+.  Property: NonlinearShuntCompensatorPoint.NonlinearShuntCompensator Type: NonlinearShuntCompensator Upper 1
+Class: NuclearGeneratingUnit
+.  Property: GeneratingUnit.genControlSource Type: GeneratorControlSource Upper 1
+.  Property: GeneratingUnit.governorSCD Type: PerCent Upper 1
+.  Property: GeneratingUnit.longPF Type: Float Upper 1
+.  Property: GeneratingUnit.maximumAllowableSpinningReserve Type: ActivePower Upper 1
+.  Property: GeneratingUnit.maxOperatingP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.minOperatingP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.nominalP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedGrossMaxP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedGrossMinP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedNetMaxP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.shortPF Type: Float Upper 1
+.  Property: GeneratingUnit.startupCost Type: Money Upper 1
+.  Property: GeneratingUnit.startupTime Type: Seconds Upper 1
+.  Property: GeneratingUnit.totalEfficiency Type: PerCent Upper 1
+.  Property: GeneratingUnit.variableCost Type: Money Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: OperationalLimitSet
+.  Property: OperationalLimitSet.Equipment Type: Equipment Upper 1
+.  Property: OperationalLimitSet.Terminal Type: ACDCTerminal Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: OperationalLimitType
+.  Property: OperationalLimitType.acceptableDuration Type: Seconds Upper 1
+.  Property: OperationalLimitType.direction Type: OperationalLimitDirectionKind Upper 1
+.  Property: OperationalLimitType.isInfiniteDuration Type: Boolean Upper 1
+.  Property: OperationalLimitType.kind Type: LimitKind Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: PetersenCoil
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: PhaseTapChangerAsymmetrical
+.  Property: PhaseTapChangerAsymmetrical.windingConnectionAngle Type: AngleDegrees Upper 1
+.  Property: PhaseTapChangerNonLinear.voltageStepIncrement Type: PerCent Upper 1
+.  Property: PhaseTapChangerNonLinear.xMax Type: Reactance Upper 1
+.  Property: PhaseTapChangerNonLinear.xMin Type: Reactance Upper 1
+.  Property: PhaseTapChanger.TransformerEnd Type: TransformerEnd Upper 1
+.  Property: TapChanger.highStep Type: Integer Upper 1
+.  Property: TapChanger.lowStep Type: Integer Upper 1
+.  Property: TapChanger.ltcFlag Type: Boolean Upper 1
+.  Property: TapChanger.neutralStep Type: Integer Upper 1
+.  Property: TapChanger.neutralU Type: Voltage Upper 1
+.  Property: TapChanger.normalStep Type: Integer Upper 1
+.  Property: TapChanger.TapChangerControl Type: TapChangerControl Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: PhaseTapChangerLinear
+.  Property: PhaseTapChangerLinear.stepPhaseShiftIncrement Type: AngleDegrees Upper 1
+.  Property: PhaseTapChangerLinear.xMax Type: Reactance Upper 1
+.  Property: PhaseTapChangerLinear.xMin Type: Reactance Upper 1
+.  Property: PhaseTapChanger.TransformerEnd Type: TransformerEnd Upper 1
+.  Property: TapChanger.highStep Type: Integer Upper 1
+.  Property: TapChanger.lowStep Type: Integer Upper 1
+.  Property: TapChanger.ltcFlag Type: Boolean Upper 1
+.  Property: TapChanger.neutralStep Type: Integer Upper 1
+.  Property: TapChanger.neutralU Type: Voltage Upper 1
+.  Property: TapChanger.normalStep Type: Integer Upper 1
+.  Property: TapChanger.TapChangerControl Type: TapChangerControl Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: PhaseTapChangerSymmetrical
+.  Property: PhaseTapChangerNonLinear.voltageStepIncrement Type: PerCent Upper 1
+.  Property: PhaseTapChangerNonLinear.xMax Type: Reactance Upper 1
+.  Property: PhaseTapChangerNonLinear.xMin Type: Reactance Upper 1
+.  Property: PhaseTapChanger.TransformerEnd Type: TransformerEnd Upper 1
+.  Property: TapChanger.highStep Type: Integer Upper 1
+.  Property: TapChanger.lowStep Type: Integer Upper 1
+.  Property: TapChanger.ltcFlag Type: Boolean Upper 1
+.  Property: TapChanger.neutralStep Type: Integer Upper 1
+.  Property: TapChanger.neutralU Type: Voltage Upper 1
+.  Property: TapChanger.normalStep Type: Integer Upper 1
+.  Property: TapChanger.TapChangerControl Type: TapChangerControl Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: PhaseTapChangerTable
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: PhaseTapChangerTablePoint
+.  Property: PhaseTapChangerTablePoint.angle Type: AngleDegrees Upper 1
+.  Property: PhaseTapChangerTablePoint.PhaseTapChangerTable Type: PhaseTapChangerTable Upper 1
+.  Property: TapChangerTablePoint.b Type: PerCent Upper 1
+.  Property: TapChangerTablePoint.g Type: PerCent Upper 1
+.  Property: TapChangerTablePoint.r Type: PerCent Upper 1
+.  Property: TapChangerTablePoint.ratio Type: Float Upper 1
+.  Property: TapChangerTablePoint.step Type: Integer Upper 1
+.  Property: TapChangerTablePoint.x Type: PerCent Upper 1
+Class: PhaseTapChangerTabular
+.  Property: PhaseTapChangerTabular.PhaseTapChangerTable Type: PhaseTapChangerTable Upper 1
+.  Property: PhaseTapChanger.TransformerEnd Type: TransformerEnd Upper 1
+.  Property: TapChanger.highStep Type: Integer Upper 1
+.  Property: TapChanger.lowStep Type: Integer Upper 1
+.  Property: TapChanger.ltcFlag Type: Boolean Upper 1
+.  Property: TapChanger.neutralStep Type: Integer Upper 1
+.  Property: TapChanger.neutralU Type: Voltage Upper 1
+.  Property: TapChanger.normalStep Type: Integer Upper 1
+.  Property: TapChanger.TapChangerControl Type: TapChangerControl Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: PhotoVoltaicUnit
+.  Property: PowerElectronicsUnit.maxP Type: ActivePower Upper 1
+.  Property: PowerElectronicsUnit.minP Type: ActivePower Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: PostLineSensor
+.  Property: AuxiliaryEquipment.Terminal Type: Terminal Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: PotentialTransformer
+.  Property: AuxiliaryEquipment.Terminal Type: Terminal Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: PowerElectronicsConnection
+.  Property: PowerElectronicsConnection.maxQ Type: ReactivePower Upper 1
+.  Property: PowerElectronicsConnection.minQ Type: ReactivePower Upper 1
+.  Property: PowerElectronicsConnection.ratedS Type: ApparentPower Upper 1
+.  Property: PowerElectronicsConnection.ratedU Type: Voltage Upper 1
+.  Property: PowerElectronicsConnection.PowerElectronicsUnit Type: PowerElectronicsUnit Upper 1
+.  Property: RegulatingCondEq.RegulatingControl Type: RegulatingControl Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: PowerElectronicsWindUnit
+.  Property: PowerElectronicsUnit.maxP Type: ActivePower Upper 1
+.  Property: PowerElectronicsUnit.minP Type: ActivePower Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: PowerTransformer
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: PowerTransformerEnd
+.  Property: PowerTransformerEnd.b Type: Susceptance Upper 1
+.  Property: PowerTransformerEnd.connectionKind Type: WindingConnection Upper 1
+.  Property: PowerTransformerEnd.g Type: Conductance Upper 1
+.  Property: PowerTransformerEnd.r Type: Resistance Upper 1
+.  Property: PowerTransformerEnd.ratedS Type: ApparentPower Upper 1
+.  Property: PowerTransformerEnd.ratedU Type: Voltage Upper 1
+.  Property: PowerTransformerEnd.x Type: Reactance Upper 1
+.  Property: PowerTransformerEnd.PowerTransformer Type: PowerTransformer Upper 1
+.  Property: TransformerEnd.endNumber Type: Integer Upper 1
+.  Property: TransformerEnd.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: TransformerEnd.Terminal Type: Terminal Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: RatioTapChanger
+.  Property: RatioTapChanger.stepVoltageIncrement Type: PerCent Upper 1
+.  Property: RatioTapChanger.TransformerEnd Type: TransformerEnd Upper 1
+.  Property: RatioTapChanger.RatioTapChangerTable Type: RatioTapChangerTable Upper 1
+.  Property: TapChanger.highStep Type: Integer Upper 1
+.  Property: TapChanger.lowStep Type: Integer Upper 1
+.  Property: TapChanger.ltcFlag Type: Boolean Upper 1
+.  Property: TapChanger.neutralStep Type: Integer Upper 1
+.  Property: TapChanger.neutralU Type: Voltage Upper 1
+.  Property: TapChanger.normalStep Type: Integer Upper 1
+.  Property: TapChanger.TapChangerControl Type: TapChangerControl Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: RatioTapChangerTable
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: RatioTapChangerTablePoint
+.  Property: RatioTapChangerTablePoint.RatioTapChangerTable Type: RatioTapChangerTable Upper 1
+.  Property: TapChangerTablePoint.b Type: PerCent Upper 1
+.  Property: TapChangerTablePoint.g Type: PerCent Upper 1
+.  Property: TapChangerTablePoint.r Type: PerCent Upper 1
+.  Property: TapChangerTablePoint.ratio Type: Float Upper 1
+.  Property: TapChangerTablePoint.step Type: Integer Upper 1
+.  Property: TapChangerTablePoint.x Type: PerCent Upper 1
+Class: ReactiveCapabilityCurve
+.  Property: Curve.curveStyle Type: CurveStyle Upper 1
+.  Property: Curve.xUnit Type: UnitSymbol Upper 1
+.  Property: Curve.y1Unit Type: UnitSymbol Upper 1
+.  Property: Curve.y2Unit Type: UnitSymbol Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: RegulatingControl
+.  Property: RegulatingControl.mode Type: RegulatingControlModeKind Upper 1
+.  Property: RegulatingControl.Terminal Type: Terminal Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: RegularTimePoint
+.  Property: RegularTimePoint.sequenceNumber Type: Integer Upper 1
+.  Property: RegularTimePoint.value1 Type: Float Upper 1
+.  Property: RegularTimePoint.value2 Type: Float Upper 1
+.  Property: RegularTimePoint.IntervalSchedule Type: RegularIntervalSchedule Upper 1
+Class: ReportingGroup
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Season
+.  Property: Season.endDate Type: MonthDay Upper 1
+.  Property: Season.startDate Type: MonthDay Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: SeriesCompensator
+.  Property: SeriesCompensator.r Type: Resistance Upper 1
+.  Property: SeriesCompensator.x Type: Reactance Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: SolarGeneratingUnit
+.  Property: SolarGeneratingUnit.SolarPowerPlant Type: SolarPowerPlant Upper 1
+.  Property: GeneratingUnit.genControlSource Type: GeneratorControlSource Upper 1
+.  Property: GeneratingUnit.governorSCD Type: PerCent Upper 1
+.  Property: GeneratingUnit.longPF Type: Float Upper 1
+.  Property: GeneratingUnit.maximumAllowableSpinningReserve Type: ActivePower Upper 1
+.  Property: GeneratingUnit.maxOperatingP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.minOperatingP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.nominalP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedGrossMaxP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedGrossMinP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedNetMaxP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.shortPF Type: Float Upper 1
+.  Property: GeneratingUnit.startupCost Type: Money Upper 1
+.  Property: GeneratingUnit.startupTime Type: Seconds Upper 1
+.  Property: GeneratingUnit.totalEfficiency Type: PerCent Upper 1
+.  Property: GeneratingUnit.variableCost Type: Money Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: SolarPowerPlant
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: StaticVarCompensator
+.  Property: StaticVarCompensator.capacitiveRating Type: Reactance Upper 1
+.  Property: StaticVarCompensator.inductiveRating Type: Reactance Upper 1
+.  Property: StaticVarCompensator.slope Type: VoltagePerReactivePower Upper 1
+.  Property: StaticVarCompensator.sVCControlMode Type: SVCControlMode Upper 1
+.  Property: StaticVarCompensator.voltageSetPoint Type: Voltage Upper 1
+.  Property: RegulatingCondEq.RegulatingControl Type: RegulatingControl Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: StationSupply
+.  Property: EnergyConsumer.pfixed Type: ActivePower Upper 1
+.  Property: EnergyConsumer.pfixedPct Type: PerCent Upper 1
+.  Property: EnergyConsumer.qfixed Type: ReactivePower Upper 1
+.  Property: EnergyConsumer.qfixedPct Type: PerCent Upper 1
+.  Property: EnergyConsumer.LoadResponse Type: LoadResponseCharacteristic Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: SubGeographicalRegion
+.  Property: SubGeographicalRegion.Region Type: GeographicalRegion Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: SubLoadArea
+.  Property: SubLoadArea.LoadArea Type: LoadArea Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Substation
+.  Property: Substation.Region Type: SubGeographicalRegion Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: SurgeArrester
+.  Property: AuxiliaryEquipment.Terminal Type: Terminal Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Switch
+.  Property: Switch.normalOpen Type: Boolean Upper 1
+.  Property: Switch.ratedCurrent Type: CurrentFlow Upper 1
+.  Property: Switch.retained Type: Boolean Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: SwitchSchedule
+.  Property: SwitchSchedule.Switch Type: Switch Upper 1
+.  Property: SeasonDayTypeSchedule.DayType Type: DayType Upper 1
+.  Property: SeasonDayTypeSchedule.Season Type: Season Upper 1
+.  Property: RegularIntervalSchedule.endTime Type: DateTime Upper 1
+.  Property: RegularIntervalSchedule.timeStep Type: Seconds Upper 1
+.  Property: BasicIntervalSchedule.startTime Type: DateTime Upper 1
+.  Property: BasicIntervalSchedule.value1Unit Type: UnitSymbol Upper 1
+.  Property: BasicIntervalSchedule.value2Unit Type: UnitSymbol Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: SynchronousMachine
+.  Property: SynchronousMachine.maxQ Type: ReactivePower Upper 1
+.  Property: SynchronousMachine.minQ Type: ReactivePower Upper 1
+.  Property: SynchronousMachine.qPercent Type: PerCent Upper 1
+.  Property: SynchronousMachine.type Type: SynchronousMachineKind Upper 1
+.  Property: SynchronousMachine.InitialReactiveCapabilityCurve Type: ReactiveCapabilityCurve Upper 1
+.  Property: RotatingMachine.ratedPowerFactor Type: Float Upper 1
+.  Property: RotatingMachine.ratedS Type: ApparentPower Upper 1
+.  Property: RotatingMachine.ratedU Type: Voltage Upper 1
+.  Property: RotatingMachine.GeneratingUnit Type: GeneratingUnit Upper 1
+.  Property: RegulatingCondEq.RegulatingControl Type: RegulatingControl Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: TapChangerControl
+.  Property: RegulatingControl.mode Type: RegulatingControlModeKind Upper 1
+.  Property: RegulatingControl.Terminal Type: Terminal Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Terminal
+.  Property: Terminal.phases Type: PhaseCode Upper 1
+.  Property: Terminal.ConductingEquipment Type: ConductingEquipment Upper 1
+.  Property: Terminal.ConnectivityNode Type: ConnectivityNode Upper 1
+.  Property: ACDCTerminal.sequenceNumber Type: Integer Upper 1
+.  Property: ACDCTerminal.BusNameMarker Type: BusNameMarker Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: ThermalGeneratingUnit
+.  Property: ThermalGeneratingUnit.CogenerationPlant Type: CogenerationPlant Upper 1
+.  Property: ThermalGeneratingUnit.CombinedCyclePlant Type: CombinedCyclePlant Upper 1
+.  Property: ThermalGeneratingUnit.CAESPlant Type: CAESPlant Upper 1
+.  Property: GeneratingUnit.genControlSource Type: GeneratorControlSource Upper 1
+.  Property: GeneratingUnit.governorSCD Type: PerCent Upper 1
+.  Property: GeneratingUnit.longPF Type: Float Upper 1
+.  Property: GeneratingUnit.maximumAllowableSpinningReserve Type: ActivePower Upper 1
+.  Property: GeneratingUnit.maxOperatingP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.minOperatingP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.nominalP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedGrossMaxP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedGrossMinP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedNetMaxP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.shortPF Type: Float Upper 1
+.  Property: GeneratingUnit.startupCost Type: Money Upper 1
+.  Property: GeneratingUnit.startupTime Type: Seconds Upper 1
+.  Property: GeneratingUnit.totalEfficiency Type: PerCent Upper 1
+.  Property: GeneratingUnit.variableCost Type: Money Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: TieFlow
+.  Property: TieFlow.positiveFlowIn Type: Boolean Upper 1
+.  Property: TieFlow.Terminal Type: Terminal Upper 1
+.  Property: TieFlow.ControlArea Type: ControlArea Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: VoltageLevel
+.  Property: VoltageLevel.highVoltageLimit Type: Voltage Upper 1
+.  Property: VoltageLevel.lowVoltageLimit Type: Voltage Upper 1
+.  Property: VoltageLevel.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: VoltageLevel.Substation Type: Substation Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: VoltageLimit
+.  Property: VoltageLimit.normalValue Type: Voltage Upper 1
+.  Property: OperationalLimit.OperationalLimitType Type: OperationalLimitType Upper 1
+.  Property: OperationalLimit.OperationalLimitSet Type: OperationalLimitSet Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: VsCapabilityCurve
+.  Property: Curve.curveStyle Type: CurveStyle Upper 1
+.  Property: Curve.xUnit Type: UnitSymbol Upper 1
+.  Property: Curve.y1Unit Type: UnitSymbol Upper 1
+.  Property: Curve.y2Unit Type: UnitSymbol Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: VsConverter
+.  Property: VsConverter.maxModulationIndex Type: Float Upper 1
+.  Property: VsConverter.CapabilityCurve Type: VsCapabilityCurve Upper 1
+.  Property: ACDCConverter.baseS Type: ApparentPower Upper 1
+.  Property: ACDCConverter.idleLoss Type: ActivePower Upper 1
+.  Property: ACDCConverter.maxP Type: ActivePower Upper 1
+.  Property: ACDCConverter.maxUdc Type: Voltage Upper 1
+.  Property: ACDCConverter.minP Type: ActivePower Upper 1
+.  Property: ACDCConverter.minUdc Type: Voltage Upper 1
+.  Property: ACDCConverter.numberOfValves Type: Integer Upper 1
+.  Property: ACDCConverter.ratedUdc Type: Voltage Upper 1
+.  Property: ACDCConverter.resistiveLoss Type: Resistance Upper 1
+.  Property: ACDCConverter.switchingLoss Type: ActivePowerPerCurrentFlow Upper 1
+.  Property: ACDCConverter.valveU0 Type: Voltage Upper 1
+.  Property: ACDCConverter.PccTerminal Type: Terminal Upper 1
+.  Property: ConductingEquipment.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: WaveTrap
+.  Property: AuxiliaryEquipment.Terminal Type: Terminal Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: WindGeneratingUnit
+.  Property: WindGeneratingUnit.windGenUnitType Type: WindGenUnitKind Upper 1
+.  Property: WindGeneratingUnit.WindPowerPlant Type: WindPowerPlant Upper 1
+.  Property: GeneratingUnit.genControlSource Type: GeneratorControlSource Upper 1
+.  Property: GeneratingUnit.governorSCD Type: PerCent Upper 1
+.  Property: GeneratingUnit.longPF Type: Float Upper 1
+.  Property: GeneratingUnit.maximumAllowableSpinningReserve Type: ActivePower Upper 1
+.  Property: GeneratingUnit.maxOperatingP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.minOperatingP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.nominalP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedGrossMaxP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedGrossMinP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.ratedNetMaxP Type: ActivePower Upper 1
+.  Property: GeneratingUnit.shortPF Type: Float Upper 1
+.  Property: GeneratingUnit.startupCost Type: Money Upper 1
+.  Property: GeneratingUnit.startupTime Type: Seconds Upper 1
+.  Property: GeneratingUnit.totalEfficiency Type: PerCent Upper 1
+.  Property: GeneratingUnit.variableCost Type: Money Upper 1
+.  Property: Equipment.aggregate Type: Boolean Upper 1
+.  Property: Equipment.normallyInService Type: Boolean Upper 1
+.  Property: Equipment.EquipmentContainer Type: EquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: WindPowerPlant
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: ActivePower
+.  Property: ActivePower.multiplier Type: UnitMultiplier Upper 1
+.  Property: ActivePower.unit Type: UnitSymbol Upper 1
+.  Property: ActivePower.value Type: Float Upper 1
+Class: ActivePowerPerCurrentFlow
+.  Property: ActivePowerPerCurrentFlow.multiplier Type: UnitMultiplier Upper 1
+.  Property: ActivePowerPerCurrentFlow.unit Type: UnitSymbol Upper 1
+.  Property: ActivePowerPerCurrentFlow.value Type: Float Upper 1
+Class: ActivePowerPerFrequency
+.  Property: ActivePowerPerFrequency.multiplier Type: UnitMultiplier Upper 1
+.  Property: ActivePowerPerFrequency.unit Type: UnitSymbol Upper 1
+.  Property: ActivePowerPerFrequency.value Type: Float Upper 1
+Class: AngleDegrees
+.  Property: AngleDegrees.multiplier Type: UnitMultiplier Upper 1
+.  Property: AngleDegrees.unit Type: UnitSymbol Upper 1
+.  Property: AngleDegrees.value Type: Float Upper 1
+Class: ApparentPower
+.  Property: ApparentPower.multiplier Type: UnitMultiplier Upper 1
+.  Property: ApparentPower.unit Type: UnitSymbol Upper 1
+.  Property: ApparentPower.value Type: Float Upper 1
+Class: Capacitance
+.  Property: Capacitance.multiplier Type: UnitMultiplier Upper 1
+.  Property: Capacitance.unit Type: UnitSymbol Upper 1
+.  Property: Capacitance.value Type: Float Upper 1
+Class: Conductance
+.  Property: Conductance.multiplier Type: UnitMultiplier Upper 1
+.  Property: Conductance.unit Type: UnitSymbol Upper 1
+.  Property: Conductance.value Type: Float Upper 1
+Class: CurrentFlow
+.  Property: CurrentFlow.multiplier Type: UnitMultiplier Upper 1
+.  Property: CurrentFlow.unit Type: UnitSymbol Upper 1
+.  Property: CurrentFlow.value Type: Float Upper 1
+Class: Frequency
+.  Property: Frequency.multiplier Type: UnitMultiplier Upper 1
+.  Property: Frequency.unit Type: UnitSymbol Upper 1
+.  Property: Frequency.value Type: Float Upper 1
+Class: Inductance
+.  Property: Inductance.multiplier Type: UnitMultiplier Upper 1
+.  Property: Inductance.unit Type: UnitSymbol Upper 1
+.  Property: Inductance.value Type: Float Upper 1
+Class: Length
+.  Property: Length.multiplier Type: UnitMultiplier Upper 1
+.  Property: Length.unit Type: UnitSymbol Upper 1
+.  Property: Length.value Type: Float Upper 1
+Class: Money
+.  Property: Money.multiplier Type: UnitMultiplier Upper 1
+.  Property: Money.unit Type: Currency Upper 1
+.  Property: Money.value Type: Decimal Upper 1
+Class: PerCent
+.  Property: PerCent.multiplier Type: UnitMultiplier Upper 1
+.  Property: PerCent.unit Type: UnitSymbol Upper 1
+.  Property: PerCent.value Type: Float Upper 1
+Class: Reactance
+.  Property: Reactance.multiplier Type: UnitMultiplier Upper 1
+.  Property: Reactance.unit Type: UnitSymbol Upper 1
+.  Property: Reactance.value Type: Float Upper 1
+Class: ReactivePower
+.  Property: ReactivePower.multiplier Type: UnitMultiplier Upper 1
+.  Property: ReactivePower.unit Type: UnitSymbol Upper 1
+.  Property: ReactivePower.value Type: Float Upper 1
+Class: RealEnergy
+.  Property: RealEnergy.multiplier Type: UnitMultiplier Upper 1
+.  Property: RealEnergy.unit Type: UnitSymbol Upper 1
+.  Property: RealEnergy.value Type: Float Upper 1
+Class: Resistance
+.  Property: Resistance.multiplier Type: UnitMultiplier Upper 1
+.  Property: Resistance.unit Type: UnitSymbol Upper 1
+.  Property: Resistance.value Type: Float Upper 1
+Class: RotationSpeed
+.  Property: RotationSpeed.multiplier Type: UnitMultiplier Upper 1
+.  Property: RotationSpeed.unit Type: UnitSymbol Upper 1
+.  Property: RotationSpeed.value Type: Float Upper 1
+Class: Seconds
+.  Property: Seconds.multiplier Type: UnitMultiplier Upper 1
+.  Property: Seconds.unit Type: UnitSymbol Upper 1
+.  Property: Seconds.value Type: Float Upper 1
+Class: Susceptance
+.  Property: Susceptance.multiplier Type: UnitMultiplier Upper 1
+.  Property: Susceptance.unit Type: UnitSymbol Upper 1
+.  Property: Susceptance.value Type: Float Upper 1
+Class: Voltage
+.  Property: Voltage.multiplier Type: UnitMultiplier Upper 1
+.  Property: Voltage.unit Type: UnitSymbol Upper 1
+.  Property: Voltage.value Type: Float Upper 1
+Class: VoltagePerReactivePower
+.  Property: VoltagePerReactivePower.multiplier Type: UnitMultiplier Upper 1
+.  Property: VoltagePerReactivePower.unit Type: UnitSymbol Upper 1
+.  Property: VoltagePerReactivePower.value Type: Float Upper 1
+Class: Boolean
+Class: Date
+Class: DateTime
+Class: Decimal
+Class: Float
+Class: Integer
+Class: MonthDay
+Class: String
+Class: Accumulator
+.  Property: Measurement.measurementType Type: String Upper 1
+.  Property: Measurement.phases Type: PhaseCode Upper 1
+.  Property: Measurement.unitMultiplier Type: UnitMultiplier Upper 1
+.  Property: Measurement.unitSymbol Type: UnitSymbol Upper 1
+.  Property: Measurement.PowerSystemResource Type: PowerSystemResource Upper 1
+.  Property: Measurement.Terminal Type: ACDCTerminal Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: AccumulatorLimit
+.  Property: AccumulatorLimit.value Type: Integer Upper 1
+.  Property: AccumulatorLimit.LimitSet Type: AccumulatorLimitSet Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: AccumulatorLimitSet
+.  Property: AccumulatorLimitSet.Measurements Type: Accumulator Upper -1
+.  Property: LimitSet.isPercentageLimits Type: Boolean Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: AccumulatorReset
+.  Property: AccumulatorReset.AccumulatorValue Type: AccumulatorValue Upper 1
+.  Property: Control.controlType Type: String Upper 1
+.  Property: Control.operationInProgress Type: Boolean Upper 1
+.  Property: Control.timeStamp Type: DateTime Upper 1
+.  Property: Control.unitMultiplier Type: UnitMultiplier Upper 1
+.  Property: Control.unitSymbol Type: UnitSymbol Upper 1
+.  Property: Control.PowerSystemResource Type: PowerSystemResource Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: AccumulatorValue
+.  Property: AccumulatorValue.Accumulator Type: Accumulator Upper 1
+.  Property: MeasurementValue.sensorAccuracy Type: PerCent Upper 1
+.  Property: MeasurementValue.timeStamp Type: DateTime Upper 1
+.  Property: MeasurementValue.MeasurementValueSource Type: MeasurementValueSource Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: Analog
+.  Property: Analog.positiveFlowIn Type: Boolean Upper 1
+.  Property: Measurement.measurementType Type: String Upper 1
+.  Property: Measurement.phases Type: PhaseCode Upper 1
+.  Property: Measurement.unitMultiplier Type: UnitMultiplier Upper 1
+.  Property: Measurement.unitSymbol Type: UnitSymbol Upper 1
+.  Property: Measurement.PowerSystemResource Type: PowerSystemResource Upper 1
+.  Property: Measurement.Terminal Type: ACDCTerminal Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: AnalogLimit
+.  Property: AnalogLimit.value Type: Float Upper 1
+.  Property: AnalogLimit.LimitSet Type: AnalogLimitSet Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: AnalogLimitSet
+.  Property: AnalogLimitSet.Measurements Type: Analog Upper -1
+.  Property: LimitSet.isPercentageLimits Type: Boolean Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: AnalogValue
+.  Property: AnalogValue.Analog Type: Analog Upper 1
+.  Property: MeasurementValue.sensorAccuracy Type: PerCent Upper 1
+.  Property: MeasurementValue.timeStamp Type: DateTime Upper 1
+.  Property: MeasurementValue.MeasurementValueSource Type: MeasurementValueSource Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: Command
+.  Property: Command.normalValue Type: Integer Upper 1
+.  Property: Command.value Type: Integer Upper 1
+.  Property: Command.DiscreteValue Type: DiscreteValue Upper 1
+.  Property: Command.ValueAliasSet Type: ValueAliasSet Upper 1
+.  Property: Control.controlType Type: String Upper 1
+.  Property: Control.operationInProgress Type: Boolean Upper 1
+.  Property: Control.timeStamp Type: DateTime Upper 1
+.  Property: Control.unitMultiplier Type: UnitMultiplier Upper 1
+.  Property: Control.unitSymbol Type: UnitSymbol Upper 1
+.  Property: Control.PowerSystemResource Type: PowerSystemResource Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: Discrete
+.  Property: Discrete.ValueAliasSet Type: ValueAliasSet Upper 1
+.  Property: Measurement.measurementType Type: String Upper 1
+.  Property: Measurement.phases Type: PhaseCode Upper 1
+.  Property: Measurement.unitMultiplier Type: UnitMultiplier Upper 1
+.  Property: Measurement.unitSymbol Type: UnitSymbol Upper 1
+.  Property: Measurement.PowerSystemResource Type: PowerSystemResource Upper 1
+.  Property: Measurement.Terminal Type: ACDCTerminal Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: DiscreteValue
+.  Property: DiscreteValue.Discrete Type: Discrete Upper 1
+.  Property: MeasurementValue.sensorAccuracy Type: PerCent Upper 1
+.  Property: MeasurementValue.timeStamp Type: DateTime Upper 1
+.  Property: MeasurementValue.MeasurementValueSource Type: MeasurementValueSource Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: MeasurementValueQuality
+.  Property: MeasurementValueQuality.MeasurementValue Type: MeasurementValue Upper 1
+.  Property: Quality61850.badReference Type: Boolean Upper 1
+.  Property: Quality61850.estimatorReplaced Type: Boolean Upper 1
+.  Property: Quality61850.failure Type: Boolean Upper 1
+.  Property: Quality61850.oldData Type: Boolean Upper 1
+.  Property: Quality61850.operatorBlocked Type: Boolean Upper 1
+.  Property: Quality61850.oscillatory Type: Boolean Upper 1
+.  Property: Quality61850.outOfRange Type: Boolean Upper 1
+.  Property: Quality61850.overFlow Type: Boolean Upper 1
+.  Property: Quality61850.source Type: Source Upper 1
+.  Property: Quality61850.suspect Type: Boolean Upper 1
+.  Property: Quality61850.test Type: Boolean Upper 1
+.  Property: Quality61850.validity Type: Validity Upper 1
+Class: MeasurementValueSource
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: RaiseLowerCommand
+.  Property: RaiseLowerCommand.ValueAliasSet Type: ValueAliasSet Upper 1
+.  Property: AnalogControl.maxValue Type: Float Upper 1
+.  Property: AnalogControl.minValue Type: Float Upper 1
+.  Property: AnalogControl.AnalogValue Type: AnalogValue Upper 1
+.  Property: Control.controlType Type: String Upper 1
+.  Property: Control.operationInProgress Type: Boolean Upper 1
+.  Property: Control.timeStamp Type: DateTime Upper 1
+.  Property: Control.unitMultiplier Type: UnitMultiplier Upper 1
+.  Property: Control.unitSymbol Type: UnitSymbol Upper 1
+.  Property: Control.PowerSystemResource Type: PowerSystemResource Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: SetPoint
+.  Property: SetPoint.normalValue Type: Float Upper 1
+.  Property: SetPoint.value Type: Float Upper 1
+.  Property: AnalogControl.maxValue Type: Float Upper 1
+.  Property: AnalogControl.minValue Type: Float Upper 1
+.  Property: AnalogControl.AnalogValue Type: AnalogValue Upper 1
+.  Property: Control.controlType Type: String Upper 1
+.  Property: Control.operationInProgress Type: Boolean Upper 1
+.  Property: Control.timeStamp Type: DateTime Upper 1
+.  Property: Control.unitMultiplier Type: UnitMultiplier Upper 1
+.  Property: Control.unitSymbol Type: UnitSymbol Upper 1
+.  Property: Control.PowerSystemResource Type: PowerSystemResource Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: StringMeasurement
+.  Property: Measurement.measurementType Type: String Upper 1
+.  Property: Measurement.phases Type: PhaseCode Upper 1
+.  Property: Measurement.unitMultiplier Type: UnitMultiplier Upper 1
+.  Property: Measurement.unitSymbol Type: UnitSymbol Upper 1
+.  Property: Measurement.PowerSystemResource Type: PowerSystemResource Upper 1
+.  Property: Measurement.Terminal Type: ACDCTerminal Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: StringMeasurementValue
+.  Property: StringMeasurementValue.StringMeasurement Type: StringMeasurement Upper 1
+.  Property: MeasurementValue.sensorAccuracy Type: PerCent Upper 1
+.  Property: MeasurementValue.timeStamp Type: DateTime Upper 1
+.  Property: MeasurementValue.MeasurementValueSource Type: MeasurementValueSource Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: ValueAliasSet
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: ValueToAlias
+.  Property: ValueToAlias.value Type: Integer Upper 1
+.  Property: ValueToAlias.ValueAliasSet Type: ValueAliasSet Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: PerCent
+.  Property: PerCent.multiplier Type: UnitMultiplier Upper 1
+.  Property: PerCent.unit Type: UnitSymbol Upper 1
+.  Property: PerCent.value Type: Float Upper 1
+Class: Boolean
+Class: Date
+Class: DateTime
+Class: Float
+Class: Integer
+Class: String
+Class: ACLineSegment
+.  Property: ACLineSegment.b0ch Type: Susceptance Upper 1
+.  Property: ACLineSegment.g0ch Type: Conductance Upper 1
+.  Property: ACLineSegment.r0 Type: Resistance Upper 1
+.  Property: ACLineSegment.shortCircuitEndTemperature Type: Temperature Upper 1
+.  Property: ACLineSegment.x0 Type: Reactance Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: AsynchronousMachine
+.  Property: AsynchronousMachine.converterFedDrive Type: Boolean Upper 1
+.  Property: AsynchronousMachine.efficiency Type: PerCent Upper 1
+.  Property: AsynchronousMachine.iaIrRatio Type: Float Upper 1
+.  Property: AsynchronousMachine.polePairNumber Type: Integer Upper 1
+.  Property: AsynchronousMachine.ratedMechanicalPower Type: ActivePower Upper 1
+.  Property: AsynchronousMachine.reversible Type: Boolean Upper 1
+.  Property: AsynchronousMachine.rxLockedRotorRatio Type: Float Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: BusbarSection
+.  Property: BusbarSection.ipMax Type: CurrentFlow Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: EnergySource
+.  Property: EnergySource.r Type: Resistance Upper 1
+.  Property: EnergySource.r0 Type: Resistance Upper 1
+.  Property: EnergySource.rn Type: Resistance Upper 1
+.  Property: EnergySource.x Type: Reactance Upper 1
+.  Property: EnergySource.x0 Type: Reactance Upper 1
+.  Property: EnergySource.xn Type: Reactance Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: EquivalentBranch
+.  Property: EquivalentBranch.negativeR12 Type: Resistance Upper 1
+.  Property: EquivalentBranch.negativeR21 Type: Resistance Upper 1
+.  Property: EquivalentBranch.negativeX12 Type: Reactance Upper 1
+.  Property: EquivalentBranch.negativeX21 Type: Reactance Upper 1
+.  Property: EquivalentBranch.positiveR12 Type: Resistance Upper 1
+.  Property: EquivalentBranch.positiveR21 Type: Resistance Upper 1
+.  Property: EquivalentBranch.positiveX12 Type: Reactance Upper 1
+.  Property: EquivalentBranch.positiveX21 Type: Reactance Upper 1
+.  Property: EquivalentBranch.zeroR12 Type: Resistance Upper 1
+.  Property: EquivalentBranch.zeroR21 Type: Resistance Upper 1
+.  Property: EquivalentBranch.zeroX12 Type: Reactance Upper 1
+.  Property: EquivalentBranch.zeroX21 Type: Reactance Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: EquivalentInjection
+.  Property: EquivalentInjection.r Type: Resistance Upper 1
+.  Property: EquivalentInjection.r0 Type: Resistance Upper 1
+.  Property: EquivalentInjection.r2 Type: Resistance Upper 1
+.  Property: EquivalentInjection.x Type: Reactance Upper 1
+.  Property: EquivalentInjection.x0 Type: Reactance Upper 1
+.  Property: EquivalentInjection.x2 Type: Reactance Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: ExternalNetworkInjection
+.  Property: ExternalNetworkInjection.ikSecond Type: Boolean Upper 1
+.  Property: ExternalNetworkInjection.maxInitialSymShCCurrent Type: CurrentFlow Upper 1
+.  Property: ExternalNetworkInjection.maxR0ToX0Ratio Type: Float Upper 1
+.  Property: ExternalNetworkInjection.maxR1ToX1Ratio Type: Float Upper 1
+.  Property: ExternalNetworkInjection.maxZ0ToZ1Ratio Type: Float Upper 1
+.  Property: ExternalNetworkInjection.minInitialSymShCCurrent Type: CurrentFlow Upper 1
+.  Property: ExternalNetworkInjection.minR0ToX0Ratio Type: Float Upper 1
+.  Property: ExternalNetworkInjection.minR1ToX1Ratio Type: Float Upper 1
+.  Property: ExternalNetworkInjection.minZ0ToZ1Ratio Type: Float Upper 1
+.  Property: ExternalNetworkInjection.voltageFactor Type: PU Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: GroundingImpedance
+.  Property: GroundingImpedance.x Type: Reactance Upper 1
+.  Property: EarthFaultCompensator.r Type: Resistance Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: LinearShuntCompensator
+.  Property: LinearShuntCompensator.b0PerSection Type: Susceptance Upper 1
+.  Property: LinearShuntCompensator.g0PerSection Type: Conductance Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: MutualCoupling
+.  Property: MutualCoupling.b0ch Type: Susceptance Upper 1
+.  Property: MutualCoupling.distance11 Type: Length Upper 1
+.  Property: MutualCoupling.distance12 Type: Length Upper 1
+.  Property: MutualCoupling.distance21 Type: Length Upper 1
+.  Property: MutualCoupling.distance22 Type: Length Upper 1
+.  Property: MutualCoupling.g0ch Type: Conductance Upper 1
+.  Property: MutualCoupling.r0 Type: Resistance Upper 1
+.  Property: MutualCoupling.x0 Type: Reactance Upper 1
+.  Property: MutualCoupling.First_Terminal Type: Terminal Upper 1
+.  Property: MutualCoupling.Second_Terminal Type: Terminal Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: NonlinearShuntCompensatorPoint
+.  Property: NonlinearShuntCompensatorPoint.b0 Type: Susceptance Upper 1
+.  Property: NonlinearShuntCompensatorPoint.g0 Type: Conductance Upper 1
+Class: PetersenCoil
+.  Property: PetersenCoil.mode Type: PetersenCoilModeKind Upper 1
+.  Property: PetersenCoil.nominalU Type: Voltage Upper 1
+.  Property: PetersenCoil.offsetCurrent Type: CurrentFlow Upper 1
+.  Property: PetersenCoil.positionCurrent Type: CurrentFlow Upper 1
+.  Property: PetersenCoil.xGroundMax Type: Reactance Upper 1
+.  Property: PetersenCoil.xGroundMin Type: Reactance Upper 1
+.  Property: PetersenCoil.xGroundNominal Type: Reactance Upper 1
+.  Property: EarthFaultCompensator.r Type: Resistance Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: PowerTransformer
+.  Property: PowerTransformer.beforeShCircuitHighestOperatingCurrent Type: CurrentFlow Upper 1
+.  Property: PowerTransformer.beforeShCircuitHighestOperatingVoltage Type: Voltage Upper 1
+.  Property: PowerTransformer.beforeShortCircuitAnglePf Type: AngleDegrees Upper 1
+.  Property: PowerTransformer.highSideMinOperatingU Type: Voltage Upper 1
+.  Property: PowerTransformer.isPartOfGeneratorUnit Type: Boolean Upper 1
+.  Property: PowerTransformer.operationalValuesConsidered Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: PowerTransformerEnd
+.  Property: PowerTransformerEnd.b0 Type: Susceptance Upper 1
+.  Property: PowerTransformerEnd.g0 Type: Conductance Upper 1
+.  Property: PowerTransformerEnd.phaseAngleClock Type: Integer Upper 1
+.  Property: PowerTransformerEnd.r0 Type: Resistance Upper 1
+.  Property: PowerTransformerEnd.x0 Type: Reactance Upper 1
+.  Property: TransformerEnd.grounded Type: Boolean Upper 1
+.  Property: TransformerEnd.rground Type: Resistance Upper 1
+.  Property: TransformerEnd.xground Type: Reactance Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: SeriesCompensator
+.  Property: SeriesCompensator.r0 Type: Resistance Upper 1
+.  Property: SeriesCompensator.varistorPresent Type: Boolean Upper 1
+.  Property: SeriesCompensator.varistorRatedCurrent Type: CurrentFlow Upper 1
+.  Property: SeriesCompensator.varistorVoltageThreshold Type: Voltage Upper 1
+.  Property: SeriesCompensator.x0 Type: Reactance Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: SynchronousMachine
+.  Property: SynchronousMachine.earthing Type: Boolean Upper 1
+.  Property: SynchronousMachine.earthingStarPointR Type: Resistance Upper 1
+.  Property: SynchronousMachine.earthingStarPointX Type: Reactance Upper 1
+.  Property: SynchronousMachine.ikk Type: CurrentFlow Upper 1
+.  Property: SynchronousMachine.mu Type: Float Upper 1
+.  Property: SynchronousMachine.r Type: Resistance Upper 1
+.  Property: SynchronousMachine.r0 Type: Resistance Upper 1
+.  Property: SynchronousMachine.r2 Type: Resistance Upper 1
+.  Property: SynchronousMachine.satDirectSubtransX Type: PU Upper 1
+.  Property: SynchronousMachine.satDirectSyncX Type: PU Upper 1
+.  Property: SynchronousMachine.satDirectTransX Type: PU Upper 1
+.  Property: SynchronousMachine.shortCircuitRotorType Type: ShortCircuitRotorKind Upper 1
+.  Property: SynchronousMachine.voltageRegulationRange Type: PerCent Upper 1
+.  Property: SynchronousMachine.x0 Type: Reactance Upper 1
+.  Property: SynchronousMachine.x2 Type: Reactance Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: ActivePower
+.  Property: ActivePower.multiplier Type: UnitMultiplier Upper 1
+.  Property: ActivePower.unit Type: UnitSymbol Upper 1
+.  Property: ActivePower.value Type: Float Upper 1
+Class: AngleDegrees
+.  Property: AngleDegrees.multiplier Type: UnitMultiplier Upper 1
+.  Property: AngleDegrees.unit Type: UnitSymbol Upper 1
+.  Property: AngleDegrees.value Type: Float Upper 1
+Class: Conductance
+.  Property: Conductance.multiplier Type: UnitMultiplier Upper 1
+.  Property: Conductance.unit Type: UnitSymbol Upper 1
+.  Property: Conductance.value Type: Float Upper 1
+Class: CurrentFlow
+.  Property: CurrentFlow.multiplier Type: UnitMultiplier Upper 1
+.  Property: CurrentFlow.unit Type: UnitSymbol Upper 1
+.  Property: CurrentFlow.value Type: Float Upper 1
+Class: Length
+.  Property: Length.multiplier Type: UnitMultiplier Upper 1
+.  Property: Length.unit Type: UnitSymbol Upper 1
+.  Property: Length.value Type: Float Upper 1
+Class: PerCent
+.  Property: PerCent.multiplier Type: UnitMultiplier Upper 1
+.  Property: PerCent.unit Type: UnitSymbol Upper 1
+.  Property: PerCent.value Type: Float Upper 1
+Class: PU
+.  Property: PU.multiplier Type: UnitMultiplier Upper 1
+.  Property: PU.unit Type: UnitSymbol Upper 1
+.  Property: PU.value Type: Float Upper 1
+Class: Reactance
+.  Property: Reactance.multiplier Type: UnitMultiplier Upper 1
+.  Property: Reactance.unit Type: UnitSymbol Upper 1
+.  Property: Reactance.value Type: Float Upper 1
+Class: Resistance
+.  Property: Resistance.multiplier Type: UnitMultiplier Upper 1
+.  Property: Resistance.unit Type: UnitSymbol Upper 1
+.  Property: Resistance.value Type: Float Upper 1
+Class: Susceptance
+.  Property: Susceptance.multiplier Type: UnitMultiplier Upper 1
+.  Property: Susceptance.unit Type: UnitSymbol Upper 1
+.  Property: Susceptance.value Type: Float Upper 1
+Class: Temperature
+.  Property: Temperature.multiplier Type: UnitMultiplier Upper 1
+.  Property: Temperature.unit Type: UnitSymbol Upper 1
+.  Property: Temperature.value Type: Float Upper 1
+Class: Voltage
+.  Property: Voltage.multiplier Type: UnitMultiplier Upper 1
+.  Property: Voltage.unit Type: UnitSymbol Upper 1
+.  Property: Voltage.value Type: Float Upper 1
+Class: Boolean
+Class: Date
+Class: Float
+Class: Integer
+Class: String
+Class: ACDCConverterDCTerminal
+.  Property: ACDCTerminal.connected Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: ActivePowerLimit
+.  Property: ActivePowerLimit.value Type: ActivePower Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: ApparentPowerLimit
+.  Property: ApparentPowerLimit.value Type: ApparentPower Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: AsynchronousMachine
+.  Property: AsynchronousMachine.asynchronousMachineType Type: AsynchronousMachineKind Upper 1
+.  Property: RotatingMachine.p Type: ActivePower Upper 1
+.  Property: RotatingMachine.q Type: ReactivePower Upper 1
+.  Property: RegulatingCondEq.controlEnabled Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: BatteryUnit
+.  Property: BatteryUnit.batteryState Type: BatteryStateKind Upper 1
+.  Property: BatteryUnit.storedE Type: RealEnergy Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: Breaker
+.  Property: Switch.locked Type: Boolean Upper 1
+.  Property: Switch.open Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: ConformLoad
+.  Property: EnergyConsumer.p Type: ActivePower Upper 1
+.  Property: EnergyConsumer.q Type: ReactivePower Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: ControlArea
+.  Property: ControlArea.netInterchange Type: ActivePower Upper 1
+.  Property: ControlArea.pTolerance Type: ActivePower Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: CsConverter
+.  Property: CsConverter.operatingMode Type: CsOperatingModeKind Upper 1
+.  Property: CsConverter.pPccControl Type: CsPpccControlKind Upper 1
+.  Property: CsConverter.targetAlpha Type: AngleDegrees Upper 1
+.  Property: CsConverter.targetGamma Type: AngleDegrees Upper 1
+.  Property: CsConverter.targetIdc Type: CurrentFlow Upper 1
+.  Property: ACDCConverter.p Type: ActivePower Upper 1
+.  Property: ACDCConverter.q Type: ReactivePower Upper 1
+.  Property: ACDCConverter.targetPpcc Type: ActivePower Upper 1
+.  Property: ACDCConverter.targetUdc Type: Voltage Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: CurrentLimit
+.  Property: CurrentLimit.value Type: CurrentFlow Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: DCTerminal
+.  Property: ACDCTerminal.connected Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: Disconnector
+.  Property: Switch.locked Type: Boolean Upper 1
+.  Property: Switch.open Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: DisconnectingCircuitBreaker
+.  Property: Switch.locked Type: Boolean Upper 1
+.  Property: Switch.open Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: EnergyConsumer
+.  Property: EnergyConsumer.p Type: ActivePower Upper 1
+.  Property: EnergyConsumer.q Type: ReactivePower Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: EnergySource
+.  Property: EnergySource.activePower Type: ActivePower Upper 1
+.  Property: EnergySource.reactivePower Type: ReactivePower Upper 1
+.  Property: EnergySource.voltageAngle Type: AngleRadians Upper 1
+.  Property: EnergySource.voltageMagnitude Type: Voltage Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: Equipment
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: EquivalentInjection
+.  Property: EquivalentInjection.p Type: ActivePower Upper 1
+.  Property: EquivalentInjection.q Type: ReactivePower Upper 1
+.  Property: EquivalentInjection.regulationStatus Type: Boolean Upper 1
+.  Property: EquivalentInjection.regulationTarget Type: Voltage Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: ExternalNetworkInjection
+.  Property: ExternalNetworkInjection.p Type: ActivePower Upper 1
+.  Property: ExternalNetworkInjection.q Type: ReactivePower Upper 1
+.  Property: ExternalNetworkInjection.referencePriority Type: Integer Upper 1
+.  Property: RegulatingCondEq.controlEnabled Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: Fuse
+.  Property: Switch.locked Type: Boolean Upper 1
+.  Property: Switch.open Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: GeneratingUnit
+.  Property: GeneratingUnit.normalPF Type: Float Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: GroundDisconnector
+.  Property: Switch.locked Type: Boolean Upper 1
+.  Property: Switch.open Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: HydroGeneratingUnit
+.  Property: GeneratingUnit.normalPF Type: Float Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: Jumper
+.  Property: Switch.locked Type: Boolean Upper 1
+.  Property: Switch.open Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: LinearShuntCompensator
+.  Property: ShuntCompensator.sections Type: Float Upper 1
+.  Property: RegulatingCondEq.controlEnabled Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: LoadBreakSwitch
+.  Property: Switch.locked Type: Boolean Upper 1
+.  Property: Switch.open Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: NonConformLoad
+.  Property: EnergyConsumer.p Type: ActivePower Upper 1
+.  Property: EnergyConsumer.q Type: ReactivePower Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: NonlinearShuntCompensator
+.  Property: ShuntCompensator.sections Type: Float Upper 1
+.  Property: RegulatingCondEq.controlEnabled Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: NuclearGeneratingUnit
+.  Property: GeneratingUnit.normalPF Type: Float Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: PhaseTapChangerAsymmetrical
+.  Property: TapChanger.controlEnabled Type: Boolean Upper 1
+.  Property: TapChanger.step Type: Float Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: PhaseTapChangerLinear
+.  Property: TapChanger.controlEnabled Type: Boolean Upper 1
+.  Property: TapChanger.step Type: Float Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: PhaseTapChangerSymmetrical
+.  Property: TapChanger.controlEnabled Type: Boolean Upper 1
+.  Property: TapChanger.step Type: Float Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: PhaseTapChangerTabular
+.  Property: TapChanger.controlEnabled Type: Boolean Upper 1
+.  Property: TapChanger.step Type: Float Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: PowerElectronicsConnection
+.  Property: PowerElectronicsConnection.p Type: ActivePower Upper 1
+.  Property: PowerElectronicsConnection.q Type: ReactivePower Upper 1
+.  Property: RegulatingCondEq.controlEnabled Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: RatioTapChanger
+.  Property: TapChanger.controlEnabled Type: Boolean Upper 1
+.  Property: TapChanger.step Type: Float Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: RegulatingControl
+.  Property: RegulatingControl.discrete Type: Boolean Upper 1
+.  Property: RegulatingControl.enabled Type: Boolean Upper 1
+.  Property: RegulatingControl.maxAllowedTargetValue Type: Float Upper 1
+.  Property: RegulatingControl.minAllowedTargetValue Type: Float Upper 1
+.  Property: RegulatingControl.targetDeadband Type: Float Upper 1
+.  Property: RegulatingControl.targetValue Type: Float Upper 1
+.  Property: RegulatingControl.targetValueUnitMultiplier Type: UnitMultiplier Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: SolarGeneratingUnit
+.  Property: GeneratingUnit.normalPF Type: Float Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: StaticVarCompensator
+.  Property: StaticVarCompensator.q Type: ReactivePower Upper 1
+.  Property: RegulatingCondEq.controlEnabled Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: StationSupply
+.  Property: EnergyConsumer.p Type: ActivePower Upper 1
+.  Property: EnergyConsumer.q Type: ReactivePower Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: Switch
+.  Property: Switch.locked Type: Boolean Upper 1
+.  Property: Switch.open Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: SynchronousMachine
+.  Property: SynchronousMachine.operatingMode Type: SynchronousMachineOperatingMode Upper 1
+.  Property: SynchronousMachine.referencePriority Type: Integer Upper 1
+.  Property: RotatingMachine.p Type: ActivePower Upper 1
+.  Property: RotatingMachine.q Type: ReactivePower Upper 1
+.  Property: RegulatingCondEq.controlEnabled Type: Boolean Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: TapChangerControl
+.  Property: RegulatingControl.discrete Type: Boolean Upper 1
+.  Property: RegulatingControl.enabled Type: Boolean Upper 1
+.  Property: RegulatingControl.maxAllowedTargetValue Type: Float Upper 1
+.  Property: RegulatingControl.minAllowedTargetValue Type: Float Upper 1
+.  Property: RegulatingControl.targetDeadband Type: Float Upper 1
+.  Property: RegulatingControl.targetValue Type: Float Upper 1
+.  Property: RegulatingControl.targetValueUnitMultiplier Type: UnitMultiplier Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: Terminal
+.  Property: ACDCTerminal.connected Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: ThermalGeneratingUnit
+.  Property: GeneratingUnit.normalPF Type: Float Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: VoltageLimit
+.  Property: VoltageLimit.value Type: Voltage Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: VsConverter
+.  Property: VsConverter.droop Type: PU Upper 1
+.  Property: VsConverter.droopCompensation Type: Resistance Upper 1
+.  Property: VsConverter.pPccControl Type: VsPpccControlKind Upper 1
+.  Property: VsConverter.qPccControl Type: VsQpccControlKind Upper 1
+.  Property: VsConverter.qShare Type: PerCent Upper 1
+.  Property: VsConverter.targetPhasePcc Type: AngleDegrees Upper 1
+.  Property: VsConverter.targetPowerFactorPcc Type: Float Upper 1
+.  Property: VsConverter.targetPWMfactor Type: Float Upper 1
+.  Property: VsConverter.targetQpcc Type: ReactivePower Upper 1
+.  Property: VsConverter.targetUpcc Type: Voltage Upper 1
+.  Property: ACDCConverter.p Type: ActivePower Upper 1
+.  Property: ACDCConverter.q Type: ReactivePower Upper 1
+.  Property: ACDCConverter.targetPpcc Type: ActivePower Upper 1
+.  Property: ACDCConverter.targetUdc Type: Voltage Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: WindGeneratingUnit
+.  Property: GeneratingUnit.normalPF Type: Float Upper 1
+.  Property: Equipment.inService Type: Boolean Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+Class: ActivePower
+.  Property: ActivePower.multiplier Type: UnitMultiplier Upper 1
+.  Property: ActivePower.unit Type: UnitSymbol Upper 1
+.  Property: ActivePower.value Type: Float Upper 1
+Class: AngleDegrees
+.  Property: AngleDegrees.multiplier Type: UnitMultiplier Upper 1
+.  Property: AngleDegrees.unit Type: UnitSymbol Upper 1
+.  Property: AngleDegrees.value Type: Float Upper 1
+Class: AngleRadians
+.  Property: AngleRadians.multiplier Type: UnitMultiplier Upper 1
+.  Property: AngleRadians.unit Type: UnitSymbol Upper 1
+.  Property: AngleRadians.value Type: Float Upper 1
+Class: ApparentPower
+.  Property: ApparentPower.multiplier Type: UnitMultiplier Upper 1
+.  Property: ApparentPower.unit Type: UnitSymbol Upper 1
+.  Property: ApparentPower.value Type: Float Upper 1
+Class: CurrentFlow
+.  Property: CurrentFlow.multiplier Type: UnitMultiplier Upper 1
+.  Property: CurrentFlow.unit Type: UnitSymbol Upper 1
+.  Property: CurrentFlow.value Type: Float Upper 1
+Class: PerCent
+.  Property: PerCent.multiplier Type: UnitMultiplier Upper 1
+.  Property: PerCent.unit Type: UnitSymbol Upper 1
+.  Property: PerCent.value Type: Float Upper 1
+Class: PU
+.  Property: PU.multiplier Type: UnitMultiplier Upper 1
+.  Property: PU.unit Type: UnitSymbol Upper 1
+.  Property: PU.value Type: Float Upper 1
+Class: ReactivePower
+.  Property: ReactivePower.multiplier Type: UnitMultiplier Upper 1
+.  Property: ReactivePower.unit Type: UnitSymbol Upper 1
+.  Property: ReactivePower.value Type: Float Upper 1
+Class: RealEnergy
+.  Property: RealEnergy.multiplier Type: UnitMultiplier Upper 1
+.  Property: RealEnergy.unit Type: UnitSymbol Upper 1
+.  Property: RealEnergy.value Type: Float Upper 1
+Class: Resistance
+.  Property: Resistance.multiplier Type: UnitMultiplier Upper 1
+.  Property: Resistance.unit Type: UnitSymbol Upper 1
+.  Property: Resistance.value Type: Float Upper 1
+Class: Voltage
+.  Property: Voltage.multiplier Type: UnitMultiplier Upper 1
+.  Property: Voltage.unit Type: UnitSymbol Upper 1
+.  Property: Voltage.value Type: Float Upper 1
+Class: Boolean
+Class: Date
+Class: Float
+Class: Integer
+Class: String
+Class: ACDCConverterDCTerminal
+.  Property: DCBaseTerminal.DCTopologicalNode Type: DCTopologicalNode Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: ConnectivityNode
+.  Property: ConnectivityNode.TopologicalNode Type: TopologicalNode Upper 1
+Class: DCNode
+.  Property: DCNode.DCTopologicalNode Type: DCTopologicalNode Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCTerminal
+.  Property: DCBaseTerminal.DCTopologicalNode Type: DCTopologicalNode Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: DCTopologicalNode
+.  Property: DCTopologicalNode.DCEquipmentContainer Type: DCEquipmentContainer Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Terminal
+.  Property: Terminal.TopologicalNode Type: TopologicalNode Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: TopologicalNode
+.  Property: TopologicalNode.BaseVoltage Type: BaseVoltage Upper 1
+.  Property: TopologicalNode.ConnectivityNodeContainer Type: ConnectivityNodeContainer Upper 1
+.  Property: TopologicalNode.ReportingGroup Type: ReportingGroup Upper 1
+.  Property: IdentifiedObject.description Type: String Upper 1
+.  Property: IdentifiedObject.energyIdentCodeEic Type: String Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+.  Property: IdentifiedObject.shortName Type: String Upper 1
+Class: Date
+Class: String
+Class: CsConverter
+.  Property: CsConverter.alpha Type: AngleDegrees Upper 1
+.  Property: CsConverter.gamma Type: AngleDegrees Upper 1
+.  Property: ACDCConverter.idc Type: CurrentFlow Upper 1
+.  Property: ACDCConverter.poleLossP Type: ActivePower Upper 1
+.  Property: ACDCConverter.uc Type: Voltage Upper 1
+.  Property: ACDCConverter.udc Type: Voltage Upper 1
+Class: DCTopologicalIsland
+.  Property: DCTopologicalIsland.DCTopologicalNodes Type: DCTopologicalNode Upper -1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: SvInjection
+.  Property: SvInjection.pInjection Type: ActivePower Upper 1
+.  Property: SvInjection.qInjection Type: ReactivePower Upper 1
+.  Property: SvInjection.TopologicalNode Type: TopologicalNode Upper 1
+Class: SvPowerFlow
+.  Property: SvPowerFlow.p Type: ActivePower Upper 1
+.  Property: SvPowerFlow.q Type: ReactivePower Upper 1
+.  Property: SvPowerFlow.Terminal Type: Terminal Upper 1
+Class: SvShuntCompensatorSections
+.  Property: SvShuntCompensatorSections.sections Type: Float Upper 1
+.  Property: SvShuntCompensatorSections.ShuntCompensator Type: ShuntCompensator Upper 1
+Class: SvStatus
+.  Property: SvStatus.inService Type: Boolean Upper 1
+.  Property: SvStatus.ConductingEquipment Type: ConductingEquipment Upper 1
+Class: SvSwitch
+.  Property: SvSwitch.open Type: Boolean Upper 1
+.  Property: SvSwitch.Switch Type: Switch Upper 1
+Class: SvTapStep
+.  Property: SvTapStep.position Type: Float Upper 1
+.  Property: SvTapStep.TapChanger Type: TapChanger Upper 1
+Class: SvVoltage
+.  Property: SvVoltage.angle Type: AngleDegrees Upper 1
+.  Property: SvVoltage.v Type: Voltage Upper 1
+.  Property: SvVoltage.TopologicalNode Type: TopologicalNode Upper 1
+Class: TopologicalIsland
+.  Property: TopologicalIsland.TopologicalNodes Type: TopologicalNode Upper -1
+.  Property: TopologicalIsland.AngleRefTopologicalNode Type: TopologicalNode Upper 1
+.  Property: IdentifiedObject.mRID Type: String Upper 1
+.  Property: IdentifiedObject.name Type: String Upper 1
+Class: VsConverter
+.  Property: VsConverter.delta Type: AngleDegrees Upper 1
+.  Property: VsConverter.uv Type: Voltage Upper 1
+.  Property: ACDCConverter.idc Type: CurrentFlow Upper 1
+.  Property: ACDCConverter.poleLossP Type: ActivePower Upper 1
+.  Property: ACDCConverter.uc Type: Voltage Upper 1
+.  Property: ACDCConverter.udc Type: Voltage Upper 1
+Class: ActivePower
+.  Property: ActivePower.multiplier Type: UnitMultiplier Upper 1
+.  Property: ActivePower.unit Type: UnitSymbol Upper 1
+.  Property: ActivePower.value Type: Float Upper 1
+Class: AngleDegrees
+.  Property: AngleDegrees.multiplier Type: UnitMultiplier Upper 1
+.  Property: AngleDegrees.unit Type: UnitSymbol Upper 1
+.  Property: AngleDegrees.value Type: Float Upper 1
+Class: CurrentFlow
+.  Property: CurrentFlow.multiplier Type: UnitMultiplier Upper 1
+.  Property: CurrentFlow.unit Type: UnitSymbol Upper 1
+.  Property: CurrentFlow.value Type: Float Upper 1
+Class: ReactivePower
+.  Property: ReactivePower.multiplier Type: UnitMultiplier Upper 1
+.  Property: ReactivePower.unit Type: UnitSymbol Upper 1
+.  Property: ReactivePower.value Type: Float Upper 1
+Class: Voltage
+.  Property: Voltage.multiplier Type: UnitMultiplier Upper 1
+.  Property: Voltage.unit Type: UnitSymbol Upper 1
+.  Property: Voltage.value Type: Float Upper 1
+Class: Boolean
+Class: Date
+Class: Float
+Class: String

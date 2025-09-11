@@ -139,7 +139,8 @@ type SchemaNode struct {
 
 func CreateSchema(config Config) error {
 	schema := Schema{}
-	err := parseXMI(config, &schema)
+	enumIndex := make(map[string]CIMEnum)
+	err := parseXMI(config, &schema, enumIndex)
 	if err != nil {
 		return err
 	}
@@ -148,9 +149,9 @@ func CreateSchema(config Config) error {
 		return err
 	}
 	if config.DebugPath != "" {
-		writeSchema(schema)
+		writeSchema(config, schema)
 	}
-	con, err := newClient(config)
+	con, err := newConnection(config)
 	if err != nil {
 		return err
 	}
@@ -163,6 +164,10 @@ func CreateSchema(config Config) error {
 		return err
 	}
 	err = writeNodes(con, &schema)
+	if err != nil {
+		return err
+	}
+	err = writeEnumLiterals(con, enumIndex)
 	if err != nil {
 		return err
 	}
@@ -212,7 +217,7 @@ func writeNodes(conn *dgo.Dgraph, schema *Schema) error {
 	return nil
 }
 
-func parseXMI(config Config, schema *Schema) error {
+func parseXMI(config Config, schema *Schema, enumIndex map[string]CIMEnum) error {
 	file, err := os.Open(config.ImportPath)
     if err != nil {
         return err
@@ -222,7 +227,6 @@ func parseXMI(config Config, schema *Schema) error {
 	var xmi XMI
 	var cim CIMProfile
 	classindex := make(map[string]CIMClass)
-	enumIndex := make(map[string]CIMEnum)
 	decoder := xml.NewDecoder(file)
 	decoder.CharsetReader = makeCharsetReader
 	err = decoder.Decode(&xmi)
@@ -253,9 +257,10 @@ func parseXMI(config Config, schema *Schema) error {
 			return err
 		}
 	}
-	//showCIM(&cim)
-	createSchemaData(schema, &cim)
-	writeCIM(&cim, config)
+	createSchemaData(schema, &cim, enumIndex)
+	if config.DebugPath != "" {
+		writeCIM(&cim, config)
+	}
 	return nil
 }
 
@@ -382,7 +387,7 @@ func makeCharsetReader(charset string, input io.Reader) (io.Reader, error) {
 }
 
 func writeCIM(cim *CIMProfile, config Config) {
-	file, err := os.Create(config.DebugPath)
+	file, err := os.Create(config.DebugPath + "/cimprofile.txt")
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -405,7 +410,7 @@ func writeCIM(cim *CIMProfile, config Config) {
 	w.Flush()
 }
 
-func createSchemaData(schema *Schema, cim *CIMProfile) error {
+func createSchemaData(schema *Schema, cim *CIMProfile, enums map[string]CIMEnum) error {
 	var predtype string
 	var node SchemaNode
 	var predicate SchemaPredicate
@@ -459,13 +464,23 @@ func createSchemaData(schema *Schema, cim *CIMProfile) error {
 			}	
 		}
 	}
+	for _, i :=  range enums {
+		node = SchemaNode{Name: i.Name}
+		node.Predicates = make(map[string]SchemaPredicate)
+		predicate = SchemaPredicate{Name: i.Name + ".name", Type: "string"}
+		schema.Predicates[i.Name + ".name"] = predicate
+		node.Predicates[i.Name + ".name"] = predicate
+		predicate = SchemaPredicate{Name: "rdf.about", Type: "string"}
+		node.Predicates["rdf.about"] = predicate
+		schema.Nodes[i.Name] = node
+	} 
 	println("created predicates")
 	println("created nodes")
 	return nil
 }
 
-func writeSchema(schema Schema) {
-	file, err := os.Create("./data/schema.txt")
+func writeSchema(config Config, schema Schema) {
+	file, err := os.Create(config.DebugPath + "/schema.txt")
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -522,6 +537,30 @@ func addNode(conn *dgo.Dgraph, node *SchemaNode) error {
 	if err != nil {
 		return err
 	}
-	println("node " + node.Name + " added to schema")
+	return nil
+}
+
+func writeEnumLiterals(conn *dgo.Dgraph, index map[string]CIMEnum) error {
+	var txt string
+	txn, err := newTransaction(conn)
+	if err != nil {
+		return err
+	}
+	//defer discardTransaction(txn)
+	for _, i := range index {
+		//txt = "`\n"
+		for _, j := range i.Literals {
+			txt = txt + "<_:" + j.ID + "> <rdf.about> \"" + j.ID + "\" .\n"
+			txt = txt + "<_:" + j.ID + "> <dgraph.type> \"" + i.Name + "\" .\n"
+			txt = txt + "<_:" + j.ID + "> <" + i.Name + ".name> \"" + j.Name + "\" .\n"
+		}
+		//txt = txt + "`"
+
+		writeMutation(txn, txt)
+	}
+	err = commitTransaction(txn)
+	if err != nil {
+		return err
+	}
 	return nil
 }

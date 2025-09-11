@@ -18,8 +18,8 @@ type Config struct {
 }
 
 
-func newClient(config Config) (*dgo.Dgraph, error) {
-	client, err := dgo.NewClient(config.URL,
+func newConnection(config Config) (*dgo.Dgraph, error) {
+	conn, err := dgo.NewClient(config.URL,
   		// add Dgraph ACL credentials
   		//dgo.WithACLCreds("groot", "password"),
   		// add insecure transport credentials
@@ -29,10 +29,35 @@ func newClient(config Config) (*dgo.Dgraph, error) {
 		fmt.Println(err)
 		return nil, err
 	}
-	defer client.Close()
-	return client, nil
-
+	defer conn.Close()
+	return conn, nil
 }
+
+func newTransaction(con *dgo.Dgraph) (*dgo.Txn, error) {
+  txn := con.NewTxn()
+  return txn, nil
+}
+
+func writeMutation(txn *dgo.Txn, rdfdata string) error {
+	mu := &api.Mutation{
+		SetNquads: []byte(rdfdata),
+    	CommitNow: false,
+  	}
+	if _, err := txn.Mutate(context.Background(), mu); err != nil {
+		return err
+	}
+	return nil
+}
+
+func commitTransaction(txn *dgo.Txn) error {
+	txn.Commit(context.Background())
+	return nil
+}
+
+func discardTransaction(txn *dgo.Txn) {
+	txn.Discard(context.Background())
+}
+
 
 func dropAllData (conn *dgo.Dgraph) error {
 	err := conn.Alter(context.Background(), &api.Operation{DropOp: api.Operation_ALL})
