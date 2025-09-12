@@ -546,16 +546,12 @@ func writeEnumLiterals(conn *dgo.Dgraph, index map[string]CIMEnum) error {
 	if err != nil {
 		return err
 	}
-	//defer discardTransaction(txn)
 	for _, i := range index {
-		//txt = "`\n"
 		for _, j := range i.Literals {
 			txt = txt + "<_:" + j.ID + "> <rdf.about> \"" + j.ID + "\" .\n"
 			txt = txt + "<_:" + j.ID + "> <dgraph.type> \"" + i.Name + "\" .\n"
 			txt = txt + "<_:" + j.ID + "> <" + i.Name + ".name> \"" + j.Name + "\" .\n"
 		}
-		//txt = txt + "`"
-
 		writeMutation(txn, txt)
 	}
 	err = commitTransaction(txn)

@@ -121,8 +121,9 @@ func main() {
 }
 
 func importRDF(config *Config) error {
+	dconfig := dgraph.Config{URL: config.url, ImportPath: config.path, DebugPath: config.debugpath}
 	fmt.Println("importing from: ", config.path , "into Dgraph with URL: ", config.url )
-	err := dgraph.ImportRDF(config.path, config.url)
+	err := dgraph.ImportRDF(dconfig)
 	if err != nil {
 		return err
 	}
