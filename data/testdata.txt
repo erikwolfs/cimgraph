@@ -39,3 +39,13 @@
 								<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI001654__D643_4c98_8BAE_06152801F234" value="*"/>
 							</ownedAttribute>
 						</packagedElement>
+
+
+
+HAS_ENDS: [PowerTransformerEnd] @hasInverse(field: PowerTransformerEnd.PowerTransformer)
+
+curl --silent 127.0.0.1:8080/state|jq -r '.maxUID'
+
+curl '127.0.0.1:6080/assign?what=uids&num=0'
+
+curl '127.0.0.1:6080/assign?what=uids&num=18446744073709551615'

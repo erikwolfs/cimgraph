@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:cim="http://iec.ch/TC57/2013/CIM-schema-cim16#" xmlns:entsoe="http://entsoe.eu/CIM/SchemaExtension/3/1#" xmlns:md="http://iec.ch/TC57/61970-552/ModelDescription/1#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <md:FullModel rdf:about="urn:uuid:93ff29bb-be56-98f9-3947-88070cb3dbd5">
+    <md:Model.scenarioTime>2030-01-02T09:00:00</md:Model.scenarioTime>
+    <md:Model.created>2015-02-02T13:01:25.830</md:Model.created>
+    <md:Model.description>CGMES Conformity Assessment: Small Grid Reduced Network.</md:Model.description>
+    <md:Model.version>4</md:Model.version>
+    <md:Model.profile>http://entsoe.eu/CIM/EquipmentCore/3/1</md:Model.profile>
+    <md:Model.profile>http://entsoe.eu/CIM/EquipmentOperation/3/1</md:Model.profile>
+    <md:Model.modelingAuthoritySet>http://GB/Planning/ENTSOE/2</md:Model.modelingAuthoritySet>
+    <md:Model.Supersedes rdf:resource="urn:uuid:8168421c-c68f-3376-f16c-c2b7198bcb2e" />
+	  <md:Model.DependentOn rdf:resource="urn:uuid:2399cbd0-9a39-11e0-aa80-0800200c9a66" />
+  </md:FullModel>
+  <md:FullModel rdf:about="urn:uuid:b21c2ef6-bf4e-ecfa-0a6c-d49f55f695b9">
+    <md:Model.scenarioTime>2030-01-02T09:00:00</md:Model.scenarioTime>
+    <md:Model.created>2014-10-27T09:01:25.830</md:Model.created>
+    <md:Model.description>CGMES Conformity Assessment: Small Grid Reduced Network Test Configuration.</md:Model.description>
+    <md:Model.version>4</md:Model.version>
+    <md:Model.profile>http://entsoe.eu/CIM/Topology/4/1</md:Model.profile>
+    <md:Model.modelingAuthoritySet>http://GB/Planning/ENTSOE/2</md:Model.modelingAuthoritySet>
+    <md:Model.DependentOn rdf:resource="urn:uuid:93ff29bb-be56-98f9-3947-88070cb3dbd5" />
+    <md:Model.DependentOn rdf:resource="urn:uuid:2399cbd1-9a39-11e0-aa80-0800200c9a66" />
+	  <md:Model.Supersedes rdf:resource="urn:uuid:7801a9e7-08e6-137e-58d4-0222ff3b1f96" />
+  </md:FullModel>
+    <md:FullModel rdf:about="urn:uuid:c4f602ec-cc27-fd55-f836-1e4bf21e0db3">
+    <md:Model.scenarioTime>2030-01-02T09:00:00</md:Model.scenarioTime>
+    <md:Model.created>2014-10-22T09:01:25.830</md:Model.created>
+    <md:Model.description>CGMES Conformity Assessment: Small Grid Reduced Network Test Configuration.</md:Model.description>
+    <md:Model.version>4</md:Model.version>
+    <md:Model.profile>http://entsoe.eu/CIM/SteadyStateHypothesis/1/1</md:Model.profile>
+    <md:Model.modelingAuthoritySet>http://GB/Planning/ENTSOE/2</md:Model.modelingAuthoritySet>
+    <md:Model.DependentOn rdf:resource="urn:uuid:93ff29bb-be56-98f9-3947-88070cb3dbd5" />
+	<md:Model.Supersedes rdf:resource="urn:uuid:b13424f0-8d9b-383c-43bc-e824797fc545" />
+  </md:FullModel>
+  <md:FullModel rdf:about="urn:uuid:2399cbd3-9a39-11e0-aa80-0800200c9a66_EU">
+    <md:Model.scenarioTime>2030-01-02T09:00:00</md:Model.scenarioTime>
+    <md:Model.created>2014-10-22T09:01:25.830</md:Model.created>
+	  <md:Model.description>CGMES Conformity Assessment: Small Grid Reduced Network Test Configuration.</md:Model.description>
+    <md:Model.version>4</md:Model.version>
+    <md:Model.profile>http://entsoe.eu/CIM/StateVariables/4/1</md:Model.profile>
+    <md:Model.modelingAuthoritySet>http://GB/Planning/ENTSOE/2</md:Model.modelingAuthoritySet>
+    <md:Model.Supersedes rdf:resource="urn:uuid:8940bcf5-86a7-5031-136e-a9338454ff0a" />
+    <md:Model.DependentOn rdf:resource="urn:uuid:93ff29bb-be56-98f9-3947-88070cb3dbd5" />
+    <md:Model.DependentOn rdf:resource="urn:uuid:b21c2ef6-bf4e-ecfa-0a6c-d49f55f695b9" />
+    <md:Model.DependentOn rdf:resource="urn:uuid:2399cbd1-9a39-11e0-aa80-0800200c9a66" />
+  </md:FullModel>
+</rdf:RDF>

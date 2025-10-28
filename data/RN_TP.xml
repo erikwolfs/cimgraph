@@ -3,7 +3,7 @@
   <md:FullModel rdf:about="urn:uuid:b21c2ef6-bf4e-ecfa-0a6c-d49f55f695b9">
     <md:Model.scenarioTime>2030-01-02T09:00:00</md:Model.scenarioTime>
     <md:Model.created>2014-10-27T09:01:25.830</md:Model.created>
-    <md:Model.description>CGMES Conformity Assessment: Small Grid Reduced Network Test Configuration. The model is owned by ENTSO-E and is provided by ENTSO-E "as it is". To the fullest extent permitted by law, ENTSO-E shall not be liable for any damages of any kind arising out of the use of the model (including any of its subsequent modifications). ENTSO-E neither warrants, nor represents that the use of the model will not infringe the rights of third parties. Any use of the model shall include a reference to ENTSO-E. ENTSO-E web site is the only official source of information related to the model.</md:Model.description>
+    <md:Model.description>CGMES Conformity Assessment: Small Grid Reduced Network Test Configuration.</md:Model.description>
     <md:Model.version>4</md:Model.version>
     <md:Model.profile>http://entsoe.eu/CIM/Topology/4/1</md:Model.profile>
     <md:Model.modelingAuthoritySet>http://GB/Planning/ENTSOE/2</md:Model.modelingAuthoritySet>

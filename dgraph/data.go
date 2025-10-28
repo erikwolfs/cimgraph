@@ -72,24 +72,37 @@ func saveRDF(config Config, doc *RDFDoc) error {
 	var nodeid string
 	var object string
 	var muttxt string
+	con, err := newConnection(config)
+	if err != nil {
+		return err
+	}
+	txn, err := newTransaction(con)
+	if err != nil {
+		return err
+	}
 	for _,i := range doc.Subjects {
 		muttxt = ""
 		if i.ID != "" {
 			nodeid = i.ID
 		} else if i.About != "" {
-			nodeid = i.ID
+			nodeid = i.About
 		} else {
 			return fmt.Errorf("subject has no id can not parse")
 		}
+		//hashnr := nhash(nodeid)
 		muttxt = "<_:" + nodeid + "> <rdf.about> \"" + nodeid + "\" .\n"
 		muttxt = muttxt + "<_:" + nodeid + "> <dgraph.type> \"" + i.XMLName.Local + "\" .\n"
 		for _,j := range i.Predicates {
 			if j.Recource != "" {
 				_, err := url.ParseRequestURI(j.Recource)
 				if err != nil {
-					object = "<_:" + strings.TrimPrefix(j.Recource, "#") + ">"
+					object = "<" + strings.TrimPrefix(j.Recource, "#") + ">"
 				} else {
-					object = "\"" + j.Recource + "\""
+					if strings.Contains(j.Recource, "http://") {
+						object = "\"" + j.Recource + "\""
+					} else {
+						object = "\"" + j.Recource + "\""
+					}
 				}
 				
 			} else if j.Value != "" {
@@ -100,6 +113,22 @@ func saveRDF(config Config, doc *RDFDoc) error {
 			muttxt = muttxt + "<_:" + nodeid + "> <" + j.XMLName.Local + "> " + object + " .\n"
 		}
 		fmt.Println(muttxt)
+		err = writeMutation(txn, muttxt)
+		if err != nil {
+			return err
+		}
 	}
+	err = commitTransaction(txn)
+	if err != nil {
+		return err
+	}
+	con.Close()
 	return nil
 }
+
+// func nhash(input string) string {
+//     h := fnv.New64a() // Create a new FNV hash instance
+//     h.Write([]byte(input)) // Write the input to the hash
+//     return strconv.FormatUint(uint64(h.Sum64()), 10) // Return the hash as a uint64
+// }
+

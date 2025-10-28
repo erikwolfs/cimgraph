@@ -2,11 +2,11 @@ package dgraph
 
 import (
 	"bufio"
+	"context"
 	"encoding/xml"
 	"fmt"
 	"io"
 	"os"
-	"context"
 
 	"github.com/dgraph-io/dgo/v240"
 	"github.com/dgraph-io/dgo/v240/protos/api"
@@ -108,6 +108,7 @@ type CIMProperty struct {
 	Name string
 	Lower string
 	Upper string
+	Enum bool
 }
 
 type CIMEnum struct {
@@ -252,14 +253,102 @@ func parseXMI(config Config, schema *Schema, enumIndex map[string]CIMEnum) error
 		return err
 	}
 	err = SearchEnums(&cim, enumIndex)
-	{
-		if err != nil {
-			return err
-		}
+	if err != nil {
+		return err
 	}
 	createSchemaData(schema, &cim, enumIndex)
+	err = solveExceptions(schema)
+	if err != nil {
+		return err
+	}
 	if config.DebugPath != "" {
 		writeCIM(&cim, config)
+	}
+	return nil
+}
+
+func solveExceptions(schema *Schema) error {
+	var exceptions = []string {
+		"RotatingMachine.ratedS",
+		"SynchronousMachine.maxQ",
+		"SynchronousMachine.minQ",
+		"SynchronousMachine.qPercent",
+		"SynchronousMachine.r",
+		"SynchronousMachine.r0",
+		"SynchronousMachine.r2",
+		"SynchronousMachine.satDirectSubtransX",
+		"usMachine.r",
+		"SynchronousMachine.x0",
+		"SynchronousMachine.x2",
+		"Conductor.length",
+		"ACLineSegment.b0ch",
+		"ACLineSegment.bch",
+		"ACLineSegment.g0ch",
+		"ACLineSegment.gch",
+		"ACLineSegment.r",
+		"ACLineSegment.r0",
+		"ACLineSegment.shortCircuitEndTemperature",
+		"ACLineSegment.x",
+		"ACLineSegment.x0",
+		"ShuntCompensator.nomU",
+		"LinearShuntCompensator.b0PerSection",
+		"LinearShuntCompensator.bPerSection",
+		"LinearShuntCompensator.g0PerSection",
+		"LinearShuntCompensator.gPerSection",
+		"BaseVoltage.nominalVoltage",
+		"OperationalLimitType.acceptableDuration",
+		"GeneratingUnit.maxOperatingP",
+		"GeneratingUnit.minOperatingP",
+		"CurrentLimit.value",
+		"PowerTransformerEnd.b",
+		"PowerTransformerEnd.b0",
+		"PowerTransformerEnd.g",
+		"PowerTransformerEnd.g0",
+		"PowerTransformerEnd.r",
+		"PowerTransformerEnd.r0",
+		"PowerTransformerEnd.ratedS",
+		"PowerTransformerEnd.ratedU",
+		"PowerTransformerEnd.x",
+		"PowerTransformerEnd.x0",
+		"TapChanger.neutralU",
+		"RatioTapChanger.stepVoltageIncrement",
+		"EquivalentShunt.g",
+		"EquivalentShunt.b",
+		"EquivalentBranch.negativeR12",
+		"EquivalentBranch.negativeR21",
+		"EquivalentBranch.negativeX12",
+		"EquivalentBranch.negativeX21",
+		"EquivalentBranch.positiveR12",
+		"EquivalentBranch.positiveR21",
+		"EquivalentBranch.positiveX12",
+		"EquivalentBranch.positiveX21",
+		"EquivalentBranch.r",
+		"EquivalentBranch.r21",
+		"EquivalentBranch.x",
+		"EquivalentBranch.x21",
+		"EquivalentBranch.zeroR12",
+		"EquivalentBranch.zeroR21",
+		"EquivalentBranch.zeroX12",
+		"EquivalentBranch.zeroX21",
+		"EnergyConsumer.p",
+		"EnergyConsumer.q",
+		"EquivalentInjection.regulationTarget",
+		"EquivalentInjection.p",
+		"EquivalentInjection.q",
+		"RotatingMachine.p",
+		"RotatingMachine.q",
+		"ControlArea.netInterchange",
+		"SvVoltage.angle",
+		"SvVoltage.v",
+		"SvPowerFlow.p",
+		"SvPowerFlow.q",
+	}
+	for i := 0; i < len(exceptions); i++ {
+		temp := schema.Predicates[exceptions[i]]
+		temp.Type = "float"
+		if temp.Name != "" {
+			schema.Predicates[exceptions[i]] = temp
+		}
 	}
 	return nil
 }
@@ -362,6 +451,7 @@ func SearchEnums(cim *CIMProfile, index map[string]CIMEnum) error {
 			if cim.Classes[i].Properties[j].Type == "" {
 				refenum := index[cim.Classes[i].Properties[j].Object]
 				cim.Classes[i].Properties[j].Type = refenum.Name
+				cim.Classes[i].Properties[j].Enum = true
 			}
 		}
 	}
@@ -446,10 +536,14 @@ func createSchemaData(schema *Schema, cim *CIMProfile, enums map[string]CIMEnum)
 				case "Date":
 					predtype = "dateTime"
 				default:
-					predtype = "uid"
+					//predtype = "uid"
+					predtype = "string"
 				}
 				if j.Upper == "*" {
 					predtype = "[" + predtype + "]"
+				}
+				if j.Enum {
+					predtype = "string"
 				}
 				_, existing = schema.Predicates[j.Name]
 				if !existing {

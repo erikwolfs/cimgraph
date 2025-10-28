@@ -20,6 +20,7 @@ type Config struct {
 
 func newConnection(config Config) (*dgo.Dgraph, error) {
 	conn, err := dgo.NewClient(config.URL,
+		
   		// add Dgraph ACL credentials
   		//dgo.WithACLCreds("groot", "password"),
   		// add insecure transport credentials

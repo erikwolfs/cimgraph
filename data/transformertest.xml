@@ -1,0 +1,62 @@
+  <cim:PowerTransformer rdf:ID="_045c1248-c766-11e1-8775-005056c00008">
+    <cim:IdentifiedObject.name>38-37</cim:IdentifiedObject.name>
+  </cim:PowerTransformer>
+  <cim:PowerTransformerEnd rdf:ID="_047b5a1b-c766-11e1-8775-005056c00008">
+    <cim:IdentifiedObject.name>38-37</cim:IdentifiedObject.name>
+    <cim:TransformerEnd.endNumber>1</cim:TransformerEnd.endNumber>
+    <cim:PowerTransformerEnd.PowerTransformer rdf:resource="#_045c1248-c766-11e1-8775-005056c00008" />
+  </cim:PowerTransformerEnd>
+    <cim:PowerTransformerEnd rdf:ID="_047b5a1c-c766-11e1-8775-005056c00008">
+    <cim:IdentifiedObject.name>38-37</cim:IdentifiedObject.name>
+    <cim:TransformerEnd.endNumber>1</cim:TransformerEnd.endNumber>
+    <cim:PowerTransformerEnd.PowerTransformer rdf:resource="#_045c1248-c766-11e1-8775-005056c00008" />
+  </cim:PowerTransformerEnd>
+
+
+<rdf.about>: string .
+<IdentifiedObject.name>: string .
+<TransformerEnd.endNumber>: int .
+<PowerTransformerEnd.PowerTransformer>: uid @reverse .
+type <PowerTransformer> {
+	rdf.about
+	IdentifiedObject.name
+    <~PowerTransformerEnd.PowerTransformer>
+}
+type <PowerTransformerEnd> {
+	rdf.about
+	IdentifiedObject.name
+    TransformerEnd.endNumber
+    PowerTransformerEnd.PowerTransformer
+}
+
+{
+    set {
+<1> <rdf.about> "_045c1248-c766-11e1-8775-005056c00008" .
+<1> <dgraph.type> "PowerTransformer" .
+<1> <IdentifiedObject.name> "38-37" .
+
+<2> <rdf.about> "_047b5a1b-c766-11e1-8775-005056c00008" .
+<2> <dgraph.type> "PowerTransformerEnd" .
+<2> <IdentifiedObject.name> "38-37-1" .
+<2> <TransformerEnd.endNumber> "1" .
+<2> <PowerTransformerEnd.PowerTransformer> <1> .
+
+<3> <rdf.about> "_047b5a1c-c766-11e1-8775-005056c00008" .
+<3> <dgraph.type> "PowerTransformerEnd" .
+<3> <IdentifiedObject.name> "38-37-2" .
+<3> <TransformerEnd.endNumber> "2" .
+<3> <PowerTransformerEnd.PowerTransformer> <1> .
+    }
+}
+
+{
+  PowerTransformer(func: type(PowerTransformer)) {
+    uid
+	rdf.about
+    IdentifiedObject.name
+    Ends : ~PowerTransformerEnd.PowerTransformer {
+      rdf.about
+      IdentifiedObject.name
+    }
+  }
+}

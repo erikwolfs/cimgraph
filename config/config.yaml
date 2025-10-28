@@ -1,3 +1,5 @@
 DgraphURL: 192.168.215.3:9080
 ExportPath: ./data
 DebugPath: ./log
+PostgresConn: user=postgres password=ultratop host=192.168.215.2 port=5432 dbname=postgres
+

@@ -1,0 +1,157 @@
+SET SCHEMA 'cimgraph'
+
+DROP SEQUENCE IF EXISTS object_id_seq
+;
+
+DROP SEQUENCE IF EXISTS predicate_id_seq
+;
+
+DROP SEQUENCE IF EXISTS subject_id_seq
+;
+
+/* Drop Tables */
+
+DROP TABLE IF EXISTS object CASCADE
+;
+
+DROP TABLE IF EXISTS predicate CASCADE
+;
+
+DROP TABLE IF EXISTS resource CASCADE
+;
+
+DROP TABLE IF EXISTS subject CASCADE
+;
+
+/* Create Tables */
+
+CREATE TABLE object
+(
+	id bigint NOT NULL   DEFAULT NEXTVAL(('"object_id_seq"'::text)::regclass),
+	predicate_id bigint NOT NULL,
+	value_str text NULL,
+	value_flt double precision NULL
+)
+;
+
+CREATE TABLE predicate
+(
+	id bigint NOT NULL   DEFAULT NEXTVAL(('"predicate_id_seq"'::text)::regclass),
+	subject_id bigint NOT NULL,
+	pretype varchar(100) NOT NULL
+)
+;
+
+CREATE TABLE resource
+(
+	object_id bigint NOT NULL,
+	subject_id bigint NOT NULL,
+	resource_id varchar(50) NOT NULL
+)
+;
+
+CREATE TABLE subject
+(
+	id bigint NOT NULL   DEFAULT NEXTVAL(('"subject_id_seq"'::text)::regclass),
+	subtype varchar(100) NOT NULL,
+	rdfid varchar(50) NOT NULL,
+	valid_from timestamp with time zone NOT NULL,
+	valid_to timestamp with time zone NOT NULL
+)
+;
+
+/* Create Primary Keys, Indexes, Uniques, Checks */
+
+ALTER TABLE object ADD CONSTRAINT "PK_object"
+	PRIMARY KEY (id)
+;
+
+CREATE INDEX "IXFK_object_predicate" ON object (predicate_id ASC)
+;
+
+ALTER TABLE predicate ADD CONSTRAINT "PK_predicate"
+	PRIMARY KEY (id)
+;
+
+CREATE INDEX "IXFK_predicate_subject" ON predicate (subject_id ASC)
+;
+
+CREATE INDEX "IDX_predicate_type" ON predicate (pretype ASC)
+;
+
+ALTER TABLE resource ADD CONSTRAINT "PK_resource"
+	PRIMARY KEY (object_id,subject_id)
+;
+
+CREATE INDEX "IXFK_resource_object" ON resource (object_id ASC)
+;
+
+CREATE INDEX "IXFK_resource_subject" ON resource (subject_id ASC)
+;
+
+CREATE INDEX "IDX_resource" ON resource (resource_id ASC)
+;
+
+ALTER TABLE subject ADD CONSTRAINT "PK_subject"
+	PRIMARY KEY (id)
+;
+
+CREATE INDEX "IDX_subject_type" ON subject (subtype ASC)
+;
+
+CREATE INDEX "IDX_rdfid" ON subject (rdfid ASC)
+;
+
+/* Create Foreign Key Constraints */
+
+ALTER TABLE object ADD CONSTRAINT "FK_object_predicate"
+	FOREIGN KEY (predicate_id) REFERENCES predicate (id) ON DELETE No Action ON UPDATE No Action
+;
+
+ALTER TABLE predicate ADD CONSTRAINT "FK_predicate_subject"
+	FOREIGN KEY (subject_id) REFERENCES subject (id) ON DELETE No Action ON UPDATE No Action
+;
+
+ALTER TABLE resource ADD CONSTRAINT "FK_resource_object"
+	FOREIGN KEY (object_id) REFERENCES object (id) ON DELETE No Action ON UPDATE No Action
+;
+
+ALTER TABLE resource ADD CONSTRAINT "FK_resource_subject"
+	FOREIGN KEY (subject_id) REFERENCES subject (id) ON DELETE No Action ON UPDATE No Action
+;
+
+/* Create Table Comments, Sequences for Autonumber Columns */
+
+CREATE SEQUENCE object_id_seq INCREMENT 1 START 1
+;
+
+CREATE SEQUENCE predicate_id_seq INCREMENT 1 START 1
+;
+
+CREATE SEQUENCE subject_id_seq INCREMENT 1 START 1
+
+DROP PROCEDURE insert_subject(subtype varchar(100),
+                                rdfid varchar(50),
+                                valid_from timestamp with time zone,
+                                valid_to timestamp with time zone,
+                                ret_id INOUT bigint)
+
+CREATE OR REPLACE PROCEDURE insert_subject(subtype varchar(100),
+                                rdfid varchar(50),
+                                valid_from timestamp with time zone,
+                                valid_to timestamp with time zone,
+                                ret_id INOUT bigint)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+	INSERT INTO subject(subtype,
+                        rdfid,
+                        valid_from,
+                        valid_to)
+	VALUES ($1,
+            $2,
+            $3,
+            $4)
+	RETURNING subject.id INTO ret_id;
+END;
+$$
