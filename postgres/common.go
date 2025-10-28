@@ -18,7 +18,12 @@ type postgresTx struct {
 }
 
 type Config struct {
-	URL string
+	Host string
+	Port string
+	DBName string
+	User string
+	Password string
+	Schema string
 	ImportPath string
 	ExportPath string
 	DebugPath string
@@ -47,8 +52,9 @@ type Object struct {
 }
 
 type Resource struct {
-	ID int64
+	ObjectID int64
 	SubjectID int64
+	ResourceID string
 }
 
 var (
@@ -61,7 +67,12 @@ var (
 
 func newConnection(config Config, ctx context.Context) (*postgresdb, error) {
 	pgOnce.Do(func() {
-		db, err := pgxpool.New(ctx, config.URL)
+		configstr := "user=" + config.User +
+					" password=" + config.Password +
+					" host=" + config.Host +
+					" port=" + config.Port +
+					" dbname=" + config.DBName
+		db, err := pgxpool.New(ctx, configstr)
 		if err != nil {
 			conErr = err
 		}
@@ -111,7 +122,50 @@ func InsertSubject(ptx postgresTx, subject *Subject, ctx context.Context) error 
     		"rdfid": subject.RDFAbout,
 			"valid_from": "2000-01-01 00:00:00+02",
 			"valid_to": "2999-12-31 00:00:00+02",
-			"ret_id": subject.ID,
+			"ret_id": nil,
+	}
+	err := ptx.tx.QueryRow(ctx, command, args).Scan(&subject.ID)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func InsertPredicate(ptx postgresTx, subjectid int64, predicate *Predicate, ctx context.Context) error {
+	command := "CALL insert_predicate(@subject_id, @pretype, @ret_id)"
+	args := pgx.NamedArgs{
+    		"subject_id": subjectid,
+    		"pretype": predicate.Type,
+			"ret_id": nil,
+	}
+	err := ptx.tx.QueryRow(ctx, command, args).Scan(&predicate.ID)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func InsertObject(ptx postgresTx, predicateid int64, object *Object, ctx context.Context) error {
+	command := "CALL insert_object(@predicate_id, @value_str, @value_flt, @ret_id)"
+	args := pgx.NamedArgs{
+    		"predicate_id": predicateid,
+    		"value_str": object.ValueStr,
+			"value_flt": object.ValueFlt,
+			"ret_id": nil,
+	}
+	err := ptx.tx.QueryRow(ctx, command, args).Scan(&object.ID)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func InsertResource(ptx postgresTx, resource *Resource, ctx context.Context) error {
+	command := "CALL insert_object(@object_id, @subject_id, @resource_id)"
+	args := pgx.NamedArgs{
+    		"object_id": resource.ObjectID,
+    		"subject_id": resource.SubjectID,
+			"resource_id": resource.ResourceID,
 	}
 	_, err := ptx.tx.Exec(ctx, command, args)
 	if err != nil {

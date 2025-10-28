@@ -45,7 +45,6 @@ func ImportRDF (config Config) error {
 }
 
 func parseRDF(config Config, doc *RDFDoc) error {
-	//var doc2 Node
 	file, err := os.Open(config.ImportPath)
     if err != nil {
         return err
@@ -72,7 +71,7 @@ func saveRDF(config Config, doc *RDFDoc) error {
 	if err != nil {
 		return err
 	}
-	err = schemaSet(tx, ctx, "cimgraph")
+	err = schemaSet(tx, ctx, config.Schema)
 	if err != nil {
 		return err
 	}
@@ -89,6 +88,7 @@ func saveRDF(config Config, doc *RDFDoc) error {
 		if err != nil {
 			return err
 		}
+		fmt.Println("inserted id: ", subject.ID)
 	}
 	err = commitTransaction(tx, ctx)
 	if err != nil {

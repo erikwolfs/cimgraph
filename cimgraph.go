@@ -18,7 +18,12 @@ type Config struct {
 	configPath string
 	path string
 	debugpath string
-	postgresURL string
+	postgresHost string
+	postgresPort string
+	postgresDBName string
+	postgresUser string
+	postgresPassword string
+	postgresSchema string
 }
 
 func main() {
@@ -57,11 +62,46 @@ func main() {
 				Destination: &config.debugpath,
 			},
 			&cli.StringFlag{
-				Name: "dbstring",
-				Aliases: []string{"d"},
-				Usage: "Set the config string to the postgres database",
-				Sources: cli.NewValueSourceChain(yaml.YAML("PostgresConn", altsrc.NewStringPtrSourcer(&config.configPath))),
-				Destination: &config.postgresURL,
+				Name: "dbhost",
+				Aliases: []string{"h"},
+				Usage: "Set the postgres database host",
+				Sources: cli.NewValueSourceChain(yaml.YAML("PostgresHost", altsrc.NewStringPtrSourcer(&config.configPath))),
+				Destination: &config.postgresHost,
+			},
+			&cli.StringFlag{
+				Name: "dbport",
+				Aliases: []string{"p"},
+				Usage: "Set the postgres database port",
+				Sources: cli.NewValueSourceChain(yaml.YAML("PostgresPort", altsrc.NewStringPtrSourcer(&config.configPath))),
+				Destination: &config.postgresPort,
+			},
+			&cli.StringFlag{
+				Name: "dbname",
+				Aliases: []string{"n"},
+				Usage: "Set the postgres database name",
+				Sources: cli.NewValueSourceChain(yaml.YAML("PostgresDBName", altsrc.NewStringPtrSourcer(&config.configPath))),
+				Destination: &config.postgresDBName,
+			},
+			&cli.StringFlag{
+				Name: "dbuser",
+				Aliases: []string{"s"},
+				Usage: "Set the postgres database user",
+				Sources: cli.NewValueSourceChain(yaml.YAML("PostgresUser", altsrc.NewStringPtrSourcer(&config.configPath))),
+				Destination: &config.postgresUser,
+			},
+			&cli.StringFlag{
+				Name: "dbpassword",
+				Aliases: []string{"w"},
+				Usage: "Set the postgres database user pasword",
+				Sources: cli.NewValueSourceChain(yaml.YAML("PostgresPassword", altsrc.NewStringPtrSourcer(&config.configPath))),
+				Destination: &config.postgresPassword,
+			},
+			&cli.StringFlag{
+				Name: "dbschema",
+				Aliases: []string{"e"},
+				Usage: "Set the postgres database schema",
+				Sources: cli.NewValueSourceChain(yaml.YAML("PostgresSchema", altsrc.NewStringPtrSourcer(&config.configPath))),
+				Destination: &config.postgresSchema,
 			},
 		},
 		Commands: []*cli.Command{
@@ -176,9 +216,15 @@ func createSchema(config *Config) error {
 }
 
 func importRDFtoDB(config *Config) error {
-	dconfig := postgres.Config{URL: config.postgresURL, ImportPath: config.path, DebugPath: config.debugpath}
-	fmt.Println("importing from: ", config.path , "into PostgresSQL with URL: ", config.postgresURL )
-	//err := dgraph.ImportRDF(dconfig)
+	dconfig := postgres.Config{Host: config.postgresHost,
+								Port: config.postgresPort,
+								DBName: config.postgresDBName,
+								User: config.postgresUser,
+								Password: config.postgresPassword,
+								Schema: config.postgresSchema,
+								ImportPath: config.path,
+								DebugPath: config.debugpath}
+	fmt.Println("importing from: ", config.path , "into PostgresSQL server:", config.postgresDBName, "on:", config.postgresHost )
 	err := postgres.ImportRDF(dconfig)
 	if err != nil {
 		return err
