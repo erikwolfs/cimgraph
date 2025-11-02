@@ -126,9 +126,3 @@ func saveRDF(config Config, doc *RDFDoc) error {
 	return nil
 }
 
-// func nhash(input string) string {
-//     h := fnv.New64a() // Create a new FNV hash instance
-//     h.Write([]byte(input)) // Write the input to the hash
-//     return strconv.FormatUint(uint64(h.Sum64()), 10) // Return the hash as a uint64
-// }
-

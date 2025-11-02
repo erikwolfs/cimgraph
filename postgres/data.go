@@ -2,129 +2,192 @@ package postgres
 
 import (
 	"context"
-	"encoding/xml"
 	"fmt"
-	"io"
-	//"net/url"
-	"os"
-	//"strings"
-	//"golang.org/x/text/date"
-	"golang.org/x/text/encoding/charmap"
-	//"google.golang.org/genproto/googleapis/type/datetime"
+	"time"
+
+	"github.com/jackc/pgx/v5"
 )
 
-type RDFDoc struct {
-	XMLName 	xml.Name
-	Subjects []RDFSubject `xml:",any"`
+type DataSet struct {
+	ID int64
+	TSType string
+	RDFAbout string
+	Attributes []DSAttribute
 }
 
-type RDFSubject struct {
-	XMLName xml.Name
-	About string `xml:"about,attr"`
-	ID string `xml:"ID,attr"`
-	Predicates []RDFPredicate `xml:",any"`
+type DSAttribute struct {
+	ID int64
+	ATName string
+	ATValue string
 }
 
-type RDFPredicate struct {
-	XMLName xml.Name 
-	Recource string `xml:"resource,attr"`
-	Value string `xml:",chardata"`
+type Subject struct {
+	ID int64
+	DatasetID int64
+	RDFAbout string
+	Type string
+	ValidFrom time.Time
+	ValidTo time.Time
+	Predicates []Predicate
 }
 
-func ImportRDF (config Config) error {
-	var doc RDFDoc
-	err := parseRDF(config, &doc)
-	if err != nil {
-		return err
-	}
-	err = saveRDF(config, &doc)
-	if err != nil {
-		return err
-	}
-	return nil
+type SubjectByRDFID struct {
+	ID int64 `db:"subject_id"`
+	DatasetID int64 `db:"dataset_id"`
+	Type string `db:"subtype"`
+	ValidFrom time.Time `db:"valid_from"`
+	ValidTo time.Time `db:"valid_to"`
 }
 
-func parseRDF(config Config, doc *RDFDoc) error {
-	file, err := os.Open(config.ImportPath)
-    if err != nil {
-        return err
-    }
-	fmt.Println("Successfully Opened ", config.ImportPath)
-    defer file.Close()
-	decoder := xml.NewDecoder(file)
-	decoder.CharsetReader = makeCharsetReader
-	err = decoder.Decode(&doc)
-	if err != nil {
-		return err
-    }
-	return nil
+type Predicate struct {
+	ID int64
+	Type string
+	Objects []Object
 }
 
-func saveRDF(config Config, doc *RDFDoc) error {
-	var nodeid string
-	ctx := context.Background()
-	postgres, err := newConnection(config, ctx)
-	if err != nil {
-		return err
+type Object struct {
+	ID int64
+	ValueStr string
+	ValueFlt float64
+	ResourceURI string
+	Resource Resource
+}
+
+type EmptyObject struct {
+	ID int64 `db:"object_id"`
+	ResourceURI string `db:"recourse_uri"`
+	ValidFrom time.Time `db:"valid_from"`
+	ValidTo time.Time `db:"valid_to"`
+}
+
+type ObjectSet struct {
+	Objects []Object
+}
+
+type Resource struct {
+	ObjectID int64
+	SubjectID int64
+}
+
+
+func InsertDataSet(ptx PostgresTx, dataset *DataSet, ctx context.Context) error {
+	command := "CALL insert_dataset(@tstype, @rdfid, @ret_id)"
+	args := pgx.NamedArgs{
+    		"tstype": dataset.TSType,
+    		"rdfid": dataset.RDFAbout,
+			"ret_id": nil,
 	}
-	tx, err := newTransaction(postgres, ctx)
+	err := ptx.tx.QueryRow(ctx, command, args).Scan(&dataset.ID)
 	if err != nil {
-		return err
-	}
-	err = schemaSet(tx, ctx, config.Schema)
-	if err != nil {
-		return err
-	}
-	for _,i := range doc.Subjects {
-		if i.ID != "" {
-			nodeid = i.ID
-		} else if i.About != "" {
-			nodeid = i.About
-		} else {
-			return fmt.Errorf("subject has no id can not parse")
-		}
-		subject := Subject{RDFAbout: nodeid, Type: i.XMLName.Local}
-		err = InsertSubject(tx, &subject, ctx)
-		if err != nil {
-			return err
-		}
-		fmt.Println("inserted id: ", subject.ID)
-	}
-	err = commitTransaction(tx, ctx)
-	if err != nil {
-		return err
+		return fmt.Errorf("error writing dataset record: %v", err)
 	}
 	return nil
 }
 
-func makeCharsetReader(charset string, input io.Reader) (io.Reader, error) {
-    if charset == "ISO-8859-1" || charset == "windows-1252" {
-        // Windows-1252 is a superset of ISO-8859-1, so should do here
-        return charmap.Windows1252.NewDecoder().Reader(input), nil
-    }
-    return nil, fmt.Errorf("unknown charset: %s", charset)
+func InsertDSAttribute(ptx PostgresTx, datasetid int64, dsattribute *DSAttribute, ctx context.Context) error {
+	command := "CALL insert_dsattribute(@atname, @atvalue, @dataset_id)"
+	args := pgx.NamedArgs{
+    		"atname": dsattribute.ATName,
+    		"atvalue": dsattribute.ATValue,
+			"dataset_id": datasetid,
+	}
+	_, err := ptx.tx.Exec(ctx, command, args)
+	if err != nil {
+		return fmt.Errorf("error writing dsattribute record: %v", err)
+	}
+	return nil
 }
 
-// for _,j := range i.Predicates {
-		// 	predicate := Predicate{Type: j.XMLName.Local}
-		// 	if j.Recource != "" {
-		// 		_, err := url.ParseRequestURI(j.Recource)
-		// 		if err != nil {
-		// 			object := Object{ValueStr: strings.TrimPrefix(j.Recource, "#")}
-		// 		} else {
-		// 			if strings.Contains(j.Recource, "http://") {
-		// 				object = "\"" + j.Recource + "\""
-		// 			} else {
-		// 				object = "\"" + j.Recource + "\""
-		// 			}
-		// 		}
-				
-		// 	} else if j.Value != "" {
-		// 		object = "\"" + j.Value + "\""
-		// 	} else {
-		// 		return fmt.Errorf("object has no value or resource, can not parse")
-		// 	}
-		// 	muttxt = muttxt + "<_:" + nodeid + "> <" + j.XMLName.Local + "> " + object + " .\n"
-//}
+func InsertSubject(ptx PostgresTx, subject *Subject, ctx context.Context) error {
+	command := "CALL insert_subject(@subtype, @dataset_id, @rdfid, @valid_from, @valid_to, @ret_id)"
+	args := pgx.NamedArgs{
+    		"subtype": subject.Type,
+			"dataset_id": subject.DatasetID,
+    		"rdfid": subject.RDFAbout,
+			"valid_from": "2000-01-01 00:00:00+02",
+			"valid_to": "2999-12-31 00:00:00+02",
+			"ret_id": nil,
+	}
+	err := ptx.tx.QueryRow(ctx, command, args).Scan(&subject.ID)
+	if err != nil {
+		return fmt.Errorf("error writing subject record: %v", err)
+	}
+	return nil
+}
 
+func InsertPredicate(ptx PostgresTx, subjectid int64, predicate *Predicate, ctx context.Context) error {
+	command := "CALL insert_predicate(@subject_id, @pretype, @ret_id)"
+	args := pgx.NamedArgs{
+    		"subject_id": subjectid,
+    		"pretype": predicate.Type,
+			"ret_id": nil,
+	}
+	err := ptx.tx.QueryRow(ctx, command, args).Scan(&predicate.ID)
+	if err != nil {
+		return fmt.Errorf("error writing predicate record: %v", err)
+	}
+	return nil
+}
+
+func InsertObject(ptx PostgresTx, predicateid int64, object *Object, ctx context.Context) error {
+	command := "CALL insert_object(@predicate_id, @value_str, @value_flt, @resource_uri, @valid_from, @valid_to, @ret_id)"
+	args := pgx.NamedArgs{
+    		"predicate_id": predicateid,
+    		"value_str": object.ValueStr,
+			"value_flt": object.ValueFlt,
+			"resource_uri": object.ResourceURI,
+			"valid_from": "2000-01-01 00:00:00+02",
+			"valid_to": "2999-12-31 00:00:00+02",
+			"ret_id": nil,
+	}
+	err := ptx.tx.QueryRow(ctx, command, args).Scan(&object.ID)
+	if err != nil {
+		return fmt.Errorf("error writing object record: %v", err)
+	}
+	return nil
+}
+
+func InsertResource(ptx PostgresTx, resource *Resource, ctx context.Context) error {
+	command := "CALL insert_resource(@object_id, @subject_id)"
+	args := pgx.NamedArgs{
+    		"object_id": resource.ObjectID,
+    		"subject_id": resource.SubjectID,
+	}
+	_, err := ptx.tx.Exec(ctx, command, args)
+	if err != nil {
+		return fmt.Errorf("error writing resource record: %v", err)
+	}
+	return nil
+}
+
+func RetrieveAboutsWithoutResource(ptx PostgresTx, objects *[]*EmptyObject ,ctx context.Context) error {
+	command := "select * from retrieve_abouts_without_link()"
+	rows, err := ptx.tx.Query(ctx, command)
+	if err != nil {
+		return fmt.Errorf("error retrieving object abouts without resource: %v", err)
+	}
+	*objects, err = pgx.CollectRows(rows, pgx.RowToAddrOfStructByName[EmptyObject])
+	if err != nil {
+		return fmt.Errorf("error parsing object abouts without resource: %v", err)
+	}
+	return nil
+}
+
+func RetrieveSubjectByRDFID(ptx PostgresTx, subjects *[]*SubjectByRDFID, object *EmptyObject, ctx context.Context) error {
+	command := "select * from retrieve_subject_by_rdfid(@rdfabout, @validfrom, @validto)"
+	args := pgx.NamedArgs{
+    		"rdfabout": object.ResourceURI,
+    		"validfrom": object.ValidFrom,
+			"validto": object.ValidTo,
+	}
+	rows, err := ptx.tx.Query(ctx, command, args)
+	if err != nil {
+		return fmt.Errorf("error retrieving subject by rdfid: %v", err)
+	}
+	*subjects, err = pgx.CollectRows(rows, pgx.RowToAddrOfStructByName[SubjectByRDFID])
+	if err != nil {
+		return fmt.Errorf("error parsing subject after retrieving it by rdfid: %v", err)
+	}
+	return nil
+}
 

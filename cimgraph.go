@@ -3,21 +3,21 @@ package main
 import (
 	"cimgraph/dgraph"
 	"cimgraph/postgres"
+	"cimgraph/rdfxml"
 	"context"
 	"fmt"
 	"log"
 	"os"
-
 	"github.com/urfave/cli-altsrc/v3"
 	yaml "github.com/urfave/cli-altsrc/v3/yaml"
 	"github.com/urfave/cli/v3"
 )
 
-type Config struct {
+type config struct {
 	dGraphURL string
 	configPath string
 	path string
-	debugpath string
+	debugPath string
 	postgresHost string
 	postgresPort string
 	postgresDBName string
@@ -27,7 +27,7 @@ type Config struct {
 }
 
 func main() {
-	var config Config
+	var config config
 
 	cli.VersionFlag = &cli.BoolFlag{
 		Name: "version",
@@ -59,7 +59,7 @@ func main() {
 				Aliases: []string{"l"},
 				Value: "./log",
 				Usage: "Activates writing debug info to the given location",
-				Destination: &config.debugpath,
+				Destination: &config.debugPath,
 			},
 			&cli.StringFlag{
 				Name: "dbhost",
@@ -175,7 +175,7 @@ func main() {
 					},
 				},
 				Action: func(ctx context.Context, cmd *cli.Command) error {
-                    if err := importRDFtoDB(&config); err != nil {
+                    if err := importRDFDB(&config); err != nil {
 						return err
 					}
                     return nil
@@ -190,8 +190,8 @@ func main() {
 	}
 }
 
-func importRDF(config *Config) error {
-	dconfig := dgraph.Config{URL: config.dGraphURL, ImportPath: config.path, DebugPath: config.debugpath}
+func importRDF(config *config) error {
+	dconfig := dgraph.Config{URL: config.dGraphURL, ImportPath: config.path, DebugPath: config.debugPath}
 	fmt.Println("importing from: ", config.path , "into Dgraph with URL: ", config.dGraphURL )
 	err := dgraph.ImportRDF(dconfig)
 	if err != nil {
@@ -200,13 +200,13 @@ func importRDF(config *Config) error {
 	return nil
 }
 
-func exportRDF(config *Config) error {
+func exportRDF(config *config) error {
 	fmt.Println("exporting to: ", config.path, "from Dgraph with URL: ", config.dGraphURL)
 	return nil
 }
 
-func createSchema(config *Config) error {
-	dconfig := dgraph.Config{URL: config.dGraphURL, ImportPath: config.path, DebugPath: config.debugpath}
+func createSchema(config *config) error {
+	dconfig := dgraph.Config{URL: config.dGraphURL, ImportPath: config.path, DebugPath: config.debugPath}
 	fmt.Println("create schema from", config.path, "into Dgraph with URL: ", config.dGraphURL)
 	err := dgraph.CreateSchema(dconfig)
 	if err != nil {
@@ -215,17 +215,16 @@ func createSchema(config *Config) error {
 	return nil
 }
 
-func importRDFtoDB(config *Config) error {
-	dconfig := postgres.Config{Host: config.postgresHost,
+func importRDFDB(config *config) error {
+	dbconfig := postgres.Config{ImportPath: config.path,
+								Host: config.postgresHost,
 								Port: config.postgresPort,
 								DBName: config.postgresDBName,
 								User: config.postgresUser,
 								Password: config.postgresPassword,
-								Schema: config.postgresSchema,
-								ImportPath: config.path,
-								DebugPath: config.debugpath}
-	fmt.Println("importing from: ", config.path , "into PostgresSQL server:", config.postgresDBName, "on:", config.postgresHost )
-	err := postgres.ImportRDF(dconfig)
+								Schema: config.postgresSchema}
+	//err := rdfxml.ImportRDFtoDB(&dbconfig)
+	err := rdfxml.Test_empty(&dbconfig)
 	if err != nil {
 		return err
 	}
