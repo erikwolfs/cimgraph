@@ -8,7 +8,7 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
-type postgresdb struct {
+type Postgresdb struct {
 	db *pgxpool.Pool
 }
 
@@ -29,14 +29,14 @@ type Config struct {
 
 
 var (
-	pgInstance *postgresdb
+	pgInstance *Postgresdb
 	pgOnce sync.Once
 	conErr error
 	txInstance PostgresTx
 	txErr error
 )
 
-func NewConnection(config *Config, ctx context.Context) (*postgresdb, error) {
+func NewConnection(config *Config, ctx context.Context) (*Postgresdb, error) {
 	pgOnce.Do(func() {
 		configstr := "user=" + config.User +
 					" password=" + config.Password +
@@ -47,7 +47,7 @@ func NewConnection(config *Config, ctx context.Context) (*postgresdb, error) {
 		if err != nil {
 			conErr = err
 		}
-		pgInstance = &postgresdb{db}
+		pgInstance = &Postgresdb{db}
 	})
 	if conErr != nil {
 		return pgInstance, fmt.Errorf("unable to create connection pool: %w", conErr)
@@ -55,11 +55,11 @@ func NewConnection(config *Config, ctx context.Context) (*postgresdb, error) {
 	return pgInstance, nil
 }
 
-func CloseConnection(conn *postgresdb) {
+func CloseConnection(conn *Postgresdb) {
 	conn.db.Close()
 }
 
-func NewTransaction(postgres *postgresdb, ctx context.Context) (PostgresTx, error) {
+func NewTransaction(postgres *Postgresdb, ctx context.Context) (PostgresTx, error) {
 	tx, err := postgres.db.BeginTx(ctx, pgx.TxOptions{})
 	if err != nil {
 		txErr = err
@@ -74,10 +74,19 @@ func NewTransaction(postgres *postgresdb, ctx context.Context) (PostgresTx, erro
 	return txInstance, nil
 }
 
-func SchemaSet(ptx PostgresTx, ctx context.Context, schema string) error {
+func SchemaSetonTx(ptx PostgresTx, ctx context.Context, schema string) error {
 	_, err := ptx.tx.Exec(ctx, fmt.Sprintf(`set search_path="%s"`, schema))
 	if err != nil {
-		return fmt.Errorf("unable to access schema : %s, error: %w", schema, txErr)
+		return fmt.Errorf("unable to access schema : %s, error: %w", schema, err)
+	}
+	return nil
+}
+
+func SchemaSetonCon(postgres Postgresdb, ctx context.Context, schema string) error {
+	command := "SET search_path TO " + schema + ";"
+	_, err := postgres.db.Exec(ctx, command)
+	if err != nil {
+		return fmt.Errorf("unable to access schema : %s, error: %w", schema, err)
 	}
 	return nil
 }

@@ -367,3 +367,63 @@ AS $function$
 	AND subject.valid_to >= validto;
 $function$
 
+CREATE OR REPLACE FUNCTION cimgraph.retrieve_subjects_by_type(stype VARCHAR(100),
+																validfrom TIMESTAMP WITH TIME ZONE,
+																validto TIMESTAMP WITH TIME ZONE)
+RETURNS TABLE(subject_id bigint,
+			   subtype VARCHAR(100),
+			   rdfid VARCHAR(50))
+LANGUAGE sql
+AS $function$
+	SELECT subject.id,
+	subject.subtype,
+	subject.rdfid
+	FROM subject
+	WHERE subject.subtype = stype
+	AND subject.valid_from <= validfrom
+	AND subject.valid_to >= validto;
+$function$
+
+CREATE OR REPLACE FUNCTION cimgraph.retrieve_predicates_by_subject(subjectid BIGINT,
+																validfrom TIMESTAMP WITH TIME ZONE,
+																validto TIMESTAMP WITH TIME ZONE)
+RETURNS TABLE(predicate_id BIGINT,
+			   pretype VARCHAR(100),
+			   object_id BIGINT,
+			   value_str TEXT,
+			   value_flt DOUBLE PRECISION,
+			   resource_uri VARCHAR(50))
+LANGUAGE SQL
+AS $FUNCTION$
+	SELECT predicate.id,
+			predicate.pretype,
+			object.id,
+			object.value_str,
+			object.value_flt,
+			object.resource_uri
+	FROM predicate
+	INNER JOIN object ON predicate.id = object.predicate_id
+	WHERE predicate.subject_id = subjectid
+	AND object.valid_from <= validfrom
+	AND object.valid_to >= validto;
+$FUNCTION$
+
+CREATE OR REPLACE FUNCTION cimgraph.retrieve_childs_by_subject(subjectid BIGINT,
+																validfrom TIMESTAMP WITH TIME ZONE,
+																validto TIMESTAMP WITH TIME ZONE)
+RETURNS TABLE(child_subid BIGINT,
+				child_subtype VARCHAR(100),
+				child_rdfid VARCHAR(50))
+LANGUAGE SQL
+AS $FUNCTION$
+	SELECT subject.id,
+			subject.subtype,
+			subject.rdfid
+	FROM resource
+	INNER JOIN object ON resource.object_id = object.id
+	INNER JOIN predicate ON object.predicate_id = predicate.id
+	INNER JOIN subject ON predicate.subject_id = subject.id
+	WHERE resource.subject_id = subjectid
+	AND object.valid_from <= validfrom
+	AND object.valid_to >= validto;
+$FUNCTION$

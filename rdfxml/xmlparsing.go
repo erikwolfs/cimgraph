@@ -53,7 +53,7 @@ func ImportRDFtoDB(config *db.Config) error {
  	if err != nil {
  		return err
  	}
- 	err = db.SchemaSet(pgtx, ctx, config.Schema)
+ 	err = db.SchemaSetonTx(pgtx, ctx, config.Schema)
  	if err != nil {
  		return err
  	}
@@ -97,12 +97,16 @@ func ImportRDFtoDB(config *db.Config) error {
 			}
 		}
 	}
+	file.Close()
+	err = writerelationships(pgtx, ctx)
+	 	if err != nil {
+ 		return err
+ 	}
 	err = db.CommitTransaction(pgtx, ctx)
  	if err != nil {
  		return err
  	}
 	db.CloseConnection(pgcon)
-	file.Close()
 	return nil
 }
 
@@ -130,7 +134,7 @@ func writedataset(tx db.PostgresTx, rdfdataset *RDFDataSet, ctx context.Context)
 	return dbdataset.ID, nil
 }
 
-func writesubject(tx db.PostgresTx, datasetid int64 , rdfsubject *RDFSubject, ctx context.Context) (error) {
+func writesubject(tx db.PostgresTx, datasetid int64 , rdfsubject *RDFSubject, ctx context.Context) error {
 	dbsubject := db.Subject{DatasetID: datasetid,
 							RDFAbout: rdfsubject.ID,
 							Type: rdfsubject.XMLName.Local}
@@ -158,29 +162,16 @@ func writesubject(tx db.PostgresTx, datasetid int64 , rdfsubject *RDFSubject, ct
 	return nil
 }
 
-func Test_empty(config *db.Config) error {
-	ctx := context.Background()
-	pgcon, err := db.NewConnection(config, ctx)
- 	if err != nil {
- 		return err
- 	}
-	pgtx, err := db.NewTransaction(pgcon, ctx)
- 	if err != nil {
- 		return err
- 	}
- 	err = db.SchemaSet(pgtx, ctx, config.Schema)
- 	if err != nil {
- 		return err
- 	}
+func writerelationships(tx db.PostgresTx, ctx context.Context) error {
 	var objects []*db.EmptyObject
 	var subjects []*db.SubjectByRDFID
-	err = db.RetrieveAboutsWithoutResource(pgtx, &objects, ctx)
+	err := db.RetrieveAboutsWithoutResource(tx, &objects, ctx)
 	if err != nil {
  		return err
  	}
 	for _, object := range objects {
 		object.ResourceURI = strings.TrimPrefix(object.ResourceURI, "#")
-		err = db.RetrieveSubjectByRDFID(pgtx, &subjects, object, ctx)
+		err = db.RetrieveSubjectByRDFID(tx, &subjects, object, ctx)
 		if err != nil {
 			return err
 		}
@@ -190,14 +181,12 @@ func Test_empty(config *db.Config) error {
 		for _,subject := range subjects {
 			var resource = db.Resource{ObjectID: object.ID,
 									SubjectID: subject.ID,}
-			err = db.InsertResource(pgtx, &resource, ctx)
+			err = db.InsertResource(tx, &resource, ctx)
 			if err != nil {
 				return err
 			}
 		}
 	}
-	db.CommitTransaction(pgtx, ctx)
-	db.CloseConnection(pgcon)
 	return nil
 }
 

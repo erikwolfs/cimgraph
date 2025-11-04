@@ -39,10 +39,26 @@ type SubjectByRDFID struct {
 	ValidTo time.Time `db:"valid_to"`
 }
 
+type SubjectByType struct {
+	ID int64 `db:"subject_id"`
+	Type string `db:"subtype"`
+	RDFAbout string `db:"rdfid"`
+}
+
+
 type Predicate struct {
 	ID int64
 	Type string
 	Objects []Object
+}
+
+type PredicateBySubjectID struct {
+	ID int64 `db:"predicate_id"`
+	Type string `db:"pretype"`
+	ObjectID int64 `db:"object_id"`
+	ValueStr string `db:"value_str"`
+	ValueFlt float64 `db:"value_flt"`
+	ResourceURI string `db:"resource_uri"`
 }
 
 type Object struct {
@@ -187,6 +203,42 @@ func RetrieveSubjectByRDFID(ptx PostgresTx, subjects *[]*SubjectByRDFID, object 
 	*subjects, err = pgx.CollectRows(rows, pgx.RowToAddrOfStructByName[SubjectByRDFID])
 	if err != nil {
 		return fmt.Errorf("error parsing subject after retrieving it by rdfid: %v", err)
+	}
+	return nil
+}
+
+func RetrieveSubjectsByType(con *Postgresdb, subtype *string, subjects *[]*SubjectByType, ctx context.Context) error {
+	command := "select * from retrieve_subjects_by_type(@stype, @validfrom, @validto)"
+	args := pgx.NamedArgs{
+    		"stype": subtype,
+    		"validfrom": "2000-01-01 00:00:00+02",
+			"validto": "2999-12-31 00:00:00+02",
+	}
+	rows, err := con.db.Query(ctx, command, args)
+	if err != nil {
+		return fmt.Errorf("error retrieving subjects by type: %v", err)
+	}
+	*subjects, err = pgx.CollectRows(rows, pgx.RowToAddrOfStructByName[SubjectByType])
+	if err != nil {
+		return fmt.Errorf("error parsing subjects by type: %v", err)
+	}
+	return nil
+}
+
+func RetrievePredicatesBySubjectID(con *Postgresdb, subid int64, predicates *[]*PredicateBySubjectID, ctx context.Context) error {
+	command := "select * from retrieve_predicates_by_subject(@subjectid, @validfrom, @validto)"
+	args := pgx.NamedArgs{
+    		"subjectid": subid,
+    		"validfrom": "2000-01-01 00:00:00+02",
+			"validto": "2999-12-31 00:00:00+02",
+	}
+	rows, err := con.db.Query(ctx, command, args)
+	if err != nil {
+		return fmt.Errorf("error retrieving predicates by subject id: %v", err)
+	}
+	*predicates, err = pgx.CollectRows(rows, pgx.RowToAddrOfStructByName[PredicateBySubjectID])
+	if err != nil {
+		return fmt.Errorf("error parsing predicates by subject id: %v", err)
 	}
 	return nil
 }

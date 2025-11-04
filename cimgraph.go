@@ -1,20 +1,21 @@
 package main
 
 import (
-	"cimgraph/dgraph"
+	"cimgraph/como"
 	"cimgraph/postgres"
 	"cimgraph/rdfxml"
 	"context"
 	"fmt"
 	"log"
 	"os"
+	"time"
+
 	"github.com/urfave/cli-altsrc/v3"
 	yaml "github.com/urfave/cli-altsrc/v3/yaml"
 	"github.com/urfave/cli/v3"
 )
 
 type config struct {
-	dGraphURL string
 	configPath string
 	path string
 	debugPath string
@@ -46,13 +47,6 @@ func main() {
 				Value: "./config/config.yaml",
 				Usage: "Location of the cimgraph config file",
 				Destination: &config.configPath,
-			},
-			&cli.StringFlag{
-				Name: "url",
-				Aliases: []string{"u"},
-				Usage: "URL of the Dgraph DB to be used",
-				Sources: cli.NewValueSourceChain(yaml.YAML("DgraphURL", altsrc.NewStringPtrSourcer(&config.configPath))),
-				Destination: &config.dGraphURL,
 			},
 			&cli.StringFlag{
 				Name: "debuglog",
@@ -106,57 +100,19 @@ func main() {
 		},
 		Commands: []*cli.Command{
 			{
-				Name: "importtograph",
-				Aliases: []string{"i"},
-				Usage: "import RDF XML files into the Dgrap DB",
-				Arguments: []cli.Argument{
-					&cli.StringArg{
-						Name: "importpath",
-						UsageText: "path of the RDF XML files to import",
-						Value: "./data/",
-						Destination: &config.path,
-					},
-				},
-				Action: func(ctx context.Context, cmd *cli.Command) error {
-                    if err := importRDF(&config); err != nil {
-						return err
-					}
-                    return nil
-                },
-			},
-			{
 				Name: "exporttograph",
 				Aliases: []string{"e"},
-				Usage: "export RDF XML files from the Dgrap DB",
+				Usage: "export JSON graph message from the DB",
 				Arguments: []cli.Argument{
 					&cli.StringArg{
-						Name: "exportpath",
-						UsageText: "path of the RDF XML files to export",
-						Value: "./data/",
+						Name: "subject type",
+						UsageText: "give the root subject type for the graph",
+						Value: "PowerTransformer/",
 						Destination: &config.path,
 					},
 				},
 				Action: func(ctx context.Context, cmd *cli.Command) error {
-                    if err := exportRDF(&config); err != nil {
-						return err
-					}
-                    return nil
-                },
-			},
-			{
-				Name: "create",
-				Usage: "create data schema in the Dgrap DB bases on provided XMI",
-				Aliases: []string{"s"},
-				Arguments: []cli.Argument{
-					&cli.StringArg{
-						Name: "schemapath",
-						UsageText: "path of the source XMI XML file",
-						Value: "./data/schema.xmi",
-						Destination: &config.path,
-					},
-				},
-				Action: func(ctx context.Context, cmd *cli.Command) error {
-                    if err := createSchema(&config); err != nil {
+                    if err := exportRDFGraph(&config); err != nil {
 						return err
 					}
                     return nil
@@ -190,32 +146,25 @@ func main() {
 	}
 }
 
-func importRDF(config *config) error {
-	dconfig := dgraph.Config{URL: config.dGraphURL, ImportPath: config.path, DebugPath: config.debugPath}
-	fmt.Println("importing from: ", config.path , "into Dgraph with URL: ", config.dGraphURL )
-	err := dgraph.ImportRDF(dconfig)
+func exportRDFGraph(config *config) error {
+	fmt.Println("exporting Graph for: ", config.path)
+	dbconfig := postgres.Config{ImportPath: config.path,
+								Host: config.postgresHost,
+								Port: config.postgresPort,
+								DBName: config.postgresDBName,
+								User: config.postgresUser,
+								Password: config.postgresPassword,
+								Schema: config.postgresSchema}
+	err := como.GenerateGraphBySubjectType(&dbconfig, config.path)
 	if err != nil {
 		return err
 	}
 	return nil
 }
 
-func exportRDF(config *config) error {
-	fmt.Println("exporting to: ", config.path, "from Dgraph with URL: ", config.dGraphURL)
-	return nil
-}
-
-func createSchema(config *config) error {
-	dconfig := dgraph.Config{URL: config.dGraphURL, ImportPath: config.path, DebugPath: config.debugPath}
-	fmt.Println("create schema from", config.path, "into Dgraph with URL: ", config.dGraphURL)
-	err := dgraph.CreateSchema(dconfig)
-	if err != nil {
-		return err
-	}
-	return nil
-}
 
 func importRDFDB(config *config) error {
+	defer exeTime("importRDFDB")
 	dbconfig := postgres.Config{ImportPath: config.path,
 								Host: config.postgresHost,
 								Port: config.postgresPort,
@@ -224,9 +173,16 @@ func importRDFDB(config *config) error {
 								Password: config.postgresPassword,
 								Schema: config.postgresSchema}
 	//err := rdfxml.ImportRDFtoDB(&dbconfig)
-	err := rdfxml.Test_empty(&dbconfig)
+	err := rdfxml.ImportRDFtoDB(&dbconfig)
 	if err != nil {
 		return err
 	}
 	return nil
+}
+
+func exeTime(name string) func() {
+	start := time.Now()
+	return func() {
+		fmt.Printf("%s execution time: %v\n", name, time.Since(start))
+	}
 }
