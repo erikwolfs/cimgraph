@@ -84,7 +84,7 @@ func ImportRDFtoDB(config *db.Config) error {
 				} else {
 					var subject RDFSubject
 					if err := decoder.DecodeElement(&subject, &t); err != nil {
-						return fmt.Errorf("error parsing tdf dubject: %v", err)
+						return fmt.Errorf("error parsing rdf subject: %v", err)
 					}
 					if datasetid == 0 {
 						return fmt.Errorf("no dataset defined when writing subject: %s", subject)

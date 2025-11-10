@@ -137,6 +137,25 @@ func main() {
                     return nil
                 },
 			},
+			{
+				Name: "importRDFschematodb",
+				Aliases: []string{"s"},
+				Usage: "import RDFS XML schema files into the Postgres DB",
+				Arguments: []cli.Argument{
+					&cli.StringArg{
+						Name: "importpath",
+						UsageText: "path of the RDFS XML files to import",
+						Value: "./data/",
+						Destination: &config.path,
+					},
+				},
+				Action: func(ctx context.Context, cmd *cli.Command) error {
+                    if err := importRDFSDB(&config); err != nil {
+						return err
+					}
+                    return nil
+                },
+			},
 		},
  	}
 
@@ -172,8 +191,23 @@ func importRDFDB(config *config) error {
 								User: config.postgresUser,
 								Password: config.postgresPassword,
 								Schema: config.postgresSchema}
-	//err := rdfxml.ImportRDFtoDB(&dbconfig)
 	err := rdfxml.ImportRDFtoDB(&dbconfig)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func importRDFSDB(config *config) error {
+	defer exeTime("importRDFSDB")
+	dbconfig := postgres.Config{ImportPath: config.path,
+								Host: config.postgresHost,
+								Port: config.postgresPort,
+								DBName: config.postgresDBName,
+								User: config.postgresUser,
+								Password: config.postgresPassword,
+								Schema: config.postgresSchema}
+	err := rdfxml.ImportRDFStoDB(&dbconfig)
 	if err != nil {
 		return err
 	}

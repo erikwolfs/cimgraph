@@ -14,11 +14,12 @@ type ComoMessage struct {
 type Subject struct {
 	Cim string
 	RdfID string
-	Predicates []Predicate
+	Predicates []Predicate `json:"Predicates,omitempty"`
+	Children []Subject `json:"Children,omitempty"`
 }
 
 type Predicate struct {
-	CIM string
+	Cim string
 	Value string `json:"Value,omitempty"`
 	Resource string `json:"Resource,omitempty"`
 }
@@ -46,6 +47,10 @@ func GenerateGraphBySubjectType(config *db.Config, subtype string) error {
 		if err != nil {
 			return err
 		}
+		err = retrieveChildsbySubject(pgcon, recsubj.ID, &subject, ctx)
+		if err != nil {
+			return err
+		}
 		message.Subjects = append(message.Subjects, subject)
 	}
 	b, err := json.MarshalIndent(message, " ", "  ")
@@ -63,10 +68,28 @@ func retrievePredicatesbySubject(conn *db.Postgresdb, subid int64, subject *Subj
 		return err
 	}
 	for _, recpred := range recpreds {
-		predicate := Predicate{CIM: recpred.Type,
+		predicate := Predicate{Cim: recpred.Type,
 								Value: recpred.ValueStr,
 								Resource: recpred.ResourceURI,}
 		subject.Predicates = append(subject.Predicates, predicate)
+	}
+	return nil
+}
+
+func retrieveChildsbySubject(conn *db.Postgresdb, subid int64, subject *Subject, ctx context.Context) error {
+	var recchilds []*db.ChildSubjectByID
+	err := db.RetrieveChildsBySubjectID(conn, subid, &recchilds, ctx)
+	if err != nil {
+		return err
+	}
+	for _, recchild := range recchilds {
+		child := Subject{Cim: recchild.Type,
+							RdfID: recchild.RDFAbout}
+		err = retrievePredicatesbySubject(conn, recchild.ID, &child, ctx)
+		if err != nil {
+			return err
+		}
+		subject.Children = append(subject.Children, child)
 	}
 	return nil
 }

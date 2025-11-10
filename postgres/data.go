@@ -31,6 +31,12 @@ type Subject struct {
 	Predicates []Predicate
 }
 
+type ChildSubjectByID struct {
+	ID int64 `db:"child_subid"`
+	Type string `db:"child_subtype"`
+	RDFAbout string `db:"child_rdfid"`
+}
+
 type SubjectByRDFID struct {
 	ID int64 `db:"subject_id"`
 	DatasetID int64 `db:"dataset_id"`
@@ -239,6 +245,24 @@ func RetrievePredicatesBySubjectID(con *Postgresdb, subid int64, predicates *[]*
 	*predicates, err = pgx.CollectRows(rows, pgx.RowToAddrOfStructByName[PredicateBySubjectID])
 	if err != nil {
 		return fmt.Errorf("error parsing predicates by subject id: %v", err)
+	}
+	return nil
+}
+
+func RetrieveChildsBySubjectID(con *Postgresdb, subid int64, childsubjects *[]*ChildSubjectByID, ctx context.Context) error {
+	command := "select * from retrieve_childs_by_subject(@subjectid, @validfrom, @validto)"
+	args := pgx.NamedArgs{
+    		"subjectid": subid,
+    		"validfrom": "2000-01-01 00:00:00+02",
+			"validto": "2999-12-31 00:00:00+02",
+	}
+	rows, err := con.db.Query(ctx, command, args)
+	if err != nil {
+		return fmt.Errorf("error retrieving childs by subject id: %v", err)
+	}
+	*childsubjects, err = pgx.CollectRows(rows, pgx.RowToAddrOfStructByName[ChildSubjectByID])
+	if err != nil {
+		return fmt.Errorf("error parsing childs by subject id: %v", err)
 	}
 	return nil
 }
