@@ -307,8 +307,7 @@ CREATE OR REPLACE PROCEDURE insert_association(parentid bigint,
 												ascomment TEXT,
 												asrange VARCHAR(100),
 												inverserole VARCHAR(100),
-												used boolean,
-												INOUT ret_id bigint)
+												used boolean)
 LANGUAGE plpgsql
 AS $$
 BEGIN
@@ -331,8 +330,7 @@ BEGIN
 			$7,
 			$8,
 			$9,
-			$10)
-	RETURNING association.id INTO ret_id;
+			$10);
 END;
 $$;
 
@@ -341,8 +339,7 @@ CREATE OR REPLACE PROCEDURE insert_attribute(classid bigint,
                                 				atlabel VARCHAR(100),
 												datatype VARCHAR(100),
 												atcomment TEXT,
-												mandatory boolean,
-												INOUT ret_id bigint)
+												mandatory boolean)
 LANGUAGE plpgsql
 AS $$
 BEGIN
@@ -357,8 +354,7 @@ BEGIN
 			$3,
 			$4,
 			$5,
-			$6)
-	RETURNING attribute.id INTO ret_id;
+			$6);
 END;
 $$;
 
@@ -384,7 +380,7 @@ $$;
 
 CREATE OR REPLACE PROCEDURE insert_enumvalue(enumid BIGINT,
 											evname VARCHAR(100),
-											encomment TEXT)
+											evcomment TEXT)
 LANGUAGE plpgsql
 AS $$
 BEGIN

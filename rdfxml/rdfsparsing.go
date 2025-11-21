@@ -8,6 +8,7 @@ import (
 	"net/url"
 	"strings"
 	"strconv"
+	"context"
 	db "cimgraph/postgres"
 )
 
@@ -25,10 +26,29 @@ type RDFSDefinition struct {
 	Value string `xml:",chardata"`
 }
 
+type RDFSHeader struct {
+	Identifier string
+	Version string
+	Items []RDFSItem
+}
+
+type RDFSItem struct {
+	Name string
+	Value string
+}
+
 type RDFSClass struct {
+	ID int64
 	Name string
 	Label string
 	Comment string
+	SubClassOf string
+	Attributes []RDFSAttribute
+	Associations []RDFSAssociation
+}
+
+type RDFSBaseClass struct {
+	Name string
 	SubClassOf string
 }
 
@@ -72,9 +92,10 @@ func ImportRDFStoDB(config *db.Config) error {
 	file, err := os.Open(config.ImportPath)
 	var enums []RDFSEnumeration
 	var enumvalues []RDFSEnumValue
-	var classes []RDFSClass 
+	var classes map[string]RDFSClass 
 	var attributes []RDFSAttribute
 	var associations []RDFSAssociation
+	var rdfsheader RDFSHeader
     if err != nil {
         return fmt.Errorf("error opening rdfs file: %v", err)
     }
@@ -124,7 +145,7 @@ func ImportRDFStoDB(config *db.Config) error {
 													Label: contains("label", content),
 													Comment: contains("comment", content),
 													SubClassOf: contains("subClassOf", content),}
-								classes = append(classes, class)
+								classes[description.RDFAbout] = class
 							}
 						case "Property":
 							if urlfragment(contains("stereotype", content)) == "attribute" {
@@ -147,7 +168,21 @@ func ImportRDFStoDB(config *db.Config) error {
 																InverseRoleName: contains("inverseRoleName", content),
 																Used: strings.ToLower(contains("AssociationUsed", content)) == "yes",}
 								associations = append(associations, association)
-								fmt.Println(association.MultiMin, association.MultiMax)
+							}
+						case "Ontology":
+							rdfsheader = RDFSHeader{Identifier: contains("identifier", content),
+													Version: contains("versionIRI", content),
+														}
+							for k,v := range content {
+								rdfsitem := RDFSItem{Name: k,
+													Value: v,}
+								rdfsheader.Items = append(rdfsheader.Items, rdfsitem)
+							}
+						case "ClassCategory":
+							for k,v := range content {
+								rdfsitem := RDFSItem{Name: k,
+													Value: v,}
+								rdfsheader.Items = append(rdfsheader.Items, rdfsitem)
 							}
 						default:
 							if contains("stereotype", content) == "enum" {
@@ -159,6 +194,129 @@ func ImportRDFStoDB(config *db.Config) error {
 							}
 					}
 				}
+		}
+	}
+	file.Close()
+	err = mapattributes(classes, attributes)
+	if err != nil {
+		return err
+	}
+	err = mapassosiations(classes, associations)
+	if err != nil {
+		return err
+	}
+	err = mapinheritance(classes)
+	if err != nil {
+		return err
+	}
+	ctx := context.Background()
+	pgcon, err := db.NewConnection(config, ctx)
+ 	if err != nil {
+ 		return err
+ 	}
+ 	pgtx, err := db.NewTransaction(pgcon, ctx)
+ 	if err != nil {
+ 		return err
+ 	}
+ 	err = db.SchemaSetonTx(pgtx, ctx, config.Schema)
+ 	if err != nil {
+ 		return err
+ 	}
+	headerid, err := writerdfsheader(pgtx, &rdfsheader, ctx)
+	if err != nil {
+		return err
+	}
+	err = writeclasses(pgtx, classes, headerid, ctx)
+	if err != nil {
+		return err
+	}
+	err = db.CommitTransaction(pgtx, ctx)
+ 	if err != nil {
+ 		return err
+ 	}
+	fmt.Println("rdf record with id:", headerid, "written")
+	db.CloseConnection(pgcon)
+	return nil
+}
+
+func writerdfsheader(tx db.PostgresTx, header *RDFSHeader, ctx context.Context) (int64, error) {
+	dbheader := db.RDFS{RDFType: header.Identifier,
+						Version: header.Version}
+	err := db.InsertRDFS(tx, &dbheader, ctx)
+	if err != nil {
+		return 0, err
+	}
+	for _,i := range header.Items {
+		dbitem := db.RDFSItem{Name: i.Name,
+								Value: i.Value,
+								RDF_ID: dbheader.ID,}
+		err = db.InsertRDFSItem(tx, &dbitem, ctx)
+		if err != nil {
+			return 0, err
+		}
+	}
+	return dbheader.ID, nil
+}
+
+func writeclasses(tx db.PostgresTx, classes map[string]RDFSClass, rdfid int64, ctx context.Context) error {
+	for _, i := range classes {
+		dbclass := db.Class{Name: i.Name,
+							Label: i.Label,
+							Comment: i.Comment,
+							RDFS_ID: rdfid,}
+		err := db.InsertClass(tx, &dbclass, ctx)
+		if err != nil {
+			return err
+		}
+		i.ID = dbclass.ID
+	}
+	return nil
+}
+
+func mapattributes(classes map[string]RDFSClass, attributes []RDFSAttribute) error {
+	for _, attribute := range attributes {
+		if class, ok := classes[attribute.Domain]; ok {
+			class.Attributes = append(class.Attributes, attribute)
+		} else {
+			return fmt.Errorf("RDFS Attribute %v with domain %v not linked to a class", attribute.Name, attribute.Domain)
+		}
+	}
+	return nil
+}
+
+func mapassosiations(classes map[string]RDFSClass, associations []RDFSAssociation) error {
+	for _, association := range associations {
+		if class, ok := classes[association.Domain]; ok {
+			class.Associations = append(class.Associations, association)
+		} else {
+			return fmt.Errorf("RDFS Association %v with domain %v not linked to a class", association.Name, association.Domain)
+		}
+	}
+	return nil
+}
+
+func mapinheritance(classes map[string]RDFSClass) error {
+	for _, class := range classes {
+		if class.SubClassOf != "" {
+			var baseclasses []RDFSBaseClass
+			subclass := class
+			nomorebaseclasses:
+			for {
+				baseclass := RDFSBaseClass{Name: subclass.SubClassOf}
+				if subclass.SubClassOf != "" {
+					baseclass.SubClassOf = subclass.SubClassOf
+				}
+				baseclasses = append(baseclasses, baseclass)
+				if baseclass.SubClassOf != "" {
+					subclass = classes[baseclass.Name]
+				} else {
+					break nomorebaseclasses
+				}
+			}
+			for _, baseclass := range baseclasses {
+				class.Attributes = append(class.Attributes, classes[baseclass.Name].Attributes...)
+				class.Associations = append(class.Associations, classes[baseclass.Name].Associations...)
+			} 
 		}
 	}
 	return nil
