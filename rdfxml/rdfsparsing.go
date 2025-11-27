@@ -43,8 +43,8 @@ type RDFSClass struct {
 	Label string
 	Comment string
 	SubClassOf string
-	Attributes []RDFSAttribute
-	Associations []RDFSAssociation
+	Attributes map[string]RDFSAttribute
+	Associations map[string]RDFSAssociation
 }
 
 type RDFSBaseClass struct {
@@ -92,7 +92,7 @@ func ImportRDFStoDB(config *db.Config) error {
 	file, err := os.Open(config.ImportPath)
 	var enums []RDFSEnumeration
 	var enumvalues []RDFSEnumValue
-	var classes map[string]RDFSClass 
+	classes := make(map[string]*RDFSClass)
 	var attributes []RDFSAttribute
 	var associations []RDFSAssociation
 	var rdfsheader RDFSHeader
@@ -145,7 +145,9 @@ func ImportRDFStoDB(config *db.Config) error {
 													Label: contains("label", content),
 													Comment: contains("comment", content),
 													SubClassOf: contains("subClassOf", content),}
-								classes[description.RDFAbout] = class
+								class.Attributes = make(map[string]RDFSAttribute)
+								class.Associations = make(map[string]RDFSAssociation)
+								classes[description.RDFAbout] = &class
 							}
 						case "Property":
 							if urlfragment(contains("stereotype", content)) == "attribute" {
@@ -258,7 +260,7 @@ func writerdfsheader(tx db.PostgresTx, header *RDFSHeader, ctx context.Context) 
 	return dbheader.ID, nil
 }
 
-func writeclasses(tx db.PostgresTx, classes map[string]RDFSClass, rdfid int64, ctx context.Context) error {
+func writeclasses(tx db.PostgresTx, classes map[string]*RDFSClass, rdfid int64, ctx context.Context) error {
 	for _, i := range classes {
 		dbclass := db.Class{Name: i.Name,
 							Label: i.Label,
@@ -273,10 +275,10 @@ func writeclasses(tx db.PostgresTx, classes map[string]RDFSClass, rdfid int64, c
 	return nil
 }
 
-func mapattributes(classes map[string]RDFSClass, attributes []RDFSAttribute) error {
+func mapattributes(classes map[string]*RDFSClass, attributes []RDFSAttribute) error {
 	for _, attribute := range attributes {
 		if class, ok := classes[attribute.Domain]; ok {
-			class.Attributes = append(class.Attributes, attribute)
+			class.Attributes[attribute.Name] = attribute
 		} else {
 			return fmt.Errorf("RDFS Attribute %v with domain %v not linked to a class", attribute.Name, attribute.Domain)
 		}
@@ -284,10 +286,10 @@ func mapattributes(classes map[string]RDFSClass, attributes []RDFSAttribute) err
 	return nil
 }
 
-func mapassosiations(classes map[string]RDFSClass, associations []RDFSAssociation) error {
+func mapassosiations(classes map[string]*RDFSClass, associations []RDFSAssociation) error {
 	for _, association := range associations {
 		if class, ok := classes[association.Domain]; ok {
-			class.Associations = append(class.Associations, association)
+			class.Associations[association.Name] = association
 		} else {
 			return fmt.Errorf("RDFS Association %v with domain %v not linked to a class", association.Name, association.Domain)
 		}
@@ -295,7 +297,7 @@ func mapassosiations(classes map[string]RDFSClass, associations []RDFSAssociatio
 	return nil
 }
 
-func mapinheritance(classes map[string]RDFSClass) error {
+func mapinheritance(classes map[string]*RDFSClass) error {
 	for _, class := range classes {
 		if class.SubClassOf != "" {
 			var baseclasses []RDFSBaseClass
@@ -303,8 +305,8 @@ func mapinheritance(classes map[string]RDFSClass) error {
 			nomorebaseclasses:
 			for {
 				baseclass := RDFSBaseClass{Name: subclass.SubClassOf}
-				if subclass.SubClassOf != "" {
-					baseclass.SubClassOf = subclass.SubClassOf
+				if classes[subclass.SubClassOf].SubClassOf != "" {
+					baseclass.SubClassOf = classes[subclass.SubClassOf].SubClassOf
 				}
 				baseclasses = append(baseclasses, baseclass)
 				if baseclass.SubClassOf != "" {
@@ -314,8 +316,20 @@ func mapinheritance(classes map[string]RDFSClass) error {
 				}
 			}
 			for _, baseclass := range baseclasses {
-				class.Attributes = append(class.Attributes, classes[baseclass.Name].Attributes...)
-				class.Associations = append(class.Associations, classes[baseclass.Name].Associations...)
+				for _, attribute := range classes[baseclass.Name].Attributes {
+					if _, ok := class.Attributes[attribute.Name]; ok {
+						continue
+					} else {
+						class.Attributes[attribute.Name] = attribute
+					}
+				} 
+				for _, association := range classes[baseclass.Name].Associations {
+					if _, ok := class.Associations[association.Name]; ok {
+						continue
+					} else {
+						class.Associations[association.Name] = association
+					}
+				} 
 			} 
 		}
 	}
