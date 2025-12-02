@@ -151,7 +151,7 @@ func InsertClass(ptx PostgresTx, class *Class, ctx context.Context) error {
 }
 
 func InsertAssociation(ptx PostgresTx, asso *Association, ctx context.Context) error {
-	command := "CALL insert_association(@parentid, @childid, @asname, @aslabel, @munin, @mumax, @ascomment, @asrange, @inverserole, @used)"
+	command := "CALL insert_association(@parentid, @childid, @asname, @aslabel, @mumin, @mumax, @ascomment, @asrange, @inverserole, @used)"
 	args := pgx.NamedArgs{
     		"parentid": asso.Parent_ID,
     		"childid": asso.Child_ID,

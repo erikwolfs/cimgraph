@@ -78,6 +78,7 @@ type RDFSEnumeration struct {
 	Name string
 	Label string
 	Comment string
+	Values []RDFSEnumValue
 }
 
 type RDFSEnumValue struct {
@@ -90,7 +91,7 @@ type RDFSEnumValue struct {
 func ImportRDFStoDB(config *db.Config) error {
 	fmt.Println("importing RDFschema from: ", config.ImportPath , "into PostgresSQL server:", config.DBName, "on:", config.Host )
 	file, err := os.Open(config.ImportPath)
-	var enums []RDFSEnumeration
+	enums := make(map[string]*RDFSEnumeration)
 	var enumvalues []RDFSEnumValue
 	classes := make(map[string]*RDFSClass)
 	var attributes []RDFSAttribute
@@ -120,10 +121,19 @@ func ImportRDFStoDB(config *db.Config) error {
 					}
 					var destype string
 					content := make(map[string]string)
+					stereotypes := make(map[string]string)
 					for _, definition := range description.Definitions {
 						switch definition.XMLName.Local {
 							case "type":
 								destype = definition.Recource
+							case "stereotype":
+								var value string 
+								if definition.Recource != "" {
+									value = urlfragment(definition.Recource)
+								} else {
+									value = definition.Value
+								}
+								stereotypes[value] = value
 							default:
 								if definition.Recource != "" {
 									content[definition.XMLName.Local] = definition.Recource
@@ -135,11 +145,11 @@ func ImportRDFStoDB(config *db.Config) error {
 					destype = urlfragment(destype)
 					switch destype {
 						case "Class":
-							if urlfragment(contains("stereotype", content)) == "enumeration" {
-								enum := RDFSEnumeration{Name: description.RDFAbout,
+							if _, ok := stereotypes["enumeration"]; ok {
+								enum := RDFSEnumeration{Name: urlfragment(description.RDFAbout),
 														Label: contains("label", content),
 														Comment: contains("comment", content),}
-								enums = append(enums, enum)
+								enums[urlfragment(description.RDFAbout)] = &enum
 							} else {
 								class := RDFSClass{Name: description.RDFAbout,
 													Label: contains("label", content),
@@ -150,7 +160,7 @@ func ImportRDFStoDB(config *db.Config) error {
 								classes[description.RDFAbout] = &class
 							}
 						case "Property":
-							if urlfragment(contains("stereotype", content)) == "attribute" {
+							if _, ok := stereotypes["attribute"]; ok {
 								attribute := RDFSAttribute{Name: description.RDFAbout,
 															Label: contains("label", content),
 															Domain: contains("domain", content),
@@ -187,7 +197,7 @@ func ImportRDFStoDB(config *db.Config) error {
 								rdfsheader.Items = append(rdfsheader.Items, rdfsitem)
 							}
 						default:
-							if contains("stereotype", content) == "enum" {
+							if _, ok := stereotypes["enum"]; ok {
 								enumvalue := RDFSEnumValue{Name: description.RDFAbout,
 															Label: contains("label", content),
 															Comment: contains("comment", content),
@@ -211,6 +221,10 @@ func ImportRDFStoDB(config *db.Config) error {
 	if err != nil {
 		return err
 	}
+	err = mapenums(enums, enumvalues)
+	if err != nil {
+		return err
+	}
 	ctx := context.Background()
 	pgcon, err := db.NewConnection(config, ctx)
  	if err != nil {
@@ -229,6 +243,10 @@ func ImportRDFStoDB(config *db.Config) error {
 		return err
 	}
 	err = writeclasses(pgtx, classes, headerid, ctx)
+	if err != nil {
+		return err
+	}
+	err = writeenums(pgtx, enums, headerid, ctx)
 	if err != nil {
 		return err
 	}
@@ -261,16 +279,73 @@ func writerdfsheader(tx db.PostgresTx, header *RDFSHeader, ctx context.Context) 
 }
 
 func writeclasses(tx db.PostgresTx, classes map[string]*RDFSClass, rdfid int64, ctx context.Context) error {
-	for _, i := range classes {
-		dbclass := db.Class{Name: i.Name,
-							Label: i.Label,
-							Comment: i.Comment,
+	for _, class := range classes {
+		dbclass := db.Class{Name: class.Name,
+							Label: class.Label,
+							Comment: class.Comment,
 							RDFS_ID: rdfid,}
 		err := db.InsertClass(tx, &dbclass, ctx)
 		if err != nil {
 			return err
 		}
-		i.ID = dbclass.ID
+		class.ID = dbclass.ID
+		for _, attribute := range class.Attributes {
+			dbattribute := db.Attribute{Class_ID: class.ID,
+										Name: attribute.Name,
+										Label: attribute.Label,
+										DataType: attribute.DataType,
+										Mandatory: attribute.Mandatory,
+										Comment: attribute.Comment,}
+			err = db.InsertAttribute(tx, &dbattribute, ctx)
+			if err != nil {
+			return err
+			}
+		}
+	}
+	for _, class := range classes {
+		for _, association := range class.Associations {
+			if refclass, ok := classes[association.Range]; ok {
+				dbassociation := db.Association{Parent_ID: class.ID,
+												Child_ID: refclass.ID,
+												Name: association.Name,
+												Label: association.Label,
+												Comment: association.Comment,
+												MultiMin: association.MultiMin,
+												MultiMax: association.MultiMax,
+												Range: association.Range,
+												InvereRole: association.InverseRoleName,
+												Used: association.Used,}
+				err := db.InsertAssociation(tx, &dbassociation, ctx)
+				if err != nil {
+					return err
+				}
+			} else {
+				return fmt.Errorf("RDFS Association %v with range %v not linked to a class", association.Name, association.Range)
+			}
+		}
+	}
+	return nil
+}
+
+func writeenums(tx db.PostgresTx, enums map[string]*RDFSEnumeration, rdfid int64, ctx context.Context) error {
+	for _, enum := range enums {
+		dbenum := db.Enum{Name: enum.Name,
+							Label: enum.Label,
+							Comment: enum.Comment,
+							RDFS_ID: rdfid,}
+		err := db.InsertEnum(tx, &dbenum, ctx)
+		if err != nil {
+			return err
+		}
+		for _, val := range enum.Values {
+			dbval := db.EnumValue{Enum_ID: dbenum.ID,
+									Name: val.Name,
+									Comment: val.Comment,}
+			err := db.InsertEnumValue(tx, &dbval, ctx)
+			if err != nil {
+				return err
+			}
+		}
 	}
 	return nil
 }
@@ -331,6 +406,17 @@ func mapinheritance(classes map[string]*RDFSClass) error {
 					}
 				} 
 			} 
+		}
+	}
+	return nil
+}
+
+func mapenums(enums map[string]*RDFSEnumeration, enumvalues []RDFSEnumValue) error {
+	for _, value := range enumvalues {
+		if enum, ok := enums[value.Enumerator]; ok {
+			enum.Values = append(enum.Values, value)
+		} else {
+			return fmt.Errorf("enumerator value %v for enumerator %v not linked to a enumerator", value.Name, value.Enumerator)
 		}
 	}
 	return nil
