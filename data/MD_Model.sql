@@ -427,3 +427,4 @@ AS $FUNCTION$
 	AND object.valid_from <= validfrom
 	AND object.valid_to >= validto;
 $FUNCTION$
+

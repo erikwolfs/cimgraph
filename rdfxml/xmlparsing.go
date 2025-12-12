@@ -9,59 +9,74 @@ import (
 	"strings"
 	"golang.org/x/text/encoding/charmap"
 	db "cimgraph/postgres"
+	"cimgraph/common"
 )
 
+//RDF Message Header Object
 type RDFDataSet struct {
 	XMLName xml.Name
 	About string `xml:"about,attr"`
 	Attributes []RDFDSAttribute `xml:",any"`
 }
 
+//RDF Message Header Attribute Object
 type RDFDSAttribute struct {
 	XMLName xml.Name
 	Recource string `xml:"resource,attr"`
 	Value string `xml:",chardata"`
 }
 
+//RDF Subject Object
 type RDFSubject struct {
 	XMLName xml.Name
 	ID string `xml:"ID,attr"`
 	Predicates []RDFPredicate `xml:",any"`
 }
 
+//RDF Predicate Object including RDF Object as value or resource
 type RDFPredicate struct {
 	XMLName xml.Name 
 	Recource string `xml:"resource,attr"`
 	Value string `xml:",chardata"`
 }
 
+//Main function called when importing a RDF XML message
 func ImportRDFtoDB(config *db.Config) error {
 	fmt.Println("importing from: ", config.ImportPath , "into PostgresSQL server:", config.DBName, "on:", config.Host )
+	//varibel to store the DB ID given on the whole dataset when writing it to the db
 	var datasetid int64 = 0
+	//Open de message from file
 	file, err := os.Open(config.ImportPath)
     if err != nil {
         return fmt.Errorf("error opening rdf file: %v", err)
     }
 	fmt.Println("Successfully Opened ", config.ImportPath)
     defer file.Close()
+	//context can be used to define timeouts when communicating with the DB
 	ctx := context.Background()
-	pgcon, err := db.NewConnection(config, ctx)
+	//Create a new connectionpool
+	pgpool, err := db.NewConnectionPool(config, ctx)
  	if err != nil {
  		return err
  	}
- 	pgtx, err := db.NewTransaction(pgcon, ctx)
+	//Create a new transaction to make sure nothing is written when error ocures
+ 	pgtx, err := pgpool.NewTransaction(ctx)
  	if err != nil {
  		return err
  	}
- 	err = db.SchemaSetonTx(pgtx, ctx, config.Schema)
+	//Select the correct DB schema
+ 	err = pgtx.SetSchema(ctx, config.Schema)
  	if err != nil {
  		return err
  	}
+	//Start parsing the XML in chunks
 	decoder := xml.NewDecoder(file)
 	decoder.CharsetReader = makeCharsetReader
+	t := common.CurrentTime()
 	for {
 		t, tokenErr := decoder.Token()
 		if tokenErr != nil {
+			//This stops the parsing when the end of file is reached or when error during parsing
 			if tokenErr == io.EOF {
 				break
 			}
@@ -74,21 +89,47 @@ func ImportRDFtoDB(config *db.Config) error {
 					continue
 				} else if t.Name.Space == "http://iec.ch/TC57/61970-552/ModelDescription/1#" {
 					var dataset RDFDataSet
+					//Parse the Message Header
 					if err := decoder.DecodeElement(&dataset, &t); err != nil {
 						return fmt.Errorf("error parsing dataset definition %v", err)
 					}
+					//retrieve profiles from the dataset
+					dbcon, err := pgpool.NewConnection(ctx)
+					if err != nil {
+						return err
+					}
+					profiles, err := findProfilesToValidate(dbcon, &dataset, config.Schema, ctx)
+					if err != nil {
+						return err
+					}
+					dbcon.Release()
+					if len(profiles) == 0 {
+						return fmt.Errorf("no RDFS found to validate this profile, import ended")
+					}
+					valset, err := RetrieveValSetsFromDB(pgpool, profiles, ctx, config.Schema)
+					if err != nil {
+						return err
+					}
+					fmt.Println(valset)
+					//write the dataset including attributes to the database
 					datasetid, err = writedataset(pgtx, &dataset, ctx)
 					if err != nil {
 						return err
 					}
+					fmt.Println("dataset records written to the db")
 				} else {
 					var subject RDFSubject
+					//Parse a subject
 					if err := decoder.DecodeElement(&subject, &t); err != nil {
 						return fmt.Errorf("error parsing rdf subject: %v", err)
 					}
+					//Dont save subject unless they are linked to a dataset, this means header has to be on top of file
 					if datasetid == 0 {
 						return fmt.Errorf("no dataset defined when writing subject: %s", subject)
 					}
+					//validate a subject
+					//TO DO
+					//Write a subject to the DB
 					err = writesubject(pgtx, datasetid , &subject, ctx)
 					if err != nil {
 						return err
@@ -97,16 +138,24 @@ func ImportRDFtoDB(config *db.Config) error {
 			}
 		}
 	}
+	//Close the RDF message file
+	fmt.Println("triples written to the DB")
 	file.Close()
+	common.MeasureTime("write triples to DB", t)
+	t = common.CurrentTime()
+	//Retrieve subject subject relationships and write them to the DB using the DB IDs
 	err = writerelationships(pgtx, ctx)
 	 	if err != nil {
  		return err
  	}
-	err = db.CommitTransaction(pgtx, ctx)
+	fmt.Println("relationships written to the DB")
+	common.MeasureTime("write relationships to DB", t)
+	//Commit the transaction
+	err = pgtx.Commit(ctx)
  	if err != nil {
  		return err
  	}
-	db.CloseConnection(pgcon)
+	pgpool.Close()
 	return nil
 }
 
@@ -188,6 +237,24 @@ func writerelationships(tx db.PostgresTx, ctx context.Context) error {
 		}
 	}
 	return nil
+}
+
+func findProfilesToValidate(dbcon *db.PostgresConn, dataset *RDFDataSet, schema string, ctx context.Context) (map[string]int64, error) {
+	profiles := make(map[string]int64)
+	for _, attribute := range dataset.Attributes {
+		if attribute.XMLName.Local == "Model.profile" {
+			id, err := db.SearchProfile(dbcon, attribute.Value, schema, ctx)
+			if err != nil {
+				return nil, err
+			}
+			if id > 0 {
+				profiles[attribute.Value] = id
+			} else {
+				fmt.Println("RDFS for profile " + attribute.Value + " not found")
+			}
+		}
+	}
+	return profiles, nil
 }
 
 func makeCharsetReader(charset string, input io.Reader) (io.Reader, error) {

@@ -4,6 +4,7 @@ import (
 	"cimgraph/como"
 	"cimgraph/postgres"
 	"cimgraph/rdfxml"
+	"cimgraph/common"
 	"context"
 	"fmt"
 	"log"
@@ -199,7 +200,8 @@ func importRDFDB(config *config) error {
 }
 
 func importRDFSDB(config *config) error {
-	defer exeTime("importRDFSDB")
+	t := common.CurrentTime()
+	defer common.MeasureTime("importDFSDB", t)
 	dbconfig := postgres.Config{ImportPath: config.path,
 								Host: config.postgresHost,
 								Port: config.postgresPort,

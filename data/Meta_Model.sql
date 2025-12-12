@@ -405,4 +405,54 @@ BEGIN
 END;
 $$;
 
+CREATE OR REPLACE FUNCTION retrieve_rdfid_byprofile(rdfprofile VARCHAR(50))
+RETURNS BIGINT
+LANGUAGE sql
+RETURN (
+	SELECT id
+	FROM rdfs
+	WHERE version = rdfprofile
+);
+
+CREATE OR REPLACE FUNCTION retrieve_rdfs_by_profileid(profileid BIGINT)
+RETURNS TABLE (
+	class_id BIGINT,
+	class_name VARCHAR(100),
+	attr_name VARCHAR(100)[],
+	attr_man BOOLEAN[],
+	ass_name VARCHAR(100)[],
+	ass_min INT[],
+	ass_max INT[],
+	ass_range VARCHAR(100)[]
+)
+AS 
+$func$
+	WITH
+at AS (SELECT attribute.class_id AS at_class_id,
+            array_agg(attribute.name) as attr_name,
+            array_agg(attribute.mandatory) as attr_man
+        FROM attribute
+        GROUP BY attribute.class_id),
+ass AS (SELECT association.parent_id AS as_class_id,
+            array_agg(association.name) as ass_name,
+            array_agg(association.multimin) as ass_min,
+            array_agg(association.multimax) as ass_max,
+            array_agg(association.range) as ass_range
+        FROM association
+        WHERE association.used = true
+        GROUP BY association.parent_id)
+SELECT class.id, class.name,
+        at.attr_name,
+        at.attr_man,
+        ass.ass_name,
+        ass.ass_min,
+        ass.ass_max,
+        ass.ass_range
+FROM    class LEFT JOIN at ON class.id = at.at_class_id
+        LEFT JOIN ass ON class.id = ass.as_class_id
+WHERE   class.rdfs_id = 13
+GROUP BY class.id, at.attr_name, at.attr_man, ass.ass_name, ass.ass_min, ass.ass_max, ass.ass_range
+$func$
+LANGUAGE SQL;
+
 

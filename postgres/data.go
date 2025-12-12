@@ -212,14 +212,14 @@ func RetrieveSubjectByRDFID(ptx PostgresTx, subjects *[]*SubjectByRDFID, object 
 	return nil
 }
 
-func RetrieveSubjectsByType(con *Postgresdb, subtype *string, subjects *[]*SubjectByType, ctx context.Context) error {
+func RetrieveSubjectsByType(conn *PostgresConn, subtype *string, subjects *[]*SubjectByType, ctx context.Context) error {
 	command := "select * from retrieve_subjects_by_type(@stype, @validfrom, @validto)"
 	args := pgx.NamedArgs{
     		"stype": subtype,
     		"validfrom": "2000-01-01 00:00:00+02",
 			"validto": "2999-12-31 00:00:00+02",
 	}
-	rows, err := con.db.Query(ctx, command, args)
+	rows, err := conn.con.Query(ctx, command, args)
 	if err != nil {
 		return fmt.Errorf("error retrieving subjects by type: %v", err)
 	}
@@ -230,14 +230,14 @@ func RetrieveSubjectsByType(con *Postgresdb, subtype *string, subjects *[]*Subje
 	return nil
 }
 
-func RetrievePredicatesBySubjectID(con *Postgresdb, subid int64, predicates *[]*PredicateBySubjectID, ctx context.Context) error {
+func RetrievePredicatesBySubjectID(conn *PostgresConn, subid int64, predicates *[]*PredicateBySubjectID, ctx context.Context) error {
 	command := "select * from retrieve_predicates_by_subject(@subjectid, @validfrom, @validto)"
 	args := pgx.NamedArgs{
     		"subjectid": subid,
     		"validfrom": "2000-01-01 00:00:00+02",
 			"validto": "2999-12-31 00:00:00+02",
 	}
-	rows, err := con.db.Query(ctx, command, args)
+	rows, err := conn.con.Query(ctx, command, args)
 	if err != nil {
 		return fmt.Errorf("error retrieving predicates by subject id: %v", err)
 	}
@@ -248,14 +248,14 @@ func RetrievePredicatesBySubjectID(con *Postgresdb, subid int64, predicates *[]*
 	return nil
 }
 
-func RetrieveChildsBySubjectID(con *Postgresdb, subid int64, childsubjects *[]*ChildSubjectByID, ctx context.Context) error {
+func RetrieveChildsBySubjectID(conn *PostgresConn, subid int64, childsubjects *[]*ChildSubjectByID, ctx context.Context) error {
 	command := "select * from retrieve_childs_by_subject(@subjectid, @validfrom, @validto)"
 	args := pgx.NamedArgs{
     		"subjectid": subid,
     		"validfrom": "2000-01-01 00:00:00+02",
 			"validto": "2999-12-31 00:00:00+02",
 	}
-	rows, err := con.db.Query(ctx, command, args)
+	rows, err := conn.con.Query(ctx, command, args)
 	if err != nil {
 		return fmt.Errorf("error retrieving childs by subject id: %v", err)
 	}

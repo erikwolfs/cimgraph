@@ -33,6 +33,5 @@ go.work.sum
 
 # Data Files
 data/
-como/
 config/
 log/

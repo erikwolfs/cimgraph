@@ -5,6 +5,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"cimgraph/common"
 )
 
 type ComoMessage struct {
@@ -25,12 +26,17 @@ type Predicate struct {
 }
 
 func GenerateGraphBySubjectType(config *db.Config, subtype string) error {
+	t := common.CurrentTime()
 	ctx := context.Background()
-	pgcon, err := db.NewConnection(config, ctx)
+	pgpool, err := db.NewConnectionPool(config, ctx)
  	if err != nil {
  		return err
  	}
-	err = db.SchemaSetonCon(*pgcon, ctx, config.Schema)
+	pgcon, err := pgpool.NewConnection(ctx)
+	if err != nil {
+		return err
+	}
+	err = pgcon.SetSchema(config.Schema, ctx)
 	if err != nil {
 		return err
 	}
@@ -57,11 +63,14 @@ func GenerateGraphBySubjectType(config *db.Config, subtype string) error {
 	if err != nil {
 		return err
 	}
+	pgcon.Release()
+	pgpool.Close()
 	fmt.Print(string(b))
+	common.MeasureTime("write JSON output", t)
 	return nil
 }
 
-func retrievePredicatesbySubject(conn *db.Postgresdb, subid int64, subject *Subject, ctx context.Context) error {
+func retrievePredicatesbySubject(conn *db.PostgresConn, subid int64, subject *Subject, ctx context.Context) error {
 	var recpreds []*db.PredicateBySubjectID
 	err := db.RetrievePredicatesBySubjectID(conn, subid, &recpreds, ctx)
 	if err != nil {
@@ -76,7 +85,7 @@ func retrievePredicatesbySubject(conn *db.Postgresdb, subid int64, subject *Subj
 	return nil
 }
 
-func retrieveChildsbySubject(conn *db.Postgresdb, subid int64, subject *Subject, ctx context.Context) error {
+func retrieveChildsbySubject(conn *db.PostgresConn, subid int64, subject *Subject, ctx context.Context) error {
 	var recchilds []*db.ChildSubjectByID
 	err := db.RetrieveChildsBySubjectID(conn, subid, &recchilds, ctx)
 	if err != nil {

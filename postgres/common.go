@@ -8,12 +8,78 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
-type Postgresdb struct {
-	db *pgxpool.Pool
+type PostgresPool struct {
+	pool *pgxpool.Pool
+}
+
+func (p *PostgresPool) Close() {
+	p.pool.Close()
+}
+
+func (p *PostgresPool) SetSchema(schema string, ctx context.Context) error {
+	command := "SET search_path TO " + schema + ";"
+	_, err := p.pool.Exec(ctx, command)
+	if err != nil {
+		return fmt.Errorf("unable to access schema : %s, error: %w", schema, err)
+	}
+	return nil
+}
+
+func (p *PostgresPool) NewConnection(ctx context.Context) (*PostgresConn, error) {
+	con, err := p.pool.Acquire(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return &PostgresConn{con}, nil
+}
+
+func (p *PostgresPool) NewTransaction(ctx context.Context) (PostgresTx, error) {
+	tx, err := p.pool.BeginTx(ctx, pgx.TxOptions{})
+	if err != nil {
+		txErr = err
+	}
+	txInstance = PostgresTx{tx}
+	if txErr != nil {
+		return txInstance, fmt.Errorf("unable to create new transaction: %w", txErr)
+	}
+	return txInstance, nil
+}
+
+type PostgresConn struct {
+	con *pgxpool.Conn
+}
+
+func (c *PostgresConn) Release() {
+	c.con.Release()
+}
+
+func (c *PostgresConn) SetSchema(schema string, ctx context.Context) error {
+	command := "SET search_path TO " + schema + ";"
+	_, err := c.con.Exec(ctx, command)
+	if err != nil {
+		return fmt.Errorf("unable to access schema : %s, error: %w", schema, err)
+	}
+	return nil
 }
 
 type PostgresTx struct {
 	tx pgx.Tx
+}
+
+func (t *PostgresTx) Commit(ctx context.Context) error {
+	err := t.tx.Commit(ctx)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func(t *PostgresTx) SetSchema(ctx context.Context, schema string) error {
+	_, err := t.tx.Exec(ctx, fmt.Sprintf(`set search_path="%s"`, schema))
+	if err != nil {
+		return fmt.Errorf("unable to access schema : %s, error: %w", schema, err)
+	}
+	return nil
 }
 
 type Config struct {
@@ -26,17 +92,15 @@ type Config struct {
 	Schema string
 }
 
-
-
 var (
-	pgInstance *Postgresdb
+	pgInstance *PostgresPool
 	pgOnce sync.Once
 	conErr error
 	txInstance PostgresTx
 	txErr error
 )
 
-func NewConnection(config *Config, ctx context.Context) (*Postgresdb, error) {
+func NewConnectionPool(config *Config, ctx context.Context) (*PostgresPool, error) {
 	pgOnce.Do(func() {
 		configstr := "user=" + config.User +
 					" password=" + config.Password +
@@ -47,56 +111,12 @@ func NewConnection(config *Config, ctx context.Context) (*Postgresdb, error) {
 		if err != nil {
 			conErr = err
 		}
-		pgInstance = &Postgresdb{db}
+		pgInstance = &PostgresPool{db}
 	})
 	if conErr != nil {
 		return pgInstance, fmt.Errorf("unable to create connection pool: %w", conErr)
 	}
 	return pgInstance, nil
-}
-
-func CloseConnection(conn *Postgresdb) {
-	conn.db.Close()
-}
-
-func NewTransaction(postgres *Postgresdb, ctx context.Context) (PostgresTx, error) {
-	tx, err := postgres.db.BeginTx(ctx, pgx.TxOptions{})
-	if err != nil {
-		txErr = err
-	}
-	// Rollback is safe to call even if the tx is already closed, so if
-	// the tx commits successfully, this is a no-op
-	//defer tx.Rollback(ctx)
-	txInstance = PostgresTx{tx}
-	if txErr != nil {
-		return txInstance, fmt.Errorf("unable to create new transaction: %w", txErr)
-	}
-	return txInstance, nil
-}
-
-func SchemaSetonTx(ptx PostgresTx, ctx context.Context, schema string) error {
-	_, err := ptx.tx.Exec(ctx, fmt.Sprintf(`set search_path="%s"`, schema))
-	if err != nil {
-		return fmt.Errorf("unable to access schema : %s, error: %w", schema, err)
-	}
-	return nil
-}
-
-func SchemaSetonCon(postgres Postgresdb, ctx context.Context, schema string) error {
-	command := "SET search_path TO " + schema + ";"
-	_, err := postgres.db.Exec(ctx, command)
-	if err != nil {
-		return fmt.Errorf("unable to access schema : %s, error: %w", schema, err)
-	}
-	return nil
-}
-
-func CommitTransaction(ptx PostgresTx, ctx context.Context) error {
-	err := ptx.tx.Commit(ctx)
-	if err != nil {
-		return err
-	}
-	return nil
 }
 
 

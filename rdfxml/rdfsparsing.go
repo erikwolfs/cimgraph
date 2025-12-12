@@ -226,15 +226,15 @@ func ImportRDFStoDB(config *db.Config) error {
 		return err
 	}
 	ctx := context.Background()
-	pgcon, err := db.NewConnection(config, ctx)
+	pgpool, err := db.NewConnectionPool(config, ctx)
  	if err != nil {
  		return err
  	}
- 	pgtx, err := db.NewTransaction(pgcon, ctx)
+ 	pgtx, err := pgpool.NewTransaction(ctx)
  	if err != nil {
  		return err
  	}
- 	err = db.SchemaSetonTx(pgtx, ctx, config.Schema)
+ 	err = pgtx.SetSchema(ctx, config.Schema)
  	if err != nil {
  		return err
  	}
@@ -250,12 +250,12 @@ func ImportRDFStoDB(config *db.Config) error {
 	if err != nil {
 		return err
 	}
-	err = db.CommitTransaction(pgtx, ctx)
+	err = pgtx.Commit(ctx)
  	if err != nil {
  		return err
  	}
 	fmt.Println("rdf record with id:", headerid, "written")
-	db.CloseConnection(pgcon)
+	pgpool.Close()
 	return nil
 }
 

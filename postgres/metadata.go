@@ -3,6 +3,7 @@ package postgres
 import (
 	"context"
 	"fmt"
+
 	"github.com/jackc/pgx/v5"
 )
 
@@ -74,6 +75,17 @@ type EnumValue struct {
 	Enum_ID int64
 	Name string
 	Comment string
+}
+
+type RDFSByProfileID struct {
+	Class_id int64
+	Class_name string
+	Attr_name []string
+	Attr_man []bool
+	Ass_name []string
+	Ass_min []int
+	Ass_max []int
+	Ass_range []string
 }
 
 func InsertRDFS(ptx PostgresTx, rdfs *RDFS, ctx context.Context) error {
@@ -199,4 +211,46 @@ func InsertSubClass(ptx PostgresTx, subcl *SubClass, ctx context.Context) error 
 		return fmt.Errorf("error writing subclass record: %v", err)
 	}
 	return nil
+}
+
+func SearchProfile(conn *PostgresConn, profile string, schema string, ctx context.Context) (int64, error) {
+	command := "select * from " + schema + ".retrieve_rdfid_byprofile(@rdfprofile)"
+	args := pgx.NamedArgs{
+    		"rdfprofile": profile,
+	}
+	rows, err := conn.con.Query(ctx, command, args)
+	if err != nil {
+		return 0, err
+	}
+	rows.Next()
+	row, err := rows.Values()
+	if err != nil {
+		if err.Error() == "rows is closed" {
+			return 0, nil
+		} else {
+			return 0, err
+		}
+	}
+	if row[0] == nil {
+		return 0, nil
+	}
+	id := row[0].(int64)
+	rows.Close()
+	return id, nil
+}
+
+func RetrieveProfileRDFS(conn *PostgresConn, profid int64, ctx context.Context) ([]*RDFSByProfileID, error) {
+	command := "select * from retrieve_rdfs_by_profileid(@profileid)"
+	args := pgx.NamedArgs{
+    		"profileid": profid,
+	}
+	rows, err := conn.con.Query(ctx, command, args)
+	if err != nil {
+		return nil, fmt.Errorf("error retrieving childs by subject id: %v", err)
+	}
+	childsubjects, err := pgx.CollectRows(rows, pgx.RowToAddrOfStructByName[RDFSByProfileID])
+	if err != nil {
+		return nil, fmt.Errorf("error parsing childs by subject id: %v", err)
+	}
+	return childsubjects, nil
 }
