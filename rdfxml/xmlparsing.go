@@ -73,6 +73,8 @@ func ImportRDFtoDB(config *db.Config) error {
 	decoder := xml.NewDecoder(file)
 	decoder.CharsetReader = makeCharsetReader
 	t := common.CurrentTime()
+	valset := &ValSet
+	valresult := &ValResultSet
 	for {
 		t, tokenErr := decoder.Token()
 		if tokenErr != nil {
@@ -106,7 +108,7 @@ func ImportRDFtoDB(config *db.Config) error {
 					if len(profiles) == 0 {
 						return fmt.Errorf("no RDFS found to validate this profile, import ended")
 					}
-					valset, err := RetrieveValSetsFromDB(pgpool, profiles, ctx, config.Schema)
+					valset, err = RetrieveValSetsFromDB(pgpool, profiles, ctx, config.Schema)
 					if err != nil {
 						return err
 					}
@@ -128,7 +130,13 @@ func ImportRDFtoDB(config *db.Config) error {
 						return fmt.Errorf("no dataset defined when writing subject: %s", subject)
 					}
 					//validate a subject
-					//TO DO
+					err = ValidateRDFSubject(&subject, valset, valresult)
+					for line := range *valresult {
+						fmt.Println(line)
+					}
+					if err != nil {
+						return err
+					}
 					//Write a subject to the DB
 					err = writesubject(pgtx, datasetid , &subject, ctx)
 					if err != nil {
@@ -138,6 +146,7 @@ func ImportRDFtoDB(config *db.Config) error {
 			}
 		}
 	}
+	fmt.Println(valresult)
 	//Close the RDF message file
 	fmt.Println("triples written to the DB")
 	file.Close()
