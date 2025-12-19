@@ -112,7 +112,6 @@ func ImportRDFtoDB(config *db.Config) error {
 					if err != nil {
 						return err
 					}
-					fmt.Println(valset)
 					//write the dataset including attributes to the database
 					datasetid, err = writedataset(pgtx, &dataset, ctx)
 					if err != nil {
@@ -130,9 +129,10 @@ func ImportRDFtoDB(config *db.Config) error {
 						return fmt.Errorf("no dataset defined when writing subject: %s", subject)
 					}
 					//validate a subject
+					*valresult = nil
 					err = ValidateRDFSubject(&subject, valset, valresult)
-					for line := range *valresult {
-						fmt.Println(line)
+					for _,result := range *valresult {
+						fmt.Println(result)
 					}
 					if err != nil {
 						return err

@@ -134,9 +134,11 @@ func ImportRDFStoDB(config *db.Config) error {
 									value = definition.Value
 								}
 								stereotypes[value] = value
+							case "domain":
+								content[definition.XMLName.Local] = urlfragment(definition.Recource)
 							default:
 								if definition.Recource != "" {
-									content[definition.XMLName.Local] = definition.Recource
+									content[definition.XMLName.Local] = urlfragment(definition.Recource)
 								} else {
 									content[definition.XMLName.Local] = definition.Value
 								}
@@ -151,17 +153,17 @@ func ImportRDFStoDB(config *db.Config) error {
 														Comment: contains("comment", content),}
 								enums[urlfragment(description.RDFAbout)] = &enum
 							} else {
-								class := RDFSClass{Name: description.RDFAbout,
+								class := RDFSClass{Name: urlfragment(description.RDFAbout),
 													Label: contains("label", content),
 													Comment: contains("comment", content),
 													SubClassOf: contains("subClassOf", content),}
 								class.Attributes = make(map[string]RDFSAttribute)
 								class.Associations = make(map[string]RDFSAssociation)
-								classes[description.RDFAbout] = &class
+								classes[urlfragment(description.RDFAbout)] = &class
 							}
 						case "Property":
 							if _, ok := stereotypes["attribute"]; ok {
-								attribute := RDFSAttribute{Name: description.RDFAbout,
+								attribute := RDFSAttribute{Name: urlfragment(description.RDFAbout),
 															Label: contains("label", content),
 															Domain: contains("domain", content),
 															DataType: contains("dataType", content),
@@ -169,14 +171,14 @@ func ImportRDFStoDB(config *db.Config) error {
 															Comment: contains("comment", content),}
 								attributes = append(attributes, attribute)
 							} else {
-								association := RDFSAssociation{Name: description.RDFAbout,
+								association := RDFSAssociation{Name: urlfragment(description.RDFAbout),
 																Label: contains("label", content),
 																Domain: contains("domain", content),
 																DataType: contains("dataType", content),
 																MultiMin: multimin(urlfragment(contains("multiplicity",content))),
 																MultiMax: multimax(urlfragment(contains("multiplicity",content))),
 																Comment: contains("comment", content),
-																Range: contains("range", content),
+																Range: urlfragment(contains("range", content)),
 																InverseRoleName: contains("inverseRoleName", content),
 																Used: strings.ToLower(contains("AssociationUsed", content)) == "yes",}
 								associations = append(associations, association)
@@ -198,7 +200,7 @@ func ImportRDFStoDB(config *db.Config) error {
 							}
 						default:
 							if _, ok := stereotypes["enum"]; ok {
-								enumvalue := RDFSEnumValue{Name: description.RDFAbout,
+								enumvalue := RDFSEnumValue{Name: urlfragment(description.RDFAbout),
 															Label: contains("label", content),
 															Comment: contains("comment", content),
 															Enumerator: destype,}
@@ -423,13 +425,22 @@ func mapenums(enums map[string]*RDFSEnumeration, enumvalues []RDFSEnumValue) err
 }
 
 func urlfragment(urlstr string) (string) {
+	var returnstr string
 	u, err := url.Parse(urlstr)
     if err != nil {
-        return urlstr
+        returnstr = urlstr
     } else if u.Hostname() == "" {
-		return urlstr
+		returnstr = urlstr
+	} else if u.Fragment == "" {
+		returnstr =  urlstr
+	} else {
+		returnstr = u.Fragment
 	}
-	return u.Fragment
+	if returnstr[0:1] == "#" {
+		return returnstr[1:]
+	} else {
+		return returnstr
+	}
 }
 
 func contains(key string, content map[string]string) string {
@@ -453,7 +464,7 @@ func multimin(multiplicity string) int {
 
 func multimax(multiplicity string) int {
 	if strings.HasSuffix(multiplicity, "n") {
-		return -1
+		return 99999
 	} else {
 		i, err := strconv.Atoi(string(multiplicity[len(multiplicity)-1]))
 		if err != nil {

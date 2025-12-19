@@ -70,6 +70,7 @@ func RetrieveValSetsFromDB(pool *db.PostgresPool,
 		}
 		ValSet[key] = valprof
 	}
+	conn.Release()
 	common.MeasureTime("retrieve RDFS Schema from DB", t)
 	return &ValSet, nil
 }
@@ -147,21 +148,6 @@ func validateRDFSPredicates(subject *RDFSubject, class *RDFSClass, profile strin
 				valresults = append(valresults, valresult)
 				return valresults, fmt.Errorf("blocking error while validating predicates for subject: %s", class.Name)
 			}
-		}
-	}
-	//Test if there are undefined predicates
-	for _, predicate := range subject.Predicates {
-		_, ok := class.Attributes[predicate.XMLName.Local]
-		if !ok {
-			_, ok := class.Associations[predicate.XMLName.Local]
-				if !ok {
-					valresult := ValResult{Error: "a predicate was found nat is not defined in de RDFSchema",
-											SubjectName: subject.XMLName.Local,
-											SubjectID: subject.ID,
-											Profile: profile,
-											Severity: "low",}
-					valresults = append(valresults, valresult)
-				}
 		}
 	}
 	return valresults, nil

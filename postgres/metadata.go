@@ -252,5 +252,6 @@ func RetrieveProfileRDFS(conn *PostgresConn, profid int64, ctx context.Context) 
 	if err != nil {
 		return nil, fmt.Errorf("error parsing childs by subject id: %v", err)
 	}
+	rows.Close()
 	return childsubjects, nil
 }
