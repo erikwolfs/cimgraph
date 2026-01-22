@@ -5,6 +5,8 @@
 /* ---------------------------------------------------- */
 
 /* Drop Sequences for Autonumber Columns */
+CREATE SCHEMA IF NOT EXISTS cimgraph
+
 
 DROP SEQUENCE IF EXISTS object_id_seq
 ;
